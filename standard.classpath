@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/httpmime-4.0-beta1.jar"/>
+	<classpathentry kind="lib" path="lib/apache-mime4j-0.4.jar"/>
+	<classpathentry kind="lib" path="lib/veecheck-2.0.jar" sourcepath="veecheck"/>
+	<classpathentry kind="lib" path="lib/wpsapi.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/Programme/dev/Android/wpsapi-3.0.0-android/wpsapi-3.0.0_17-android/documentation/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/libTpegML.jar" sourcepath="/libTpegML"/>
+	<classpathentry kind="lib" path="lib/libSpatialIndex.jar"/>
+	<classpathentry kind="lib" path="lib/libQuadTree.jar" sourcepath="/libQuadTree"/>
+	<classpathentry kind="lib" path="lib/admob-sdk-android.jar"/>
+	<classpathentry kind="lib" path="lib/libosmapi.jar"/>
+	<classpathentry kind="lib" path="lib/TTS_library_stub_1.4_market.jar"/>
+	<classpathentry kind="lib" path="lib/libgoogleweatherapi.jar"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

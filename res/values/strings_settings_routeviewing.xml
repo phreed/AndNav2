@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_routeviewing_maxlevel_caption">Select maximum ZoomLevel during navigation...</string>
+	<string name="chk_settings_routeviewing_maxlevel_enabled_caption">Enable autozoom during navigation...</string>
+	<string name="chk_settings_routeviewing_snaptoroute_enabled_caption">Snap position to route</string>
+	
+	<string name="tv_settings_routeviewing_snaptoroute_caption">Distance the actual location should still be projected onto the route.</string>
+</resources>

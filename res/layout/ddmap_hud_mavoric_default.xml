@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ #
+ # @Description:
+ # We are using a relative-layout, so the views are stacked as the appear in the layout.
+ # All IDs have to remain the same!
+ #
+ ### README-END ###
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/ddmap_root"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+			
+	<!-- The map, wrapped into a RotateView. -->
+	<view class="org.andnav2.ui.common.views.RotateView" 
+		android:id="@+id/rotator_ddmap"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" >
+	    <view class="org.andnav2.osm.views.OSMMapView" 
+	    	android:id="@+id/map_ddmap"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+	        android:enabled="true"
+	        android:clickable="true" />
+	</view>
+	
+	<!-- Turn Description -->
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="#FFF"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal"
+		android:layout_margin="5px" >
+		<TextView 
+			android:id="@+id/hud_ddmap_mavoric_turndescription"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="#619845"
+			android:textColor="#FFF" 
+			android:textSize="20sp"
+			android:layout_marginBottom="2px"
+			android:layout_marginLeft="2px"
+			android:layout_marginTop="2px" 
+			android:padding="2px"/>
+		<TextView 
+			android:id="@+id/hud_ddmap_mavoric_restlength"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:background="#619845"
+			android:textColor="#FFF" 
+			android:textSize="20sp"
+			android:layout_marginTop="2px"
+			android:layout_marginBottom="2px"
+			android:layout_marginRight="1px"
+			android:layout_marginLeft="1px"
+			android:padding="2px"/>
+		<TextView 
+			android:id="@+id/hud_ddmap_mavoric_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:background="#619845"
+			android:textColor="#FFF" 
+			android:textSize="20sp"
+			android:layout_marginTop="2px"
+			android:layout_marginBottom="2px"
+			android:layout_marginRight="2px"
+			android:padding="2px"/>
+	</LinearLayout>
+
+    <!-- Static Navigation Control, Upper Middle -->
+	<view class="org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView" 
+		android:id="@+id/itemizedoverlaycontrol_ddmap"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"/>
+	<view class="org.andnav2.osm.views.OSMMapViewScaleIndicatorView" 
+		android:id="@+id/scaleindicatorview_ddmap"
+		android:layout_below="@id/itemizedoverlaycontrol_ddmap"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+		
+	<!-- Zoom Controls, Upper Right edge -->
+	<ImageView
+		android:id="@+id/iv_ddmap_zoomin"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="5px"
+		android:src="@drawable/btn_zoom_in_green"/>
+	<ImageView
+		android:id="@+id/iv_ddmap_zoomout"
+		android:layout_alignParentRight="true"
+		android:layout_below="@id/iv_ddmap_zoomin"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="5px"
+		android:src="@drawable/btn_zoom_out_green"/>
+		
+	<!-- Next+UpperNext ActionView, stacked to the upper left. -->
+	<view class="org.andnav2.ui.map.hud.impl.mavoric.views.HUDNextActionView" 
+		android:id="@+id/hud_ddmap_mavoric_nextaction"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5px"
+		android:layout_marginLeft="5px"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:src="@drawable/hud_mavoric_variation_default_next_action"/>
+	<view class="org.andnav2.ui.map.hud.impl.mavoric.views.HUDUpperNextActionView" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5px"
+		android:id="@+id/hud_ddmap_mavoric_uppernextaction"
+		android:layout_below="@id/hud_ddmap_mavoric_nextaction"
+		android:layout_alignParentLeft="true"
+		android:src="@drawable/hud_mavoric_variation_default_uppernext_action"/>
+		
+	<!-- The Image showing attribution to the OSM-community. -->
+	<ImageView
+		android:id="@+id/iv_ddmap_logo_osm"
+		android:layout_alignParentBottom="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:scaleType="fitCenter"
+		android:src="@drawable/logo_osm"
+		android:padding="5px"
+		android:layout_centerHorizontal="true"/>
+		
+	<!-- The Icon indicating whether we are offroute or the route is refetched. -->
+	<ImageView
+		android:id="@+id/iv_ddmap_offroute"
+		android:visibility="gone"
+		android:layout_alignParentTop="true"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:scaleType="fitCenter"
+		android:gravity="center_horizontal"
+		android:src="@drawable/route_missed"
+		android:padding="5px"/>
+</RelativeLayout>

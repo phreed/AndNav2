@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This file describes the _titles_ of all the various screens in AndNav.
+ #
+ ### README-END ###
+-->
+<resources>
+	<!-- This is the description shown in 'manage applications' of the Android-System. -->
+	<string name="app_description">AndNav2 je navigační systém pro Android využívající OpenStreetMap. Podporováno od anddev.org.</string>
+	
+	<!-- This is the String shown in the Menu of the HOME-Screen of the Android System. -->
+	<string name="app_name">AndNav2!</string>
+	
+	<!-- Activity-Captions -->
+	<string name="app_name_splash">AndNav2!</string>
+	<string name="app_name_startupwarning">Varování...</string>
+	<string name="app_name_menu">AndNav2! - Hlavní nabídka</string>
+	<string name="app_name_donate">AndNav2! - Darovat</string>
+	<string name="app_name_about">AndNav2! - O</string>
+	<string name="app_name_sd_mainchoose">AndNav2! - Vybrat způsob...</string>
+	<string name="app_name_sd_resolver">Hledat adresu...</string>
+	<string name="app_name_sd_poi_categories">AndNav2! - POI-vyběr kategorií...</string>
+	<string name="app_name_sd_poi_entry">AndNav2! - POI zadejte popis...</string>
+	<string name="app_name_sd_poi_searchlist">AndNav2! - POI vybrat...</string>
+	<string name="app_name_sd_country">AndNav2! - vybrat zemi...</string>
+	<string name="app_name_sd_ziporcity">AndNav2! - Vylepšit ...</string>
+	<string name="app_name_sd_zip">AndNav2! - zadat PSČ...</string>
+	<string name="app_name_sd_postcode_uk_bs7666">AndNav2! - zadat GB-poštovní směrovací číslo...</string>
+	<string name="app_name_sd_city">AndNav2! - zadat město...</string>
+	<string name="app_name_sd_street">AndNav2! - zadat ulici...</string>
+	<string name="app_name_sd_streetnumber">AndNav2! - zadat číslo popisné...</string>
+	<string name="app_name_sd_favorites">AndNav2! - vybrat favority...</string>
+	<string name="app_name_sd_contacts">AndNav2! - vybrat kontakt...</string>
+	<string name="app_name_sd_savedroutechooser">Načíst uloženou trasu...</string>
+	<string name="app_name_whereami">AndNav2! - Kde jsem...</string>
+	<string name="app_name_firstaid">První pomoc!</string>
+	<string name="app_name_fetch_route">AndNav2! - Trasa se počítá...</string>
+	<string name="app_name_sethomemap">AndNav2! - nastavit pozici domů...</string>
+	<string name="app_name_osbmap">AndNav2! - vylepšit mapy...</string>
+	<string name="app_name_map">AndNav2! - Mapa</string>	
+	<string name="app_name_map_turnlist">AndNav2! - TurnList</string>
+	<string name="app_name_weather">AndNav2! - Předpověď počasí</string>
+	<string name="app_name_settings_menu">AndNav2! - Nastavení...</string>
+	<string name="app_name_settings_colorscheme">AndNav2! - Barevné schéma...</string>
+	<string name="app_name_settings_navigation">AndNav2! - Nastavení navigace...</string>
+	<string name="app_name_settings_routeviewing">AndNav2! - Náhled trasy...</string>
+	<string name="app_name_settings_hud">AndNav2! - Nastavení HUD...</string>
+	<string name="app_name_settings_tracepolicy">AndNav2! - Nastavení Trace...</string>
+	<string name="app_name_settings_screenorientation">AndNav2! - Orientace displeje...</string>
+	<string name="app_name_settings_cache">AndNav2! - Nastavení Cache...</string>
+	<string name="app_name_settings_selecthome">AndNav2! - Nastavit domov...</string>
+	<string name="app_name_settings_voice">AndNav2! - Nastavení jazyka...</string>
+	<string name="app_name_settings_keylayout">AndNav2! - Vybrat klávesnici...</string>
+	<string name="app_name_settings_centermode">AndNav2! - Nastavit mód centrování...</string>
+	<string name="app_name_settings_rotatemode">AndNav2! - Nastavit mód rotace...</string>
+	<string name="app_name_settings_quality">AndNav2! - Vybrat kvalitu zobrazení...</string>
+	<string name="app_name_settings_directionslanguage">AndNav2! - Vybrat jazyk hlasu...</string>
+	<string name="app_name_settings_unitsystem">AndNav2! - Vybrat jednotky...</string>
+	<string name="app_name_settings_statistics">AndNav2! - Statistiky...</string>
+	<string name="app_name_settings_routingflags">AndNav2! - Nastavení trasy...</string>
+	<string name="app_name_settings_routingflags_dialog">Nastavení trasy...</string>
+</resources>

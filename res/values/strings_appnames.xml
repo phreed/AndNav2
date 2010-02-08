@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This file describes the _titles_ of all the various screens in AndNav.
+ #
+ ### README-END ###
+-->
+<resources>
+	<!-- This is the description shown in 'manage applications' of the Android-System. -->
+	<string name="app_description">AndNav2 is a OpenStreetMap based Navigationsystem for Android. Powered by anddev.org.</string>
+	
+	<!-- This is the String shown in the Menu of the HOME-Screen of the Android System. -->
+	<string name="app_name">AndNav2!</string>
+	
+	<!-- Activity-Captions -->
+	<string name="app_name_splash">AndNav2!</string>
+	<string name="app_name_startupwarning">Warning...</string>
+	<string name="app_name_menu">AndNav2! - MainMenu</string>
+	<string name="app_name_donate">AndNav2! - Donate</string>
+	<string name="app_name_about">AndNav2! - About</string>
+	<string name="app_name_sd_mainchoose">AndNav2! - Choose Method...</string>
+	<string name="app_name_sd_resolver">Address-Resolver...</string>
+	<string name="app_name_sd_poi_categories">AndNav2! - Select a POI-category...</string>
+	<string name="app_name_sd_poi_entry">AndNav2! - Enter POI Description...</string>
+	<string name="app_name_sd_poi_searchlist">AndNav2! - Select a POI ...</string>
+	<string name="app_name_sd_country">AndNav2! - Select Country...</string>
+	<string name="app_name_sd_country_subdivision">AndNav2! - Select Subdivision...</string>
+	<string name="app_name_sd_ziporcity">AndNav2! - Refine by...</string>
+	<string name="app_name_sd_zip">AndNav2! - Enter ZIPCode...</string>
+	<string name="app_name_sd_postcode_uk_bs7666">AndNav2! - Enter Postcode...</string>
+	<string name="app_name_sd_city">AndNav2! - Enter CITYname...</string>
+	<string name="app_name_sd_street">AndNav2! - Enter StreetName...</string>
+	<string name="app_name_sd_streetnumber">AndNav2! - Enter StreetNumber...</string>
+	<string name="app_name_sd_favorites">AndNav2! - Select a Favorite...</string>
+	<string name="app_name_sd_contacts">AndNav2! - Pick a Contact...</string>
+	<string name="app_name_sd_savedroutechooser">Load Saved Route...</string>
+	<string name="app_name_sd_savedtracechooser">Load Saved Trace...</string>
+	<string name="app_name_whereami">AndNav2! - Where Am I...</string>
+	<string name="app_name_firstaid">FirstAid!</string>
+	<string name="app_name_fetch_route">AndNav2! - Fetching Route...</string>
+	<string name="app_name_sethomemap">AndNav2! - Set Home...</string>
+	<string name="app_name_osbmap">AndNav2! - Improve the maps...</string>
+	<string name="app_name_map">AndNav2! - Map</string>	
+	<string name="app_name_map_turnlist">AndNav2! - TurnList</string>
+	<string name="app_name_weather">AndNav2! - Weather Forecast</string>
+	<string name="app_name_settings_menu">AndNav2! - Settings...</string>
+	<string name="app_name_settings_colorscheme">AndNav2! - Colorscheme...</string>
+	<string name="app_name_settings_navigation">AndNav2! - Navigation Settings...</string>
+	<string name="app_name_settings_routeviewing">AndNav2! - RouteViewing...</string>
+	<string name="app_name_settings_hud">AndNav2! - HUD Settings...</string>
+	<string name="app_name_settings_orsserver">AndNav2! - Server Settings...</string>
+	<string name="app_name_settings_tracepolicy">AndNav2! - TracePolicy...</string>
+	<string name="app_name_settings_screenorientation">AndNav2! - ScreenOrientation...</string>
+	<string name="app_name_settings_cache">AndNav2! - Cache Settings...</string>
+	<string name="app_name_settings_selecthome">AndNav2! - Set Home...</string>
+	<string name="app_name_settings_voice">AndNav2! - Voice Settings...</string>
+	<string name="app_name_settings_keylayout">AndNav2! - Select KeyLayout...</string>
+	<string name="app_name_settings_centermode">AndNav2! - Select CenterMode...</string>
+	<string name="app_name_settings_rotatemode">AndNav2! - Select RotateMode...</string>
+	<string name="app_name_settings_quality">AndNav2! - Select DisplayQuality...</string>
+	<string name="app_name_settings_directionslanguage">AndNav2! - Change DirectionsLanguage...</string>
+	<string name="app_name_settings_unitsystem">AndNav2! - Change UnitSystem...</string>
+	<string name="app_name_settings_statistics">AndNav2! - Statistics...</string>
+	<string name="app_name_settings_routingflags">AndNav2! - Routing Settings...</string>
+	<string name="app_name_settings_routingflags_dialog">Routing Settings...</string>
+</resources>

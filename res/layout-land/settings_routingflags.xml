@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center" >
+	    <LinearLayout     
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+		   	<CheckBox android:id="@+id/chk_settings_routingflags_alwaysremember"
+		   		style="@style/default_textstyle"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:text="@string/chk_settings_routingflags_alwaysremember_caption" />
+			<Button
+				style="@style/default_textstyle"
+				android:id="@+id/btn_settings_routingflags_ok"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:gravity="right"
+			    android:text="@string/ok">
+		    	<requestFocus/>
+		    </Button>
+	    </LinearLayout>
+       	<TextView
+  	    	android:layout_width="0dip"
+	   		android:layout_height="10px" />
+	    <RadioGroup
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        android:orientation="horizontal">
+	    	<ImageView
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/car" />
+	        <RadioButton android:id="@+id/rad_settings_routingflags_car"
+	        	style="@style/default_textstyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/rad_settings_routingflags_car_caption" />
+        	<TextView
+	  	    	android:layout_width="10px"
+		   		android:layout_height="0dip" />
+	    	<ImageView
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/walk" />
+	        <RadioButton android:id="@+id/rad_settings_routingflags_pedestrian"
+	        	style="@style/default_textstyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/rad_settings_routingflags_pedestrian_caption" />
+        	<TextView
+	  	    	android:layout_width="10px"
+		   		android:layout_height="0dip" />
+	    	<ImageView
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/bike" />
+	        <RadioButton android:id="@+id/rad_settings_routingflags_bicycle"
+	        	style="@style/default_textstyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/rad_settings_routingflags_bicycle_caption" />
+	    </RadioGroup>
+	    <LinearLayout     
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+		    <CheckBox android:id="@+id/chk_settings_routingflags_realtime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/chk_settings_routingflags_realtime_caption" />
+	       	<TextView
+	  	    	android:layout_width="15px"
+		   		android:layout_height="0dip" />
+		    <CheckBox android:id="@+id/chk_settings_routingflags_saveinitial"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/chk_settings_routingflags_saveinitial_caption" />
+	    </LinearLayout>
+	    <RadioGroup
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	    	<ImageView
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/fastest" />
+	        <RadioButton android:id="@+id/rad_settings_routingflags_fastest"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/rad_settings_routingflags_fastest_caption" />
+        	<TextView
+	  	    	android:layout_width="10px"
+		   		android:layout_height="0dip" />
+	    	<ImageView
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/shortest" />
+	        <RadioButton android:id="@+id/rad_settings_routingflags_shortest"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/rad_settings_routingflags_shortest_caption" />
+	    </RadioGroup>
+       	<TextView
+  	    	android:layout_width="0dip"
+	   		android:layout_height="10px" />
+		<LinearLayout     
+	    	android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content" >
+		    <TextView
+		    	style="@style/default_textstyle"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/chk_settings_routingflags_avoid_caption" />	   		
+		    <CheckBox android:id="@+id/chk_settings_routingflags_avoidhighways"
+		    	style="@style/default_textstyle"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/chk_settings_routingflags_avoidhighways_caption" />
+		    <CheckBox android:id="@+id/chk_settings_routingflags_avoidtolls"
+		    	style="@style/default_textstyle"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/chk_settings_routingflags_avoidtolls_caption" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

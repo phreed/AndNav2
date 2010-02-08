@@ -1,0 +1,1783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 123.24202
+</description>
+<TimeStamp>
+<when>2008-06-30T19:03:36Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08293735980988,37.42084980010986,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 127.31529
+</description>
+<TimeStamp>
+<when>2008-06-30T19:04:39Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08347380161285,37.42117702960968,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 192.0
+distance from last network location  = 206.30075
+</description>
+<TimeStamp>
+<when>2008-06-30T19:06:51Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08334505558014,37.42189049720764,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 48.0
+distance from last network location  = 247.75117
+</description>
+<TimeStamp>
+<when>2008-06-30T19:08:00Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08357572555542,37.422308921813965,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 2048.0
+distance from last network location  = 196.7837
+</description>
+<TimeStamp>
+<when>2008-06-30T19:12:32Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08343625068665,37.421820759773254,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 384.0
+distance from last network location  = 259.92957
+</description>
+<TimeStamp>
+<when>2008-06-30T19:12:41Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08498656749725,37.422292828559875,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 96.0
+distance from last network location  = 230.9511
+</description>
+<TimeStamp>
+<when>2008-06-30T19:13:15Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08436965942383,37.4221533536911,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 32.0
+distance from last network location  = 215.1016
+</description>
+<TimeStamp>
+<when>2008-06-30T19:15:16Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08376884460449,37.422029972076416,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 48.0
+distance from last network location  = 160.17526
+</description>
+<TimeStamp>
+<when>2008-06-30T19:18:07Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08361864089966,37.42151498794556,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 130.46997
+</description>
+<TimeStamp>
+<when>2008-06-30T19:18:17Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08329141139984,37.4211448431015,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 127.02266
+</description>
+<TimeStamp>
+<when>2008-06-30T19:18:35Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08284616470337,37.420817613601685,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 166.21877
+</description>
+<TimeStamp>
+<when>2008-06-30T19:18:41Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08224534988403,37.42070496082306,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 3.0
+distance from last network location  = 237.59145
+</description>
+<TimeStamp>
+<when>2008-06-30T19:18:47Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08137094974518,37.42065668106079,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 320.61398
+</description>
+<TimeStamp>
+<when>2008-06-30T19:18:53Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08039462566376,37.42059767246246,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 401.3969
+</description>
+<TimeStamp>
+<when>2008-06-30T19:18:59Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07946121692657,37.420538663864136,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 3.0
+distance from last network location  = 471.54102
+</description>
+<TimeStamp>
+<when>2008-06-30T19:19:05Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0786565542221,37.42047965526581,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 106.972565
+</description>
+<TimeStamp>
+<when>2008-06-30T19:19:25Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07809329032898,37.420297265052795,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 109.58351
+</description>
+<TimeStamp>
+<when>2008-06-30T19:19:31Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07803964614868,37.419798374176025,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 149.93684
+</description>
+<TimeStamp>
+<when>2008-06-30T19:19:37Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07802355289459,37.419079542160034,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 218.3893
+</description>
+<TimeStamp>
+<when>2008-06-30T19:19:43Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07806646823883,37.418285608291626,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 293.83905
+</description>
+<TimeStamp>
+<when>2008-06-30T19:19:49Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07809865474701,37.417529225349426,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 80.508934
+</description>
+<TimeStamp>
+<when>2008-06-30T19:19:55Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07813084125519,37.416821122169495,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 28.849405
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:01Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07816302776337,37.41613447666168,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 94.50113
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:07Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07819521427155,37.415335178375244,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 186.5819
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:13Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07816302776337,37.41449296474457,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 202.49821
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:19Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07814693450928,37.41364002227783,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 110.87412
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:25Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07813620567322,37.41276025772095,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 52.430313
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:31Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07813620567322,37.41187512874603,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 96.20907
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:37Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07815229892731,37.41116166114807,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 149.48402
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:43Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07815766334534,37.41062521934509,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 224.52335
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:49Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07815766334534,37.40991711616516,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 230.15654
+</description>
+<TimeStamp>
+<when>2008-06-30T19:20:55Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07820057868958,37.40923047065735,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 249.70645
+</description>
+<TimeStamp>
+<when>2008-06-30T19:21:11Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07818984985352,37.40866184234619,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 307.32675
+</description>
+<TimeStamp>
+<when>2008-06-30T19:21:19Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0781683921814,37.4077445268631,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 16.0
+distance from last network location  = 356.9794
+</description>
+<TimeStamp>
+<when>2008-06-30T19:21:27Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0781683921814,37.40712225437164,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 398.89645
+</description>
+<TimeStamp>
+<when>2008-06-30T19:21:58Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07818984985352,37.40663409233093,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 454.26907
+</description>
+<TimeStamp>
+<when>2008-06-30T19:22:07Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07812011241913,37.406076192855835,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 565.237
+</description>
+<TimeStamp>
+<when>2008-06-30T19:22:14Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07814693450928,37.40493893623352,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 16.0
+distance from last network location  = 696.6797
+</description>
+<TimeStamp>
+<when>2008-06-30T19:22:23Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07813620567322,37.40366756916046,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 806.08496
+</description>
+<TimeStamp>
+<when>2008-06-30T19:22:30Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07824349403381,37.402605414390564,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 876.3342
+</description>
+<TimeStamp>
+<when>2008-06-30T19:22:50Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07868337631226,37.401865124702454,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 936.5711
+</description>
+<TimeStamp>
+<when>2008-06-30T19:22:51Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07935392856598,37.40122139453888,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 982.4389
+</description>
+<TimeStamp>
+<when>2008-06-30T19:22:59Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08008885383606,37.40074932575226,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 1066.3651
+</description>
+<TimeStamp>
+<when>2008-06-30T19:23:14Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08078622817993,37.39997684955597,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 1179.7067
+</description>
+<TimeStamp>
+<when>2008-06-30T19:23:21Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08125829696655,37.39896297454834,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 1320.214
+</description>
+<TimeStamp>
+<when>2008-06-30T19:23:31Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.081698179245,37.3977130651474,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 1464.0231
+</description>
+<TimeStamp>
+<when>2008-06-30T19:23:40Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08251893520355,37.39646852016449,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 1565.4794
+</description>
+<TimeStamp>
+<when>2008-06-30T19:23:58Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08335041999817,37.39563167095184,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 1659.4406
+</description>
+<TimeStamp>
+<when>2008-06-30T19:24:02Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08389222621918,37.394843101501465,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 96.0
+distance from last network location  = 1960.8988
+</description>
+<TimeStamp>
+<when>2008-06-30T19:24:25Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08559811115265,37.392343282699585,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 32.0
+distance from last network location  = 2118.4077
+</description>
+<TimeStamp>
+<when>2008-06-30T19:24:32Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08631157875061,37.39101827144623,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 24.0
+distance from last network location  = 2234.3953
+</description>
+<TimeStamp>
+<when>2008-06-30T19:24:39Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08706259727478,37.390090227127075,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 16.0
+distance from last network location  = 2398.873
+</description>
+<TimeStamp>
+<when>2008-06-30T19:24:48Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0878940820694,37.38873302936554,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 2470.2788
+</description>
+<TimeStamp>
+<when>2008-06-30T19:24:56Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08822131156921,37.38813757896423,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 270.6242
+</description>
+<TimeStamp>
+<when>2008-06-30T19:25:35Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08785653114319,37.387622594833374,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 291.67615
+</description>
+<TimeStamp>
+<when>2008-06-30T19:25:41Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0870304107666,37.38722562789917,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 785.60504
+</description>
+<TimeStamp>
+<when>2008-06-30T19:25:47Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08613991737366,37.38679111003876,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 876.0979
+</description>
+<TimeStamp>
+<when>2008-06-30T19:25:53Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08527088165283,37.386356592178345,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 948.4086
+</description>
+<TimeStamp>
+<when>2008-06-30T19:25:59Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08457350730896,37.38601326942444,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 631.8487
+</description>
+<TimeStamp>
+<when>2008-06-30T19:26:29Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08397269248962,37.38572895526886,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 554.36774
+</description>
+<TimeStamp>
+<when>2008-06-30T19:26:35Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08322703838348,37.385358810424805,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 466.20367
+</description>
+<TimeStamp>
+<when>2008-06-30T19:26:41Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08237946033478,37.38493502140045,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 376.3905
+</description>
+<TimeStamp>
+<when>2008-06-30T19:26:46Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08151042461395,37.38450586795807,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 287.27783
+</description>
+<TimeStamp>
+<when>2008-06-30T19:26:52Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08065748214722,37.38406598567963,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 197.163
+</description>
+<TimeStamp>
+<when>2008-06-30T19:26:58Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07978308200836,37.383620738983154,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 113.510445
+</description>
+<TimeStamp>
+<when>2008-06-30T19:27:05Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07893013954163,37.38320231437683,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 50.227383
+</description>
+<TimeStamp>
+<when>2008-06-30T19:27:10Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07805037498474,37.38276779651642,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 100.41974
+</description>
+<TimeStamp>
+<when>2008-06-30T19:27:16Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0771062374115,37.38230109214783,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 247.18529
+</description>
+<TimeStamp>
+<when>2008-06-30T19:27:28Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07561492919922,37.381582260131836,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 24.0
+distance from last network location  = 886.3496
+</description>
+<TimeStamp>
+<when>2008-06-30T19:28:04Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06931710243225,37.37872302532196,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 1034.3098
+</description>
+<TimeStamp>
+<when>2008-06-30T19:28:19Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06782579421997,37.378122210502625,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 1144.998
+</description>
+<TimeStamp>
+<when>2008-06-30T19:28:20Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0667314529419,37.377639412879944,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 1195.8141
+</description>
+<TimeStamp>
+<when>2008-06-30T19:28:27Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06647396087646,37.3770546913147,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 1091.5239
+</description>
+<TimeStamp>
+<when>2008-06-30T19:28:44Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06758439540863,37.3773980140686,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 1023.95026
+</description>
+<TimeStamp>
+<when>2008-06-30T19:28:45Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06771314144135,37.37852454185486,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 957.61725
+</description>
+<TimeStamp>
+<when>2008-06-30T19:28:53Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06780970096588,37.38006412982941,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 913.811
+</description>
+<TimeStamp>
+<when>2008-06-30T19:29:02Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06794917583466,37.38173246383667,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 908.08215
+</description>
+<TimeStamp>
+<when>2008-06-30T19:29:09Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06817984580994,37.38392651081085,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 954.9875
+</description>
+<TimeStamp>
+<when>2008-06-30T19:29:20Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06839442253113,37.385852336883545,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 1011.58203
+</description>
+<TimeStamp>
+<when>2008-06-30T19:29:21Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06854462623596,37.38716125488281,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 1133.0269
+</description>
+<TimeStamp>
+<when>2008-06-30T19:29:28Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06868410110474,37.389129996299744,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 1299.3492
+</description>
+<TimeStamp>
+<when>2008-06-30T19:29:35Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06846415996552,37.391071915626526,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 4.0
+distance from last network location  = 1475.554
+</description>
+<TimeStamp>
+<when>2008-06-30T19:29:44Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06827640533447,37.39299774169922,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 1652.82
+</description>
+<TimeStamp>
+<when>2008-06-30T19:29:50Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06834077835083,37.39496648311615,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 1833.0344
+</description>
+<TimeStamp>
+<when>2008-06-30T19:30:03Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06892549991608,37.397090792655945,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 2004.7715
+</description>
+<TimeStamp>
+<when>2008-06-30T19:30:12Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06944048404694,37.39898443222046,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 2158.5234
+</description>
+<TimeStamp>
+<when>2008-06-30T19:30:14Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06971406936646,37.400561571121216,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 2304.342
+</description>
+<TimeStamp>
+<when>2008-06-30T19:30:27Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06961214542389,37.40192949771881,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 2398.8062
+</description>
+<TimeStamp>
+<when>2008-06-30T19:30:28Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06941902637482,37.40277707576752,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 2503.437
+</description>
+<TimeStamp>
+<when>2008-06-30T19:30:42Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06891477108002,37.40363538265228,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 2605.4648
+</description>
+<TimeStamp>
+<when>2008-06-30T19:30:50Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06808865070343,37.40437567234039,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 2481.863
+</description>
+<TimeStamp>
+<when>2008-06-30T19:31:12Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06894159317017,37.40343689918518,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 2425.6787
+</description>
+<TimeStamp>
+<when>2008-06-30T19:31:20Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06865191459656,37.402814626693726,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 2386.7144
+</description>
+<TimeStamp>
+<when>2008-06-30T19:31:27Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06837296485901,37.402353286743164,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 24.0
+distance from last network location  = 142.52745
+</description>
+<TimeStamp>
+<when>2008-07-01T10:34:40Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06799745559692,37.40224599838257,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 174.84207
+</description>
+<TimeStamp>
+<when>2008-07-01T10:39:56Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06826567649841,37.40265905857086,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 107.551926
+</description>
+<TimeStamp>
+<when>2008-07-01T10:40:04Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06748247146606,37.402589321136475,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 48.31621
+</description>
+<TimeStamp>
+<when>2008-07-01T10:40:10Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06676363945007,37.40248203277588,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 36.324577
+</description>
+<TimeStamp>
+<when>2008-07-01T10:40:16Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0660662651062,37.402364015579224,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 57.831455
+</description>
+<TimeStamp>
+<when>2008-07-01T10:41:35Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06689774990082,37.40249276161194,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 140.36237
+</description>
+<TimeStamp>
+<when>2008-07-01T10:41:44Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06787407398224,37.402610778808594,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 228.1272
+</description>
+<TimeStamp>
+<when>2008-07-01T10:41:58Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06882357597351,37.402841448783875,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 260.35272
+</description>
+<TimeStamp>
+<when>2008-07-01T10:42:07Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0684963464737,37.403801679611206,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 271.41534
+</description>
+<TimeStamp>
+<when>2008-07-01T10:42:09Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0676702260971,37.40438640117645,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 412.04675
+</description>
+<TimeStamp>
+<when>2008-07-01T10:42:30Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06717133522034,37.405824065208435,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 513.1322
+</description>
+<TimeStamp>
+<when>2008-07-01T10:42:52Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06674218177795,37.40677893161774,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 626.00507
+</description>
+<TimeStamp>
+<when>2008-07-01T10:43:03Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0662647485733,37.407803535461426,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 717.0662
+</description>
+<TimeStamp>
+<when>2008-07-01T10:43:07Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06580877304077,37.408608198165894,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 703.7479
+</description>
+<TimeStamp>
+<when>2008-07-01T10:43:16Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0650577545166,37.40841507911682,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 599.5568
+</description>
+<TimeStamp>
+<when>2008-07-01T10:43:28Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06613063812256,37.407562136650085,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 682.9392
+</description>
+<TimeStamp>
+<when>2008-07-01T10:43:34Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06824958324432,37.40813612937927,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 816.2025
+</description>
+<TimeStamp>
+<when>2008-07-01T10:43:38Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.06997156143188,37.40894079208374,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 971.3596
+</description>
+<TimeStamp>
+<when>2008-07-01T10:43:46Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07160770893097,37.40986347198486,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 1118.9377
+</description>
+<TimeStamp>
+<when>2008-07-01T10:43:54Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07342624664307,37.410539388656616,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 24.0
+distance from last network location  = 1432.5233
+</description>
+<TimeStamp>
+<when>2008-07-01T10:44:10Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07655370235443,37.41220772266388,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 12.0
+distance from last network location  = 1570.8525
+</description>
+<TimeStamp>
+<when>2008-07-01T10:44:18Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07716524600983,37.41340935230255,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 1618.0286
+</description>
+<TimeStamp>
+<when>2008-07-01T10:44:25Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07779824733734,37.413554191589355,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 1694.1593
+</description>
+<TimeStamp>
+<when>2008-07-01T10:44:40Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07807719707489,37.41425156593323,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 1762.4547
+</description>
+<TimeStamp>
+<when>2008-07-01T10:44:42Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07802355289459,37.415050864219666,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 1820.7734
+</description>
+<TimeStamp>
+<when>2008-07-01T10:45:06Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.07799136638641,37.41571068763733,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 192.0
+distance from last network location  = 2209.2178
+</description>
+<TimeStamp>
+<when>2008-07-01T10:45:38Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08238482475281,37.41744339466095,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 16.0
+distance from last network location  = 2324.8672
+</description>
+<TimeStamp>
+<when>2008-07-01T10:45:51Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08509922027588,37.41686403751373,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 2421.0398
+</description>
+<TimeStamp>
+<when>2008-07-01T10:46:13Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08528161048889,37.41793692111969,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 2492.255
+</description>
+<TimeStamp>
+<when>2008-07-01T10:46:15Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08531379699707,37.418789863586426,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 6.0
+distance from last network location  = 2472.483
+</description>
+<TimeStamp>
+<when>2008-07-01T10:46:29Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08476662635803,37.41894006729126,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 8.0
+distance from last network location  = 2493.36
+</description>
+<TimeStamp>
+<when>2008-07-01T10:46:43Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.08449304103851,37.41937458515167,0
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<description>
+accuracy = 1536.0
+distance from last network location  = 2484.5317
+</description>
+<TimeStamp>
+<when>2008-07-01T10:51:50Z</when>
+</TimeStamp>
+<Point>
+<coordinates>
+-122.0839673280716,37.41961598396301,0
+</coordinates>
+</Point>
+</Placemark>
+</Document>
+</kml>

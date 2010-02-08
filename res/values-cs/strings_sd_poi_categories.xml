@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the names of the POI-Categories.
+ #
+ ### README-END ###
+-->
+<resources>	
+	<string name="sd_poi_category_maingroup">Nadřazená skupina</string>
+
+	<!-- Main-Groups -->
+	<string name="sd_poi_category_locality">Příjemnosti</string>
+	<string name="sd_poi_category_public_transport">Veřejný provoz</string>
+	<string name="sd_poi_category_shop">Nakupování</string>
+	<string name="sd_poi_category_tourism">Turismus</string>
+	
+	
+	<!-- Sub-Groups -->
+	<string name="sd_poi_category_bus_stop">Zastávka autobusu</string>
+	<string name="sd_poi_category_bus_station">Stanice autobusu</string>
+	<string name="sd_poi_category_railway_station">Nádraží</string>
+	<string name="sd_poi_category_tram_stop">Tramvaj</string>
+	<string name="sd_poi_category_subway_entrance">Vstup do metra</string>
+	
+	<string name="sd_poi_category_atm">Bankomat</string>
+	<string name="sd_poi_category_bank">Banka</string>
+	<string name="sd_poi_category_bureau_de_change">Směnárna</string>
+	<string name="sd_poi_category_biergarten">Pivnice</string>
+	<string name="sd_poi_category_cafe">Kavárna</string>
+	<string name="sd_poi_category_cinema">Kino</string>
+	<string name="sd_poi_category_college">Kolej</string>
+	<string name="sd_poi_category_courthouse">Soud</string>
+	<string name="sd_poi_category_fast_food">Fast Food</string>
+	<string name="sd_poi_category_fuel">Benzinová pumpa</string>
+	<string name="sd_poi_category_hospital">Nemocnice</string>
+	<string name="sd_poi_category_library">Knihovna</string>
+	<string name="sd_poi_category_nightclub">Noční klub</string>
+	<string name="sd_poi_category_parking">Parkoviště</string>
+	<string name="sd_poi_category_pharmacy">Lékárna</string>
+	<string name="sd_poi_category_place_of_worship">Památník</string>
+	<string name="sd_poi_category_police">Policie</string>
+	<string name="sd_poi_category_post_box">Poštovní schránka</string>
+	<string name="sd_poi_category_post_office">Pošta</string>
+	<string name="sd_poi_category_pub">Bar / Pub</string>
+	<string name="sd_poi_category_public_building">Veřejná budova</string>
+	<string name="sd_poi_category_restaurant">Restaurace</string>
+	<string name="sd_poi_category_school">Škola</string>
+	<string name="sd_poi_category_taxi">Taxi</string>
+	<string name="sd_poi_category_telephone">Telefón</string>
+	<string name="sd_poi_category_theatre">Divadlo</string>
+	<string name="sd_poi_category_toilets">Toalety</string>
+	<string name="sd_poi_category_townhall">Radnice</string>
+	<string name="sd_poi_category_university">Univerzita</string>
+	
+	<string name="sd_poi_category_supermarket">Supermarkt</string>
+	<string name="sd_poi_category_convenience">Potraviny</string>
+	<string name="sd_poi_category_bakery">Pekárna</string>
+	<string name="sd_poi_category_butcher">Řezník</string>
+	<string name="sd_poi_category_kiosk">Kiosk</string>
+
+	<string name="sd_poi_category_information">Informace</string>
+	<string name="sd_poi_category_hotel">Hotel</string>
+	<string name="sd_poi_category_motel">Motel</string>
+	<string name="sd_poi_category_guest_house">Penzión</string>
+	<string name="sd_poi_category_hostel">Noclehárna</string>
+</resources>

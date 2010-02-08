@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/th_settings_menu_tabhost"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:paddingTop="2px">
+	<TabWidget
+		android:id="@android:id/tabs"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"/>
+	<FrameLayout
+		android:id="@android:id/tabcontent"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:paddingTop="65px">
+		<!-- Page 1 -->
+		<TableLayout 
+			android:id="@+id/grid_sd_mainchoose_page_online"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:stretchColumns="0,1">
+			<TableRow android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<ImageButton
+					android:id="@+id/ibtn_sd_mainchoose_address"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_span="2"
+					android:src="@drawable/sd_mainchoose_address">
+					<requestFocus />
+				</ImageButton>
+			</TableRow>
+			<TableRow android:layout_width="wrap_content"
+				android:layout_height="wrap_content"> 
+				<ImageButton
+					android:id="@+id/ibtn_sd_mainchoose_contacts"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/sd_mainchoose_contacts" />
+				<ImageButton
+					android:id="@+id/ibtn_sd_mainchoose_poi"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/sd_mainchoose_poi" />
+			</TableRow>
+			<TableRow android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<ImageButton
+					android:id="@+id/ibtn_sd_mainchoose_favorites"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/sd_mainchoose_favorites" />
+				<ImageButton
+					android:id="@+id/ibtn_sd_mainchoose_page_online_close"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/sd_mainchoose_close" />
+			</TableRow>
+		</TableLayout>
+		<!-- Page 2 -->
+		<TableLayout 
+			android:id="@+id/grid_sd_mainchoose_page_offline"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:stretchColumns="0,1">
+			<TableRow android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<ImageButton
+					android:id="@+id/ibtn_sd_mainchoose_load_saved"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_span="2"
+					android:src="@drawable/sd_mainchoose_load_saved" />
+			</TableRow>
+			<TableRow android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<ImageButton
+					android:id="@+id/ibtn_sd_mainchoose_load_trace"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_span="2"
+					android:src="@drawable/sd_mainchoose_load_trace" />
+			</TableRow>
+			<TableRow android:layout_width="wrap_content"
+				android:layout_height="wrap_content"> 
+				<ImageButton
+					android:id="@+id/ibtn_sd_mainchoose_page_offline_close"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_span="2"
+					android:src="@drawable/sd_mainchoose_close" />
+			</TableRow>
+		</TableLayout>
+	</FrameLayout>
+</TabHost>

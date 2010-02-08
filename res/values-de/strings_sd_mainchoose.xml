@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_sd_mainchoose_favorite">Aus Favoriten...</string>
+	<string name="tv_sd_mainchoose_contacts">Kontakt wählen...</string>
+	<string name="tv_sd_mainchoose_poi">Point of Interest...</string>
+	<string name="tv_sd_mainchoose_address">Address Suche...</string>
+	<string name="tv_sd_mainchoose_load_saved">Gespeicherte Routen...</string>
+	<string name="tv_sd_mainchoose_close">Schließen...</string>
+	
+	
+	<string name="menu_sd_mainchoose_lat_lon">Koordinaten</string>
+	<string name="dlg_input_direct_lat_lon_title">Dezimal Koordinaten eingeben...</string>
+	<string name="dlg_input_direct_lat_lon_latitude">Breitengrad:</string>
+	<string name="dlg_input_direct_lat_lon_longitude">Längengrad:</string>
+	<string name="dlg_input_direct_lat_lon_example"><b>Beispiel</b> (<i>New York</i>):\nB: \'40.755962\'\nL: \'-73.986703\'</string>
+	<string name="dlg_input_direct_lat_lon_malformed">Ungültiger Breitengrad oder Längengrad.</string>
+</resources>

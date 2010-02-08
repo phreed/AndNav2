@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the screen, where the user select between CenterMode, RotateMode and More settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_navigation_focused">Navigation Settings...</string>
+	<string name="tv_settings_navigation_quickinfo_caption">Navigation Settings...</string>
+	<string name="tv_settings_navigation_centermode">Change CenterMode</string>
+	<string name="tv_settings_navigation_rotatemode">Change RotateMode</string>
+	<string name="tv_settings_navigation_more">More</string>
+</resources>

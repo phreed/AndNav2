@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used on multiple SearchDestination-Screens.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="sd_search_address_structured">Strukturované hledání</string>
+	<string name="sd_search_address_freeform">Hledání pomocí volného textu</string>
+	
+	<string name="btn_sd_skip_caption">Bez</string>
+	<string name="location_could_not_be_resolved">Pozice nebyla rozpoznána.</string>
+</resources>

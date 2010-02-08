@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Fetch Route Dialog -->
+	<string name="pdg_fetchroute_title">Fetching Route...</string>
+	<string name="pdg_fetchroute_messagestart">Destination:</string>
+	<!-- REFetch Route Dialog -->
+	<string name="pdg_refetchroute_title">Re-Fetching Route...</string>
+	<!-- REStore Route Dialog (after Screenorientation changed) -->
+	<string name="pdg_restoreroute_title">Restoring Route...</string>
+	<!-- Shown while loading a saved route -->
+	<string name="pdg_fetchroute_loading_saved_route">Loading saved Route...</string>
+	<!-- Shown while loading a shared route -->
+	<string name="pdg_fetchroute_loading_routebyhandle">Loading Route from RouteHandleID = %d</string>
+	
+	<string name="ddmap_info_waypoint_passed">Waypoint passed.</string>
+	<string name="ddmap_info_gps_resolving">Resolving Gps...</string>
+	<string name="ddmap_info_no_route">No Route found ...</string>
+	<string name="ddmap_info_route_fetch_no_dataconnection_title">No Data Connection...</string>
+	<string name="ddmap_info_route_fetch_no_dataconnection_message">Data Connection seems to be lost...\n <b>Retry?</b></string>
+	<string name="ddmap_info_route_fetch_tries_exceeded_ask_remove_streetnumber_title">Couldn\'t find route</string>
+	<string name="ddmap_info_route_fetch_tries_exceeded_ask_remove_streetnumber_message">After <b>3</b> trials...\n<b>Retry</b> searching without the <b>streetnumber</b>?</string>
+	<string name="ddmap_info_route_fetch_tries_exceeded_title">Couldn\'t find route</string>
+	<string name="ddmap_info_route_fetch_tries_exceeded_message">After <b>3</b> trials...\n<b>Retry</b>?</string>
+	<string name="ddmap_info_route_fetch_useold">Use last working</string>
+	<string name="ddmap_info_gps_fetch_tries_exceeded_title"><b>GPS</b> seems unavailable...</string>
+	<string name="ddmap_info_gps_fetch_tries_exceeded_message"><b>Retry</b> getting your current GPS-Location?\n\n<i>(The GPS icon in the statusbar needs to <b>stop</b> blinking!)</i></string>
+	
+	
+	<string name="toast_autozoom_enabled">Autozoom is now <b>enabled</b>. Toggle it with the \'<b>a</b>\'-Key.</string>
+	<string name="toast_autozoom_disabled">Autozoom is now <b>disabled</b>. Toggle it with the \'<b>a</b>\'-Key.</string>
+	
+	<string name="toast_snaptoroute_enabled">SnapToRoute is now <b>enabled</b>. Toggle it with the \'<b>s</b>\'-Key.</string>
+	<string name="toast_snaptoroute_disabled">SnapToRoute is now <b>disabled</b>. Toggle it with the \'<b>s</b>\'-Key.</string>
+	
+	<!-- Preloader -->
+	<string name="toast_preloader_noroute">No Route to load MapTiles for.</string>
+	<string name="ddmap_info_preloader_autozoom_disabled">Autozooming is now disabled.</string>
+	
+	<string name="dlg_preloader_title">Preloader</string>
+	<string name="dlg_preloader_message">Preload %d Maptiles for current Route?\n\nExpected size: %s</string>
+	
+	<string name="pdg_preloader_title">Preloading MapTiles...</string>
+	<string name="pdg_preloader_message">Progress: %d of %d\n\n<i>Press BACK to hide.</i></string>
+	
+	<string name="toast_preloader_cache_increased_message">Cachesize was increased to: %s</string>
+		
+	<!-- Pseudo Context Menu-String -->
+	<!-- TODO? Sollte abgelöst werden vom richtigen ContextMenu -->
+	<string name="ddmap_contextmenu_add_as_waypoint">Add as waypoint</string>
+	<string name="ddmap_contextmenu_clear_waypoints">Clear waypoints</string>
+	<string name="ddmap_contextmenu_add_as_avoidarea">Add as Avoid-area</string>
+	<string name="ddmap_contextmenu_clear_avoidareas">Clear Avoid-areas</string>
+	<string name="ddmap_contextmenu_close">Close</string>
+	<string name="ddmap_contextmenu_exit">Exit</string>
+	
+	<string name="ddmap_contextmenu_clear_avoidareas_radius_title">Select Avoid-Radius...</string>
+	
+	<string name="ddmap_info_target_reached">Target reached</string>
+</resources>

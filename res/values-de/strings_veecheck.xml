@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<resources>
+	<string name="veecheck_notify_ticker">AndNav2 Update verfügbar</string> 
+	<string name="veecheck_notify_title">AndNav2 Update verfügbar</string> 
+	<string name="veecheck_notify_message">Neueste Version herunterladen...</string> 
+	<string name="veecheck_pref_category">Veecheck Sample Settings</string> 
+	<string name="veecheck_pref_enabled_title">Aktiviert</string> 
+	<string name="veecheck_pref_enabled_summary">Ob Prüfung aktiviert ist oder nicht.</string> 
+	<string name="veecheck_pref_check_uri_title">URI prüfen</string> 
+	<string name="veecheck_pref_check_uri_summary">Die URI die für updates genutzt wird.</string> 
+	<string name="veecheck_confirm_title">AndNav2 Update bestötigen</string> 
+	
+	<string name="veecheck_version_type">Typ:</string>
+	<string name="veecheck_version_description">Beschreibung:</string>
+	<string name="veecheck_version_importance">Wichtigkeit:</string> 
+	
+	<string name="veecheck_confirm_text"><b>Möchten sie AndNav2 auf die aktuellste Version bringen?</b>\n\n<b>Wichtigkeit:</b> <i>%s</i>\n<b>Typ:</b> <i>%s</i>\n%s\n\nMit freundlichen Grüßen,\nIhr AndNav-Team</string>
+	<string name="veecheck_confirm_text_default"><b>Möchten sie AndNav2 auf die aktuellste Version bringen?</b>\n\nNeue Versionen haben mehr Features und weniger Fehler!\n\nMit freundlichen Grüßen,\nIhr AndNav-Team</string> 
+	<string name="veecheck_confirm_stop"><b>Dieses</b> Update ignorieren!</string> 
+</resources>

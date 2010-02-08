@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >        	
+    <org.andnav2.ui.common.views.SingleWeatherInfoView
+    	android:id="@+id/weather_today"
+    	android:orientation="horizontal"
+       	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:gravity="center_horizontal"
+    	android:paddingTop="15px"
+    	android:paddingLeft="3px"
+    	android:paddingRight="3px" />
+    <TableLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:stretchColumns="0,1,2,3" >
+    		<TableRow
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+    			android:paddingTop="15px" >
+        		<org.andnav2.ui.common.views.SingleWeatherInfoView
+        			android:id="@+id/weather_1"
+        			android:layout_width="wrap_content" 
+		    		android:layout_height="wrap_content"
+        			android:gravity="center_horizontal"
+        			android:paddingLeft="3px"
+        			android:paddingRight="3px"
+        			android:orientation="vertical" />
+        		<org.andnav2.ui.common.views.SingleWeatherInfoView
+        			android:id="@+id/weather_2"
+        			android:layout_width="wrap_content" 
+		    		android:layout_height="wrap_content"
+        			android:gravity="center_horizontal"
+        			android:paddingLeft="3px"
+        			android:paddingRight="3px"
+        			android:orientation="vertical" />
+        	</TableRow>
+    		<TableRow
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+    			android:paddingTop="15px" >
+        		<org.andnav2.ui.common.views.SingleWeatherInfoView
+        			android:id="@+id/weather_3"
+        			android:layout_width="wrap_content" 
+		    		android:layout_height="wrap_content"
+        			android:gravity="center_horizontal"
+        			android:paddingLeft="3px"
+        			android:paddingRight="3px"
+        			android:orientation="vertical" />
+        		<org.andnav2.ui.common.views.SingleWeatherInfoView
+        			android:id="@+id/weather_4"
+        			android:layout_width="wrap_content" 
+		    		android:layout_height="wrap_content"
+        			android:gravity="center_horizontal"
+        			android:paddingLeft="3px"
+        			android:paddingRight="3px"
+        			android:orientation="vertical" />
+  			</TableRow>
+    </TableLayout>
+    <Button
+    	style="@style/default_textstyle"
+    	android:id="@+id/weather_ok"
+       	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content"
+    	android:gravity="center_horizontal"
+    	android:text="@string/ok" />
+</LinearLayout>

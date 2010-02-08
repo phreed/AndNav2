@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_routingflags_focused">Routing Settings...</string>
+		<string name="rad_settings_routingflags_car_caption">Car</string>
+		<string name="rad_settings_routingflags_bicycle_caption">Bike</string>
+		<string name="rad_settings_routingflags_pedestrian_caption">Walk</string>
+		<string name="rad_settings_routingflags_shortest_caption">Short</string>
+		<string name="rad_settings_routingflags_fastest_caption">Fast</string>
+		<string name="chk_settings_routingflags_realtime_caption">Realtime-Navigation</string>
+		<string name="chk_settings_routingflags_avoid_caption">Avoid: </string>
+		<string name="chk_settings_routingflags_avoidhighways_caption">Highways</string>
+		<string name="chk_settings_routingflags_avoidtolls_caption">Tolls</string>
+		<string name="chk_settings_routingflags_alwaysremember_caption">Always Remember</string>
+		<string name="chk_settings_routingflags_saveinitial_caption">Make Offline available</string>
+</resources>

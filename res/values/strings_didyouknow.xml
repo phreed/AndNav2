@@ -1,0 +1,9 @@
+<resources>
+	<array name="did_you_know">
+		<item>With a <b>LongPress</b> to the Map in Navigation-Mode you can bring up a dialog where you can add Waypoints and AvoidAreas.</item>
+		<item>With a <b>LongPress</b> to the Map in Standard-Map you can add the pressed location as a named favorite.</item>
+		<item>Opening the <b>Menu</b> on the Screen where you can choose between <i>Address/Contacts/POI-Search</i> 
+		      you\'ll find a menuitem where you can directly input the 
+		      <b>Latitude</b> and <b>Longitude</b> of the destination.</item>
+	</array>
+</resources>

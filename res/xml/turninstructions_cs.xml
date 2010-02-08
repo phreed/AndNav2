@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Language Description="Czech" Code="cs">
+	<MobilityBasedMovementInstruction>
+		<Vehicle>Jeďte</Vehicle>
+		<Pedestrian>Jděte</Pedestrian>
+	</MobilityBasedMovementInstruction>
+	<Time>
+		<Appoximation>přibližně</Appoximation>
+		<Day>Den(dny)</Day>
+		<Hour>Hodin(y)</Hour>
+		<Minute>Minut(y)</Minute>
+		<Second>Sekund(y)</Second>
+	</Time>
+	<Direction>
+		<Curve>Odboč</Curve>
+		<SharpLeft>ostře do leva</SharpLeft>
+		<Left>v levo</Left>
+		<HalfLeft>mírně v levo</HalfLeft>
+		<StraightForward>rovně</StraightForward>
+		<HalfRight>mírne v pravo</HalfRight>
+		<Right>v pravo</Right>
+		<SharpRight>ostře do prava</SharpRight>
+		<UTurn>Otoč se</UTurn>
+	</Direction>
+	<ActionNumber>Číslo bodu</ActionNumber>
+	<FillWord>
+		<StartTag>Start</StartTag>
+		<EndTag>Jste v cíli!</EndTag>
+		<On>na</On>
+		<For>pro</For>
+		<Before>před</Before>
+		<After>po</After>
+	</FillWord>
+	<ThenCommands>
+		<!-- Example: Dann [@MobilityBasedMovementInstruction] [sharp left]. -->
+		<ThenCommandWithoutDistance>Potom @MobilityBasedMovementInstruction %s</ThenCommandWithoutDistance>
+		<!-- Example: Dann in [50 metern] [@MobilityBasedMovementInstruction] [sharp left]. -->
+		<ThenCommandWithDistance>Potom za %d @MobilityBasedMovementInstruction %s</ThenCommandWithDistance>
+	</ThenCommands>
+	<Units>
+		<Meters>Metry</Meters>
+		<Kilometers>Kilometry</Kilometers>
+		<Yards>Yardy</Yards>
+		<Miles>Míle</Miles>
+	</Units>
+</Language>

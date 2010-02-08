@@ -1,0 +1,18 @@
+<resources>
+	<string name="choose_search_radius">Suchradius wählen...</string>
+	<string name="poi_search_radius_global">Global</string>
+	
+	<string name="menu_sd_poi_wipe">POI-Gedächtnis löschen...</string>
+	
+	<string name="toast_sd_poi_empty">Bitte POI eingeben...</string>
+	
+	<string name="tv_sd_poi_entry_quickinfo_caption">POI eingeben...</string>	
+	<string name="tv_sd_poi_searchlist_quickinfo_caption">POI wählen...</string>
+	<string name="toast_sd_poi_getting_gps_and_poi_search">Bestimme GPS-Positon und suche POIs...</string>
+	<string name="toast_sd_poi_could_not_find">Konnte \'%s\' nicht innerhalb von %s finden.</string>
+	
+	<string name="tv_sd_poi_categories_quickinfo_caption">Kategorie auswählen...</string>
+	
+	<string name="poi_search_categorized">Kategorisierte Suche</string>
+	<string name="poi_search_freeform">Freitext Suche</string>
+</resources>

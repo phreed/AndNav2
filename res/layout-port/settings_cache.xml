@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="0">
+		<TableRow 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TextView
+				android:id="@+id/tv_settings_cache_currentsize"
+				style="@style/default_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="@string/tv_settings_cache_current_size" />
+			<ImageButton android:id="@+id/ibtn_settings_cache_close"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:src="@drawable/close" />
+		</TableRow>
+	</TableLayout>
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="10px" />
+	<LinearLayout 
+		android:layout_gravity="center_horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<ToggleButton android:id="@+id/ibtn_settings_cache_use_sdcard"
+			android:layout_gravity="center"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/sdcard"
+			android:textOff="Not"
+			android:textOn="Use"/>
+		<ImageButton android:id="@+id/ibtn_settings_cache_sdcard"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/sdcard" />
+		<TextView
+			android:layout_width="30px"
+			android:layout_height="wrap_content" />
+		<ImageButton android:id="@+id/ibtn_settings_cache_device"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/device" />
+	</LinearLayout>
+	<TextView style="@style/default_textstyle"
+		android:id="@+id/tv_settings_cache_max_slider_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/tv_settings_cache_max_size_external" />
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="10px" />
+	<SeekBar
+		android:id="@+id/hsl_settings_cache_max_slider"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:max="29" />
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="20px" />
+	<Button android:id="@+id/btn_settings_cache_clear"
+		style="@style/default_textstyle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/btn_settings_cache_clear_cache_caption" />
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="10px" />
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:text="@string/tv_settings_cache_fallbackinfo_caption" />
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="20px" />
+	<ImageButton android:id="@+id/ibtn_settings_cache_info"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/questionmark_small"
+		android:layout_gravity="bottom|right"/>
+</LinearLayout>

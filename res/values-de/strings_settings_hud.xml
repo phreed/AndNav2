@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the HUD-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_hud_focused">HUD Einstellungen...</string>
+	<string name="tv_settings_hud_quickinfo_default">HUD ändern...</string>
+	
+	<!-- The different HUD-Descriptions -->
+	<!-- The basic HUD -->
+	<string name="hud_basic_name">Standard HUD</string>
+	<string name="hud_basic_description">Dies ist das Standard HUD</string>
+		<!-- The Variations of the basic HUD -->
+		<string name="hud_basic_variation_default">Dies ist das Standard Variation.</string>
+		<string name="hud_basic_variation_1">Größere Beschreibung am oberen Rand.</string>
+	
+	<!-- Mavoric HUD -->
+	<string name="hud_mavoric_name">Mavoric HUD</string>
+	<string name="hud_mavoric_description">Dies ist das Mavoric HUD</string>
+		<!-- The Variations of the Mavoric HUD -->
+		<string name="hud_mavoric_variation_default">Dies ist das Standard Variation.</string>
+		
+	<!-- Bigarrow HUD -->
+	<string name="hud_bigarrow_name">BigArrow HUD</string>
+	<string name="hud_bigarrow_description">Dies ist das BigArrow HUD</string>
+		<!-- The Variations of the Bigarrow HUD -->
+		<string name="hud_bigarrow_variation_default">Dies ist das Standard Variation.</string>
+		<string name="hud_bigarrow_variation_1">Dies ist das erste Variation.</string>
+</resources>

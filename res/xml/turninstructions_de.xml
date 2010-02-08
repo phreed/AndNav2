@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Language Description="German" Code="de">
+	<MobilityBasedMovementInstruction>
+		<Vehicle>Fahre</Vehicle>
+		<Pedestrian>Gehe</Pedestrian>
+	</MobilityBasedMovementInstruction>
+	<Time>
+		<Appoximation>ca.</Appoximation>
+		<Day>Tag(e)</Day>
+		<Hour>Stunde(n)</Hour>
+		<Minute>Minute(n)</Minute>
+		<Second>Sekunde(n)</Second>
+	</Time>
+	<Direction>
+		<Curve>Biege</Curve>
+		<SharpLeft>scharf links</SharpLeft>
+		<Left>links</Left>
+		<HalfLeft>halb links</HalfLeft>
+		<StraightForward>geradeaus</StraightForward>
+		<HalfRight>halb rechts</HalfRight>
+		<Right>rechts</Right>
+		<SharpRight>scharf rechts</SharpRight>
+		<UTurn>Wenden Sie</UTurn>
+	</Direction>
+	<ActionNumber>Anweisungsnr.</ActionNumber>
+	<FillWord>
+		<StartTag>Start</StartTag>
+		<EndTag>Ziel erreicht!</EndTag>
+		<On>auf</On>
+		<For>für</For>
+		<Before>vor</Before>
+		<After>nach</After>
+	</FillWord>
+	<ThenCommands>
+		<!-- Example: Dann [@MobilityBasedMovementInstruction] [sharp left]. -->
+		<ThenCommandWithoutDistance>Dann @MobilityBasedMovementInstruction %s</ThenCommandWithoutDistance>
+		<!-- Example: Dann in [50 metern] [@MobilityBasedMovementInstruction] [sharp left]. -->
+		<ThenCommandWithDistance>Dann in %d @MobilityBasedMovementInstruction %s</ThenCommandWithDistance>
+	</ThenCommands>
+	<Units>
+		<Meters>Metern</Meters>
+		<Kilometers>Kilometern</Kilometers>
+		<Yards>Yards</Yards>
+		<Miles>Meilen</Miles>
+	</Units>
+</Language>

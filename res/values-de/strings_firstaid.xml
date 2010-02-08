@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Menu-Quick-Info (TextView below Icons) -->
+	<string name="firstaid_step01_selfprotect">Schützen Sie sich selbst.</string>
+	<string name="firstaid_step02_call911">Informieren sie den Notruf, 112.</string>
+	<string name="firstaid_step03_recoveryposition">Bringen Sie Opfer in die stabile Seitenlage.</string>
+</resources>

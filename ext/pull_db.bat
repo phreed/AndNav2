@@ -1,0 +1,1 @@
+F:\Programming\Android\android-sdk_m5-rc15_windows\tools\adb pull /data/data/org.anddev.andnav.apk/databases/db_andnav C:\Users\plusminus\Desktop\android\andnav\db_andnav

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the DirectionsLanguage-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_directionslanguage_focused">Zvolte jazyk průvodce...</string>
+	<string name="tv_settings_directionslanguage_quickinfo_default">Jazyk průvodce...</string>
+	<!-- Simply added behind the CountryNames after one was selected. -->
+	<string name="tv_settings_directionslanguage_quickinfo_saved_appendix">... uloženo!</string>
+	<string name="tv_settings_directionslanguage_quickinfo_current_appendix"> (aktuální)</string>
+</resources>

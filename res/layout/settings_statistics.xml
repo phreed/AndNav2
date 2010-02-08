@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/statistics_background_full">
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView android:id="@+id/tv_settings_sethome_quickinfo"
+			style="@style/settings_quickinfo_textstyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<ImageButton
+			android:id="@+id/ibtn_settings_statistics_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/close" />
+	</LinearLayout>
+	<TableLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:orientation="vertical"
+		android:stretchColumns="0,2">
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<TextView
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="@string/tv_settings_statistics_session" />
+			<TextView
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+			<TextView 
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="@string/tv_settings_statistics_overall" />
+		</TableRow>
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<TextView
+				android:id="@+id/tv_settings_statistics_session_maxspeed"
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center" />
+			<TextView
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="@string/tv_settings_statistics_maxspeed" />
+			<TextView 
+				android:id="@+id/tv_settings_statistics_overall_maxspeed"
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center" />
+		</TableRow>
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<TextView
+				android:id="@+id/tv_settings_statistics_session_average"
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center" />
+			<TextView
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="@string/tv_settings_statistics_average" />
+			<TextView 
+				android:id="@+id/tv_settings_statistics_overall_average"
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center" />
+		</TableRow>
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<TextView
+				android:id="@+id/tv_settings_statistics_session_distance"
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center" />
+			<TextView
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="@string/tv_settings_statistics_distance" />
+			<TextView
+				android:id="@+id/tv_settings_statistics_overall_distance"
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center" />
+		</TableRow>
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<TextView
+				android:id="@+id/tv_settings_statistics_session_time"
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center" />
+			<TextView
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="@string/tv_settings_statistics_time" />
+			<TextView 
+				android:id="@+id/tv_settings_statistics_overall_time"
+				style="@style/settings_statistics_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center" />
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

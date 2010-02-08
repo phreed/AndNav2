@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Rotatemode-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_rotatemode_quickinfo_default">Vyberte mód rotace...</string>
+	<string name="tv_settings_rotatemode_quickinfo_northup">Sever nahoru...</string>
+	<string name="tv_settings_rotatemode_quickinfo_northup_saved">Sever nahoru... uloženo!</string>
+	<string name="tv_settings_rotatemode_quickinfo_drivingdirectionsup">Směr jízdy nahoru...</string>
+	<string name="tv_settings_rotatemode_quickinfo_drivingdirectionsup_saved">Směr jízdy nahoru... uloženo!</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Settings-Screens -->
+	<string name="settings_tab_caption_device">Geräte Einstellungen</string>
+	<string name="settings_tab_caption_nav">Navigations Einstellungen</string>
+	<string name="settings_tab_caption_user">Nutzer Einstellungen</string>
+	<string name="tv_settings_quickinfo_close_focused">Schließen...</string>
+	
+	<string name="tv_settings_quickinfo_page_device_default">Geräte Einstellungen</string>
+	<string name="tv_settings_quickinfo_page_nav_default">Navigations Einstellungen</string>
+	<string name="tv_settings_quickinfo_page_user_default">Nutzer Einstellungen</string>
+</resources>

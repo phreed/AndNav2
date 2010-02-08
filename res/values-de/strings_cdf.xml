@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This file contains the Strings used in the CDF (CommonDialog-Factory).
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="cdf_inputbox_title">Eingabe...</string>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used in multiple map-screens.
+ #
+ ### README-END ###
+-->
+<resources>
+	<!-- Message shown, when another application started andnav with invalid parameters. -->
+	<string name="nav_intent_parse_error_message">Navigations-Intent konnte nicht geparst werden. Bitte kontaktieren sie den Support des Programmes, weöches Sie auf AndNav geleitet hat.</string>
+	
+	<!-- Menu-Strings -->
+	<string name="maps_menu_quit">Beenden</string>
+	<string name="maps_menu_refetch_route">Route neu berechnen</string>
+	<string name="maps_menu_focus_coordinates">Koordinaten fokusieren...</string>
+	<string name="maps_menu_auto_refetch">Auto-Berechnung</string>
+	<string name="maps_menu_settings">Einstellungen</string>
+	<string name="maps_menu_weather">Wetter</string>
+	<string name="maps_menu_submenu_traffic">Stau-Info</string>
+	<string name="maps_menu_submenu_traffic_clear">Staus <b>löschen</b></string>
+	<string name="maps_menu_submenu_traffic_custom_feeds">Eigene Quellen..</string>
+	<string name="maps_menu_osb">Karte verbessern</string>
+	<string name="maps_menu_reverseroute">Route umdrehen</string>
+	<string name="maps_menu_submenu_waypoints">Wegpunkte</string>
+	<string name="maps_menu_accessibility_analysis">Erreichbarkeit</string>
+	<string name="maps_menu_waypoint_add">Wegpunkt hinzufügen</string>
+	<string name="maps_menu_waypoints_clear">Wegpunkte löschen</string>
+	<string name="maps_menu_waypoints_optimize">Wegpunkt-Anordnung optimieren</string>
+	<string name="maps_menu_submenu_renderers">Karten-Darstellung</string>
+	<string name="maps_menu_satellite">Satelliten-Bilder</string>
+	<string name="maps_menu_traffic">Stau-Infos</string>
+	<string name="maps_menu_preload">Vorladen</string>
+	<string name="maps_menu_shareroute">Route mailen</string>
+	<string name="maps_menu_compass">Kompass</string>
+	<string name="maps_menu_getcentetcoordinates">Koordinaten des Karten-Zentrums...</string>
+	<string name="maps_menu_getcentetcoordinates_message"><b>Kartenzentrum:</b>\n\n<b>Breitengrad:\t</b>%.6f\n<b>Längengrad:\t</b>%.6f\n</string>
+	<string name="maps_menu_altitude_profile">Höhenprofil</string>
+	<string name="maps_menu_altitude_profile_title">Routen-Höhenprofil</string>
+	<string name="maps_menu_altitude_profile_error">Fehler beim erstellen des Höhenprofils.\nWahrscheinlich ist der gewünschte Bereich noch nicht auf dem Server enthalten.</string>
+	<string name="maps_menu_gpsstatus">Zeige GPS-Status</string>
+	<string name="maps_menu_zoomtodestination">Ans Ziel zoomen</string>
+	<string name="maps_menu_trace_show">Aktuellen Trace anzeigen</string>
+	<string name="maps_menu_trace_hide">Aktuellen Trace verstecken</string>
+	<string name="maps_menu_trace_submit">Aktuellen Trace absenden</string>
+	<string name="maps_menu_vehicleregistrationplate_lookup">Kennzeichen suchen</string>
+	
+	<!-- Context Menu-String -->
+	<string name="maps_contextmenu_add_as_waypoint">Als Wegpunkt hinzufügen</string>
+	<string name="maps_contextmenu_clear_waypoints">Wegpunkte löschen</string>
+	<string name="maps_contextmenu_close">Schließen</string>	
+	
+	<!-- Zoomlevels of the preloader (with descriptions) -->
+	<array name="preloader_rectangle_zoomlevels">
+		<item>0 (Weltgröße)</item>
+		<item>1</item>
+		<item>2 (Kontinentgröße)</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6 (Ländergröße)</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+		<item>10</item>
+		<item>11</item>
+		<item>12 (Stadtgröße)</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16 (Straßengröße)</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19 (Genauestes)</item>
+	</array>
+</resources>

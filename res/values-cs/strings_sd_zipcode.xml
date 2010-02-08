@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used on the Screen where the zipcode is entered.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="toast_sd_zipcode_empty">Zadejte PSČ...</string>
+</resources>

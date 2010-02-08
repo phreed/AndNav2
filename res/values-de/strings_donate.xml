@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This file describes the Strings shown in the "Donation"-Screen.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="donate_info">Das Existentz des <b>AndNav</b>-Projektes hängt von <b>Ihren Spenden</b> ab!</string>
+	<string name="donate_once">Einmalig</string>
+	<string name="donate_recurring">Wiederkehrend</string>
+	<string name="donate_proceed_info">Sie werden auf paypal.com weitergeleitet, wo sie die Daten prüfen können.</string>
+	
+	<string name="donate_period_daily">tägl.</string>
+	<string name="donate_period_weekly">wöchtentl.</string>
+	<string name="donate_period_monthly">monatl.</string>
+	<string name="donate_period_yearly">jährl.</string>
+
+	<string name="donate_frequency_once">Einmal</string>
+	<string name="donate_frequency_twice">Zweimal</string>
+	<string name="donate_frequency_six_times">6 mal</string>
+	<string name="donate_frequency_twelve_times">12 mal</string>
+	<string name="donate_frequency_thirty_times">30 mal</string>
+	<string name="donate_frequency_threehundredsixtyfive_times">365 mal</string>
+</resources>

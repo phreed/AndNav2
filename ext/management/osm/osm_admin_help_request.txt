@@ -1,0 +1,21 @@
+Hello lambertus,
+
+my name is Nicolas Gramlich and I have done an Navigation-Application for Google Android, called AndNav ( http://www.andnav.org/ ). Unfortunately there are licensing issues with Google, which made me to switch over to OSM.
+
+So for now I have done a soon-open-source component for Android to display the MapTiles and some public code to contribute back to the osm-project.
+So the last thing I'd need is the actual routing part.
+
+The reason why I am contacting you is because you have set up this neat website: http://www.yournavigation.org/
+
+My questions are (I'd be really happy if you could answer them):
+1. Should I set up my own MapTile-Server? Because currently I'm loading them from the same sources the osm-mainpage does (I do caching).
+2. What would you suggest for setting up a routing-server (Gosmore or pyroutlib2)? I simply need sth that creates the route from CoordsA to CoordsB. GPX returndata would be perfect.
+3. Do you know a person (maybe yourself), that could assist me in setting up a server for maptiles and routing?
+4. Can I make my app commercial?
+
+Looking forward to any response.
+
+Best Regards,
+Nicolas Gramlich
+
+For response, please send mail to plusminus@anddev.org.

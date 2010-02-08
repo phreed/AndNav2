@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_colorscheme_focused">Farbschema änden</string>
+		<string name="tv_settings_quickinfo_colorscheme_day">Tagschema</string>
+		<string name="tv_settings_quickinfo_colorscheme_night">Nachtschema</string>
+		<string name="tv_settings_quickinfo_colorscheme_default">Standard-Schema</string>
+		<string name="toast_settings_colorscheme_changed">AndNav2 muss neu gestartet werden, sodass die Änderungen sichtbar werden.</string>
+		<string name="tv_settings_colorscheme_mapcolorscheme_caption">Karten Farbeschema ändern...</string>
+		<string name="tv_settings_colorscheme_overallbrightness_slider_caption">Bildschirmhelligkeit ändern...</string>
+		<string name="tv_settings_colorscheme_overallbrightness_slider_hint">Bildschirmhelligkeit wird <b>nicht</b> sofort gesetzt!</string>
+</resources>

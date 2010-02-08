@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used on the UK-Postcode-Screen.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="toast_sd_postcode_bs_7666_empty">Prosím zadejte Postcode...</string>
+	<string name="toast_sd_postcode_bs_7666_no_match_found">Postcode neodpovídá platnému formátu.\n\nPříklad: \'SW1A 0AA\'</string>
+	<string name="sd_postcode_bs_7666_bad_format_title">Špatný Postcode formát</string>
+	<string name="sd_postcode_bs_7666_bad_format_message">Zadáno: \'%s\'\nOpraveno: \'%s\'\n\nPříklad: \'SW1A 0AA\'</string>
+	<string name="sd_postcode_bs_7666_correct">Opravit</string>
+	
+	<string name="sd_postcode_bs_7666_use_closest_match">Nejlepší nalezeno</string>
+	<string name="sd_postcode_bs_7666_closest_databasematch_title">Postcode není v databázi</string>
+	<string name="sd_postcode_bs_7666_closest_databasematch_message">Zadáno: \'%s\'\nNejlepší nalezeno: \'%s\'</string>
+</resources>

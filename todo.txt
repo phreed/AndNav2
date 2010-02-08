@@ -1,0 +1,98 @@
+- Check GeoCoder 620 return statuscode ( http://code.google.com/support/bin/answer.py?answer=93464&topic=12266&ctx=sibling ) gilt auch fuer route?
+- Catch Intent with following URIs: http://maps.google.com/maps?f=d&saddr=37.4,-121.9&daddr=Bellevue,%20WA&hl=en
+- Route-Start sometimes points to the wrong direction
+- Wrong-Direction warning/info !
+- Make lower left HUD-arrow more relieable!
+- Due to the Line-Drawing-SpeedUp when manually panning around the invisible part gets into the visible rect
+- Possibility to insert usermade turn-voices (maybe through SD-card)
+- maybe add a "123..."-key that makes the Numbers in Non-Number-keyboards appear on demand
+- Somehow give the user the possibility to check whether the found route is found for the first time. (like having a short static preview over the found route, before the realtime-navigation part starts)  
+- TracePolicy also for AndNav1
+- Colorschemes also for AndNav1
+- On First Run, Ask user if he wants to place a shortcut to the HOME-Screen
+- Maybe make the 'Quick-Renderer-Chooser' as a ContextMenu instead of an AlertDialog, so SpannableString would be supported.
+- Add Avoid-Areas through Menu, like Waypoints 
+- Maybe make the Avoid-Areas a COLLABORATIVE function!!!
+- andnav.org-FOOTER: "Warning: call_user_func(tdo) [function.call-user-func]: First argument is expected to be a valid callback in /www/htdocs/w006661d/anddev/andnav/templates/themza_j15_06/html/pagination.php on line 153" 
+- Probably only with static nav "In 0 yards drive..." doesn't sound so good, better would be "Now drive..."
+- Give ability to display traces from SD-Card in WhereAmI
+- Respect SD-Cards freesize.
+- Check of cache-cropping is working.
+- Add option to Settings, not to start with GPS turned on (fewer batter-drainage)
+- Add "Did you know"-Dialog on startup...
+- Having the preload-dialog canceled, it should be made revisible again using the same menu-button
+- Old MapTiles should get invalid after a week or two (only if they can be re-downloaded)
+(- Check if 'outdated-maptile'-redownloading works.)
+- Submit AndNav2 to the TTS-Application-Showcase of the TTS-lib 
+- Resend failed traces later on (to OSM).
+- Enable Perspective-View when Camera-Class in SDK is working again. 
+- With saved routes, just ask for RealTime or Static Nav, nothing else(?).
+- Altitude profile also for hand-drawn lines on WhereAmI.
+- Add option to altitude-api to add a 'current position' marker in the generated image.
+- Add android:hint were possible
+>>> MAKE ALL DIALOGS FROM COMMONDIALOGFACRTORY PERSISTENT!
+>>> UPDATE ALL DIALOGS with VARIABLE CONTENT in onPrepareDialog()!
+>>> CENTRALIZE ALL DIALOGS TO COMMONDIALOGFACRTORY!
+>>>>>> CHeck if cache-cropping is still working
+- Width of Weather-Dialog (especially in Landscape-Mode)
+- Compass only in portrait mode. (will net)
+>>>>>> My Error: route always sets a starting point in a fixed location very far away from my real location, even though the arrow circle with my real location is correct.
+- Autorotate(sensor) causes force close on 'map' and probably most of the other Activities, with background-activity, like the SDResolver.
+- Advanced Turn-descriptions "... at the traffic-light..."
+- ACTION_DEVICE_STORAGE_LOW Abfangen und cache-crop fragen 
+- Applying touch to WhereamI && DDMap should stop auto-centering for some seconds.
+- Wrong Direction Warning
+- Do not warn multiple times about the same downtime.
+- Server-Specific Downtime-Warnings.
+- With Multitouch --> Zooming and rotating of whereami 
+- The voice should not say the same thing multiple times.
+- Compass maybe also for Nav-Mode
+- TTS: "B 361" = "B 3 6 1" (spell/split numbers with more 3 digits).  
+- Option to start without GPS enabled. (In Menu of MainMenu)
+- ShareRoute from SDSavedRoutes with long-press.
+- Reit und Wanderkarte-DE: http://opentiles.com/nop/
+- "rally copilot like navigation"
+- Hide Ads after "In-AndNav2-donating"
+- Add "NOW drive left" instead of "in 50 meters", depending on the speed.
+- Read Navigation-Path-Colors from HudImpls
+- Use: style="@android:style/TextAppearance.Large" and similar
+- Compass + Acceleromerer guessing when GPS is unavailable.
+- http://www.andnav.org/index.php/en/community-forum?task=viewtopic&pid=864#p864
+- Disable Key-Sounds when exitted.
+- More OSM-Nodes, like addr:housenumber addable.
+	- Give the user the possibility to enter any key-values as he wishes.
+- Mehr Kennzeichen-Lookup
+- "Rotate by direction of travel" for Standard-Map
+- http://openstreetmap.org/api/0.5/node/344793814
+- wikipedia-layer
+- http://en.wikipedia.org/wiki/R-tree für trafficitems-display
+- http://trailmapping.com/api/ 
+- Load generic GPX files (like from http://trailmapping.com/)
+- http://www.foxytag.com/ Radar-Warner <-- LOOOOOOOOL die wollen Geld
+- When submitting GPX-traces manually, give the possibility to add a 'filename'.
+- CupCake:
+	- "Bring me to: _________" HOME screen widget. 
+	- voice-entry of AndNav2-searches
+- Trace/Routerecorder parcelable machen
+- http://www.andnav.org/index.php/en/community-forum/topic?id=369#p1513
+- Homepage: "[Market-Icon] Free Download"-Button
+- SD-Country Länder abhängig von Server
+	- Server-Wechsel-Probleme beachten.
+- Kein initiales "Route-Resumed"
+- http://www.andnav.org/index.php/en/community-forum/topic?id=380&p=1#p1556
+- Anstatt 'Hospital' ein Tacho-App (wie: http://gps.motionx.com/gallery/ )
+- Facebook & Twitter-Share machen 
+  - FAVORITES
+  - TRACKS und ROUTES
+- andnav:// protokoll oder existierendes definieren?
+
+
+
+- http://lyricsfly.com/api/api.php?i=14ce15080316b07e9-temporary.API.access&a=The%20Game&t=Hate%20it%20or%20love%20it
+
+
+- Movie times (Fandango)
+- Restaurants (Yelp & Open Table)
+- Local Shows (Ticket Master)
+- Places to sleep (Hotels.com)
+- How to tell people where I'm at (BrightKite)

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Voice-Settings-Screen.
+ # 
+ ### README-END ###
+-->
+<resources>
+		<string name="chk_settings_voice_menuvoice_caption">Hlas menu</string>
+		<string name="btn_settings_voice_goadvanced_caption">Rozšířené</string>
+		<string name="chk_settings_voice_directionvoice_caption">Hlas průvodce</string>
+		<string name="tv_settings_voice_quickinfo_menuvoice_default">Změnit nastavení jazyka AndNav.</string>
+		<string name="tv_settings_voice_quickinfo_menuvoice_description">Hlas menu bude přehráván při procházení v menu aplikace.</string>
+		
+		<string name="tv_settings_voice_quickinfo_directionvoice_description">Hlas navigace bude přehrán při navigaci.\n n.p. \"Za 200 metrů, odbočit vpravo.\".</string>
+			<string name="tv_settings_directionvoice_quickinfo">Co kdy říct...</string>
+			<string name="tv_settings_directionvoice_column_in">V...</string>
+			<string name="tv_settings_directionvoice_column_saywhat">... co říct?</string>
+			
+		<string name="tv_settings_voice_ttsdescription"><b>TTS</b> znamená \'<i>řeč z Textu</i>\'</string>
+		
+		<string name="btn_settings_voice_tts_caption">Text-To-Speech...</string>
+		<string name="dlg_settings_voice_tts_change_settings">Změnit nastavení</string>
+		<string name="dlg_settings_voice_tts_play_sample">Přehrát příklad</string>
+		
+	<string name="tts_not_installed_title">"'Text-To-Speech' ..."</string>
+	<string name="tts_not_installed_message"><b>VOLNÁ</b> \'Text-To-Speech\' knihovna nebyla nalezena.\n\nChcete ji z <b>Android Marketu</b> stáhnout?</string>
+	<string name="tts_outdated_message"><b>VOLNÁ</b> \'Text-To-Speech\' knihovna již není aktuální.\n\n<b>Doporučujeme</b> ji zaktualizovat!</string>
+			
+	<array name="spin_settings_directionvoice_saywhat_items">
+		<item>Nic</item>
+		<item>Pouze vzdálenost</item>
+		<item>Pouze odbočení</item>
+		<item>Vzdálenost a odbočení</item>
+		<item>Vzdálenost (TTS)</item>
+		<item>Odbočení a ulici (TTS)</item>
+		<item>Vzd., Odb. a ulici (TTS)</item>
+	</array>
+</resources>

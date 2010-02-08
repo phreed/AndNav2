@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content">
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" >
+		<RelativeLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TableLayout
+				android:id="@+id/et_dlg_osb_add_bug_new_comment_container"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:stretchColumns="1">
+				<TableRow
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" >
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:paddingRight="10px"
+						android:paddingLeft="10px"
+						android:text="@string/dlg_osb_add_bug_new_comment" />
+					<EditText android:id="@+id/et_dlg_osb_add_bug_new_comment" 
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:hint="@string/dlg_osb_add_bug_default_comment"
+						android:capitalize="sentences"/>
+				</TableRow>
+				<TableRow
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" >
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:paddingRight="10px"
+						android:paddingLeft="10px"
+						android:text="@string/dlg_osb_commentername" />
+					<EditText android:id="@+id/et_dlg_osb_add_bug_name" 
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:hint="@string/dlg_osb_default_commentername"
+						android:capitalize="words"/>
+				</TableRow>
+			</TableLayout>
+		</RelativeLayout>
+	</ScrollView>
+</FrameLayout>

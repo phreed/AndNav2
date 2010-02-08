@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_centermode_quickinfo_default">Select CenterMode...</string>
+	<string name="tv_settings_centermode_quickinfo_centeruser">Center user...</string>
+	<string name="tv_settings_centermode_quickinfo_centeruser_saved">Center user... saved!</string>
+	<string name="tv_settings_centermode_quickinfo_upto_nextturn">Show up to next turn...</string>
+	<string name="tv_settings_centermode_quickinfo_upto_nextturn_saved">Show up to next turn... saved!</string>
+</resources>

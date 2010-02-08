@@ -1,0 +1,7 @@
+<resources>
+	<array name="did_you_know">
+		<item>Durch einen <b>Langklick</b> auf die Karte im Navigationsmodus wird ein Dialog zum hinzufügen von Wegpunkten und Meidungsgebiten angezeigt.</item>
+		<item>Durch einen <b>Langklick</b> auf die Karte im Ansichtsmodus kann man beispielsweise einen Favoriten hinzufügen oder sich eine Wettervorhersage anzeigen lassen.</item>
+		<item>Wenn sie das <b>Menü</b> auf dem Bildschirm öffnen, bei dem sie zwischen <i>Address/Kontakt/POI-Suche</i> wählen können, finden Sie einen Menüpunkt, bei dem sie direkt den <b>Breiten-</b> und <b>Längengrad</b> ihres Ziels eingeben können.</item>
+	</array>
+</resources>

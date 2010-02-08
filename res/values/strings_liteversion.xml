@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This file describes the Strings shown in the "NotInLiteVersion"-Dialog.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="dlg_notinliteversion_title">Get Pro...</string>
+	<string name="dlg_notinliteversion_message">This feature is a part of the <b>Pro</b> version. You can get it for only $2 on the market.</string>
+	<string name="dlg_notinliteversion_moreinfo">More Info...</string>
+	
+	<string name="toast_get_pro_version">@string/dlg_notinliteversion_message</string>
+</resources>

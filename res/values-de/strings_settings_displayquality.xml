@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_quality_focused">AnzeigeQualität...</string>
+		<string name="tv_settings_quality_quickinfo_default">AnzeigeQualität</string>
+		
+		<string name="btn_settings_quality_low">Schlecht</string>
+			<string name="tv_settings_quality_quickinfo_low_description">Keine Transparenz, Keine Kantenglättung, Keine abgerundeten Pfade.</string>
+		
+		<string name="btn_settings_quality_standard">Mittel</string>
+			<string name="tv_settings_quality_quickinfo_standard_description">Transparenz, Text Kantenglättung, Keine abgerundeten Pfade.</string>
+			
+		<string name="btn_settings_quality_high">Hoch</string>
+			<string name="tv_settings_quality_quickinfo_high_description">Transparenz, Text Kantenglättung, Abgerundete Pfade.</string>
+			
+		<string name="btn_settings_quality_best">Beste</string>
+			<string name="tv_settings_quality_quickinfo_best_description">Transparency, Text+Pfad Kantenglättung, Abgerundete Pfade.</string>
+</resources>

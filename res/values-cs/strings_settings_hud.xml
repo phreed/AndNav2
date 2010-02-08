@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the HUD-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_hud_focused">Nastavení HUD...</string>
+	<string name="tv_settings_hud_quickinfo_default">HUD změnit...</string>
+</resources>

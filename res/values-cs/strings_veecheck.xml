@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Update-Checker-Screen.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="veecheck_notify_ticker">Je dostupná AndNav2 aktualizace</string> 
+	<string name="veecheck_notify_title">Je dostupná AndNav2 aktualizace</string> 
+	<string name="veecheck_notify_message">Stáhnout nejnovější verzi...</string> 
+	<string name="veecheck_pref_category">Veecheck Sample Settings</string> 
+	<string name="veecheck_pref_enabled_title">Aktivováno</string> 
+	<string name="veecheck_pref_enabled_summary">Zda je nebo není kontrola aktivovaná.</string> 
+	<string name="veecheck_pref_check_uri_title">URI zkontrolovat</string> 
+	<string name="veecheck_pref_check_uri_summary">URI která je určená pro aktualizace.</string> 
+	<string name="veecheck_confirm_title">Potvrdit AndNav2 aktualizaci</string> 
+	
+	<string name="veecheck_version_type">Typ:</string>
+	<string name="veecheck_version_description">Popis:</string>
+	<string name="veecheck_version_importance">Důležitost:</string> 
+	
+	<string name="veecheck_confirm_text"><b>Chcete AndNav2 aktualizovat na nejnovější verzi?</b>\n\n<b>Důležitost:</b> <i>%s</i>\n<b>Typ:</b> <i>%s</i>\n%s\n\nS přátelským pozdravem,\nVáš AndNav-Team</string>
+	<string name="veecheck_confirm_text_default"><b>Chcete AndNav2 aktualizovat na nejnovější verzi?</b>\n\nNové verze mají více možností a méně chyb!\n\nS přátelským pozdravem,\nVáš AndNav-Team</string> 
+	<string name="veecheck_confirm_stop"><b>Tuto</b> aktualizaci ignorovat!</string> 
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_center_and_rotate_mode_quickinfo_current">(aktuell)</string>
+	<string name="rotatemode_dd_up_centermode_upto_nextturn_mutex_title">Einstellungs-Konflikt!</string>
+	<string name="rotatemode_dd_up_centermode_upto_nextturn_mutex_message">Die gewählte Einstellung lässt sich nicht zusammen mit dem Rotationsmodus: \"Fahrtrichtung nach oben\" wählen.\n\nFortfahren wird den Rotationsmodus auf: \"Norden nach oben\" setzen!</string>
+	<string name="centermode_dd_up_rotatemode_upto_nextturn_mutex_title">Einstellungs-Konflikt!</string>
+	<string name="centermode_dd_up_rotatemode_upto_nextturn_mutex_message">Die gewählte Einstellung lässt sich nicht zusammen mit dem Zentrierungsmodus: \"Bis zur Abbiegung\" wählen.\n\nFortfahren wird den Rotationsmodus auf: \"Nutzer-Zentrierung\" setzen!</string>
+</resources>

@@ -1,0 +1,62 @@
+<resources>
+	<string name="toast_osbmap_refresh_error">Fehler beim holen der Bugs...</string>
+	
+	<string name="dlg_osb_default_commentername">AndNav2-User</string>
+	
+	<string name="dlg_osb_bug_invalid_comment">Bitte gültigen Kommentar eingeben..."</string>
+	<string name="dlg_osb_commentername">Name:</string>
+	
+	<string name="osb_instructions"><b>Anleitung:</b>\nHier können Sie uns über Bugs im OpenStreetMap-Kartenmaterial informieren.\n\n<b>Was ist ein Bug:</b>\nEin Bug ist zum Beispiel eine fehlende Straße, eine fehlende Kreuzung, ein falscher Straßenname oder einfach ein nicht verzeichneter Briefkasten.\nFügen Sie einfach einen Kommentar an den neu erstellten Bug und innerhalb weniger Tage oder Wochen wird der Fehler behoben.\n\n<b>Einen Bug erstellen:</b>\nUm einen Bug zu erstellen, drücken Sie einfach auf das \'<i>grüne Plus</i>\'-Icon zu Ihrer Rechten und positionieren Sie das Fadenkreuz über der fehlerhaften Stelle.\nDrücken sie nun den erschienenen Knopf mit dem <b>Haken</b> um eine kurze Beschreibung einzugeben. Oder aber drücken Sie <b>Abbrechen</b> um den Bug wieder zu verwerfen.\n\n<b>Einen Bug ändern:</b>\nUm einen Bug zu <b>ändern</b> klicken Sie ihn einfach auf der Karte an.\nDrücken sie dann den <b>Ändern</b>-Knopf unten rechts in der Ecke des Bildschirms und lassen sich durch die Menüs führen.\n\nVielen Dank an das OpenStreetBugs.org-Team für diese Program-Schnittstelle.\n\nBitte nutzen Sie diese Fähigkeit weise. =)\n</string>
+	
+	<!-- Choose between adding OSB or FTPC -->
+	<string name="dlg_osb_choose_what_to_add">Wählen...</string>
+	<string name="dlg_osb_choose_what_to_add_osmpoi">POI hinzufügen</string>
+	<string name="dlg_osb_choose_what_to_add_osb">Bug melden</string>
+	<string name="dlg_osb_choose_what_to_add_ftpc">UK Postcode hinzufügen</string>
+	
+	<!-- Editing Bugs -->
+	<string name="dlg_osb_edit_bug_previous_comments">Kommentare</string>
+	<string name="dlg_osb_edit_bug_new_comment">Anfügen:</string>
+	<string name="dlg_osb_edit_bug_close_bug">Bug schließen</string>
+	<string name="dlg_osb_edit_bug_default_comment">Mein Kommentar...</string>
+	
+	<string name="dlg_osb_edit_bug_title">Bug ändern...</string>
+	<string name="dlg_osb_edit_bug_error_during_append">Fehler beim ändern des Bugs!</string>
+	<string name="dlg_osb_edit_bug_error_during_close">Fehler beim schließen des Bugs!</string>
+	
+	
+	<string name="dlg_osb_edit_bug_success">Bug erfolgreich geändert.\n\nJetzt neu laden?</string>
+	
+	<!-- Adding Bugs -->
+	<string name="dlg_osb_add_bug_new_comment">Kommentar:</string>
+	<string name="dlg_osb_add_bug_default_comment">Bug: ...</string>
+	<string name="toast_osbmap_position_buglocation_in_crosshair">Positionieren sie das <b>Fadenkreuz</b> über der gewünschten Stelle...</string>
+	<string name="toast_osbmap_add_bug_zoom_too_low">Bitte zoomen Sie %d Stufen weiter hinein...</string>
+	<string name="dlg_osb_add_bug_error">Fehler beim hinzufügen des Bugs!</string>
+	<string name="dlg_osb_add_bug_success">Bug erfolgreich hinzugefügt!\n\nJetzt neu laden?</string>
+	
+	<!-- Adding FTPC -->
+	<string name="dlg_osb_add_ftpc_title">UK-Postcode hinzufügen...</string>
+	<string name="dlg_osb_add_ftpc_default_postcode1">SW1A</string>
+	<string name="dlg_osb_add_ftpc_default_postcode2">0AA</string>
+	<string name="dlg_osb_add_ftpc_postcode">Postcode:</string>
+	<string name="dlg_osb_add_ftpc_default_mail">mein@provider.de</string>
+	<string name="dlg_osb_add_ftpc_mail">E-Mail:</string>
+	<string name="dlg_osb_add_ftpc_example">Hinweis: <b>E-Mail</b> wird zur Bestätigung benötigt.</string>
+	<string name="dlg_osb_ftpc_mail_invalid_comment"><b>Ungültige</b> E-Mail Addresse eingegeben.\nSie wird zur Bestätigung benötigt!</string>
+	<string name="dlg_osb_ftpc_postcode_invalid_comment"><b>Falsches</b> Postcode-Format.\nBeispiel: <b>[SW1A]</b> <b>[0AA]</b>!</string>
+	<string name="dlg_osb_add_ftpc_success"><b>Erfolgreich</b>. Sie erhalten in Kürze eine Bestätigungs-Email.</string>
+	<string name="dlg_osb_add_ftpc_failed">Scheinbar ist ein <b>Fehler</b> aufgetreten.\nBitte trotzdem Emails prüfen.</string>
+	
+	<!-- OSM-POIs -->
+	<string name="dlg_input_osmpoiname_title">Namen des POI eingeben...</string>
+	<string name="dlg_input_osmpoiname_category">Kategorie:</string>
+	<string name="dlg_input_osmpoiname_name">Name:</string>
+	<string name="dlg_input_osmpoiname_name_hint">z.B.: \'McDonalds\'</string>
+	<string name="dlg_input_osmpoiname_example">Hinweis: Der <b>Name</b> sollte den POI in 1-3 Worten dingefest machen.</string>
+	
+	<string name="dlg_osb_add_osmpoi_failed_title">Fehler...</string>
+	<string name="dlg_osb_add_osmpoi_failed_message">POI wurde <b>NICHT</b> hinzugefügt.</string>
+	<string name="dlg_osb_add_osmpoi_success_title">Erfolg!</string>
+	<string name="dlg_osb_add_osmpoi_success_message"><b>POI wurde hinzugefügt!</b>\nEs wird <b>1-2 Tage</b> dauern, bis der POI auf der Karte auftaucht. Versuchen Sie nach dieser Zeit den Karten-Cache in den Einstellungen zu leeren. <b>Etwa eine Woche</b>, bis danach gesucht werden kann.</string>
+</resources>

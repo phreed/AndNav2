@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones you see when selecting the routing-options 
+ # right before the route gets fetched.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_routingflags_focused">Nastavení trasy...</string>
+		<string name="rad_settings_routingflags_car_caption">Auto</string>
+		<string name="rad_settings_routingflags_bicycle_caption">Kolo</string>
+		<string name="rad_settings_routingflags_pedestrian_caption">Pěšky</string>
+		<string name="rad_settings_routingflags_shortest_caption">Nejkratší</string>
+		<string name="rad_settings_routingflags_fastest_caption">Nejrychlejší</string>
+		<string name="chk_settings_routingflags_realtime_caption">Navigace v reálném čase</string>
+		<string name="chk_settings_routingflags_avoid_caption">Vyhýbat se:</string>
+		<string name="chk_settings_routingflags_avoidhighways_caption">Dálnicím</string>
+		<string name="chk_settings_routingflags_avoidtolls_caption">Placeným úsekům</string>
+		<string name="chk_settings_routingflags_alwaysremember_caption">Zapamatovat</string>
+		<string name="chk_settings_routingflags_saveinitial_caption">Ukládat trasy offline</string>
+</resources>

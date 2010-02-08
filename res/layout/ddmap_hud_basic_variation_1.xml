@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ #
+ # @Description:
+ # We are using a relative-layout, so the views are stacked as the appear in the layout.
+ # All IDs have to remain the same!
+ #
+ ### README-END ###
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/ddmap_root"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<!-- Turn Description -->
+	<view class="org.andnav2.ui.map.hud.impl.basic.views.HUDTurnDescriptionView" 
+		android:id="@+id/hud_ddmap_basic_turndescription"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="#000"
+		android:textColor="#FFF" 
+		android:textSize="18sp"/>
+		
+	<!-- The map, wrapped into a RotateView. -->
+	<view class="org.andnav2.ui.common.views.RotateView" 
+		android:id="@+id/rotator_ddmap"
+		android:layout_above="@id/hud_ddmap_basic_turndescription"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" >
+	    <view class="org.andnav2.osm.views.OSMMapView" 
+	    	android:id="@+id/map_ddmap"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+	        android:enabled="true"
+	        android:clickable="true" />
+	</view>
+	
+    <!-- Static Navigation Control, Upper Middle -->
+	<view class="org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView" 
+		android:id="@+id/itemizedoverlaycontrol_ddmap"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"/>
+	<view class="org.andnav2.osm.views.OSMMapViewScaleIndicatorView" 
+		android:id="@+id/scaleindicatorview_ddmap"
+		android:layout_below="@id/itemizedoverlaycontrol_ddmap"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+		
+	<!-- Zoom Controls, Upper edged -->
+	<ImageView
+		android:id="@+id/iv_ddmap_zoomin"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/btn_zoom_in"/>
+	<ImageView
+		android:id="@+id/iv_ddmap_zoomout"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/btn_zoom_out"/>
+		
+	<!-- Next+UpperNext ActionView, stacked on the left. -->
+	<view class="org.andnav2.ui.map.hud.impl.basic.views.HUDNextActionView" 
+		android:id="@+id/hud_ddmap_basic_nextaction"
+		android:layout_above="@id/hud_ddmap_basic_turndescription"
+		android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/hud_basic_next_action"/>
+	<view class="org.andnav2.ui.map.hud.impl.basic.views.HUDUpperNextActionView" 
+		android:id="@+id/hud_ddmap_basic_uppernextaction"
+		android:layout_above="@id/hud_ddmap_basic_nextaction"
+		android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/hud_basic_uppernext_action"/>
+		
+	<!-- SummaryView in the lower right. -->
+	<view class="org.andnav2.ui.map.hud.impl.basic.views.HUDRemainingSummaryView" 
+		android:id="@+id/hud_ddmap_basic_summary"
+		android:layout_above="@id/hud_ddmap_basic_turndescription"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/hud_basic_remaining_summary"/>
+		
+	<!-- The Image showing attribution to the OSM-community. -->
+	<ImageView
+		android:id="@+id/iv_ddmap_logo_osm"
+		android:layout_alignParentBottom="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:scaleType="fitCenter"
+		android:src="@drawable/logo_osm"
+		android:padding="5px"
+		android:layout_centerHorizontal="true"/>
+		
+	<!-- The Icon indicating whether we are offroute or the route is refetched. -->
+	<ImageView
+		android:id="@+id/iv_ddmap_offroute"
+		android:visibility="gone"
+		android:layout_alignParentTop="true"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:scaleType="fitCenter"
+		android:gravity="center_horizontal"
+		android:src="@drawable/route_missed"
+		android:padding="5px"/>
+</RelativeLayout>

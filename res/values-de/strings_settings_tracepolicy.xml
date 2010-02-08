@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Tracepolicy-Screens.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_tracepolicy_focused">Trace-Einstellungne ändern...</string>
+	<string name="chk_settings_tracepolicy_filter_caption">Minimal Filter</string>
+	<string name="tv_settings_tracepolicy_quickdescription">Wählen was mit den GPS-Traces geschehen soll.</string>
+	<string name="dlg_input_osm_account_title">OSM Account-Informationen</string>
+	<string name="dlg_input_osm_account_username">Nutzername:</string>
+	<string name="dlg_input_osm_account_password">Passwort:</string>
+	<string name="dlg_input_osm_account_username_tooshort"><b>NICHT GESPEICHERT</b>\nNutzername zu kurz!</string>
+	<string name="dlg_input_osm_account_password_tooshort"><b>NICHT GESPEICHERT</b>\nPasswort zu kurz!</string>
+	<string name="dlg_input_osm_account_info"><b>Tipp:</b> Daten doppelt prüfen!</string>
+	
+	<string name="notif_settings_tracepolicy_osmcontribution_failed_fallback_used_title">Trace-Hochladen fehlgeschlagen.</string>
+	<string name="notif_settings_tracepolicy_osmcontribution_failed_fallback_used_message">Trace wurde auf SD-Karte gespeichert.</string>
+	
+	<string name="tv_settings_tracepolicy_local">Lokal</string>
+	<string name="tv_settings_tracepolicy_remote">Web</string>
+</resources>

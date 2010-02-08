@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TableLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"	
+		android:stretchColumns="0">
+		<TableRow 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TextView
+				style="@style/sd_quickinfo_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:gravity="center"
+				android:text="@string/tv_settings_navigation_quickinfo_caption"
+				android:layout_gravity="center"/>
+			<ImageButton android:id="@+id/ibtn_settings_navigation_close"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:src="@drawable/close" />
+		</TableRow>
+	</TableLayout>
+
+	<ScrollView 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TableLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:stretchColumns="0,3">
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_navigation_centermode"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/centermode_user"/>
+				<TextView
+					android:id="@+id/tv_settings_navigation_centermode"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					style="@style/default_textstyle"
+					android:text="@string/tv_settings_navigation_centermode" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_navigation_rotatemode"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/rotatemode_northup"/>
+				<TextView
+					android:id="@+id/tv_settings_navigation_rotatemode"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					style="@style/default_textstyle"
+					android:text="@string/tv_settings_navigation_rotatemode" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_navigation_more"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/settingsmenu_more" />
+				<TextView
+					android:id="@+id/tv_settings_navigation_more"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					style="@style/default_textstyle"
+					android:text="@string/tv_settings_navigation_more" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+		</TableLayout>
+	</ScrollView>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used in the Contacts-Screen, while searching a destination.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_sd_contacts_quickinfo_caption">Vyberte kontakt...</string>
+	<string name="sd_contacts_resolving_address">Adresa se hledá...</string>
+	<string name="toast_sd_contacts_error_resolving_address">Chyba při hledání adresy...</string>
+	<string name="toast_could_not_resolve_address">Adresa nenalezena...</string>
+	<string name="sd_contacts_address_type_home">Soukromá</string>
+	<string name="sd_contacts_address_type_work">Do práce</string>
+	
+	<string name="sd_contacts_loading_title">Čtu kontakty...</string>
+	<string name="sd_contacts_loading_progress">Načítám: %d %%  (%d z %d kontaktů)</string>
+</resources>

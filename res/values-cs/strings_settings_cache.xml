@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the Cache-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_cache_focused">Nastavení Cache...</string>
+	<string name="tv_settings_cache_fallbackinfo_caption">V případě nedostupnosti SD karty, bude použita vnitřní paměť!</string>
+	<string name="tv_settings_cache_quickinfo_default_caption">Větší Cache (v MegaBytech) ukládá více mapových podkladů do paměti. Z toho vyplývá menší datový přenos a rychlejší načítání.</string>
+	<string name="tv_settings_cache_current_size">Použito: %.1f z %d MB</string>
+	<string name="tv_settings_cache_max_size_external">Maximum (SDKarta):</string>
+	<string name="tv_settings_cache_max_size_internal">Maximum (Interní):</string>
+	<string name="btn_settings_cache_clear_cache_caption">Smazat Cache...</string>
+	<string name="pdg_settings_cache_clear_cache_message">Prosím čekejte</string>
+	<string name="pdg_settings_cache_clear_cache_title">Mažu Cache...</string>
+	
+	<string name="settings_cache_clear_external_warning_title">Varování...</string>
+	<string name="settings_cache_clear_external_warning_message">Mazání SD-Karty <b>by mělo</b> být provedeno v PC, protože je to rychlejší a jistější. (Kliknutím na \'Další\' by mohlo vést k zhroucení!)\n</string>
+</resources>

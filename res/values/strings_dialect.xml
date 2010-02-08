@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This file describes the Dialects of the different languages.
+ # The dialects themselves do not need to be translated, 
+ # as they are only known in the country they are spoken.
+ #
+ ### README-END ###
+-->
+<resources>
+	<!-- No Dialect, or the Raw Language -->
+	<string name="dialect_none">Normal</string>
+	
+	<!-- German Dialects -->
+	<string name="dialect_germany_platt">Platt</string>
+	<string name="dialect_germany_schwaebisch">Schwäbisch</string>
+	<string name="dialect_germany_berlinerisch">Berlinerisch</string>
+	<string name="dialect_germany_rheinlaendisch">Rheinländisch</string>
+	<string name="dialect_germany_ruhrpott">Ruhrpott</string>
+</resources>

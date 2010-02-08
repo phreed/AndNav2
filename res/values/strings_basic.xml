@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Basic strings. -->
+	<string name="ok">OK</string>
+	<string name="yes_UPPERCASE">YES</string>
+	<string name="no_UPPERCASE">NO</string>
+	<string name="na">N/A</string>
+	<string name="cancel">Cancel</string>
+	<string name="close">Close</string>
+	<string name="instructions">Instructions</string>
+	<string name="clear">Clear</string>
+	<string name="success">Success</string>
+	<string name="hide">Hide</string>
+	<string name="coordinates">Coordinates</string>
+	<string name="update">Update</string>
+	<string name="install">Install</string>
+	<string name="save">Save</string>
+	<string name="find">Find</string>
+	<string name="search">Search</string>
+	<string name="refresh">Refresh</string>
+	<string name="about">About</string>
+	<string name="report_bugs">Report bugs</string>
+	<string name="versioninfo">Versioninfo</string>
+	<string name="latitude">Latitude</string>
+	<string name="longitude">Longitude</string>
+	<string name="home">Home</string>
+	<string name="proceed">Proceed</string>
+	<string name="clipboard">Clipboard</string>
+	<string name="online">Online</string>
+	<string name="offline">Offline</string>
+	
+	<string name="year">year</string>
+	<string name="years">years</string>
+	<string name="month">month</string>
+	<string name="months">months</string>
+	<string name="week">week</string>
+	<string name="weeks">weeks</string>
+	<string name="day">day</string>
+	<string name="days">days</string>
+	<string name="hour">hour</string>
+	<string name="hours">hours</string>
+	<string name="minute">minute</string>
+	<string name="minutes">minutes</string>
+	<string name="second">second</string>
+	<string name="seconds">seconds</string>
+	
+	<string name="compass_please_callibrate">Please calibrate the compass by shaking your handset.</string>
+		
+	<string name="please_wait_a_moment">Please wait a moment..."</string>
+	
+	<string name="list_empty">This list is empty...</string>
+	
+	<string name="startup_gpsrequried_title">GPS is disabled...</string>
+	<string name="startup_gpsrequried_message">In order to use AndNav, you need to turn on the GPS Receiver of your device.\n\nClick <b>Ok</b> to go to the system-settings, or <b>Cancel</b> to leave.\n\nAfter that please restart AndNav.\n</string>
+	
+	<string name="startupwarning">Watch the streets or you\'ll meet the trees!\nYou drive at your own risk!</string>
+	<string name="nevershowagain">Never show again</string>
+	
+	<string name="not_yet_implemented_title">Sorry...</string>
+	<string name="not_yet_implemented_message">This functionality is not yet implemented :(</string>
+	
+	<string name="notif_serverdowntime_tickertext">AndNav2 - ServerDowntime</string>
+	<string name="notif_serverdowntime_title">Downtime: </string>
+	<string name="notif_serverdowntime_message">Starting: </string>
+	
+	<string name="unknown">Unknown</string>
+
+	
+    <!-- Characters that are used for each of the fast-scroll widget that skips directly
+        to names starting with this letter.  If your language sorts differently than this,
+        please rearrange the alphabet here to be whatever is correct (e.g. Norwegian
+        has the three additional letters at the end). -->
+    <string name="alphabet">\u0020ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+	
+</resources>

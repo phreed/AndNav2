@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_quality_focused">Change DisplayQuality...</string>
+		<string name="tv_settings_quality_quickinfo_default">Display-Quality</string>
+		
+		<string name="btn_settings_quality_low">Low</string>
+			<string name="tv_settings_quality_quickinfo_low_description">No transparency, No AntiAliasing, No Smoothed PathEdges.</string>
+		
+		<string name="btn_settings_quality_standard">Average</string>
+			<string name="tv_settings_quality_quickinfo_standard_description">Transparency, Text AntiAliasing, No Smoothed PathEdges.</string>
+			
+		<string name="btn_settings_quality_high">High</string>
+			<string name="tv_settings_quality_quickinfo_high_description">Transparency, Text AntiAliasing, Smoothed PathEdges.</string>
+			
+		<string name="btn_settings_quality_best">Best</string>
+			<string name="tv_settings_quality_quickinfo_best_description">Transparency, Text+Path AntiAliasing, Smoothed PathEdges.</string>
+</resources>

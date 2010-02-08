@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_directionslanguage_focused">Change DirectionsLanguage...</string>
+	<string name="tv_settings_directionslanguage_quickinfo_default">Choose DirectionsLanguage...</string>
+	<!-- Simply added behind the CountryNames -->
+	<string name="tv_settings_directionslanguage_quickinfo_saved_appendix">... saved!</string>
+	<string name="tv_settings_directionslanguage_quickinfo_current_appendix"> (current)</string>
+</resources>

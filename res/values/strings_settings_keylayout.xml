@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_keylayout_focused">Change KeyLayout...</string>
+	<string name="tv_settings_keylayout_quickinfo_caption">Select a KeyLayout...</string>
+</resources>

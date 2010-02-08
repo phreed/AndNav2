@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the names of the POI-Categories.
+ #
+ ### README-END ###
+-->
+<resources>	
+	<string name="sd_poi_category_maingroup">Main Group</string>
+	
+	<!-- Main-Groups -->
+	<string name="sd_poi_category_locality">Allgemeines</string>
+	<string name="sd_poi_category_public_transport">Öffentlicher Transport</string>
+	<string name="sd_poi_category_shop">Einkaufen</string>
+	<string name="sd_poi_category_transport">Transport</string>
+	<string name="sd_poi_category_leisure">Freizeit</string>
+	<string name="sd_poi_category_food">Essen + Trinken</string>
+	<string name="sd_poi_category_tourism">Tourismus</string>
+	<string name="sd_poi_category_emergency">Notfall</string>
+	<string name="sd_poi_category_mostused">Meistgenutzt</string>
+	
+	
+	<!-- Sub-Groups -->	
+	<string name="sd_poi_category_dentist">Dentist</string>
+	<string name="sd_poi_category_doctors">Doctor</string>
+	<string name="sd_poi_category_embassy">Embassy</string>
+	<string name="sd_poi_category_emergency_phone">Emergency Phone</string>
+	<string name="sd_poi_category_fire_station">Fire Station</string>
+	<string name="sd_poi_category_hospital">Hospital</string>
+	<string name="sd_poi_category_pharmacy">Pharmacy</string>
+	<string name="sd_poi_category_police">Police</string>
+	<string name="sd_poi_category_telephone">Telephone</string>
+	<string name="sd_poi_category_veterinary">Veterinary</string>
+	
+	<string name="sd_poi_category_biergarten">Biergarten</string>
+	<string name="sd_poi_category_cafe">Cafe</string>
+	<string name="sd_poi_category_drinking_water">Drinking Water</string>
+	<string name="sd_poi_category_fast_food">Fast Food</string>
+	<string name="sd_poi_category_food_court">Food Court</string>
+	<string name="sd_poi_category_pub">Pub</string>
+	<string name="sd_poi_category_restaurant">Restaurant</string>
+	<string name="sd_poi_category_vending_machine">Vending Machine</string>	
+	
+	<string name="sd_poi_category_10pin">10pin bowling</string>
+	<string name="sd_poi_category_9pin">9pin bowling</string>
+	<string name="sd_poi_category_athletics">Athletics</string>
+	<string name="sd_poi_category_australian_football">Australian Football</string>
+	<string name="sd_poi_category_baseball">Baseball</string>
+	<string name="sd_poi_category_basketball">Basketball</string>
+	<string name="sd_poi_category_beachvolleyball">Beachvolleyball</string>
+	<string name="sd_poi_category_boules">Boules</string>
+	<string name="sd_poi_category_chess">Chess</string>
+	<string name="sd_poi_category_climbing">Climbing</string>
+	<string name="sd_poi_category_cricket">Cricket</string>
+	<string name="sd_poi_category_cricket_nets">Cricket Nets</string>
+	<string name="sd_poi_category_croquet">Croquet</string>
+	<string name="sd_poi_category_cycling">Cycling</string>
+	<string name="sd_poi_category_equestrian">Equestrian</string>
+	<string name="sd_poi_category_football">Football</string>
+	<string name="sd_poi_category_fountain">Fountain</string>
+	<string name="sd_poi_category_garden">Garden</string>
+	<string name="sd_poi_category_golf">Golf</string>
+	<string name="sd_poi_category_golf_course">Golf Course</string>
+	<string name="sd_poi_category_gymnastics">Gymnastics</string>
+	<string name="sd_poi_category_hockey">Hockey</string>
+	<string name="sd_poi_category_horse_racing">Horse Racing</string>
+	<string name="sd_poi_category_motor">Motor</string>
+	<string name="sd_poi_category_multi">Multi</string>
+	<string name="sd_poi_category_park">Park</string>
+	<string name="sd_poi_category_pitch">Pitch</string>
+	<string name="sd_poi_category_playground">Playground</string>
+	<string name="sd_poi_category_rugby">Rugby</string>
+	<string name="sd_poi_category_shooting">Shooting</string>
+	<string name="sd_poi_category_skateboard">Skateboard</string>
+	<string name="sd_poi_category_skating">Skating</string>
+	<string name="sd_poi_category_skiing">Skiing</string>
+	<string name="sd_poi_category_soccer">Soccer</string>
+	<string name="sd_poi_category_sports_centre">Sports Centre</string>
+	<string name="sd_poi_category_stadium">Stadium</string>
+	<string name="sd_poi_category_swimming">Swimming</string>
+	<string name="sd_poi_category_table_tennis">Table Tennis</string>
+	<string name="sd_poi_category_team_handball">Handball</string>
+	<string name="sd_poi_category_tennis">Tennis</string>
+	<string name="sd_poi_category_volleyball">Volleyball</string>
+	<string name="sd_poi_category_water_park">Water Park</string>
+	
+	<string name="sd_poi_category_atm">ATM</string>
+	<string name="sd_poi_category_bank">Bank</string>
+	<string name="sd_poi_category_bicycle_parking">Bicycle Parking</string>
+	<string name="sd_poi_category_brothel">Brothel</string>
+	<string name="sd_poi_category_bureau_de_change">Bureau de Change</string>
+	<string name="sd_poi_category_cinema">Cinema</string>
+	<string name="sd_poi_category_college">College</string>
+	<string name="sd_poi_category_courthouse">Courthouse</string>
+	<string name="sd_poi_category_grave_yard">Grave Yard</string>
+	<string name="sd_poi_category_kindergarten">Kindergarten</string>
+	<string name="sd_poi_category_library">Library</string>
+	<string name="sd_poi_category_nightclub">Nightclub</string>
+	<string name="sd_poi_category_post_box">Post Box</string>
+	<string name="sd_poi_category_post_office">Post Office</string>
+	<string name="sd_poi_category_school">School</string>
+	<string name="sd_poi_category_services">Services</string> <!-- ??? -->
+	<string name="sd_poi_category_theatre">Theatre</string>
+	<string name="sd_poi_category_toilets">Toilets</string>
+	<string name="sd_poi_category_university">University</string>
+
+	<string name="sd_poi_category_aerodrome">Airport</string>
+	<string name="sd_poi_category_bus_station">Bus Station</string>
+	<string name="sd_poi_category_bus_stop">Bus Stop</string>
+	<string name="sd_poi_category_ferry_terminal">Ferry Terminal</string>
+	<string name="sd_poi_category_halt">Halt</string>
+	<string name="sd_poi_category_railway_station">Railway Station</string>
+	<string name="sd_poi_category_aerialway_station">Aerialway Station</string>
+	<string name="sd_poi_category_subway_entrance">Subway Entrance</string>
+	<string name="sd_poi_category_terminal">Terminal</string>
+	<string name="sd_poi_category_tram_stop">Tram Stop</string>
+	
+	<string name="sd_poi_category_alcohol">Liquor Store</string>
+	<string name="sd_poi_category_bakery">Bakery</string>
+	<string name="sd_poi_category_beverages">Beverages</string>
+	<string name="sd_poi_category_bicycle">Bicycle</string>
+	<string name="sd_poi_category_books">Books</string>
+	<string name="sd_poi_category_butcher">Butcher</string>
+	<string name="sd_poi_category_car">Car</string>
+	<string name="sd_poi_category_chemist">Chemist</string>
+	<string name="sd_poi_category_clothes">Clothes</string>
+	<string name="sd_poi_category_computer">Computer</string>
+	<string name="sd_poi_category_convenience">Convenience</string>
+	<string name="sd_poi_category_department_store">Department_store</string>
+	<string name="sd_poi_category_doityourself">Doityourself (DIY)</string>
+	<string name="sd_poi_category_dry_cleaning">Dry Cleaning</string>
+	<string name="sd_poi_category_electronics">Electronics</string>
+	<string name="sd_poi_category_florist">Florist</string>
+	<string name="sd_poi_category_furniture">Furniture</string>
+	<string name="sd_poi_category_garden_centre">Garden Centre</string>
+	<string name="sd_poi_category_hairdresser">Hairdresser</string>
+	<string name="sd_poi_category_hardware">Hardware</string>
+	<string name="sd_poi_category_hifi">HiFi</string>
+	<string name="sd_poi_category_kiosk">Kiosk</string>
+	<string name="sd_poi_category_laundry">Laundry</string>
+	<string name="sd_poi_category_mall">Mall</string>
+	<string name="sd_poi_category_motorcycle">Motorcycle</string>
+	<string name="sd_poi_category_optician">Optician</string>
+	<string name="sd_poi_category_organic">Organic</string>
+	<string name="sd_poi_category_outdoor">Outdoor</string>
+	<string name="sd_poi_category_shoes">Shoes</string>
+	<string name="sd_poi_category_sports">Sports</string>
+	<string name="sd_poi_category_stationery">Stationery</string>
+	<string name="sd_poi_category_supermarket">Supermarket</string>
+	<string name="sd_poi_category_toys">Toys</string>
+	<string name="sd_poi_category_video">Video</string>
+	
+	<string name="sd_poi_category_alpine_hut">Alpine Hut</string>
+	<string name="sd_poi_category_arts_centre">Arts Centre</string>
+	<string name="sd_poi_category_attraction">Attraction</string>
+	<string name="sd_poi_category_camp_site">Camp Site</string>
+	<string name="sd_poi_category_caravan_site">Caravan Site</string>
+	<string name="sd_poi_category_castle">castle</string>
+	<string name="sd_poi_category_chalet">Chalet</string>
+	<string name="sd_poi_category_guest_house">Guest House</string>
+	<string name="sd_poi_category_hostel">Hostel</string>
+	<string name="sd_poi_category_hotel">Hotel</string>
+	<string name="sd_poi_category_information">Information</string>
+	<string name="sd_poi_category_lighthouse">Lighthouse</string>
+	<string name="sd_poi_category_memorial">Memorial</string>
+	<string name="sd_poi_category_motel">Motel</string>
+	<string name="sd_poi_category_museum">Museum</string>
+	<string name="sd_poi_category_picnic_site">Picnic Site</string>
+	<string name="sd_poi_category_ruins">Ruins</string>
+	<string name="sd_poi_category_theme_park">Theme Park</string>
+	<string name="sd_poi_category_viewpoint">Viewpoint</string>
+	<string name="sd_poi_category_zoo">Zoo</string>
+
+	<string name="sd_poi_category_car_rental">Car Rental</string>
+	<string name="sd_poi_category_car_repair">Car Repair</string>
+	<string name="sd_poi_category_car_sharing">Car Sharing</string>
+	<string name="sd_poi_category_fuel">Fuel</string>
+	<string name="sd_poi_category_parking">Parking</string>
+	<string name="sd_poi_category_taxi">Taxi</string>
+</resources>

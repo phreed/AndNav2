@@ -1,0 +1,3 @@
+TestCases:
+	- Being in DDMap, open Menu for a long time. Check if there are problems, finding the new position on the route.
+	- Check if the Zoom-Factor increases 2.4f and 4.8f apply to all regions on earth or just the S.F.  testing area.

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Fetch Route Dialog -->
+	<string name="pdg_fetchroute_title">Route wird berechnet...</string>
+	<string name="pdg_fetchroute_messagestart">Ziel:</string>
+	<!-- REFetch Route Dialog -->
+	<string name="pdg_refetchroute_title">Route wird neu berechnet...</string>
+	<!-- REStore Route Dialog (after Screenorientation changed) -->
+	<string name="pdg_restoreroute_title">Route wiederherstellen...</string>
+	<!-- Shown while loading a saved route -->
+	<string name="pdg_fetchroute_loading_saved_route">Lade gespeicherte Route...</string>
+	<!-- Shown while loading a shared route -->
+	<string name="pdg_fetchroute_loading_routebyhandle">Lade Route von RouteHandleID = %d</string>
+	
+	<string name="ddmap_info_waypoint_passed">Wegpunkt passiert.</string>
+	<string name="ddmap_info_gps_resolving">Aktiviere Gps...</string>
+	<string name="ddmap_info_no_route">Keine Route gefunden ...</string>
+	<string name="ddmap_info_route_fetch_no_dataconnection_title">Keine Daten Verbindung...</string>
+	<string name="ddmap_info_route_fetch_no_dataconnection_message">Datenverbindung abgebrochen...\n <b>Nochmal versuchen?</b></string>
+	<string name="ddmap_info_route_fetch_tries_exceeded_ask_remove_streetnumber_title">Route nicht gefunden</string>
+	<string name="ddmap_info_route_fetch_tries_exceeded_ask_remove_streetnumber_message">Nach <b>3</b> Versuchen...\n<b>Nochmal</b> ohne <b>Hausnummer</b> versuchen?</string>
+	<string name="ddmap_info_route_fetch_tries_exceeded_title">Keine Route gefunden ...</string>
+	<string name="ddmap_info_route_fetch_tries_exceeded_message">Nach <b>3</b> Versuchen...\n<b>Nochmal versuchen?</b></string>
+	<string name="ddmap_info_route_fetch_useold">Letzte Route nutzen</string>
+	<string name="ddmap_info_gps_fetch_tries_exceeded_title"><b>GPS</b> nicht verfügbar...</string>
+	<string name="ddmap_info_gps_fetch_tries_exceeded_message"><b>Nochmal versuchen</b> die GPS-Position zu bestimmen?\n\n<i>(Das GPS Icon in der Statusleiste sollte <b>aufhören</b> zu blinken!)</i></string>
+	
+	
+	<string name="toast_autozoom_enabled">Autozoom <b>eingeschaltet</b>. Umschalten mit der \'<b>a</b>\'-Taste.</string>
+	<string name="toast_autozoom_disabled">Autozoom <b>ausgeschaltet</b>. Umschalten mit der \'<b>a</b>\'-Taste.</string>
+	
+	<string name="toast_snaptoroute_enabled">\'Position auf Route heften\' <b>eingeschaltet</b>. Umschalten mit der \'<b>a</b>\'-Taste.</string>
+	<string name="toast_snaptoroute_disabled">\'Position auf Route heften\' <b>ausgeschaltet</b>. Umschalten mit der \'<b>a</b>\'-Taste.</string>
+	
+	<!-- Preloader -->
+	<string name="toast_preloader_noroute">Keine Route verfügbar um Kartenkacheln zu vor zu laden.</string>
+	<string name="ddmap_info_preloader_autozoom_disabled">Autozoom ist jetzt ausgeschaltet.</string>
+	
+	<string name="dlg_preloader_title">Vorlader</string>
+	<string name="dlg_preloader_message">%d Kartenkacheln für aktuelle Route laden?\n\nUngefähre Größe: %s</string>
+	
+	<string name="pdg_preloader_title">Lade Kartenkacheln...</string>
+	<string name="pdg_preloader_message">Fortschritt: %d von %d\n\n<i>BACK drücken zum ausblenden.</i></string>
+	
+	<string name="toast_preloader_cache_increased_message">Cachegröße wurde erhöht auf: %s</string>
+		
+	<!-- Pseudo Context Menu-String -->
+	<!-- TODO? Sollte abgelöst werden vom richtigen ContextMenu -->
+	<string name="ddmap_contextmenu_add_as_waypoint">Als Wegpunkt hinzufügen</string>
+	<string name="ddmap_contextmenu_clear_waypoints">Wegpunkte löschen</string>
+	<string name="ddmap_contextmenu_add_as_avoidarea">Als Meidungsgebiet hinzufügen</string>
+	<string name="ddmap_contextmenu_clear_avoidareas">Meidungsgebiete löschen</string>
+	<string name="ddmap_contextmenu_close">Schließen</string>
+	<string name="ddmap_contextmenu_exit">Beenden</string>
+	
+	<string name="ddmap_contextmenu_clear_avoidareas_radius_title">Meidungsradius wählen...</string>
+	
+	<string name="ddmap_info_target_reached">Ziel erreicht!</string>
+</resources>

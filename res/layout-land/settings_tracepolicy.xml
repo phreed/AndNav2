@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+    <LinearLayout     
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+		<LinearLayout 	
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:orientation="vertical">
+			<CheckBox
+				android:id="@+id/chk_settings_tracepolicy_filter_minimal_requirements"
+				style="@style/sd_quickinfo_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:gravity="center"
+				android:text="@string/chk_settings_tracepolicy_filter_caption"
+				android:layout_gravity="center"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:gravity="center"
+				android:text="@string/tv_settings_tracepolicy_quickdescription"
+				android:layout_gravity="center"/>
+		</LinearLayout>
+		<ImageButton android:id="@+id/ibtn_settings_tracepolicy_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="right"
+			android:src="@drawable/close" />
+	</LinearLayout>
+
+    <LinearLayout     
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+		<TableLayout
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" 
+			android:stretchColumns="0,2">
+			<TableRow 
+				android:paddingTop="20px"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					style="@style/default_textstyle"
+					android:gravity="center"
+					android:layout_span="3"
+					android:text="@string/tv_settings_tracepolicy_remote" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<ImageView 
+					android:id="@+id/iv_settings_tracepolicy_uploadtoandnav_selector"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_tracepolicy_uploadtoandnav"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/tracepolicy_andnavupload"
+					android:gravity="center"
+					android:paddingLeft="30px" 
+					android:paddingRight="30px"
+					android:paddingBottom="12px" 
+					android:paddingTop="12px"/>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<ImageView
+					android:id="@+id/iv_settings_tracepolicy_uploadtoosmaccount_selector"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_tracepolicy_uploadtoosmaccount"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/tracepolicy_directosmupload"
+					android:gravity="center"
+					android:paddingBottom="12px"
+					android:paddingTop="12px"/>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+		</TableLayout>
+		<TableLayout
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" 
+			android:stretchColumns="0,2">
+			<TableRow 
+				android:paddingTop="20px"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					style="@style/default_textstyle"
+					android:gravity="center"
+					android:layout_span="3"
+					android:text="@string/tv_settings_tracepolicy_local" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<ImageView
+					android:id="@+id/iv_settings_tracepolicy_sdcard_selector"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_tracepolicy_sdcard"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/sdcard"
+					android:gravity="center"
+					android:paddingTop="12px"
+					android:paddingBottom="12px"/>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+	<string name="toast_sd_postcode_bs_7666_empty">Bitte Postcode eingeben...</string>
+	<string name="toast_sd_postcode_bs_7666_no_match_found">Postcode entspricht nicht dem gültigen Format.\n\nBeispiel: \'SW1A 0AA\'</string>
+	<string name="sd_postcode_bs_7666_bad_format_title">Falsches Postcode Format</string>
+	<string name="sd_postcode_bs_7666_bad_format_message">Eingegeben: \'%s\'\nKorrigiert: \'%s\'\n\nBeispiel: \'SW1A 0AA\'</string>
+	<string name="sd_postcode_bs_7666_correct">Korrigieren</string>
+	
+	
+	<string name="sd_postcode_bs_7666_use_closes_match">Bester Treffer</string>
+	<string name="sd_postcode_bs_7666_closest_databasematch_title">Postcode nicht in der Datenbank</string>
+	<string name="sd_postcode_bs_7666_closest_databasematch_message">Eingeben: \'%s\'\nBester Treffer: \'%s\'</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_statistics_focused">Show Statistics...</string>
+		<string name="tv_settings_statistics_session">Session</string>
+		<string name="tv_settings_statistics_overall">Overall</string>
+		<string name="tv_settings_statistics_average">Avg</string>
+		<string name="tv_settings_statistics_maxspeed">Max</string>
+		<string name="tv_settings_statistics_distance">Dist</string>
+		<string name="tv_settings_statistics_time">Time</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_unitsystem_focused">Einheitensystem ändern...</string>
+		<string name="tv_settings_unitsystem_quickinfo_caption">Einheitensystem wählen...</string>
+		<string name="btn_settings_unitsystem_metric_caption">Metrische Einheiten</string>
+		<string name="tv_settings_unitsystem_metric_details">Meter\nKilometer\nKilometer pro Stunde\nCelcius</string>
+		<string name="btn_settings_unitsystem_imperial_caption">Imperiale Einheiten</string>
+		<string name="tv_settings_unitsystem_imperial_details">Yards\nMilen\nMilen pro Stunde\nFahrenheit</string>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView
+			style="@style/sd_quickinfo_textstyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_weight="1"
+			android:text="@string/tv_settings_keylayout_quickinfo_caption"/>
+		<ImageButton android:id="@+id/ibtn_settings_keylayout_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/close" />
+	</LinearLayout>
+
+	<ScrollView 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TableLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:stretchColumns="0,2">
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_keylayout_abcdef"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/keylayout_abcdef_full"
+					android:paddingTop="12px"
+					android:paddingBottom="12px"/>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_keylayout_qwerty"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/keylayout_qwerty_full"
+					android:paddingBottom="12px"
+					android:paddingTop="12px"/>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_keylayout_qwertz"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/keylayout_qwertz_full"
+					android:paddingBottom="12px"
+					android:paddingTop="12px"/>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+			<TableRow android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+				<ImageButton
+					android:id="@+id/ibtn_settings_keylayout_cyrillic"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/keylayout_cyrillic_full"
+					android:paddingBottom="12px"
+					android:paddingTop="12px"/>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</TableRow>
+		</TableLayout>
+	</ScrollView>
+</LinearLayout>

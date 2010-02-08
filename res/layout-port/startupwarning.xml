@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+	<ImageView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:src="@drawable/startupwarning" />
+	<TextView
+		style="@style/default_textstyle"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:gravity="center"
+	    android:text="@string/startupwarning" />
+    <TableLayout     
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:stretchColumns="1" >
+	    <TableRow 	    
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" >
+			<Button
+				style="@style/small_textstyle"
+				android:id="@+id/btn_startupwarning_neveragain"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content" 
+			    android:text="@string/nevershowagain" />
+			<TextView
+			    android:layout_width="0dip"
+			    android:layout_height="0dip" />
+			<Button
+				style="@style/default_textstyle"
+				android:id="@+id/btn_startupwarning_ok"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content" 
+			    android:text="@string/ok" />
+	    </TableRow>
+    </TableLayout>
+</LinearLayout>

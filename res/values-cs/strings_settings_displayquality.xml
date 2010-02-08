@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the DisplayQuality-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_quality_focused">Kvalita zobrazení...</string>
+		<string name="tv_settings_quality_quickinfo_default">Kvalita zobrazení</string>
+		
+		<string name="btn_settings_quality_low">Špatná</string>
+			<string name="tv_settings_quality_quickinfo_low_description">Žádná průhlednost, žádné vyhlazení hran textu, žádné vyhlazené hrany cesty.</string>
+		
+		<string name="btn_settings_quality_standard">Střední</string>
+			<string name="tv_settings_quality_quickinfo_standard_description">Průhlednost, vyhlazení hran textu, žádné vyhlazené hrany cesty.</string>
+			
+		<string name="btn_settings_quality_high">Vysoká</string>
+			<string name="tv_settings_quality_quickinfo_high_description">Průhlednost, vyhlazení hran textu, vyhlazené hrany cesty.</string>
+			
+		<string name="btn_settings_quality_best">Nejlepší</string>
+			<string name="tv_settings_quality_quickinfo_best_description">Průhlednost, vyhlazení hran textu a cesty, vyhlazené hrany cesty.</string>
+</resources>

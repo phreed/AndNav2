@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Basic strings. -->
+	<string name="ok">OK</string>
+	<string name="yes_UPPERCASE">ANO</string>
+	<string name="no_UPPERCASE">NE</string>
+	<string name="na">N/V</string>
+	<string name="cancel">Zrušit</string>
+	<string name="close">Zavřít</string>
+	<string name="instructions">Návod</string>
+	<string name="clear">Smazat</string>
+	<string name="success">Úspěch</string>
+	<string name="hide">Skrýt</string>
+	<string name="coordinates">Souřadnice</string>
+	<string name="update">Aktualizace</string>
+	<string name="install">Instalovat</string>
+	<string name="save">Uložit</string>
+	<string name="find">Najít</string>
+	<string name="search">Hledat</string>
+	<string name="refresh">Obnovit</string>
+	<string name="about">O aplikaci</string>
+	<string name="report_bugs">Nahlásit chybu</string>
+	<string name="versioninfo">Informace o verzi</string>
+	<string name="latitude">Zeměpisná šíře</string>
+	<string name="longitude">Zeměpisná délka</string>
+	<string name="home">Domů</string>
+	<string name="proceed">Další</string>
+	<string name="clipboard">Schránka</string>
+	
+	<string name="year">Rok</string>
+	<string name="years">Roky</string>
+	<string name="month">Měsíc</string>
+	<string name="months">Měsíce</string>
+	<string name="week">Týden</string>
+	<string name="weeks">Týdny</string>
+	<string name="day">Den</string>
+	<string name="days">Dny</string>
+	<string name="hour">Hodina</string>
+	<string name="hours">Hodiny</string>
+	<string name="minute">Minuta</string>
+	<string name="minutes">Minuty</string>
+	<string name="second">Sekunda</string>
+	<string name="seconds">Sekundy</string>
+	
+	<string name="compass_please_callibrate">Prosím zkalibrujte kompas tím že svým mobilem zahýbete.</string>
+		
+	<string name="please_wait_a_moment">Prosím čekejte..."</string>
+	
+	<string name="list_empty">Seznam je prázdný...</string>
+	
+	<string name="startup_gpsrequried_title">GPS je aktivní...</string>
+	<string name="startup_gpsrequried_message">Aby bylo možné používat AndNav, musí být zapnutý GPS-přijímač.\n\nKlikněte na <b>OK</b> pro přesun do systémových nastavení, nebo <b>Zrušit</b> pro ukončení.\n\nSpusťte potom AndNav znovu.\n</string>
+	
+	<string name="startupwarning">Dávejde pozor na provoz!\nJedete na vlastní riziko!</string>
+	<string name="nevershowagain">Příště nezobrazovat</string>
+	
+	<string name="not_yet_implemented_title">Sorry...</string>
+	<string name="not_yet_implemented_message">Tato funkce ještě není dostupná!</string>
+
+	<string name="notif_serverdowntime_tickertext">AndNav2 - ServerDowntime</string>
+	<string name="notif_serverdowntime_title">Downtime: </string>
+	<string name="notif_serverdowntime_message">Beginn: </string>
+	
+	<string name="unknown">Neznámé</string>
+	
+		
+    <!-- Characters that are used for each of the fast-scroll widget that skips directly
+        to names starting with this letter.  If your language sorts differently than this,
+        please rearrange the alphabet here to be whatever is correct (e.g. Norwegian
+        has the three additional letters at the end). -->
+    <string name="alphabet">\u0020ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+	
+</resources>

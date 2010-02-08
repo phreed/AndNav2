@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_routingflags_focused">Routen Einstellungen...</string>
+		<string name="rad_settings_routingflags_car_caption">Auto</string>
+		<string name="rad_settings_routingflags_bicycle_caption">Rad</string>
+		<string name="rad_settings_routingflags_pedestrian_caption">Fuß.</string>
+		<string name="rad_settings_routingflags_shortest_caption">Kurz</string>
+		<string name="rad_settings_routingflags_fastest_caption">Schnell</string>
+		<string name="chk_settings_routingflags_realtime_caption">Echtzeit-Navigation</string>
+		<string name="chk_settings_routingflags_avoid_caption">Meide:</string>
+		<string name="chk_settings_routingflags_avoidhighways_caption">Autobahnen</string>
+		<string name="chk_settings_routingflags_avoidtolls_caption">Maut</string>
+		<string name="chk_settings_routingflags_alwaysremember_caption">Immer merken</string>
+		<string name="chk_settings_routingflags_saveinitial_caption">Routen Offline speichern</string>
+</resources>

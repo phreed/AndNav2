@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<resources>
+	<string name="veecheck_notify_ticker">AndNav2 Update available</string> 
+	<string name="veecheck_notify_title">AndNav2 Update available</string> 
+	<string name="veecheck_notify_message">Download the latest version...</string> 
+	<string name="veecheck_pref_category">Sample Settings</string> 
+	<string name="veecheck_pref_enabled_title">Enabled</string> 
+	<string name="veecheck_pref_enabled_summary">Whether checking is enabled or not.</string> 
+	<string name="veecheck_pref_check_uri_title">Check URI</string> 
+	<string name="veecheck_pref_check_uri_summary">The URI which will be checked for updates.</string> 
+	<string name="veecheck_confirm_title">Confirm AndNav2 Update</string> 
+	
+	<string name="veecheck_version_type">Type:</string>
+	<string name="veecheck_version_description">Description:</string>
+	<string name="veecheck_version_importance">Importance:</string> 
+	
+	<string name="veecheck_confirm_text"><b>Would you like to update AndNav2 to the latest version?</b>\n\n<b>Importance:</b> <i>%s</i>\n<b>Type:</b> <i>%s</i>\n%s\n\nBest Regards,\nThe AndNav-Team</string>
+	<string name="veecheck_confirm_text_default">Would you like to update AndNav2 to the latest version?\n\nNew versions mean:\n- Less Bugs\n- More Features\n- Better Performance\n- Less Energy-Consumption\n\nBest Regards,\nThe AndNav-Team</string> 
+	<string name="veecheck_confirm_stop">Don\'t notify me of <b>this</b> update again</string> 
+</resources>

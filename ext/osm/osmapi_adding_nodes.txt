@@ -1,0 +1,10 @@
+Use a negitive ID for new objects. The assigned ID will be returned.
+	if you want add a k="note" v="FIXME: noname"
+##########
+<node id="-1" lat="61.8083953857422" lon="10.8497076034546" visible="true" timestamp="2005-07-30T14:27:12+01:00">
+   <tag k="tourism" v="hotel" />
+   <tag k="name" v="Cockroach Inn" />
+</node>
+##########
+
+http://username@password:osmapiserver/0.5/...

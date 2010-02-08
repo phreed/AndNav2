@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used in the Screen, 
+ # where the user chooses between Address/Contact/Favorite/...-Search.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_sd_mainchoose_favorite">Z oblíbených bodů...</string>
+	<string name="tv_sd_mainchoose_contacts">Vybrat kontakt...</string>
+	<string name="tv_sd_mainchoose_poi">Point of Interest...</string>
+	<string name="tv_sd_mainchoose_address">Hledat adresu...</string>
+	<string name="tv_sd_mainchoose_load_saved">Uložené trasy...</string>
+	<string name="tv_sd_mainchoose_close">Zavřít...</string>
+	
+	<!-- These strings are shown, when the user selects the item from the [MENU]. -->
+	<string name="menu_sd_mainchoose_lat_lon">Souřadnice</string>
+	<string name="dlg_input_direct_lat_lon_title">Zadejte souřadnice v decimálním formátu...</string>
+	<string name="dlg_input_direct_lat_lon_latitude">Zeměpisná šířka:</string>
+	<string name="dlg_input_direct_lat_lon_longitude">Zeměpisná délka:</string>
+	<string name="dlg_input_direct_lat_lon_example"><b>Příklad</b> (<i>New York</i>):\nŠ: \'40.755962\'\nD: \'-73.986703\'</string>
+	<string name="dlg_input_direct_lat_lon_malformed">Neplatná zeměpisná šířka nebo délka.</string>
+</resources>

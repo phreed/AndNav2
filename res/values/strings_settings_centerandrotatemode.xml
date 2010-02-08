@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_center_and_rotate_mode_quickinfo_current">(current)</string>
+	<string name="rotatemode_dd_up_centermode_upto_nextturn_mutex_title">Settings-conflict!</string>
+	<string name="rotatemode_dd_up_centermode_upto_nextturn_mutex_message">The selected setting is not applicable with the RotateMode: \"DrivingDirection Up\".\n\nContinuing will set the Rotatemode to: \"North Up\" !</string>
+	<string name="centermode_dd_up_rotatemode_upto_nextturn_mutex_title">Settings-conflict!</string>
+	<string name="centermode_dd_up_rotatemode_upto_nextturn_mutex_message">The selected setting is not applicable with the CenterMode: \"Show up to next turn\".\n\nContinuing will set the centermode to: \"Center User\" !</string>
+</resources>

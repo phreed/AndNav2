@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+    <LinearLayout     
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+		<TextView
+			style="@style/sd_quickinfo_textstyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" 
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:text="@string/tv_settings_unitsystem_quickinfo_caption" />
+		<ImageButton android:id="@+id/ibtn_settings_unitsystem_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:gravity="right"
+			android:src="@drawable/close" />
+	</LinearLayout>
+
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:stretchColumns="0,1">
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<Button android:id="@+id/btn_settings_unitsystem_metric"
+				style="@style/settings_quickinfo_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:text="@string/btn_settings_unitsystem_metric_caption" />
+			<Button android:id="@+id/btn_settings_unitsystem_imperial"
+				style="@style/settings_quickinfo_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/btn_settings_unitsystem_imperial_caption" />
+		</TableRow>
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TextView
+				style="@style/settings_quickinfo_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/tv_settings_unitsystem_metric_details"  />
+			<TextView
+				style="@style/settings_quickinfo_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:text="@string/tv_settings_unitsystem_imperial_details"  />
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

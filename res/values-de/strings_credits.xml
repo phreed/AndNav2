@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This file describes the Credits shown in the About-Window and the Splash-Window.
+ #
+ # @Translator:
+ # You can add yourself with a link to the arrays, if you wish to.
+ #
+ ### README-END ###
+-->
+<resources>
+	<!-- This is the String shown in the bottom of the the Splash-Screen. -->
+	<string name="maps_attribution"><b>Data</b>: OpenStreetMap.org\n<b>Service</b>: OpenRouteService.org\n</string>
+
+	<array name="aboutcreditsnames">
+		<item>Nicolas Gramlich</item>
+		<item>Pascal Neis</item>
+		<item>Das OpenStreetMap-Projekt</item>
+		<item>Charles L. Chen (TTS-lib)</item>
+		<item>Die andnav.org Community =)</item>
+		<item>Joy and Tom Gibara</item>
+		<item>Sjors Provoost</item>
+		<item>Flaggen-Icons (icondrawer.com)</item>
+		<item>Tango-Icons</item>
+		<item>Guy Romain</item>
+	</array>
+</resources>

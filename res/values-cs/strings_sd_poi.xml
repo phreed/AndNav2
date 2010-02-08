@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used in the POI-Screen(s).
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="choose_search_radius">Vyberte poloměr hledání...</string>
+	<string name="poi_search_radius_global">Globální</string>
+	
+	<string name="menu_sd_poi_wipe">Smazat POI-historii...</string>
+	
+	<string name="toast_sd_poi_empty">Prosím zadejte POI...</string>
+	
+	<string name="tv_sd_poi_entry_quickinfo_caption">Zadejte POI...</string>	
+	<string name="tv_sd_poi_searchlist_quickinfo_caption">Vyberte POI...</string>
+	<string name="toast_sd_poi_getting_gps_and_poi_search">Zjišťuji GPS-pozici a hledám body POI...</string>
+	<string name="toast_sd_poi_could_not_find">Nemohl jsem \'%s\' během %s najít.</string>
+	
+	<string name="tv_sd_poi_categories_quickinfo_caption">Vyberte kategorii...</string>
+	
+	<string name="poi_search_categorized">Kategorizované hledání</string>
+	<string name="poi_search_freeform">Hledání pomocí volného textu</string>
+</resources>

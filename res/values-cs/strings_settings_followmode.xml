@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the centermode-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_centermode_quickinfo_default">Vyberte centrování...</string>
+	<string name="tv_settings_centermode_quickinfo_centeruser">Uživatelské centrování...</string>
+	<string name="tv_settings_centermode_quickinfo_centeruser_saved">Uživatelské centrování... uloženo!</string>
+	<string name="tv_settings_centermode_quickinfo_upto_nextturn">Až k odbočení...</string>
+	<string name="tv_settings_centermode_quickinfo_upto_nextturn_saved">Až k odbočení... uloženo!</string>
+</resources>

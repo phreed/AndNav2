@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Screenorientation-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_audio_focused">Změnit zvukové nastavení...</string>
+	<string name="tv_settings_quickinfo_screenorientation_focused">Změnit orientaci displeje...</string>
+	<string name="tv_settings_screenorientation_quickinfo_default">Nastavte orientaci...</string>
+	<string name="tv_settings_screenorientation_user">Uživatelské (standard)</string>
+	<string name="tv_settings_screenorientation_sensor">Sensorem</string>
+	<string name="tv_settings_screenorientation_landscape">Vždy naležato</string>
+	<string name="tv_settings_screenorientation_portrait">Vždy svisle</string>
+</resources>

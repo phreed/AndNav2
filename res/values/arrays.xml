@@ -1,0 +1,108 @@
+<resources>
+	<array name="settings_snaptoroute_radius_metric">
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>40</item>
+		<item>50</item>
+		<item>75</item>
+		<item>100</item>
+		<item>150</item>
+		<item>200</item>
+		<item>250</item>
+		<item>300</item>
+		<item>400</item>
+		<item>500</item>
+	</array>
+	
+	<array name="settings_snaptoroute_radius_imperial">
+		<item>10</item> <!-- 10 yards -->
+		<item>19</item> <!-- 20 yards -->
+		<item>28</item> <!-- 30 yards -->
+		<item>37</item> <!-- 40 yards -->
+		<item>46</item> <!-- 50 yards -->
+		<item>69</item> <!-- 75 yards -->
+		<item>92</item> <!-- 100 yards -->
+		<item>137</item> <!-- 150 yards -->
+		<item>182</item> <!-- 200 yards -->
+		<item>229</item> <!-- 250 yards -->
+		<item>274</item> <!-- 300 yards -->
+		<item>366</item> <!-- 400 yards -->
+		<item>457</item> <!-- 500 yards -->
+	</array>
+
+	<array name="poi_avoidarea_radius_ors_metric">
+		<item>50</item>
+		<item>100</item>
+		<item>200</item>
+		<item>500</item>
+		<item>1000</item>
+		<item>2000</item>
+		<item>5000</item>
+		<item>10000</item>
+		<item>20000</item>
+		<item>50000</item>
+	</array>
+	
+	<array name="poi_avoidarea_radius_ors_imperial">
+		<item>46</item> <!-- 50 yards -->
+		<item>92</item> <!-- 100 yards -->
+		<item>229</item> <!-- 250 yards -->
+		<item>458</item> <!-- 500 yards -->
+		<item>915</item> <!-- 1000 yards -->
+		<item>1610</item> <!-- 1 miles -->
+		<item>3219</item> <!-- 2 miles -->
+		<item>8047</item> <!-- 5 miles -->
+		<item>16094</item> <!-- 10 miles -->
+		<item>32187</item> <!-- 20 miles -->
+		<item>48281</item> <!-- 30 miles -->
+	</array>
+
+	<array name="accessibility_minutes">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>10</item>
+		<item>20</item>
+		<item>30</item>
+		<item>45</item>
+		<item>60</item>
+	</array>
+	
+	<array name="poi_search_radius">
+		<item>1</item>
+		<item>2</item>
+		<item>5</item>
+		<item>10</item>
+		<item>25</item>
+		<item>50</item>
+		<item>100</item>
+		<item>-1</item> <!-- For global search -->
+	</array>
+	<array name="poi_search_radius_ors_metric">
+		<item>100</item>
+		<item>200</item>
+		<item>500</item>
+		<item>1000</item>
+		<item>2000</item>
+		<item>5000</item>
+		<item>10000</item>
+		<item>20000</item>
+		<item>50000</item>
+	</array>
+	
+	<array name="poi_search_radius_ors_imperial">
+		<item>92</item> <!-- 100 yards -->
+		<item>229</item> <!-- 250 yards -->
+		<item>458</item> <!-- 500 yards -->
+		<item>915</item> <!-- 1000 yards -->
+		<item>1610</item> <!-- 1 miles -->
+		<item>3219</item> <!-- 2 miles -->
+		<item>8047</item> <!-- 5 miles -->
+		<item>16094</item> <!-- 10 miles -->
+		<item>32187</item> <!-- 20 miles -->
+		<item>48281</item> <!-- 30 miles -->
+	</array>
+</resources>

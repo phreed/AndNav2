@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_favorites_focused">Favoriten verwalten...</string>
+	
+	<string name="settings_favortites_contextmenu_use">Diesen Favoriten wählen!</string>
+	<string name="settings_favortites_contextmenu_delete">Diesen Favoriten löschen!</string>
+
+	<string name="tv_sd_favorites_quickinfo_caption">Favoriten auswählen...</string>
+	<string name="menu_sd_favorites_wipe">Favoriten löschen...</string>
+	
+	<string name="dlg_input_favorite_name_name">Name:</string>
+	<string name="et_dlg_input_favorite_name_name_hint">z.B.: \'Toller Ort\'</string>
+	<string name="dlg_input_favorite_name_title">Name eingeben...</string>
+	<string name="dlg_input_favorite_name_example">Mindestens <b>3</b> Buchstaben.</string>
+	
+	
+	<string name="toast_error_adding_favorite">Fehler beim Hinzufügen des Favoriten.</string>
+</resources>

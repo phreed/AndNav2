@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_sd_resolver_quickinfo_caption">Bitte wählen...</string>
+	<string name="dlg_sd_resolver_loading_title">Suche Addresse...</string>
+	<string name="dlg_sd_resolver_streetline_nostreet">Stadt-Zentrum</string>
+</resources>

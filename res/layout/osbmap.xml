@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<!-- Background (rotatable) -->
+	<view class="org.andnav2.ui.common.views.RotateView" 
+		android:id="@+id/rotator_ddmap"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" >
+	    <view class="org.andnav2.osm.views.OSMMapView" 
+	    	android:id="@+id/map_osbmap"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+	        android:enabled="true"
+	        android:clickable="true" />
+	</view>
+    <!-- PinControl, Upper Middle -->
+	<view class="org.andnav2.osm.views.OSMMapViewScaleIndicatorView" 
+		android:id="@+id/scaleindicatorview_osbmap"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentTop="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+	<!-- Zoom Controls, Upper edged -->
+	<ImageView
+		android:id="@+id/iv_osbmap_zoomin"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/btn_zoom_in"/>
+	<ImageView
+		android:id="@+id/iv_osbmap_zoomout"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/btn_zoom_out"/>
+	<!-- Left side -->
+	<ImageButton
+		android:id="@+id/ibtn_osbmap_refresh"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:enabled="false"
+		android:src="@drawable/refresh"/>
+	<!-- Right side -->
+	<ImageButton
+		android:id="@+id/ibtn_osbmap_comment_write"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:enabled="false"
+		android:src="@drawable/comment_write"/>
+	<ImageButton
+		android:id="@+id/ibtn_osbmap_add"
+		android:layout_above="@id/ibtn_osbmap_comment_write"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/osb_icon_bug_add"/>
+	<ImageButton
+		android:id="@+id/ibtn_osbmap_add_cancel"
+		android:layout_above="@id/ibtn_osbmap_add"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:src="@drawable/osb_icon_bug_open"/>
+</RelativeLayout>

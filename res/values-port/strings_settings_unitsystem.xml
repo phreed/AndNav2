@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+		<string name="tv_settings_unitsystem_metric_details">Meters\nKilometers\nKilometers/Hour\nCelcius</string>
+		<string name="tv_settings_unitsystem_imperial_details">Yards\nMiles\nMiles/Hour\nFahrenheit</string>
+</resources>

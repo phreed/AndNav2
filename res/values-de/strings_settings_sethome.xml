@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_sethome_focused">Heimartort setzen...</string>
+	<string name="btn_settings_sethome_via_map_caption">Von der Karte</string>
+	<string name="btn_settings_sethome_via_sd_caption">Dialog-Suche</string>
+	<string name="pdg_settings_sethome_via_sd_donefetch_message">Bitte warten...</string>
+	<string name="toast_settings_sethome_via_map_failed">Addresse konnte nicht gefunden werden.\nTipp: Vielleicht ohne Hausnummer probieren.</string>
+	<string name="toast_settings_sethome_via_map_howto">Longklick auf die Karte setzt eine neue Heimatort.</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the screen, where the user select between centermode, RotateMode and More settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_navigation_focused">Nastavení navigace...</string>
+	<string name="tv_settings_navigation_quickinfo_caption">Nastavení navigace...</string>
+	<string name="tv_settings_navigation_centermode">centrování mapy</string>
+	<string name="tv_settings_navigation_rotatemode">rotace mapy</string>
+	<string name="tv_settings_navigation_more">více možností</string>
+</resources>

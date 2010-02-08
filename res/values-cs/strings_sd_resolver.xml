@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used on the Screen where the addresses are resolved.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_sd_resolver_quickinfo_caption">Prosím vyberte...</string>
+	<string name="dlg_sd_resolver_loading_title">Hledat adresu...</string>
+	<!-- Used when no street could be found. -->
+	<string name="dlg_sd_resolver_streetline_nostreet">Město-centrum</string>
+</resources>

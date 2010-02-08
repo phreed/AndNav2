@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+		<string name="chk_settings_voice_menuvoice_caption">Menu Voice</string>
+		<string name="btn_settings_voice_goadvanced_caption">Advanced</string>
+		<string name="chk_settings_voice_directionvoice_caption">Direction Voice</string>
+		<string name="tv_settings_voice_quickinfo_menuvoice_default">Change the voice-settings of AndNav.</string>
+		<string name="tv_settings_voice_quickinfo_menuvoice_description">Menu Voice will be heard when navigating through almost every menu in AndNav.</string>
+		
+		<string name="tv_settings_voice_quickinfo_directionvoice_description">Direction Voice will be heard when AndNav is routing your way to the next TurnPoint.\n i.e. \"In 200 meters, turn right\".</string>
+			<string name="tv_settings_directionvoice_quickinfo">What to say when...</string>
+			<string name="tv_settings_directionvoice_column_in">In...</string>
+			<string name="tv_settings_directionvoice_column_saywhat">... say what?</string>
+			
+		<string name="tv_settings_voice_ttsdescription"><b>TTS</b> means \'<i>Text To Speech</i>\'</string>
+		
+		<string name="btn_settings_voice_tts_caption">Text-2-Speech...</string>
+		<string name="dlg_settings_voice_tts_change_settings">Change Settings</string>
+		<string name="dlg_settings_voice_tts_play_sample">Play sample</string>
+		
+	<string name="tts_not_installed_title">"'Text to Speech' ..."</string>
+	<string name="tts_not_installed_message">The <b>FREE</b> \'Text to Speech\' library was not found on this device.\n\nDo you want to install it from the <b>Android Market</b>?</string>
+	<string name="tts_outdated_message">The <b>FREE</b> \'Text to Speech\' library is out of date.\n\nIt is <b>strongly</b> recommended to update it now!</string>
+			
+	<array name="spin_settings_directionvoice_saywhat_items">
+		<item>Nothing</item>
+		<item>Distance only</item>
+		<item>Turn only</item>
+		<item>Distance and Turn</item>
+		<item>Distance (TTS)</item>
+		<item>Turn and Street (TTS)</item>
+		<item>Dist., Turn and Street (TTS)</item>
+	</array>
+</resources>

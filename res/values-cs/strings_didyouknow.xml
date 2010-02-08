@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This file describes the Strings shown in the "Did-You-Know"-Dialog popping up on the main-menu.
+ # Each item describes one page of the "Did-You-Know"-Dialog.
+ #
+ ### README-END ###
+-->
+<resources>
+	<array name="did_you_know">
+		<item><b>Dlouhým kliknutím</b> na mapu v módu navigace se zobrazí dialogové okénko pro přidání otočného bodu a zadání prostoru pro objetí.</item>
+		<item><b>Dlouhým kliknutím</b> na mapu v módu náhledu můžete přidat oblíbebý bod nebo si nechat zobrazit předpověd počasí pro danou oblast.</item>
+		<item>Když otevřete <b>Menu</b> na displeji, můžete vybírat mezi <i>Adresou/Kontakty/POI</i>, najdete také položku menu, kde můžete přímo zadat <b>zeměpisnou šířku</b> a <b>délku</b> Vašeho cíle.</item>
+	</array>
+</resources>

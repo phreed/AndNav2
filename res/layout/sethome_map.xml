@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">  
+    <view class="org.andnav2.osm.views.OSMMapView" 
+    	android:id="@+id/map_sethome"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:enabled="true"
+        android:clickable="true" />
+	<ImageView
+		android:id="@+id/iv_sethome_map_zoomin"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/btn_zoom_in"/>
+	<ImageView
+		android:id="@+id/iv_sethome_map_zoomout"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/btn_zoom_out"/>
+	<ImageButton
+		android:id="@+id/ibtn_sethome_center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:src="@drawable/person_small"/>
+	<ImageButton
+		android:id="@+id/ibtn_sethome_toggle_sattelite"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/ibtn_sethome_center"
+		android:layout_alignParentRight="true"
+		android:src="@drawable/world_small"/>		
+	<ImageButton
+		android:id="@+id/ibtn_sethome_set"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:src="@drawable/checked"/>
+	<ImageButton
+		android:id="@+id/ibtn_sethome_cancel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/ibtn_sethome_set"
+		android:layout_alignParentLeft="true"
+		android:src="@drawable/exit"/>
+</RelativeLayout>

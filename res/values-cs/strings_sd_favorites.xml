@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used in the Favorites-Screen, while searching a destination.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_favorites_focused">Spravovat oblíbené body...</string>
+	
+	<string name="settings_favortites_contextmenu_use">Vybrat oblíbený bod!</string>
+	<string name="settings_favortites_contextmenu_delete">Tento oblíbený bod smazat!</string>
+
+	<string name="tv_sd_favorites_quickinfo_caption">Vyberte oblíbený bod...</string>
+	<string name="menu_sd_favorites_wipe">Smazat blíbený bod...</string>
+	
+	<string name="dlg_input_favorite_name_name">Jméno:</string>
+	<string name="dlg_input_favorite_name_title">Jméno bodu...</string>
+	<string name="dlg_input_favorite_name_example">Minimálně <b>3</b> znaky.</string>
+	
+	<string name="toast_error_adding_favorite">Chyba při přidání oblíbeného bodu.</string>
+</resources>

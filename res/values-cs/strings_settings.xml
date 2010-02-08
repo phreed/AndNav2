@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Settings-Menu-Screen.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<!-- Settings-Screens -->
+	<string name="settings_tab_caption_device">Nastavení přístroje</string>
+	<string name="settings_tab_caption_nav">Nastavení navigce</string>
+	<string name="settings_tab_caption_user">Uživatelská nastavení</string>
+	<string name="tv_settings_quickinfo_close_focused">Zavřít...</string>
+	
+	<string name="tv_settings_quickinfo_page_device_default">Nastavení přístroje</string>
+	<string name="tv_settings_quickinfo_page_nav_default">Nastavení navigce</string>
+	<string name="tv_settings_quickinfo_page_user_default">Uživatelská nastavení</string>
+</resources>

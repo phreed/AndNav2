@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="D:/Programme/dev/Android/android-sdk-windows-1.1_r1/android.jar"/>
+	<classpathentry kind="lib" path="lib/httpmime-4.0-beta1.jar"/>
+	<classpathentry kind="lib" path="lib/apache-mime4j-0.4.jar"/>
+	<classpathentry kind="lib" path="lib/veecheck-2.0.jar" sourcepath="veecheck"/>
+	<classpathentry kind="lib" path="lib/wpsapi.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/Programme/dev/Android/wpsapi-3.0.0-android/wpsapi-3.0.0_17-android/documentation/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/libTpegML.jar" sourcepath="/libTpegML"/>
+	<classpathentry kind="lib" path="lib/admob-sdk-1.0-android.jar"/>
+	<classpathentry kind="lib" path="lib/TTS_library_stub_1.3.1_Market.jar"/>
+	<classpathentry kind="lib" path="lib/libSpatialIndex.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

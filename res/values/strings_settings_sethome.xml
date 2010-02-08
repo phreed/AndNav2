@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_sethome_focused">Change Home Location...</string>
+	<string name="btn_settings_sethome_via_map_caption">Select on Map</string>
+	<string name="btn_settings_sethome_via_sd_caption">Search via Dialogs</string>
+	<string name="pdg_settings_sethome_via_sd_donefetch_message">Please wait a moment...</string>
+	<string name="toast_settings_sethome_via_map_failed">Sorry, address could not be found.\nTip: Maybe skip the streetnumber.</string>
+	<string name="toast_settings_sethome_via_map_howto">Make a long-press to the Map to set a new home-location.</string>
+</resources>

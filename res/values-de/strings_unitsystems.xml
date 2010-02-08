@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="units_meters">Meter</string>
+	<string name="units_kilometers">Kilometer</string>
+	<string name="units_miles">Meilen</string>
+	<string name="units_yards">Yards</string>
+</resources>

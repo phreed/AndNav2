@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="48"
+   height="48"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="market_bag.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="D:\Workspace\Java\AndNav2\res\drawable\market_bag.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2390"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3179"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3249"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-2.0769496"
+     inkscape:cy="3.0223142"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1264"
+     inkscape:window-height="750"
+     inkscape:window-x="0"
+     inkscape:window-y="14" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <image
+       y="0.73282623"
+       x="0"
+       id="image3251"
+       height="47.267174"
+       width="48"
+       sodipodi:relref="market_bag_background.gif"
+       xlink:href="market_bag_background.gif" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-opacity:1"
+       d="M 20.885501,44.00243 C 14.940463,42.641157 9.3343563,41.373994 8.4274861,41.186515 L 6.7786312,40.845642 L 6.8762141,39.201448 C 7.4139387,30.141012 6.8446587,23.623536 4.9420633,17.058078 C 4.4471724,15.350311 4.1335052,13.715277 4.2450228,13.424665 C 4.3565403,13.134056 5.2824859,12.19245 6.3026764,11.332213 C 7.3856626,10.419026 8.4535967,9.098927 8.8689249,8.1600104 C 9.2601688,7.2755317 9.8061084,6.4652111 10.082127,6.359296 C 10.358141,6.2533772 11.847699,6.4280642 13.392251,6.7474841 C 14.936803,7.0669039 16.333068,7.3282474 16.495062,7.3282474 C 16.657053,7.3282474 17.14847,6.5869039 17.587102,5.6808179 C 19.380199,1.9767716 23.174936,0.98479849 26.407857,3.3750005 C 27.540158,4.2121462 29.110077,6.9225888 29.481451,8.6815103 C 29.709278,9.7605685 29.890432,9.8845771 31.810813,10.276063 C 32.95609,10.509537 34.525763,10.889884 35.298977,11.121273 L 36.70482,11.541988 L 36.84516,18.27032 C 36.942171,22.921135 37.229764,26.426729 37.776572,29.623693 C 38.678236,34.895317 38.598592,35.544797 36.415867,40.720241 C 35.724448,42.359661 35.098517,44.214843 35.024912,44.84287 C 34.951307,45.470896 34.872649,46.108399 34.850122,46.259544 C 34.751213,46.923178 30.97709,46.313164 20.885501,44.00243 z M 27.480921,8.9625044 C 27.480921,7.8474242 25.962662,5.4533858 24.809651,4.750358 C 23.031841,3.6663715 21.752996,3.822584 20.270797,5.3047837 C 18.256794,7.3187866 18.6159,7.7486138 23.085729,8.6740904 C 27.836754,9.6577899 27.480921,9.6344385 27.480921,8.9625044 z"
+       id="path2396"
+       sodipodi:nodetypes="ccccssssssssssscccssssccsssc" />
+  </g>
+</svg>

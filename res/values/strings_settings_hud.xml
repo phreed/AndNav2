@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the HUD-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_hud_focused">HUD Settings...</string>
+	<string name="tv_settings_hud_quickinfo_default">Select HUD...</string>
+	
+	<string name="tv_settings_hud_variation_caption">Select Variation...</string>
+	
+	<!-- The different HUD-Descriptions -->
+	<!-- The basic HUD -->
+	<string name="hud_basic_name">Default HUD</string>
+	<string name="hud_basic_description">This is the default HUD</string>
+		<!-- The Variations of the basic HUD -->
+		<string name="hud_basic_variation_default">This is the default variation.</string>
+		<string name="hud_basic_variation_1">Bigger turn description on the top.</string>
+	
+	<!-- Mavoric HUD -->
+	<string name="hud_mavoric_name">Mavoric HUD</string>
+	<string name="hud_mavoric_description">This is the Mavoric HUD</string>
+		<!-- The Variations of the mavoric HUD -->
+		<string name="hud_mavoric_variation_default">This is the default variation.</string>
+		
+	<!-- Bigarrow HUD -->
+	<string name="hud_bigarrow_name">BigArrow HUD</string>
+	<string name="hud_bigarrow_description">This is the BigArrow HUD</string>
+		<!-- The Variations of the Bigarrow HUD -->
+		<string name="hud_bigarrow_variation_default">This is the default variation.</string>
+		<string name="hud_bigarrow_variation_1">This is the first variation.</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_routeviewing_maxlevel_caption">Maximales ZoomLevel währen der Navigation wählen ...</string>
+	<string name="chk_settings_routeviewing_maxlevel_enabled_caption">Autozoom während der Navigation aktivieren...</string>
+	
+	<string name="chk_settings_routeviewing_snaptoroute_enabled_caption">Magnetische Position...</string>
+	<string name="tv_settings_routeviewing_snaptoroute_caption">Radius um die eigene Position noch auf die Route zu projezieren.</string>
+</resources>

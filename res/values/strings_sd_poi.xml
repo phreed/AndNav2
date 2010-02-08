@@ -1,0 +1,18 @@
+<resources>
+	<string name="choose_search_radius">Select search radius...</string>
+	<string name="poi_search_radius_global">Global</string>
+
+	<string name="menu_sd_poi_wipe">Wipe POI-History...</string>
+	
+	<string name="toast_sd_poi_empty">Please enter a POI...</string>
+	
+	<string name="tv_sd_poi_entry_quickinfo_caption">Enter POI...</string>	
+	<string name="tv_sd_poi_searchlist_quickinfo_caption">Select a POI...</string>
+	<string name="toast_sd_poi_getting_gps_and_poi_search">Getting GPS-location and doing POI-Search...</string>
+	<string name="toast_sd_poi_could_not_find">Sorry, could not find \'%s\' within %s.</string>
+	
+	<string name="tv_sd_poi_categories_quickinfo_caption">Pick a category...</string>
+	
+	<string name="poi_search_categorized">Categorized Search</string>
+	<string name="poi_search_freeform">Freeform Search</string>
+</resources>

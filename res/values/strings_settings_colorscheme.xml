@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_colorscheme_focused">Change Color Scheme</string>
+		<string name="tv_settings_quickinfo_colorscheme_day">Day Color Scheme</string>
+		<string name="tv_settings_quickinfo_colorscheme_night">Night Color Scheme</string>
+		<string name="tv_settings_quickinfo_colorscheme_default">Default Color Scheme</string>
+		<string name="toast_settings_colorscheme_changed">You need to restart AndNav2 to fully see the changes.</string>
+		<string name="tv_settings_colorscheme_mapcolorscheme_caption">Change Map-Colorscheme...</string>
+		<string name="tv_settings_colorscheme_overallbrightness_slider_caption">Change Screenbrightness...</string>
+		<string name="tv_settings_colorscheme_overallbrightness_slider_hint">Screenbrightness may <b>not</b> change immediately!</string>
+</resources>

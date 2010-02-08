@@ -1,0 +1,401 @@
+A  Augsburg
+AA  Aalen
+AB  Aschaffenburg
+ABG  Altenburg
+ABI  Anhalt-Bitterfeld
+AC  Aachen
+AIC  Aichach
+AK  Altenkirchen
+AM  Amberg
+AN  Ansbach
+AÖ  Altötting
+AP  Apolda
+AS  Amberg-Sulzbach
+AUR  Aurich
+AW  Ahrweiler
+AZ  Alzey
+B  Berlin
+BA  Bamberg
+BAD  Baden-Baden
+BAR  Barnim
+BB  Böblingen
+BBL  Brandenburgischer Landtag
+BC  Biberach
+BD  Fahrzeuge der Verfassungsorgane
+BGL  Berchtesgadener Land
+BI  Bielefeld
+BIR  Birkenfeld
+BIT  Bitburg
+BK  Börde(kreis)
+BL  Balingen
+BLK  Burgenlandkreis
+BM  Bergheim
+BN  Bonn
+BO  Bochum
+BOR  Borken
+BOT  Bottrop
+BP  Bundespolizei
+BRA  Brake
+BRB  Brandenburg
+BS  Braunschweig
+BT  Bayreuth
+BÜS  Büsingen
+BW  Bundes-Wasser- und Schifffahrtsverwaltung
+BWL  Baden-Württembergischer Landtag
+BYL  Bayerischer Landtag
+BZ  Bautzen
+C  Chemnitz
+CB  Cottbus
+CE  Celle
+CHA  Cham
+CLP  Cloppenburg
+CO  Coburg
+Stadt Coburg (sonst)
+COC  Cochem
+COE  Coesfeld
+CUX  Cuxhaven
+CW  Calw
+D  Düsseldorf
+DA  Darmstadt
+DAH  Dachau
+DAN  Dannenberg
+DAU  Daun
+DBR  Bad Doberan
+DD  Dresden
+DE  Dessau
+DEG  Deggendorf
+DEL  Delmenhorst
+DGF  Dingolfing
+DH  Diepholz
+DLG  Dillingen
+DM  Demmin
+DN  Düren
+DO  Dortmund
+DON  Donauwörth
+DU  Duisburg
+DÜW  Bad Dürkheim an der Weinstraße
+E  Essen
+EA  Eisenach
+EBE  Ebersberg
+ED  Erding
+EE  Elbe-Elster
+EF  Erfurt
+EI  Eichstätt
+EIC  Eichsfeld
+EL  Emsland
+EM  Emmendingen
+EMD  Emden
+EMS  Bad Ems
+EN  Ennepe
+ER  Erlangen
+ERB  Erbach
+ERH  Erlangen-Höchstadt
+ERZ  Erzgebirge
+ES  Esslingen
+ESW  Eschwege
+EU  Euskirchen
+F  Frankfurt
+FB  Friedberg
+FD  Fulda
+FDS  Freudenstadt
+FF  Frankfurt
+FFB  Fürstenfeldbruck
+FG  Freiberg
+FL  Flensburg
+FN  Friedrichshafen
+FO  Forchheim
+FR  Freiburg
+FRG  Freyung
+FRI  Friesland
+FS  Freising
+FT  Frankenthal
+FÜ  Fürth
+G  Gera
+GAP  Garmisch-Partenkirchen
+GE  Gelsenkirchen
+GER  Germersheim
+GF  Gifhorn
+GG  Groß-Gerau
+GI  Gießen
+GL  (Bergisch) Gladbach
+GM  Gummersbach
+GÖ  Göttingen
+GP  Göppingen
+GR  Görlitz
+GRZ  Greiz
+GS  Goslar
+GT  Gütersloh
+GTH  Gotha
+GÜ  Güstrow
+GZ  Günzburg
+H  Hannover
+HA  Hagen
+HAL  Halle
+HAM  Hamm
+HAS  Haßberge oder Haßfurt
+HB  Hansestadt Bremen
+HBN  Hildburghausen
+HD  Heidelberg
+HDH  Heidenheim
+HE  Helmstedt
+HEF  Bad Hersfeld
+HEI  Heide
+HEL  Hessischer Landtag
+HER  Herne
+HF  Herford
+HG  Bad Homburg
+HGW  Hansestadt Greifswald
+HH  Hansestadt Hamburg
+HI  Hildesheim
+HL  Hansestadt Lübeck
+HM  Hameln
+HN  Heilbronn
+HO  Hof
+HOL  Holzminden
+HOM  Homburg
+HP  Heppenheim
+HR  Homberg
+HRO  Hansestadt Rostock
+HS  Heinsberg
+HSK  Hochsauerlandkreis
+HST  Hansestadt Stralsund
+HU  Hanau
+HVL  Havelland
+HWI  Hansestadt Wismar
+HX  Höxter
+HZ  Harz
+IGB  St. Ingbert
+IK  Ilm-Kreis
+IN  Ingolstadt
+IZ  Itzehoe
+J  Jena
+JL  Jerichower Land
+K  Köln
+KA  Karlsruhe
+KB  Korbach
+KC  Kronach
+KE  Kempten
+KEH  Kelheim
+KF  Kaufbeuren
+KG  Bad Kissingen
+KH  Bad Kreuznach
+KIB  Kirchheimbolanden
+KL  Kaiserslautern
+KLE  Kleve
+KN  Konstanz
+KO  Koblenz
+KR  Krefeld
+KS  Kassel
+KT  Kitzingen
+KU  Kulmbach
+KÜN  Künzelsau
+KUS  Kusel
+KYF  Kyffhäuser
+LA  Landshut
+LAU  Lauf
+LB  Ludwigsburg
+LD  Landau
+LDK  Lahn-Dill-Kreis
+LDS  Landkreis Dahme-Spreewald
+LER  Leer
+LEV  Leverkusen
+LG  Lüneburg
+LI  Lindau
+LIF  Lichtenfels
+LIP  Lippe
+LL  Landsberg am Lech
+LM  Limburg
+LÖ  Lörrach
+LOS  Landkreis Oder-Spree
+LSA  Landtag Sachsen-Anhalt
+LSN  Landtag Sachsen
+LU  Ludwigshafen
+LWL  Ludwigslust
+M  München
+MA  Mannheim
+MB  Miesbach
+MD  Magdeburg
+ME  Mettmann
+MEI  Meißen
+MG  Mönchengladbach
+MH  Mülheim an der Ruhr
+MI  Minden
+MIL  Miltenberg
+MK  Grafschaft Mark
+MKK  Main-Kinzig-Kreis
+MM  Memmingen
+MN  Mindelheim
+MOL  Märkisch-Oderland
+MOS  Mosbach
+MR  Marburg-Biedenkopf
+MS  Münster
+MSH  Mansfeld-Südharz
+MSP  Main-Spessart
+MST  Mecklenburg-Strelitz
+MTK  Main-Taunus-Kreis
+MÜ  Mühldorf
+MÜR  Müritz
+MVL  Mecklenburg-Vorpommerscher Landtag
+MYK  Mayen-Koblenz
+MZ  Mainz
+MZG  Merzig
+N  Nürnberg
+NB  Neubrandenburg
+ND  Neuburg an der Donau
+NDH  Nordhausen
+NE  Neuss
+NEA  Neustadt an der Aisch
+NES  Bad Neustadt an der Saale
+NEW  Neustadt an der Waldnaab
+NF  Nordfriesland
+NI  Nienburg/Weser
+NK  Neunkirchen
+NL  Niedersächsischer Landtag
+NM  Neumarkt
+NMS  Neumünster
+NOH  Nordhorn
+NOM  Northeim
+NR  Neuwied
+NRW  Nordrhein-Westfalen
+NU  Neu-Ulm
+NVP  Nordvorpommern
+NW  Neustadt an der Weinstraße
+NWM  Nordwestmecklenburg
+OA  Oberallgäu
+OAL  Ostallgäu
+OB  Oberhausen
+OD  Bad Oldesloe
+OE  Olpe
+OF  Offenbach
+OG  Offenburg
+OH  Ostholstein
+OHA  Osterode am Harz
+OHV  Oberhavel
+OHZ  Osterholz
+OL  Oldenburg
+OPR  Ostprignitz-Ruppin
+OS  Osnabrück
+OSL  Oberspreewald-Lausitz
+OVP  Ostvorpommern
+P  Potsdam
+PA  Passau
+PAF  Pfaffenhofen
+PAN  Pfarrkirchen
+PB  Paderborn
+PCH  Parchim
+PE  Peine
+PF  Pforzheim
+PI  Pinneberg
+PIR  Pirna
+PLÖ  Plön
+PM  Potsdam-Mittelmark
+PR  Prignitz
+PS  Pirmasens
+R  Regensburg
+RA  Rastatt
+RD  Rendsburg
+RE  Recklinghausen
+REG  Regen
+RH  Roth
+RO  Rosenheim
+ROW  Rotenburg an der Wümme
+RP  Rhein-Pfalz
+RPL  Rheinland-Pfälzischer Landtag
+RS  Remscheid
+RT  Reutlingen
+RÜD  Rüdesheim
+RÜG  Rügen
+RV  Ravensburg
+RW  Rottweil
+RZ  Ratzeburg
+S  Stuttgart
+SAD  Schwandorf
+SAL  Saarländischer Landtag
+SAW  Salzwedel
+SB  Saarbrücken
+SC  Schwabach
+SDL  Stendal
+SE  Bad Segeberg
+SFA  Soltau-Fallingbostel
+SG  Solingen
+SH  Schleswig-Holstein
+SHA  Schwäbisch Hall
+SHG  Schaumburg
+SHK  Saale-Holzland-Kreis
+SHL  Suhl
+SI  Siegen
+SIG  Sigmaringen
+SIM  Simmern
+SK  Saalekreis
+SL  Schleswig
+SLF  Saalfeld
+SLK  Salzlandkreis
+SLS  Saarlouis
+SM  Schmalkalden-Meiningen
+SN  Schwerin
+SO  Soest
+SOK  Saale-Orla-Kreis
+SÖM  Sömmerda
+SON  Sonneberg
+SP  Speyer
+SPN  Spree-Neiße
+SR  Straubing
+ST  Steinfurt
+STA  Starnberg
+STD  Stade
+SU  Siegburg
+SÜW  Südliche Weinstraße
+SW  Schweinfurt
+SZ  Salzgitter
+TBB  Tauberbischofsheim
+TDO  Torgau + Delitzsch + Oschatz
+TF  Teltow-Fläming
+THL  Thüringer Landtag
+THW  Technisches Hilfswerk
+TIR  Tirschenreuth
+TÖL  Bad Tölz
+TR  Trier
+TS  Traunstein
+TÜ  Tübingen
+TUT  Tuttlingen
+UE  Uelzen
+UER  Uecker-Randow
+UH  Unstrut-Hainich
+UL  Ulm
+UM  Uckermark
+UN  Unna
+V  Vogtland
+VB  Vogelsberg
+VEC  Vechta
+VER  Verden
+VIE  Viersen
+VK  Völklingen
+VS  Villingen-Schwenningen
+W  Wuppertal
+WAF  Warendorf
+WAK  Wartburgkreis
+WB  Wittenberg
+WE  Weimar
+WEN  Weiden
+WES  Wesel
+WF  Wolfenbüttel
+WHV  Wilhelmshaven
+WI  Wiesbaden
+WIL  Wittlich
+WL  Winsen an der Luhe
+WM  Weilheim
+WN  Waiblingen
+WND  St. Wendel
+WO  Worms
+WOB  Wolfsburg
+WST  Westerstede
+WT  Waldshut-Tiengen
+WTM  Wittmund
+WÜ  Würzburg
+WUG  Weißenburg
+WUN  Wunsiedel
+WW  Westerwald
+X  NATO
+Y  Bundeswehr
+Z  Zwickau
+ZW  Zweibrücken

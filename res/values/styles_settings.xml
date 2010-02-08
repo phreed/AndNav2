@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="settings_tabcaption_textstyle">
+		<item name="android:textSize">22sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="settings_quickinfo_textstyle">
+		<item name="android:textSize">22sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="settings_button_default_textstyle">
+		<item name="android:textSize">22sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	
+	<style name="settings_statistics_textstyle">
+		<item name="android:textSize">30sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="settings_voice_textstyle">
+		<item name="android:textSize">30sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="settings_directionvoice_textstyle">
+		<item name="android:textSize">28sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+</resources>

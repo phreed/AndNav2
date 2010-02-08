@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+		<string name="chk_settings_voice_menuvoice_caption">Menü-Stimme</string>
+		<string name="btn_settings_voice_goadvanced_caption">Erweitert</string>
+		<string name="chk_settings_voice_directionvoice_caption">Ansage-Stimme</string>
+		<string name="tv_settings_voice_quickinfo_menuvoice_default">Sprach-Einstellungen von AndNav ändern.</string>
+		<string name="tv_settings_voice_quickinfo_menuvoice_description">Die Menü-Stimme wird beim navigieren durch die meisten der Menüs abgespielt.</string>
+		
+		<string name="tv_settings_voice_quickinfo_directionvoice_description">Navigations-Stimme wird beim Navigieren abgespielt.\n z.B. \"In 200 Metern, rechts abbiegen.\".</string>
+			<string name="tv_settings_directionvoice_quickinfo">Was wann sagen...</string>
+			<string name="tv_settings_directionvoice_column_in">In...</string>
+			<string name="tv_settings_directionvoice_column_saywhat">... was sagen?</string>
+			
+		<string name="tv_settings_voice_ttsdescription"><b>TTS</b> heißt \'<i>Text Zu Sprache</i>\'</string>
+		
+		<string name="btn_settings_voice_tts_caption">Text-To-Speech...</string>
+		<string name="dlg_settings_voice_tts_change_settings">Einstellungen ändern</string>
+		<string name="dlg_settings_voice_tts_play_sample">Beispiel abspielen</string>
+		
+	<string name="tts_not_installed_title">"'Text-To-Speech' ..."</string>
+	<string name="tts_not_installed_message">Die <b>FREIE</b> \'Text-To-Speech\' Bibliothek wurde nicht gefunden.\n\nMöchten Sie diese vom <b>Android Market</b> herunterladen?</string>
+	<string name="tts_outdated_message">Die <b>FREIE</b> \'Text-To-Speech\' Bibliothek ist nicht merh aktuell.\n\nEs wird <b>stark</b> empfohlen diese jetzt zu aktuelisieren!</string>
+			
+	<array name="spin_settings_directionvoice_saywhat_items">
+		<item>Nichts</item>
+		<item>Nur Distanz</item>
+		<item>Nur Abbiegung</item>
+		<item>Distanz und Abbiegung</item>
+		<item>Distanz (TTS)</item>
+		<item>Abbiegung and Straße (TTS)</item>
+		<item>Dist., Abb. und Straße (TTS)</item>
+	</array>
+</resources>

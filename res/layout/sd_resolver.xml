@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:admobsdk="http://schemas.android.com/apk/res/org.andnav2"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView
+			style="@style/sd_quickinfo_textstyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_weight="1"
+			android:text="@string/tv_sd_resolver_quickinfo_caption" />
+		<ImageButton android:id="@+id/ibtn_sd_resolver_back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/back" />
+		<ImageButton android:id="@+id/ibtn_sd_resolver_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/close" />
+	</LinearLayout>
+	<view class="org.andnav2.ui.common.views.FastScrollView" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<ListView android:id="@+id/list_resolvedaddresses"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"/>
+	</view>
+	<com.admob.android.ads.AdView  
+		android:id="@+id/ad" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		admobsdk:backgroundColor="#000000"
+		admobsdk:textColor="#FFFFFF"
+		admobsdk:keywords="Android application"
+		admobsdk:refreshInterval="30" />
+</LinearLayout>

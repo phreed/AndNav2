@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="sd_search_address_structured">Structured Search</string>
+	<string name="sd_search_address_freeform">Freeform Search</string>
+	
+	<string name="btn_sd_skip_caption">Skip</string>
+	<string name="location_could_not_be_resolved">Location could not be resolved.</string>
+</resources>

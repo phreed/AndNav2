@@ -1,0 +1,62 @@
+<resources>
+	<string name="toast_osbmap_refresh_error">Error refreshing bugs...</string>
+	
+	<string name="dlg_osb_default_commentername">AndNav2-User</string>
+	
+	<string name="dlg_osb_bug_invalid_comment">Please enter a valid comment..."</string>
+	<string name="dlg_osb_commentername">Name:</string>
+	
+	<string name="osb_instructions"><b>Instructions:</b>\nOn this screen you can <b>add/edit bugs</b> that you discovered within the openstreetmap-data.\n\n<b>What is a bug:</b>\nA bug is for example a missing street, a junction, a wrong streetname or simply an unmarked postbox.\nJust add a proper comment to the new bug and it will get fixed soon.\n\n<b>Adding a bug:</b>\nTo add a bug, simply press the \'<i>green plus</i>\'-icon to your right and position the crosshair above the errorous place.\nThen press the <b>checkmark</b>-button to enter a description or the <b>cancel</b>-button to dismiss the new bug.\n\n<b>Editing a bug:</b>\nTo <b>edit</b> a bug simply select one by touching its icon on the screen.\nThen hit the <b>edit</b>-button in the lower right corner and proceed in the dialog.\n\nThanks to OpenStreetBugs.org for their API.\n\nPlease use this power wisely. =)\n</string>
+	
+	<!-- Choose between adding OSB or FTPC -->
+	<string name="dlg_osb_choose_what_to_add">Choose...</string>
+	<string name="dlg_osb_choose_what_to_add_osb">Report Map-Bug</string>
+	<string name="dlg_osb_choose_what_to_add_osmpoi">Add POI</string>
+	<string name="dlg_osb_choose_what_to_add_ftpc">Add UK Postcode</string>
+	
+	<!-- Editing Bugs -->
+	<string name="dlg_osb_edit_bug_previous_comments">Comments</string>
+	<string name="dlg_osb_edit_bug_new_comment">Append:</string>
+	<string name="dlg_osb_edit_bug_close_bug">Close Bug</string>
+	<string name="dlg_osb_edit_bug_default_comment">My comment...</string>
+	
+	<string name="dlg_osb_edit_bug_title">Edit Bug...</string>
+	<string name="dlg_osb_edit_bug_error_during_append">Error while appending comment to bug!</string>
+	<string name="dlg_osb_edit_bug_error_during_close">Error while appending closing bug!</string>
+	
+	
+	<string name="dlg_osb_edit_bug_success">Successfully changed bug.\n\nRefresh visible bugs now?</string>
+	
+	<!-- Adding Bugs -->
+	<string name="dlg_osb_add_bug_new_comment">Comment:</string>
+	<string name="dlg_osb_add_bug_default_comment">Bug: ...</string>
+	<string name="toast_osbmap_position_buglocation_in_crosshair">Position the <b>crosshair</b> above the desired location...</string>
+	<string name="toast_osbmap_add_bug_zoom_too_low">You need to zoom in %d levels closer to contribute something...</string>
+	<string name="dlg_osb_add_bug_error">Error while adding bug...</string>
+	<string name="dlg_osb_add_bug_success">Successfully added bug.\n\nRefresh visible bugs now?</string>
+	
+	<!-- Adding FTPC -->
+	<string name="dlg_osb_add_ftpc_title">Add UK-Postcode...</string>
+	<string name="dlg_osb_add_ftpc_default_postcode1">SW1A</string>
+	<string name="dlg_osb_add_ftpc_default_postcode2">0AA</string>
+	<string name="dlg_osb_add_ftpc_postcode">Postcode:</string>
+	<string name="dlg_osb_add_ftpc_default_mail">your@mail.com</string>
+	<string name="dlg_osb_add_ftpc_mail">E-Mail:</string>
+	<string name="dlg_osb_add_ftpc_example">Hint: <b>E-Mail</b> is needed for confirmation.</string>
+	<string name="dlg_osb_ftpc_mail_invalid_comment"><b>Invalid</b> E-Mail Address entered.\nIt is needed for confirmation!</string>
+	<string name="dlg_osb_ftpc_postcode_invalid_comment"><b>Invalid</b> Postcode-Format.\nSample: <b>[SW1A]</b> <b>[0AA]</b>!</string>
+	<string name="dlg_osb_add_ftpc_success"><b>Success</b>. You should momentarily receive an email.</string>
+	<string name="dlg_osb_add_ftpc_failed">Seems like it <b>failed</b>.\nCheck your mail anyway.</string>
+	
+	<!-- OSM-POIs -->
+	<string name="dlg_input_osmpoiname_title">Enter the POI-name...</string>
+	<string name="dlg_input_osmpoiname_category">Category:</string>
+	<string name="dlg_input_osmpoiname_name">Name:</string>
+	<string name="dlg_input_osmpoiname_name_hint">i.e. \'McDonalds\'</string>
+	<string name="dlg_input_osmpoiname_example">Hint: The <b>name</b> should pinpoint the POI in 1-3 word.</string>
+	
+	<string name="dlg_osb_add_osmpoi_failed_title">Error...</string>
+	<string name="dlg_osb_add_osmpoi_failed_message">POI could not be added.</string>
+	<string name="dlg_osb_add_osmpoi_success_title">Success!</string>
+	<string name="dlg_osb_add_osmpoi_success_message"><b>POI was added!</b>\nIt will take some days <b>until it appears</b> on the map. Then, you can try clearing the maptile-cache in the settings. <b>About a week</b> will pass until you can search for it!</string>
+</resources>

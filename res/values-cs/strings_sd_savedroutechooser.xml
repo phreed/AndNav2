@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used on the Screen where the saved routes are displayed.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_sd_savedroutechooser_quickinfo_caption">Načítám trasu...</string>
+	<string name="dlg_sd_savedroutechooser_loading_title">Načítám uloženou trasu...</string>
+	<string name="dlg_sd_savedroutechooser_loading_progress">Průběh: %d %%  (%d z %d tras)</string>
+</resources>

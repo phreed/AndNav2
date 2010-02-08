@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the Colorscheme-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_colorscheme_focused">Změnit barevné schéma</string>
+		<string name="tv_settings_quickinfo_colorscheme_day">Denní</string>
+		<string name="tv_settings_quickinfo_colorscheme_night">Noční</string>
+		<string name="tv_settings_quickinfo_colorscheme_default">Standardní</string>
+		<string name="toast_settings_colorscheme_changed">Aby byly změny viditelné, musí být AndNav2 restartován.</string>
+		<string name="tv_settings_colorscheme_mapcolorscheme_caption">Změnit Mapové barevné schéma...</string>
+		<string name="tv_settings_colorscheme_overallbrightness_slider_caption">Změnit světlost displeje...</string>
+		<string name="tv_settings_colorscheme_overallbrightness_slider_hint">Nastavení světlosti displeje <b>nebude</b> provedeno okamžitě!</string>
+</resources>

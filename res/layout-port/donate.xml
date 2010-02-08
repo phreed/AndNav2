@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ImageView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingTop="5px"
+		android:layout_gravity="center"
+		android:src="@drawable/paypal" />
+	<TextView 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="10px"
+		android:paddingBottom="10px"
+		android:gravity="center"
+		android:text="@string/donate_info" />
+	<TextView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:paddingTop="10px"
+		android:paddingRight="5px"
+		android:paddingBottom="5px"
+		android:paddingLeft="5px"
+		android:text="@string/donate_once" />
+	<LinearLayout 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_gravity="center" >
+		<TextView 
+			android:id="@+id/tv_donate_once_currency_symbol"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:padding="2px"
+			android:text="$" />
+		<EditText 
+			android:id="@+id/et_donate_once_amount"
+			android:layout_width="75px"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:padding="2px"
+			android:digits="0123456789"
+			android:text="5" />
+		<Spinner 
+			android:id="@+id/spin_donate_once_currency"
+			android:layout_width="110px"
+			android:layout_height="wrap_content"
+		android:layout_gravity="center" />
+		<ImageButton
+			android:id="@+id/ibtn_donate_once"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		android:layout_gravity="center"
+			android:src="@drawable/paypal_donate" />
+	</LinearLayout>
+	<TextView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:paddingTop="10px"
+		android:paddingRight="5px"
+		android:paddingBottom="5px"
+		android:paddingLeft="5px"
+		android:text="@string/donate_recurring" />
+	<LinearLayout 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_gravity="center" >
+		<LinearLayout 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_gravity="center" >
+			<TextView 
+				android:id="@+id/tv_donate_recurring_currency_symbol"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:padding="2px"
+				android:text="$" />
+			<EditText 
+				android:id="@+id/et_donate_recurring_amount"
+				android:layout_width="75px"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:padding="2px"
+				android:digits="0123456789"
+				android:text="5" />
+			<Spinner 
+				android:id="@+id/spin_donate_recurring_currency"
+				android:layout_width="110px"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center" />
+			<ImageButton
+				android:id="@+id/ibtn_donate_recurring"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:src="@drawable/paypal_donate" />
+		</LinearLayout>
+		<LinearLayout 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_gravity="center"  >
+			<Spinner 
+				android:id="@+id/spin_donate_recurring_frequency"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<Spinner 
+				android:id="@+id/spin_donate_recurring_periods"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</LinearLayout>
+	<TextView 
+		android:id="@+id/tv_donate_once_currency_symbol"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:padding="5px"
+		android:text="@string/donate_proceed_info" />
+</LinearLayout>

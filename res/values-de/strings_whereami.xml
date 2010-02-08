@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Standard-Map-Screen (also known as WhereAmI-Map).
+ # 
+ ### README-END ###
+-->
+<resources>
+	<!-- Context Menu-String -->
+	<string name="tv_whereami_contextmenu_nav_here">Hierher navigieren...</string>
+	<string name="tv_whereami_contextmenu_add_as_favorite">Als Favorite hinzufügen...</string>
+	<string name="tv_whereami_contextmenu_show_radar">Im Radar zeigen...</string>
+	<string name="tv_whereami_contextmenu_weather_get">Wettervorhersage...</string>
+	<string name="tv_whereami_contextmenu_close">Schließen</string>
+	
+	<string name="et_whereami_searchbox_hint">z.B.: \'Berlin, Lychenerstraße\'</string>
+	
+		
+	<string name="toast_autofollow_once">Auf Nutzer zentriert...</string>
+	<string name="toast_autofollow_enabled">Auto.-Folgen: Aktiviert</string>
+	<string name="toast_autofollow_disabled">Auto.-Follow: Deaktiviert</string>
+	
+	<string name="whereami_location_not_resolvable">Ihre Position konnt nicht gefunden werden.</string>
+
+	<string name="toast_whereami_no_radar_app_installed">Radar-Program nicht installiert.\nEs kann vom Android-Market heruntergeladen werden!</string>	
+	<string name="toast_map_accessibilityanalysis_finished">Erreichbarkeits-Analyse fertig.</string>
+	
+	<string name="whereami_search_no_places_found">Nichts gefunden!</string>
+	<string name="whereami_search_places_found">Gefunden:</string>
+	
+	<string name="whereami_search_scope_title">Suchen...</string>
+	<string name="whereami_search_scope_global">Global</string>
+	<string name="whereami_search_scope_local">Lokal (Sichtbarer Bereich)</string>
+	
+	<string name="wherami_dialog_locality">Ort:</string>
+	<string name="wherami_dialog_thoroughfare">Straße:</string>
+	<string name="wherami_dialog_distance">Distanz:</string>
+	<string name="wherami_dialog_streetname">Straße:</string>
+	<string name="wherami_dialog_streetnumber">Hausnummer:</string>
+	<string name="wherami_dialog_feature">Feature:</string>
+	<string name="wherami_dialog_zipcode">PLZ:</string>
+	<string name="wherami_dialog_cityname">Stadt:</string>
+	<string name="wherami_dialog_phone">Tel:</string>
+	<string name="wherami_dialog_adminarea">Kreis:</string>
+	<string name="wherami_dialog_subadminarea">Bezirk:</string>
+	<string name="wherami_dialog_country">Land:</string>
+	
+	<!-- The Maptile-Preload-Dialog -->
+	<string name="dlg_preloader_rect_maxzoom_title">Maximales Zoomlevel wählen.</string>
+	<string name="dlg_preloader_rect_reducezoom">Zoom reduzieren</string>
+	<string name="dlg_preloader_rect_title">Rechecks-Vorlader</string>
+	<string name="dlg_preloader_rect_message">Lade %d Kartenkacheln im sichtbaren Bereich?\n\nUngefähre Größe: %s</string>
+	
+	<!-- The Dialog where the user can add a new Traffic Feed. -->
+	<string name="dlg_customtrafficfeed_title">Feed-Daten eingeben...</string>
+	<string name="dlg_customtrafficfeed_name">Name:</string>
+	<string name="dlg_customtrafficfeed_name_hint">My Traffic Feed</string>
+	<string name="dlg_customtrafficfeed_url">URL:</string>
+	<string name="dlg_customtrafficfeed_url_hint">http://</string>
+	<string name="dlg_customtrafficfeed_country">Land:</string>
+	 <!-- The following two items are the caption of the Button that opens http://feedlist.andnav.org -->
+	<string name="dlg_customtrafficfeed_showfeedlist">Feedliste</string>
+	<string name="dlg_customtrafficfeed_clipboardpaste">&lt;- Einfügen</string>
+
+	<string name="dlg_input_vehicleregistrationplate_lookup_hint">Sample: "HD TV 123"</string>
+	<string name="dlg_input_vehicleregistrationplate_lookup_title">Enter sign...</string>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used in the OpenStreetBug-Map-Screen.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="toast_osbmap_refresh_error">Chyba při načítání Bug...</string>
+	
+	<string name="dlg_osb_default_commentername">AndNav2-User</string>
+	
+	<string name="dlg_osb_bug_invalid_comment">Prosím zadejte platný komentář..."</string>
+	<string name="dlg_osb_commentername">Jméno:</string>
+	
+	<string name="osb_instructions"><b>Návod:</b>\nZde nás můžete informovat o Bug-chybách v OpenStreetMap-Mapových podkladech.\n\n<b>Co je to Bug:</b>\nBug je například chybějící ulice, chybějící křižovatka, špatný název ulice nebo neexistující adresa.\nPřidejte jednoduše komentář na nově vytvořeném Bug a během několika dní nebo týdnů bude chyba opravena.\n\n<b>Vytvořit Bug:</b>\nPro vytvoření Bug, klikněte jednoduše na \'<i>plus</i>\'-ikonu na pravé straně a nastavte kříž nad chybným místem.\nPotom klikněte na tlačítko s <b>háčkem</b> pro zadání popisu. Nebo klikněte na <b>Zrušit</b>.\n\n<b>Bug změnit:</b>\nPro <b>změnu</b> Bug klikněte jednoduše na mapu.\nPotom na tlačítko <b>Změnit</b> vpravo dole a postupujte pomocí menu dále.\n\nDěkujeme OpenStreetBugs.org týmu za toto programové rozhraní.\n\nProsím používejte tuto funkčnost s rozmyslem. =)\n</string>
+	
+	<!-- Choose between adding OSB or FTPC -->
+	<string name="dlg_osb_choose_what_to_add">Vybrat...</string>
+	<string name="dlg_osb_choose_what_to_add_osmpoi">přidat POI</string>
+	<string name="dlg_osb_choose_what_to_add_osb">nahlásit Bug</string>
+	<string name="dlg_osb_choose_what_to_add_ftpc">přidat UK Postcode</string>
+	
+	<!-- Editing Bugs -->
+	<string name="dlg_osb_edit_bug_previous_comments">Kommentáře</string>
+	<string name="dlg_osb_edit_bug_new_comment">Připojit:</string>
+	<string name="dlg_osb_edit_bug_close_bug">Bug zavřít</string>
+	<string name="dlg_osb_edit_bug_default_comment">Můj Kommentář...</string>
+	
+	<string name="dlg_osb_edit_bug_title">Bug změnit...</string>
+	<string name="dlg_osb_edit_bug_error_during_append">Chyba při změně Bugu!</string>
+	<string name="dlg_osb_edit_bug_error_during_close">Chyba při zavírání Bugu!</string>
+	
+	<string name="dlg_osb_edit_bug_success">Bug úspěšně změněn.\n\nZnovu načíst?</string>
+	
+	<!-- Adding Bugs -->
+	<string name="dlg_osb_add_bug_new_comment">Kommentář:</string>
+	<string name="dlg_osb_add_bug_default_comment">Bug: ...</string>
+	<string name="toast_osbmap_position_buglocation_in_crosshair">Nastavte <b>kříž</b> nad určeným místem...</string>
+	<string name="toast_osbmap_add_bug_zoom_too_low">Prosím přibližte %d stupeň blíž...</string>
+	<string name="dlg_osb_add_bug_error">Chyba při přidání Bugu!</string>
+	<string name="dlg_osb_add_bug_success">Bug úspěšně přidán!\n\nZnovu načíst?</string>
+	
+	<!-- Adding FreeThePostCode -->
+	<string name="dlg_osb_add_ftpc_title">přidat UK-Postcode...</string>
+	<string name="dlg_osb_add_ftpc_default_postcode1">SW1A</string>
+	<string name="dlg_osb_add_ftpc_default_postcode2">0AA</string>
+	<string name="dlg_osb_add_ftpc_postcode">Postcode:</string>
+	<string name="dlg_osb_add_ftpc_default_mail">mein@provider.de</string>
+	<string name="dlg_osb_add_ftpc_mail">E-Mail:</string>
+	<string name="dlg_osb_add_ftpc_example">Upozornění: <b>E-Mail</b> je pro nutný pro potvrzení.</string>
+	<string name="dlg_osb_ftpc_mail_invalid_comment"><b>Neplatná</b> E-Mail Addresa.\nBude nutná pro potvrzení!</string>
+	<string name="dlg_osb_ftpc_postcode_invalid_comment"><b>Špatný</b> Postcode-Format.\nPříklad: <b>[SW1A]</b> <b>[0AA]</b>!</string>
+	<string name="dlg_osb_add_ftpc_success"><b>Úspěch</b>. V krátkosti obdržíte potvrzení emailem.</string>
+	<string name="dlg_osb_add_ftpc_failed">Zřejmě se vyskytla <b>Chyba</b>.\nPřesto prosím zkontrolujte email.</string>
+	
+	<!-- OSM-POIs -->
+	<string name="dlg_input_osmpoiname_title">zadejte jméno POI...</string>
+	<string name="dlg_input_osmpoiname_category">Kategorie:</string>
+	<string name="dlg_input_osmpoiname_name">Jméno:</string>
+	<string name="dlg_input_osmpoiname_name_hint">např.: \'McDonalds\'</string>
+	<string name="dlg_input_osmpoiname_example">Upozornění: <b>Jméno</b> POI 1-3 slovy upřesnit.</string>
+</resources>

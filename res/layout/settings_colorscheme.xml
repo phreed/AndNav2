@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1" />
+		<ImageButton android:id="@+id/ibtn_settings_colorscheme_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/close"/>
+	</LinearLayout>
+	<TextView 
+		style="@style/small_textstyle"
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tv_settings_colorscheme_overallbrightness_slider_caption"
+        android:paddingLeft="20px" 
+        android:paddingTop="20px" 
+        android:paddingRight="20px" />
+	<SeekBar 
+		android:id="@+id/seek_settings_colorscheme_overallbrightness"
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20px" 
+        android:paddingRight="20px"
+        android:max="255" />
+	<TextView
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tv_settings_colorscheme_overallbrightness_slider_hint"
+        android:paddingLeft="20px" 
+        android:paddingTop="10px" 
+        android:paddingRight="20px" />
+	<TextView
+		style="@style/sd_quickinfo_textstyle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:layout_gravity="center"
+        android:paddingTop="30px" 
+		android:text="@string/tv_settings_colorscheme_mapcolorscheme_caption" />
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:stretchColumns="0,7">
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="0dip"
+				android:layout_height="0dip" />
+			<RadioButton
+				android:id="@+id/rad_settings_colorscheme_daymode"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+	    	<ImageView
+				android:id="@+id/iv_settings_colorscheme_daymode"
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/settings_colorscheme_daymode" />
+			<RadioButton
+				android:id="@+id/rad_settings_colorscheme_default"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+	    	<ImageView
+				android:id="@+id/iv_settings_colorscheme_default"
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/settings_colorscheme_defaultmode" />
+			<RadioButton
+				android:id="@+id/rad_settings_colorscheme_nightmode"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+	    	<ImageView
+				android:id="@+id/iv_settings_colorscheme_nightmode"
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:src="@drawable/settings_colorscheme_nightmode" />
+			<TextView android:layout_width="0dip"
+				android:layout_height="0dip" />
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

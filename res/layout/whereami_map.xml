@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:admobsdk="http://schemas.android.com/apk/res/org.andnav2"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<!-- AdMob - AdView -->
+	<com.admob.android.ads.AdView  
+		android:id="@+id/ad" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		admobsdk:backgroundColor="#000000"
+		admobsdk:textColor="#FFFFFF"
+		admobsdk:keywords="Android application"
+		admobsdk:refreshInterval="30" />
+	<!-- Background (rotatable) -->
+	<view class="org.andnav2.ui.common.views.CompassRotateView" 
+		android:id="@+id/rotator_wheramimap"
+		android:layout_above="@id/ad"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" >     
+		<view class="org.andnav2.osm.views.OSMMapView" 
+			android:id="@+id/map_whereami"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+	        android:enabled="true"
+	        android:clickable="true" />
+    </view>
+    <!-- PinControl, Upper Middle -->
+	<view class="org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView" 
+		android:id="@+id/itemizedoverlaycontrol_whereami"
+		android:visibility="gone"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+	<view class="org.andnav2.osm.views.OSMMapViewScaleIndicatorView" 
+		android:id="@+id/scaleindicatorview_whereami"
+		android:layout_below="@id/itemizedoverlaycontrol_whereami"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+	<!-- Zoom Controls, Upper edged -->
+	<ImageView
+		android:id="@+id/iv_whereami_zoomin"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/btn_zoom_in"/>
+	<ImageView
+		android:id="@+id/iv_whereami_zoomout"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/btn_zoom_out"/>
+	<!-- Right side -->
+	<ImageButton
+		android:id="@+id/ibtn_whereami_center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:src="@drawable/person_focused_small"/>
+	<ImageButton
+		android:id="@+id/ibtn_whereami_whereami"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/ibtn_whereami_center"
+		android:layout_alignParentRight="true"
+		android:src="@drawable/questionmark_small"/>
+	<ImageButton
+		android:id="@+id/ibtn_whereami_choose_renderer"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/ibtn_whereami_whereami"
+		android:layout_alignParentRight="true"
+		android:src="@drawable/world_small"/>	
+	<view class="org.andnav2.ui.common.views.CompassImageView" 
+		android:id="@+id/iv_whereami_compass"
+		android:visibility="gone"
+		android:layout_alignParentRight="true"
+		android:layout_above="@id/ibtn_whereami_choose_renderer" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/overlay_compass"
+		android:padding="3px" />
+	<!-- Left side -->	
+	<ImageButton
+		android:id="@+id/ibtn_whereami_search"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/ibtn_whereami_whereami"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:src="@drawable/search"/>
+	<EditText
+		android:id="@+id/et_whereami_search"
+		android:layout_width="0dip"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/ibtn_whereami_whereami"
+		android:layout_toRightOf="@id/ibtn_whereami_search"
+		android:layout_toLeftOf="@id/ibtn_whereami_center"
+		android:layout_alignParentBottom="true"
+		android:singleLine="true"
+		android:visibility="gone"
+		android:hint="@string/et_whereami_searchbox_hint" 
+		android:capitalize="words" />
+	<ImageButton
+		android:id="@+id/ibtn_whereami_setnavpoints_start"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/ibtn_whereami_search"
+		android:layout_alignParentLeft="true"
+		android:src="@drawable/setnavpoints"/>
+	<LinearLayout
+		android:id="@+id/ibtn_whereami_setstartendpoint_container"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/ibtn_whereami_setnavpoints_start"
+		android:orientation="horizontal">
+		<ImageButton
+			android:id="@+id/ibtn_whereami_setstartpoint"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:src="@drawable/flag_start_small"/>
+		<ImageButton
+			android:id="@+id/ibtn_whereami_setendpoint"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:src="@drawable/flag_destination_small"/>
+	</LinearLayout>
+	<ImageButton
+		android:id="@+id/ibtn_whereami_setnavpoints_cancel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/ibtn_whereami_setstartendpoint_container"
+		android:layout_alignParentLeft="true"
+		android:visibility="gone"
+		android:src="@drawable/osb_icon_bug_open"/>
+</RelativeLayout>

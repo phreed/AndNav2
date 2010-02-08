@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_centermode_quickinfo_default">Zentrierungsmodus wählen...</string>
+	<string name="tv_settings_centermode_quickinfo_centeruser">Nutzer-Zentrierung...</string>
+	<string name="tv_settings_centermode_quickinfo_centeruser_saved">Nutzer-Zentrierung... gespeichert!</string>
+	<string name="tv_settings_centermode_quickinfo_upto_nextturn">Bis zum Abbiegen...</string>
+	<string name="tv_settings_centermode_quickinfo_upto_nextturn_saved">Bis zum Abbiegen... gespeichert!</string>
+</resources>

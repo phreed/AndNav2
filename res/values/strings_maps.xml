@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used in multiple map-screens.
+ #
+ ### README-END ###
+-->
+<resources>
+	<!-- Message shown, when another application started andnav with invalid parameters. -->
+	<string name="nav_intent_parse_error_message">Could not parse Navigation-Intent. Please contact the support that directed you to AndNav.</string>
+	
+	<!-- Menu-Strings -->
+	<string name="maps_menu_quit">Quit</string>
+	<string name="maps_menu_refetch_route">Refetch Route</string>
+	<string name="maps_menu_focus_coordinates">Focus coordinates...</string>
+	<string name="maps_menu_auto_refetch">Auto Refetch</string>
+	<string name="maps_menu_settings">Settings</string>
+	<string name="maps_menu_weather">Weather</string>
+	<string name="maps_menu_submenu_traffic">Traffic</string>
+	<string name="maps_menu_submenu_traffic_clear"><b>Clear</b> Traffic</string>
+	<string name="maps_menu_submenu_traffic_custom_feeds">Custom Feeds...</string>
+	<string name="maps_menu_osb">Improve Map</string>
+	<string name="maps_menu_reverseroute">Reverse Route</string>
+	<string name="maps_menu_submenu_waypoints">WayPoints</string>
+	<string name="maps_menu_accessibility_analysis">Accessibility</string>
+	<string name="maps_menu_waypoint_add">Add WayPoint</string>
+	<string name="maps_menu_waypoints_clear">Clear Waypoints</string>
+	<string name="maps_menu_waypoints_optimize">Optimize Waypoint-Order</string>
+	<string name="maps_menu_submenu_renderers">Renderers</string>
+	<string name="maps_menu_satellite">Toggle Satellite</string>
+	<string name="maps_menu_traffic">Toggle Traffic</string>
+	<string name="maps_menu_preload">Preload</string>
+	<string name="maps_menu_shareroute">Mail Route</string>
+	<string name="maps_menu_compass">Compass</string>
+	<string name="maps_menu_getcentetcoordinates">Get center Coordinates</string>
+	<string name="maps_menu_getcentetcoordinates_message"><b>MapCenter:</b>\n\n<b>Latitude:\t</b>%.6f\n<b>Longitude:\t</b>%.6f\n</string>
+	<string name="maps_menu_altitude_profile">Altitude Profile</string>
+	<string name="maps_menu_altitude_profile_title">Route-AltitudeProfile</string>
+	<string name="maps_menu_altitude_profile_error">A problem was encountered, while creating the altitude-profile for the route.\nProbably the area request is not yet covered by our server.</string>
+	<string name="maps_menu_gpsstatus">Show GPS-Status</string>
+	<string name="maps_menu_zoomtodestination">Zoom to Destination</string>
+	<string name="maps_menu_trace_show">Show Current Trace</string>
+	<string name="maps_menu_trace_hide">Hide Current Trace</string>
+	<string name="maps_menu_trace_submit">Submit Current Trace</string>
+	<string name="maps_menu_vehicleregistrationplate_lookup">Plate Lookup</string>
+	
+	<!-- Context Menu-String -->
+	<string name="maps_contextmenu_add_as_waypoint">Add as waypoint</string>
+	<string name="maps_contextmenu_clear_waypoints">Clear waypoints</string>
+	<string name="maps_contextmenu_close">Close</string>	
+	
+	<!-- Zoomlevels of the preloader (with descriptions) -->
+	<array name="preloader_rectangle_zoomlevels">
+		<item>0 (Worldscale)</item>
+		<item>1</item>
+		<item>2 (Continentscale)</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6 (Countryscale)</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+		<item>10</item>
+		<item>11</item>
+		<item>12 (Cityscale)</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16 (Streetscale)</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19 (Closest)</item>
+	</array>
+</resources>

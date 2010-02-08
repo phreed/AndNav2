@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Screens that deal with setting the Home-Location.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_sethome_focused">Nastavit domov...</string>
+	<string name="btn_settings_sethome_via_map_caption">Z mapy</string>
+	<string name="btn_settings_sethome_via_sd_caption">Dialogové hledání</string>
+	<string name="pdg_settings_sethome_via_sd_donefetch_message">Prosím čekejte...</string>
+	<string name="toast_settings_sethome_via_map_failed">Adresa nenalezena.\nTip: Zkuse to bez čísla popisného.</string>
+	<string name="toast_settings_sethome_via_map_howto">Dlouhé kliknutí na mapu nastaví domov.</string>
+</resources>

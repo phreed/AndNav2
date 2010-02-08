@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are the ones from the AutoZoom and SnapToRoute-Settings.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_routeviewing_maxlevel_caption">Nastavte maximální zvětšení během navigace ...</string>
+	<string name="chk_settings_routeviewing_maxlevel_enabled_caption">Aktivovat autozoom ...</string>
+	
+	<string name="chk_settings_routeviewing_snaptoroute_enabled_caption">Korekce GPS chyby...</string>
+	<string name="tv_settings_routeviewing_snaptoroute_caption">Nastavte toleranci pro zobrazení ukazatele na trase.</string>
+</resources>

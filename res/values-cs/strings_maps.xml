@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used in multiple map-screens.
+ #
+ ### README-END ###
+-->
+<resources>
+	<!-- Message shown, when another application started andnav with invalid parameters. -->
+	<string name="nav_intent_parse_error_message">Navigations-Intent nemohl být pasrován. Prosím kontaktujte podporu programu, kterou najdete na stránkách kam Vás AndNav navedl.</string>
+	
+	<!-- Menu-Strings -->
+	<string name="maps_menu_quit">Ukončit</string>
+	<string name="maps_menu_refetch_route">Trasu znovu přepočítat</string>
+	<string name="maps_menu_focus_coordinates">Souřadnice přiblížit...</string>
+	<string name="maps_menu_auto_refetch">Auto-přepočítávání</string>
+	<string name="maps_menu_settings">Nastavení</string>
+	<string name="maps_menu_weather">Počasí</string>
+	<string name="maps_menu_submenu_traffic">Informace o dopravě</string>
+	<string name="maps_menu_submenu_traffic_clear">Informace o dopravě <b>smazat</b></string>
+	<string name="maps_menu_submenu_traffic_custom_feeds">Vlastní zdroje..</string>
+	<string name="maps_menu_osb">Zlepšit mapu</string>
+	<string name="maps_menu_reverseroute">Otočit trasu</string>
+	<string name="maps_menu_submenu_waypoints">Otočné body</string>
+	<string name="maps_menu_accessibility_analysis">Dostupnost</string>
+	<string name="maps_menu_waypoint_add">Přidat otočný bod</string>
+	<string name="maps_menu_waypoints_clear">Smazat otočné body</string>
+	<string name="maps_menu_waypoints_optimize">Optimalizovat řazení otočných bodů</string>
+	<string name="maps_menu_submenu_renderers">Typ mapy</string>
+	<string name="maps_menu_satellite">Satelitní obrázky</string>
+	<string name="maps_menu_traffic">Informace o stavu</string>
+	<string name="maps_menu_preload">Přednačíst</string>
+	<string name="maps_menu_shareroute">Trasu poslat emailem</string>
+	<string name="maps_menu_compass">Kompas</string>
+	<string name="maps_menu_getcentetcoordinates">Souřadnice mapového centra...</string>
+	<string name="maps_menu_getcentetcoordinates_message"><b>Mapové centrum:</b>\n\n<b>Zeměpisná šíře:\t</b>%.6f\n<b>Zeměpisná délka:\t</b>%.6f\n</string>
+	<string name="maps_menu_altitude_profile">Výškový profil</string>
+	<string name="maps_menu_altitude_profile_title">Výškový profil trasy</string>
+	<string name="maps_menu_altitude_profile_error">Nastala chyba při vytváření výškového profilu.\nZřejmě ještě nejsou dostupné informace o tomto území na serveru.</string>
+	<string name="maps_menu_gpsstatus">Zobrazit stav GPS</string>
+	<string name="maps_menu_zoomtodestination">Zoom to Destination</string>
+	<string name="maps_menu_trace_show">Zobrazit současnou trasu</string>
+	<string name="maps_menu_trace_hide">Skrýt současnou trasu</string>
+	<string name="maps_menu_trace_submit">Odeslat současnou trasu</string>
+	<string name="maps_menu_vehicleregistrationplate_lookup">Info o SPZ</string>
+	
+	<!-- Context Menu-String -->
+	<string name="maps_contextmenu_add_as_waypoint">Přidat jako otočný bod</string>
+	<string name="maps_contextmenu_clear_waypoints">Smazat otočné body</string>
+	<string name="maps_contextmenu_close">Zavřít</string>	
+	
+	<!-- Zoomlevels of the preloader (with descriptions) -->
+	<array name="preloader_rectangle_zoomlevels">
+		<item>0 (Zeměkoule)</item>
+		<item>1</item>
+		<item>2 (Kontinenty)</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6 (Státy)</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+		<item>10</item>
+		<item>11</item>
+		<item>12 (Města)</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16 (Ulice)</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19 (Nejpodrobnější)</item>
+	</array>
+</resources>

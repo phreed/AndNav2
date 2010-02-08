@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TableLayout
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content">
+			<TableRow
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:paddingRight="10px"
+					android:paddingLeft="10px"
+					android:text="@string/dlg_input_direct_lat_lon_latitude" />
+				<EditText android:id="@+id/et_input_direct_lat_lon_latitude" 
+					android:layout_width="150px"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="" />
+			</TableRow>
+			<TableRow
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:paddingRight="10px"
+					android:paddingLeft="10px"
+					android:text="@string/dlg_input_direct_lat_lon_longitude" />
+				<EditText android:id="@+id/et_input_direct_lat_lon_longitude" 
+					android:layout_width="150px"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:text="" />
+			</TableRow>
+		</TableLayout>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_gravity="center" 
+			android:gravity="center" 
+			android:text="@string/dlg_input_direct_lat_lon_example" />
+	</LinearLayout>
+</FrameLayout>

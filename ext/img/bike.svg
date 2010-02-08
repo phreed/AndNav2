@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   height="48"
+   width="48"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="bike.svg"
+   sodipodi:docbase="/home/uwe/Desktop"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:modified="TRUE"
+   inkscape:export-filename="D:\Workspace\Java\AndNav2\res\drawable\bike.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 362.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="725 : 362.5 : 1"
+       inkscape:persp3d-origin="362.5 : 241.66667 : 1"
+       id="perspective12" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="750"
+     inkscape:window-width="1280"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="6.3512818"
+     inkscape:cx="33.232183"
+     inkscape:cy="26.173098"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:current-layer="svg2"
+     showgrid="false" />
+  <g
+     id="g3175"
+     transform="matrix(0.9609435,0,0,0.9609435,0.8913149,1.5474379)">
+    <g
+       style="stroke:#ffffff;stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="translate(4.7911852e-2,8.6563948e-2)"
+       id="g3169">
+      <circle
+         sodipodi:ry="161"
+         sodipodi:rx="161"
+         sodipodi:cy="409"
+         sodipodi:cx="215"
+         id="circle3171"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:78.08333588;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         cx="215"
+         cy="409"
+         r="161"
+         transform="matrix(5.1227321e-2,0,0,5.1227321e-2,-1.7417286,8.3343712)" />
+      <circle
+         sodipodi:ry="161"
+         sodipodi:rx="161"
+         sodipodi:cy="406"
+         sodipodi:cx="790"
+         id="circle3173"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:78.08333588;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         cx="790"
+         cy="406"
+         r="161"
+         transform="matrix(5.1227321e-2,0,0,5.1227321e-2,-1.7417286,8.3343712)" />
+    </g>
+    <g
+       id="g3165">
+      <circle
+         sodipodi:ry="161"
+         sodipodi:rx="161"
+         sodipodi:cy="409"
+         sodipodi:cx="215"
+         id="FrontWheel"
+         style="fill:none;fill-opacity:1;stroke:#363636;stroke-width:40px;stroke-opacity:1"
+         cx="215"
+         cy="409"
+         r="161"
+         transform="matrix(5.1227321e-2,0,0,5.1227321e-2,-1.7417286,8.3343712)" />
+      <circle
+         sodipodi:ry="161"
+         sodipodi:rx="161"
+         sodipodi:cy="406"
+         sodipodi:cx="790"
+         id="RearWheel"
+         style="fill:none;fill-opacity:1;stroke:#363636;stroke-width:40px;stroke-opacity:1"
+         cx="790"
+         cy="406"
+         r="161"
+         transform="matrix(5.1227321e-2,0,0,5.1227321e-2,-1.7417286,8.3343712)" />
+    </g>
+    <path
+       style="fill:#141a51;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.20000005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path2391"
+       d="M 20.14147,9.2018768 C 13.350446,9.2680668 14.50214,8.5002706 10.848489,20.242258 C 7.8720529,29.624097 8.1962589,28.600973 8.1806919,29.259058 C 8.1697829,29.770318 8.5824849,30.175675 9.1010899,30.210372 C 10.17961,30.10132 9.7259599,30.327015 13.465174,18.715491 C 27.128123,33.128586 22.002126,30.791367 29.355025,31.08407 C 39.018668,30.991406 39.804115,31.58711 39.918843,30.170658 C 39.905605,29.689681 39.680561,29.402861 33.048391,14.642641 L 33.683808,12.895242 L 35.868056,12.855529 L 35.788629,11.028703 L 27.647341,11.028703 C 26.928083,12.012718 27.938574,12.008305 31.578987,12.815816 L 30.94357,14.602926 L 14.700708,14.642641 C 15.795038,10.82131 15.177271,11.059591 20.101757,11.068417 L 20.14147,9.2018768 z M 14.231363,16.601306 L 30.125325,16.573125 L 25.531858,28.916307 L 14.231363,16.601306 z M 32.041618,17.334006 L 27.532692,29.169935 L 37.395966,29.198115 L 32.041618,17.334006 z" />
+    <path
+       style="fill:#c70a0a;fill-opacity:1;fill-rule:evenodd;stroke:#363636;stroke-width:0.05122732;stroke-opacity:1"
+       id="Frame"
+       d="M 20.25957,9.1267026 C 13.468546,9.1928922 14.62024,8.4250961 10.966589,20.167083 C 7.9901528,29.548922 8.3143588,28.525798 8.2987921,29.183883 C 8.287883,29.695143 8.7005848,30.1005 9.2191899,30.135197 C 10.29771,30.026145 9.8440599,30.25184 13.583274,18.640316 C 27.246223,33.053411 22.120226,30.716192 29.473125,31.008895 C 39.136768,30.916231 39.922215,31.511935 40.036943,30.095483 C 40.023705,29.614506 39.798661,29.327686 33.166491,14.567466 L 33.801908,12.820067 L 35.986156,12.780354 L 35.906729,10.953528 L 27.765441,10.953528 C 27.046183,11.937543 28.056674,11.93313 31.697087,12.740641 L 31.06167,14.527751 L 14.818808,14.567466 C 15.913138,10.746135 15.295371,10.984416 20.219857,10.993242 L 20.25957,9.1267026 z M 14.349463,16.526131 L 30.243425,16.49795 L 25.649958,28.841132 L 14.349463,16.526131 z M 32.159718,17.258831 L 27.650792,29.09476 L 37.514066,29.12294 L 32.159718,17.258831 z" />
+  </g>
+</svg>

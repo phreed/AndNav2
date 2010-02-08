@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent">
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView
+			style="@style/sd_quickinfo_textstyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_weight="1"
+			android:text="@string/tv_sd_poi_categories_quickinfo_caption" />
+		<ImageButton android:id="@+id/ibtn_sd_poi_categories_back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/back" />
+		<ImageButton android:id="@+id/ibtn_sd_poi_categories_close"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/close" />
+	</LinearLayout>
+	<ExpandableListView android:id="@+id/elv_sd_poi_categories_items"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"/>	
+</LinearLayout>

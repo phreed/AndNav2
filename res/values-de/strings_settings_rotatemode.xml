@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_rotatemode_quickinfo_default">Rotationsmodus wählen...</string>
+	<string name="tv_settings_rotatemode_quickinfo_northup">Norden nach oben...</string>
+	<string name="tv_settings_rotatemode_quickinfo_northup_saved">Norden nach oben... gespeichert!</string>
+	<string name="tv_settings_rotatemode_quickinfo_drivingdirectionsup">Fahrtrichtung nach oben...</string>
+	<string name="tv_settings_rotatemode_quickinfo_drivingdirectionsup_saved">Fahrtrichtung nach oben... gespeichert!</string>
+</resources>

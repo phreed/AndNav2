@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Standard-Map-Screen (also known as WhereAmI-Map).
+ # 
+ ### README-END ###
+-->
+<resources>
+	<!-- Context Menu-String -->
+	<string name="tv_whereami_contextmenu_nav_here">Navigovat sem...</string>
+	<string name="tv_whereami_contextmenu_add_as_favorite">Přidat bod jako oblíbený...</string>
+	<string name="tv_whereami_contextmenu_show_radar">Zobrazit v radaru...</string>
+	<string name="tv_whereami_contextmenu_weather_get">Předpověď počasí...</string>
+	<string name="tv_whereami_contextmenu_close">Zavřít</string>
+	
+		
+	<string name="toast_autofollow_once">Centrovat na uživatele...</string>
+	<string name="toast_autofollow_enabled">Autofollow: zapnuto</string>
+	<string name="toast_autofollow_disabled">Autofollow: vypnuto</string>
+	
+	<string name="whereami_location_not_resolvable">Vaše pozice nebyla nalezena.</string>
+
+	<string name="toast_whereami_no_radar_app_installed">Radarový program není nainstalován.\nMůže být stažen z Android-Marketu!</string>	
+	<string name="toast_map_accessibilityanalysis_finished">Analýza dostupnosti dokončena.</string>
+	
+	<string name="whereami_search_no_places_found">Nenalezeno!</string>
+	<string name="whereami_search_places_found">Nalezeno:</string>
+	
+	<string name="whereami_search_scope_title">Hledat...</string>
+	<string name="whereami_search_scope_global">Globální</string>
+	<string name="whereami_search_scope_local">Lokální (viditelná oblast)</string>
+	
+	<string name="wherami_dialog_locality">Město:</string>
+	<string name="wherami_dialog_thoroughfare">Ulice:</string>
+	<string name="wherami_dialog_distance">Vzdálenost:</string>
+	<string name="wherami_dialog_streetname">Ulice:</string>
+	<string name="wherami_dialog_streetnumber">Číslo popisné:</string>
+	<string name="wherami_dialog_feature">Vlastnost:</string>
+	<string name="wherami_dialog_zipcode">PSČ:</string>
+	<string name="wherami_dialog_cityname">Město:</string>
+	<string name="wherami_dialog_phone">Tel:</string>
+	<string name="wherami_dialog_adminarea">Okres:</string>
+	<string name="wherami_dialog_subadminarea">Kraj:</string>
+	<string name="wherami_dialog_country">Země:</string>
+	
+	<!-- The Maptile-Preload-Dialog -->
+	<string name="dlg_preloader_rect_maxzoom_title">Zvolte maximálné zvětšení.</string>
+	<string name="dlg_preloader_rect_reducezoom">Zmenšit zvětšení</string>
+	<string name="dlg_preloader_rect_title">Načtení mapy</string>
+	<string name="dlg_preloader_rect_message">Načíst %d mapové podklady v zobrazeném poli?\n\nPřibližná velikost: %s</string>
+	
+	<!-- The Dialog where the user can add a new Traffic Feed. -->
+	<string name="dlg_customtrafficfeed_title">Zadat Feed-Data...</string>
+	<string name="dlg_customtrafficfeed_name">Jméno:</string>
+	<string name="dlg_customtrafficfeed_name_hint">My Traffic Feed</string>
+	<string name="dlg_customtrafficfeed_url">URL:</string>
+	<string name="dlg_customtrafficfeed_url_hint">http://</string>
+	<string name="dlg_customtrafficfeed_country">Země:</string>
+	 <!-- The following two items are the caption of the Button that opens http://feedlist.andnav.org -->
+	<string name="dlg_customtrafficfeed_showfeedlist">Feedlist</string>
+	<string name="dlg_customtrafficfeed_clipboardpaste">&lt;- Vložit</string>
+</resources>

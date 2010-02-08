@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Tracepolicy-Screens.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_tracepolicy_focused">Změnit nastavení trasy...</string>
+	<string name="chk_settings_tracepolicy_filter_caption">Minimální Filtrace</string>
+	<string name="tv_settings_tracepolicy_quickdescription">Zvolte co se má s GPS-záznamy stát.</string>
+	<string name="dlg_input_osm_account_title">Informace o OSM účtu</string>
+	<string name="dlg_input_osm_account_username">Jméno:</string>
+	<string name="dlg_input_osm_account_password">Heslo:</string>
+	<string name="dlg_input_osm_account_username_tooshort"><b>NICHT GESPEICHERT</b>\nJméno příliš krátké!</string>
+	<string name="dlg_input_osm_account_password_tooshort"><b>NICHT GESPEICHERT</b>\nHeslo příliš krátké!</string>
+	<string name="dlg_input_osm_account_info"><b>Tip:</b> Zadání dvakrát zkontroluj!</string>
+	
+	<string name="notif_settings_tracepolicy_osmcontribution_failed_fallback_used_title">Načtení trasy selhalo.</string>
+	<string name="notif_settings_tracepolicy_osmcontribution_failed_fallback_used_message">Trasy byla uložena na SD kartu.</string>
+</resources>

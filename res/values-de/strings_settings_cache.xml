@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_cache_focused">Cache Einstellungen...</string>
+	<string name="tv_settings_cache_fallbackinfo_caption">Interner Speicher wird immer als Rückfall-Sicherung genutzt, wenn keine SD-Karte eingelegt ist!</string>
+	<string name="tv_settings_cache_quickinfo_default_caption">Ein größerer Cache (in MegaBytes) speichert mehr Kartenkacheln im lokalen Speicher. Daraus folgen weniger Datentransfer und schnellere Ladezeiten.</string>
+	<string name="tv_settings_cache_current_size">Genutzt: %.1f von %d MB</string>
+	<string name="tv_settings_cache_max_size_external">Maximum (SDKarte):</string>
+	<string name="tv_settings_cache_max_size_internal">Maximum (Intern):</string>
+	<string name="btn_settings_cache_clear_cache_caption">Cache leeren...</string>
+	<string name="pdg_settings_cache_clear_cache_message">Bitte warten</string>
+	<string name="pdg_settings_cache_clear_cache_title">Cache wird geleert...</string>
+	
+	<string name="settings_cache_clear_external_warning_title">Warnung...</string>
+	<string name="settings_cache_clear_external_warning_message">Löschen der SD-Karte <b>sollte</b> vom PC aus erledigt werden, da dies viel schneller und sicherer geht. (Ein Klick auf \'Weiter\' könnte zu einem Absturz führen!)\n</string>
+</resources>

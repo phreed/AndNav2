@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="2">
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<ImageButton
+				android:id="@+id/ibtn_settings_centermode_centeruser"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/centermode_user"/>
+			<ImageButton
+				android:id="@+id/ibtn_settings_centermode_upto_nextturn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/centermode_uptonextturn"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+			<ImageButton
+				android:id="@+id/ibtn_settings_centermode_close"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:src="@drawable/close"/>
+		</TableRow>
+	</TableLayout>
+		<TextView
+			android:id="@+id/tv_settings_centermode_quickinfo"
+			style="@style/settings_quickinfo_textstyle"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"/>
+		<ImageView
+			android:id="@+id/iv_settings_centermode_sample"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:scaleType="fitCenter"/>
+</LinearLayout>

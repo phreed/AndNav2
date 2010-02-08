@@ -1,0 +1,556 @@
+################################
+#       AndNav-ChangeLog       #
+#                              #
+#  Creator: Nicolas Gramlich   #
+################################
+
+########################################
+#         0.8.7.7 --> 0.8.7.8          #
+########################################
+# Added:
+	- 
+	
+# Updated:
+	- UK Postcode-Entry - Now forced to enter in 2 parts.
+	- US-Server can now be properly pinged.
+	- Searching for a US Address, user now gets asked for the State.
+	- Improved searching of locations using the structured search (through the dialogs).
+	
+# Fixed:
+	- Bug where tiles remained in "Loading" state.
+	
+########################################
+#         0.8.7.6 --> 0.8.7.7          #
+########################################
+# Added:
+	- US-Server
+	
+# Updated:
+	- 
+	
+# Fixed:
+	- 
+
+########################################
+#         0.8.7.5 --> 0.8.7.6          #
+########################################
+# Added:
+	- 6400 new PostCodes!
+	- Possibility to show the currently recording trace on every map. 
+	- VehicleRegistrationPlate-Lookup (Currently for Germany only).
+	
+# Updated:
+	- Smarter sorting of Saved Routes. (Named on top, below unnamed/'timestamped' descending)
+	- Now, multiple Trace-Settings can be chosen. (Before just a single one.)
+	- TrafficOverlay is now even faster. (Using a Quad-Tree datastructure.)
+	
+# Fixed:
+	- Fixed bug, showing only one 'type' of a contact at a time. (i.e. just 'Work' where 'Home' and 'Work' were available)
+	- Fixed correct showing of focused OverlayItems.
+	
+########################################
+#        0.8.7.4 --> 0.8.7.5           #
+########################################
+# Added:
+	- 460 new PostCodes
+	
+# Updated:
+	- 
+	
+# Fixed:
+	- Bug which caused a 'Force Close' when closing a MapView. 
+	- Bug on the Standard-MapView which slowed everything down a lot.
+	- Small Bug when loading Contacts.  
+
+########################################
+#     0.8.7.2 --> 0.8.7.4 nightly      #
+########################################
+# Added:
+	- Different HUDs for the Navigation-Map. 
+		- Also different Direction-Indicators for the Standard-Map.
+	- Share route by Mail. (Via RouteHandleID)
+		- Searchbox on the Standard-Map now parses such RouteHandleIDs.
+	- Cyrillic Keylayout.
+	- ScaleIndicator for Navigation-Map.
+	- 300 More UK-PostCodes.
+	- Lite/Pro-Version differences.
+	- New POI-Category "Most Used" containing the most important POIs for a quick access.
+	- DrivingDirecton-Dialects (5 German ones for now) 
+	- Interface to GPS-Status (from the market) on the Map and the Navigation-Map.
+	- ORSServer-Settings.
+		- User is asked to choose server on the first start.
+	- Possibility (through the menu) to zoom on destination while viewing a route.
+	- Saved Routes can now be renamed. 
+	- GoogleMaps-Satellite-Tiles
+	- GoogleMaps-Terrain-Tiles
+	- MapTile-Pack Downloader
+	
+# Updated:
+	- Significantly improved loading-speed of the Contacts.
+	- Nicer Traffic-Overlay-Icon.
+	- MainMenu-Screen (with donation-Info-Button).
+	- POI-Search can be canceled now.
+	- Not-installed RADAR-App now gets opened in the market, if not available.
+	- Traffic-Information is displayed a lot faster and with more sense, but initially loads a bit slower.
+	
+# Fixed:
+	- FAQ-Button not opening the FAQ-webpage.
+	- Improved stability of Overlays.
+	- Closes to tiny possible memory leaks with the direction-arrow overlays.
+	- Fixed bug where Route-Refetching did not happen, when HorizontalPositioningError was not available.
+	- Fixed a bug always showing 1024MB as the max-size of the cache.
+	- DowntimeManager showing wrong date of the next occurring downtime.
+	- Bug when no Audible Turn Instruction could be heard for distances > 1km. 
+
+########################################
+#     0.8.7.1 nightly --> 0.8.7.2      #
+########################################
+# Added:
+	- ScaleIndicatorView on OpenStreetBugMap.
+	- Possibility to add POIs to OSM-Database directly through AndNav2.
+	- Adaptions to RC33.
+	- TTS-Library-Stub that is ready for CupCake.
+	
+# Updated:
+	- Persistence of Dialogs on the OpenStreetBugMap while changing ScreenOrientation.
+	- Downtime-Warner now respects Timezone-difference to the server.
+	
+# Fixed:
+	- 'Force Close' opening OpenStreetBug-Map.
+	- Altitude-Profile image not appearing in the dialog.
+	- UnitSystem of the HUD-element of the upper next turn now refreshes correctly.
+	- HUD-element of the upper next turn now shows the correct distance.
+	- Traffic-Elements now can get focused properly.
+
+########################################
+#  0.8.6 bleeding --> 0.8.7.1 nightly  #
+########################################
+# Added:
+	- Any touch applied to the map now prevents auto-centering for some seconds. 
+	- ServerDowntime-Warner (Warns 2 days prior to scheduled downtimes.) 
+	
+# Updated:
+	- 
+	
+# Fixed:
+	- 'Force Close' opening SetHome-Map
+	- 'Force Close' opening OpenStreetBug-Map
+
+########################################
+#   0.8.6 bleeding --> 0.8.7 stable    #
+########################################
+# Added:
+	- 
+	
+# Updated:
+	- 
+	
+# Fixed:
+	- Minor fixes
+
+########################################
+#   0.8.6 bleeding --> 0.8.7 nightly   #
+########################################
+# Added:
+	- Info-View on the uppernextturn.
+	
+# Updated:
+	- Enabling the Compass on the Standard-Map, now forces Portrait-Mode.
+	- Modular LocationManagement, easily switchable.
+	- Hint on how to format addresses in the Searchbox of the Standard-Map.
+	
+# Fixed:
+	- Street disappearing in Address-Resolver-Screen when Ad came up.
+	- Address-Resolver-Screen crashing when rotating screen while search is ongoing.
+	- POI-Result-Screen crashing when rotating screen while search is ongoing. 
+	- Pressing the Enter-Key on the Hardware-Keyboard in the Street-Entry-Screen not correctly jumps to the Streetnumber-Entry-Screen.
+	- Fixed GPS not disconnecting properly. 
+	
+################################################
+# 0.8.6 bleeding --> 0.8.6 bleeding california #
+################################################
+# Added:
+	- LongPress to WhereAmI-Map now offers option to open Radar-Application.
+	- German Localization!
+	- Dutch DrivingDirections-Language!
+	- Configuration-Manager for the TTS-Library (by Charles L. Chen) .
+	- FreeThePostcode-Option on the OpenStreetBug-Map.
+	- Traces can now be filtered for minimum requirements in the "Trace-Settings"-Settingemenu.
+	- New Renderer 'ÖPNV', nicely showing the public transit in Germany and border near areas of other countries!
+	- New Colorscheme-Settingsmenu (Screenbrightness can be changed) .
+	- Process of determining being 'Off-Route' now makes use of the accuracy of the users location.
+	- Proper default-values for turn-voice.
+	- New possibility for turn voice ("Distance" spoken by TTS)..
+	- Improved pronounciation-mapping from the Directionslanguage to the TTS-library.
+	- UI-Elements on Standard-Map now fade out after 4 seconds. They can be made visible by touching the map.
+	- Standard-Map Searchbox now can also handle latitudes in a Google-Style format: "X.XXX Y.YYY" (Lat first, then Lon)  
+	
+# Updated:
+	- StreetNumber-Search is now possible again.
+	- StreetName-Only search is now possible (ZipCode and CityName are skippable).
+	- Cache-Setting Screen now respects the size of the attached external media.
+	- TTS-Library will now show a 'Outdated'-dialog of the installed library is to old to be used.
+	- When a problem occurs during uploading a trace to a OSM-Account. The Trace gets saved to the SD-Card as a fallback.
+	- The Renderer on each MapViews now is remembered.   
+	- Most Input-Dialog should now be persistent when the ScreenOrientation changes.
+	- Changing the orientation of the Address-Resolver-Screen now no more causes a refetch. 
+	- Changing the orientation of the Found POI Screen now no more causes a refetch. 
+	- Slightly updated logo.
+	- Decreased time, manual action on the zoom-buttons blocked Autozoom-Actions.(From: 20sec ; To: 12sec)
+	- Weather-Forecast Layout for Portrait-Mode.
+	
+# Fixed:
+	- Contacts-Selection-Screen is now no more blocking system keys.
+	- Postcodes disappearing in the List of the Resolver-Screen, after scrolling.
+	- Bug where distances bigger than 1400 miles were formatted as "1.0k miles" instead of "1.4k miles"
+	- Layout of DisplayQuality-Screen.
+	- Bug when toggling Autozoom with the 'a'-Key started the Waypoint-Activity .
+	- 'Advanced Nav Settings'-Dialog appearing when screen was rotated.
+	- Address-Resolver-Screen sometimes showed the wrong flags.
+
+#######################################
+#   0.8.5 nightly --> 0.8.6 bleeding  #
+#######################################
+# Added:
+	- Interpolated-generation of unavailable(not yet downloaded) maptiles from above zoom-levels (much smoother experience!) 
+	- OpenStreetBug-Screen where you can submit bugs in the OpenStreetMap-Data.
+	- Added a warning, when attempting to clear the cache on the SD-Card.
+	- ContextMenu of Navigation-Screen now has an "Exit"-Item, which will cancel navigation.
+	- Possibility to focus on coordinates in the standard-map, through the menu.
+	- OpenPisteMap-Renderer ("Its Christmas/Holiday time =)").
+	- Long-Press to 'Standard-Map' now gives 'Add as favorite'-Option.
+	
+# Updated:
+	- Resolved items on the "Address-Resolver"-Screen are now sorted by Accuracy then by City then by Street.
+	- Text-2-Speech output now speaks the decoded abbreviations (i.e. "St" --> "Street" or "Dr" --> "Drive").
+	- Navigation-Screen now doesn't need to re-download the Route, when switching orientation.
+	- Contacts-Screen now remembers the Contacts-List when switching orientation.
+	- HorizontalSliders (i.e. in Settings-->Cache) now have drag-picker-icon, which makes them look more draggable. 
+	- QWERTZ-Keyboardlayout now has a "ß".
+	- Initial ad should now display immediately.
+	- Invalid Routes now no more get saved.
+	
+# Fixed:
+	- Some OutOfMemory-Errors. 
+	- Maptiles not being properly deleted in SD-Card-Cache.
+	- Keyboard on ZipCode-Entry handled only numbers correctly.
+	- Bug when scrolling down the resolved list-Items on the "Address-Resolver"-Screen.
+	- Standard-Map losing center, when switching orientation.
+
+#################################
+#   0.8.5 a --> 0.8.5 nightly   #
+#################################
+# Added:
+	- Text-2-Speech!
+	- Full Text-2-Speech output when clicking on the Desciption-Textfield in the bottom of the Nav-Map. 
+	- Avoid-Areas through Long-Click on the Map. (Like adding Waypoints)
+	- Added a short description on what 'Trace-Policy' actually does.
+	- Added a short description to the selection of Renderers.
+	- ZoomButtons now give feedback when pressed (background flashes orange).
+	- Compass on the WhereAmI-Screen now displays a toast when it needs to be calibrated.
+	- When doing an Address-Search there now is a Activity showing the closest matches of the entered Address.
+	- Version-Updates can now be ignored (no that makes no sense!)  
+	
+# Updated:
+	- Dramatically improved the overall map-drawingspeed.
+	- Responsiveness while tiles are being downloaded is much higher now. 
+	- Tile-Downloading-behavior is now like a stack and no more like a queue, so the most recently needed maptiles are loaded as first.
+	- Removed some unused images. apk is now ~100kb smaller. 
+	- Settings-Menu Icons are now bigger. (64px instead of 48px)
+	- More Setting-Menu Icons have text on them.
+	- Improved Drawing-Speed of Accessibility-Analysis-Polygon
+	- Accessibility-Menuitem on WhereAmI now shows 'Hide' when a Accessibility-Polygon is visible.
+	- Initial Route-Fetch now has the title "Fetching Route..." instead of "Re-Fetching Route..."  
+	- Accessibility was extended from 30 minutes up to 60 minutes!
+	- The System now won't recognize the MapTiles as pictures and not index them (they are stored as "sample_x_y_z.png.andnav").
+	- It is now ensured, that the "Close"-Menuitem of 'WhereAmI' and the Nav-Map is always visible and not listed under 'more'.
+	- Direction-Voice menu has now a couple of dropdown-spinners to select the behavior when the nav passes certain distances to the next turn point.
+	- Temporarily disabled Streetnumber-Search because Map-Data is not ready for it.
+	- ABC-Keyboardlayout now adapts to the Screen-Orientation (10 Columns in Landscape and 10 in Portrait-Mode).
+	- ZipCode-Entry now uses also Full OnScreenKeboard.
+	
+# Fixed:
+	- Bug that made the Colorscheme-Overlay disappear, after returning from the Settings-Menu of the NavMap.
+	- Some Exceptions when flipping the screen, while a Progressdialog was visible. 
+
+###########################
+#   0.8.4 a --> 0.8.5 a   #
+###########################
+# Added:
+	- Fast-Scrolling of AndNav2s Contacts-Screen (just like the Systems Contacts-App).
+	- Added ColorScheme-Support for MapViews. (NightMode makes it a bit darker, Daymode a bit brighter, and default leaves it as it is.)
+	- Added working Avoid-Area-Overlay, will be used for displaying traffic-jams/TMC in later versions.
+	- GPX-Traces get uploaded to andnav.org in zip format (Filesize-reduction of around 90-98%)
+	- Resolving the Address of a Contact can now be canceled
+	- AutoZoom now gets disabled for 20 seconds, when the UI-zoom-keys are used.
+	- AutoZoom can be toggled using the 'a'-key.
+	- Added Settings-MenuItem for GPS-Tracing (for OSM-Contribution-Modes)
+		- GPS-Traces can be either:
+		  - Stored to SDCard (zipped)
+		  - Uploaded to AndNav.org-Server (zipped, for automatically contributing to the OSM-Project)
+		  - Uploaded to an OSM-Account(unzipped, set AccountDetails in 'Trace'-settings).
+	- Route can be reversed through the menu. (Switched are the initial starting-point with the destination. Also the order of the waypoints is reversed.)
+	- On the WhereAmI-Screen the visible rectangle can be preloaded up to a selectable ZoomLevel. (Through menu)
+	- GoogleMaps-Tiles are available on the WhereAmI-Map but NOT during Navigation!
+	- Now there is a 'Loading' and a 'Downloading'-MapTile.
+	
+# Updated:
+	- Destination-Coordinates are resolved only once now. (RE-fetching routes is noticeably faster now)
+	- Close-Buttons in the Settings-Menu now have a 'Back'-Icon. 
+	- Range of Accessibility-Analysis can now be chosen from 1 to 30 minutes.
+	- Removed 'Locale'-SettingsMenuItem, because it did noting :P
+	- Replaced own ContextMenuActivities on WhereAmI and Nav with Android-Internal-Dialogs.
+	- App-Description is now correct (visible in System-ApplicationManagement)
+	- Using the Software-Keyboard, the letters now are not always uppercase, but standard Capitalized
+	
+# Fixed:
+	- Bug when skipping Streetname caused an AssertionException is now fixed.
+	- Bug that Renderers different from Mapnik displayed no tiles is now fixed. 
+	- The Preloader now correctly respects existing map-tiles(no more re-downloads them) 
+	
+###########################
+#   0.8.3 a --> 0.8.4 a   #
+###########################
+# Added:
+	- Caching to SD-Card
+	
+# Updated:
+	- WhereAmI-Map of AndNav2 now keeps the screen awake.
+	
+# Fixed:
+	- AndNav1 now doesn't accidentally leave the GPS on when being closed. (Leaves it on, when you leave using the HOME-Button)
+	- 'Force Close' when Contacts had a  '  in their name.
+
+###########################
+#   0.8.2 a --> 0.8.3 a   #
+###########################
+# Added:
+	- 
+	
+# Updated:
+	- AndNav now enables the GPS-receiver as it starts, so the chance that GPS-receiver already provides recent locations when opening the map-apps is bigger.
+	- UK Postcode-Entry now no more blocks 'unperfect' codes. Unmatching (not in database) are blocked. 
+	
+# Fixed:
+	- Force-Close when opening the Contacts-Screen (in special contacts-situations) 
+
+###########################
+#   0.8.1 a --> 0.8.2 a   #
+###########################
+# Added:
+	- UK PostCode-Search backed by >4000 OSM-entries (provides closest match)
+	
+# Updated:
+	- Size and color of Route-Lines and Turn-Arrows (bigger and better visible now)
+	- WhereAmI-Map now starts at the LastKnownLocation not at lat=0 & lon=0
+	- Keyboard-Layouts now have the Numbers on top (like any other keyboard)
+	- Size & Description of many Buttons and Icons in whole AndNav 
+	
+# Fixed:
+	- Force-Close when querying the Reverse-Geocoder with lat=0 & lon=0
+	- Layout of UpdateChecker-Dialog
+	- POIs from Category-Search can now be used as Waypoints 
+	- The 'Choose-Renderer'-Button on the 'WhereAmI'-Screen is now working. 
+
+###########################
+#   0.9.2.3 --> 0.9.3.1   #
+###########################
+# Added:
+	- Accessibility Analysis
+	- Volume can be properly adjusted using the Hardware-Volume Controls
+	- Last working Route can now be kept when non was found during route-refetching.
+	
+# Updated:
+	- If target-device has no compass, compass-menuitem in WhereAmI is no more shown.
+	- Less sounds when Menu-Voice was selected
+	- Improved size of buttons in Keyboard-Layouts
+	
+# Fixed:
+	- (AndNav2) Volume of Sounds during Realtime-Navigation
+	- (AndNav2) 'Select Country'-Screen had no BACK-Button
+	- Favorite-Items can now again be deleted using a LongClick
+	- OpenStreetMapView now has getVisibleRect and getDrawnRect.
+	- 'User'-ScreenRotation is now no more the same as 'Sensor' ;)
+	- Bug when AndNav2 was zooming out to far on when WayPoints had been added 
+
+###########################
+#   0.9.2.2 --> 0.9.2.3   #
+###########################
+# Added:
+	- WhereAmI-Searchbox now has autocomplete with previous typed POIs
+	
+# Updated:
+	- 
+	
+# Fixed:
+	- UK-Postcode Activity now has proper descriptions on malformed postcodes
+	- Home-Location can now be properly chosen from POI/Contacts/Favs
+	- ABC-Keyboardlayout is now back default
+
+###########################
+#   0.9.2.1 --> 0.9.2.2   #
+###########################
+# Added:
+	- 
+	
+# Updated:
+	- 
+	
+# Fixed:
+	- Wrong MapAPI-Key
+	
+###########################
+#     0.7.2 --> 0.9.2.1   #
+###########################
+# Added:
+	- POI-Search (Limited to global-search because of SDK-Bug)
+	- Contacts-Search
+	- Perspective-Mode (pseudo-3D, currently unstable --> not visible to the user)
+	- Version-Info in the Menu of Menu-Activity 
+	- Possibility to change ScreenRotation to: Sensor(automatic), User(Default), Always Landscape, Always Portrait
+	- WayPoints can now be also chosen from POI, Contacts & Favorites
+	
+# Updated:
+	- GPS now has to be enabled when starting AndNav
+	- Streetname-Software-Keyboard now has also Numbers (for i.e.: "42nd Street")
+	- Search-Desination-Mainchooser now has text written on the icons and a Quickinfo for improved usability.
+	- WhereAmI-Icon now is an arrow showing the bearing of travel.
+	- RouteFetch-Progressdialog is now cancelable
+	
+# Fixed:
+	- UK-Directions-Language now no more displays in Greek-characters
+	- In Directions-Languages-Dialog there are now only countries listed that actually have Directions-Languages  
+	- A showstopping Bug directly after getting the directions 
+	- A showstopping Bug, when Start and Destination were almost the same
+	- QWERTY-Keyboardlayout missed the letter 'T'
+	- Number of Satellites is now correctly received and displayed in the UI (blue bars)
+	- GPS should now only stay on if MapActivities are sent to background
+	- Compass-Mode crashed WhereAmI after changing ScreenOrientation quickly
+	
+###########################
+#     0.6.2 --> 0.7.2     #
+###########################
+# Added:
+	- WhereAmIMap can now utilize the Compass (accessible through its menu)
+	- Searching on WhereAmI is now enabled and utilizes a MapPin-overlay
+	- Revere-Geocoding can now be used from within WhereAmI. Clicking the '?' brings up information about the location the center of the map points to.
+	- By Tapping the lower right HUD-Element (where the total 'restdistance' and 'resttime' appear) one can now toggle between "arrival-time" and "resttime"
+	- AutoZoom can now be separately selected (no more depends directly to the followmode).
+	- If the route to the destination could not be found and the user had entered a stretnumber, AndNav asks the user if he would like to retry the search without the streetnumber.
+	- MainMenu, WhereAmIMap and DDMap - Menus now have Alphabetic shortcuts (like 'w' for 'weather')
+	- Screen should now never fade to black (dim out) while in navigation.  
+	
+# Updated:
+	- Highly improved RotateModes, displays much smoother now!
+	- Various Adaptions to SDK 0.9
+		- RotateableMapView is now 'replaced' by the container RotateView, which introduces a SmoothCanvas
+	- Improved finding of streetnumbers.
+	- Faster parsing of the directions-data (now using the systems JSON-Parser)
+	
+# Fixed:
+	- Oops, Switzerland's Countrycode is 'CH' not 'SU' =)
+	
+###########################
+#     0.6.1 --> 0.6.2     #
+###########################
+# Added:
+	- Walking-Directions (additionally to the Driving-Directions)
+	- "Avoid Highways" and "Avoid Tolls"
+	- When refetching route the current speed is shown now in the lower left HUD part.
+	- Map-Credits on SplashScreen
+	- Warning on first startup.
+	
+# Updated:
+	- Map now shows the arrows of the next TWO turns, if they are close(1,5km) behind each other.
+	- FollowMode and RotateMode now preselect the current of its modes
+	- Length of Arrows now depends on the zoomlevel
+	
+# Fixed:
+	- Arrows now have the correct size in RotateMode-DrivingDirectionUp
+	- Stability improved (Less "Error Receiving Broadcast Null"-Exceptions on NavMap)
+	
+###########################
+#     0.6.0 --> 0.6.1     #
+###########################
+# Added:
+	- Possibility to customize which direction-voices (distance + turn) should be spoken and which not.
+	- Statistics-module implemented
+	- SetHome can now be also done via "Search-Direction"-Dialogs
+	- Navigation app now shows an arrow right on the map itself, which is indicating the next turn.
+	- HVGA-Portrait Support
+
+# Updated:	
+	- SetHomeMap now auto-centers the user if no home-location was set before.
+	- Having added a new Home-Location in SetHomeMap, SettingsSelectHome now gets closed.  
+	- Clicking the "Home-Sweet-Home"-Button for the first time, made the user enter the Home-Location. When successfully done now, the NavActivity is automatically started.
+	- When Route was longer than 999 'long-units' (kilometers or miles) it now is abbreviated to '1k'
+	- When Time was longer than 9:59 hours it now shows no more minutes but hours only.
+	- Passing Waypoints/Reaching Target now results in "Voice".
+	- Loop optimization in DrivingDirections Overlay, leaded to small performance increase.
+	- Direction-Arrows are now better to see, because they are thicker now. 
+	- About-Entries now link to their WebPages
+	
+# Fixed:
+	- SetHomeMap now also show "MyLocation"-overlay.
+	- Adding Waypoints now no more starts a new Navigation-Session instead of just adding the Waypoint, when hitting the OK-Button in the "Enter Streetname..."-Activity
+	- HardWare-Back-Button did not work in all Map-Activities
+	- "Change FollowMode"-Button got accidentally inactive last version
+	- FollowMode accidentially got deleted from AndroidManifest.xml
+
+###########################
+#  0.5.0 (adc) --> 0.6.0  #
+###########################
+# Added:
+	- Voice-Directions & Menu-Voices, spoken by 'Joy Gibrara' (British female)
+		- Possibility to En/Disable in the Settings  
+	- Added CitySearch to SearchDestination
+	- Possibility to change KeyLayouts (Generic implementation. Currently: QWERTZ, QWERTY, ABCDEF)
+	- Possibility to change UnitSystems (Generic implementation. Currently: METRIC, US)
+	- AndNav now starts the "Where Am I?"-Activity on system-wide {android.content.Intent.VIEW_ACTION; and "geo"-scheme}-Intents.
+	- Navigate Home-Possibility
+		- Changeable in the Settings 
+			- a.) with a Long-Press to the MapView
+			- b.) with the SearchDestination-Dialogs (SOON)
+		- Asked for Home-Location if not set (when clicking "Home-Sweet-Home"-Button in the Main-Menu)
+	- Weather ForeCast can be accessed from the Menu and LongPress-ContextMenu of WhereAmI 
+	- Context-Menu on the Main-Nav-Map allows to Add and Clear Waypoints when long-pressing the MapView
+	- WayPoints can now get optimized, what means distance between gets minimized. (classic 'Traveling-Salesman' problem)
+
+# Updated:	
+	- 7 instead of 5 turn-arrows
+	- QuickInfo in Settings-Activity now changes also on Click (not just on FocusChanges)
+	- ZipCode and CityName now also AutoComplete with previously entered ones.
+	- DisplayQuality can now be changed "on the fly" (via Settings). --> No more map-restart necessary
+	- Reduced Memory-Footprint in all Activities, by Code-Optimizations and combination of Listeners
+	- WayPoints being crossed, now get removed. (on next Route-Refetch they are no more included) 
+
+# Fixed:
+	- When Route was lost once it stuck searching the same GPS-position again and again. Now it uses always the current GPS-position, as it was originally meant to be.
+	- When remaining time is > 10 hours, it now shows only hours, no more minutes.  
+	- Clicks to the Buttons of the NumberPads now not just appends the number, but also replaces previous selections.
+
+###########################
+#  0.4.1 --> 0.5.0 (adc)  #
+###########################
+# Added:
+	- Routes can have (an unlimited amount of) WayPoints
+	- Title-Bar is now no more visible in Nav-Activity
+
+# Updated:
+	- Improved automatic zoom in "Up-To-Next-Turn"-Mode, now no more jumps quickly between, being on the "edge"
+	- 'Next-Turn-Text' is now a separate View and no more drawn by the Overlay. Performance should have improved. 
+
+# Fixed:
+	-
+
+#####################
+#  ?.?.? --> 0.4.1  #
+#####################
+# Added:
+	- Everyting before here.
+
+# Updated:
+	-
+	
+# Fixed:
+	-

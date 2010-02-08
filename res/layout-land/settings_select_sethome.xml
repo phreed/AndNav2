@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ImageButton android:id="@+id/ibtn_settings_sethome_close"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_gravity="right"
+		android:src="@drawable/close" />
+	<TableLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:stretchColumns="0,1">
+		<TableRow 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<ImageView
+				android:id="@+id/iv_settings_sethome_via_map"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:scaleType="fitCenter" 
+				android:src="@drawable/home_set_via_map_full" />
+			<ImageView
+				android:id="@+id/iv_settings_sethome_via_sd"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:scaleType="fitCenter"
+				android:src="@drawable/home_set_via_sd_full" />
+		</TableRow>
+		<TableRow 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<Button android:id="@+id/btn_settings_sethome_via_map"
+				style="@style/settings_quickinfo_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:text="@string/btn_settings_sethome_via_map_caption" />
+			<Button android:id="@+id/btn_settings_sethome_via_sd"
+				style="@style/settings_quickinfo_textstyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="@string/btn_settings_sethome_via_sd_caption" />
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

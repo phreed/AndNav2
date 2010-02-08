@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used by the Unitsystem-Settings-Screen.
+ # 
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_settings_quickinfo_unitsystem_focused">Změna jednotek...</string>
+		<string name="tv_settings_unitsystem_quickinfo_caption">Vyberte jednotky...</string>
+		<string name="btn_settings_unitsystem_metric_caption">Metrické jednotky</string>
+		<string name="tv_settings_unitsystem_metric_details">Metry\nKilometry\nKilometry za hodinu\nCelsium</string>
+		<string name="btn_settings_unitsystem_imperial_caption">Imperiální jednotky</string>
+		<string name="tv_settings_unitsystem_imperial_details">Yardy\nMíle\nMíle za hodinu\nFahrenheity</string>
+</resources>

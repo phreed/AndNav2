@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_directionslanguage_focused">Ansagesprache wählen...</string>
+	<string name="tv_settings_directionslanguage_quickinfo_default">Ansagesprache...</string>
+	<!-- Simply added behind the CountryNames -->
+	<string name="tv_settings_directionslanguage_quickinfo_saved_appendix">... gspeichert!</string>
+	<string name="tv_settings_directionslanguage_quickinfo_current_appendix"> (aktuell)</string>
+</resources>

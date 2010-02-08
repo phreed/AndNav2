@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:stretchColumns="2">
+		<TableRow android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<ImageButton
+				android:id="@+id/ibtn_settings_rotatemode_northup"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/rotatemode_northup"/>
+			<ImageButton
+				android:id="@+id/ibtn_settings_rotatemode_drivingdirectionup"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/rotatemode_drivingdirectionup"/>
+			<TextView 
+				android:layout_width="0dip"
+				android:layout_height="0dip" />
+			<ImageButton
+				android:id="@+id/ibtn_settings_rotatemode_close"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/close"/>
+		</TableRow>
+	</TableLayout>
+	<TextView
+		android:id="@+id/tv_settings_rotatemode_quickinfo"
+		style="@style/settings_quickinfo_textstyle"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"/>
+	<ImageView
+		android:id="@+id/iv_settings_rotatemode_sample"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:scaleType="fitCenter"/>
+</LinearLayout>

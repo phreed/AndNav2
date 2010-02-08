@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ ##### README #####
+ # @License: BSD (may be used for everything by anyone!) 
+ #
+ # @Description:
+ # This Strings from this file are used on the Screen 
+ # where the user selects between zipcode and cityname.
+ #
+ ### README-END ###
+-->
+<resources>
+	<string name="tv_ziporcity_searchbyzip">PSČ...</string>
+	<string name="tv_ziporcity_searchbycityname">Město...</string>
+	<string name="tv_ziporcity_searchby_uk_postcode_bs7776">UK Postcode...</string>
+</resources>

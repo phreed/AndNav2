@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.andnav2"
+    android:versionCode="20"
+    android:versionName="0.8.8.2.1">
+   
+    <uses-sdk android:minSdkVersion="3" />
+    
+    <uses-permission android:name="android.permission.BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> 
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application android:debuggable="false" android:name=".app.AndNav2Application" android:icon="@drawable/icon" android:label="@string/app_name" android:description="@string/app_description" 
+    	android:manageSpaceActivity=".ui.settings.SettingsCache">
+        <activity android:name=".Splash" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.StartupWarning" android:label="@string/app_name_startupwarning" android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.Menu" android:label="@string/app_name_menu">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".paypal.ui.Donate" android:label="@string/app_name_donate">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.About" android:label="@string/app_name_about">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.weather.WeatherForecast" android:label="@string/app_name_weather"  android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDMainChoose" android:label="@string/app_name_sd_mainchoose">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDPOICategories" android:label="@string/app_name_sd_poi_categories">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.osm.api.nodes.POICategorySelector" android:label="@string/app_name_sd_poi_categories">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDPOIEntry" android:label="@string/app_name_sd_poi_entry">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDResolver" android:label="@string/app_name_sd_resolver">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDPOISearchList" android:label="@string/app_name_sd_poi_searchlist">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDCountry" android:label="@string/app_name_sd_country">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDCountrySubdivision" android:label="@string/app_name_sd_country_subdivision">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDZipOrCity" android:label="@string/app_name_sd_ziporcity">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDZip" android:label="@string/app_name_sd_zip">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDPostcodeUK_BS7666" android:label="@string/app_name_sd_postcode_uk_bs7666">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDCity" android:label="@string/app_name_sd_city">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDStreet" android:label="@string/app_name_sd_street">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDFavorites" android:label="@string/app_name_sd_favorites">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDContacts" android:label="@string/app_name_sd_contacts">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDSavedRouteChooser" android:label="@string/app_name_sd_savedroutechooser">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDSavedTraceChooser" android:label="@string/app_name_sd_savedtracechooser">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.sd.SDStreetNumber" android:label="@string/app_name_sd_streetnumber">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.map.WhereAmIMap" android:label="@string/app_name_whereami" android:theme="@style/Theme.NoBackground">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="geo" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http" android:host="maps.google.com" android:path="" />
+			</intent-filter>
+        </activity>
+        <activity android:name=".ui.map.OpenStreetDDMap" android:label="@string/app_name_map" android:theme="@style/Theme.NoBackground">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.map.OSBMap" android:label="@string/app_name_osbmap">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.map.SetHomeMap" android:label="@string/app_name_sethomemap">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+    	<activity android:name=".ui.settings.SettingsMenu" android:label="@string/app_name_settings_menu">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsColorscheme" android:label="@string/app_name_settings_colorscheme">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsORSServer" android:label="@string/app_name_settings_orsserver">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsTracePolicy" android:label="@string/app_name_settings_tracepolicy">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsScreenOrientation" android:label="@string/app_name_settings_screenorientation">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsCache" android:label="@string/app_name_settings_cache">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsRouteViewing" android:label="@string/app_name_settings_routeviewing">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsKeyLayout" android:label="@string/app_name_settings_keylayout">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsUnitSystem" android:label="@string/app_name_settings_unitsystem">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsHUD" android:label="@string/app_name_settings_hud">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsStatistics" android:label="@string/app_name_settings_statistics">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsSelectHome" android:label="@string/app_name_settings_selecthome">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+        <activity android:name=".ui.settings.SettingsRoutingFlags" android:label="@string/app_name_settings_routingflags" android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.settings.SettingsNavigation" android:label="@string/app_name_settings_navigation">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+    	<activity android:name=".ui.settings.SettingsVoice" android:label="@string/app_name_settings_voice">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsDirectionVoice" android:label="@string/app_name_settings_voice">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsCenterMode" android:label="@string/app_name_settings_centermode">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsRotateMode" android:label="@string/app_name_settings_rotatemode">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsQuality" android:label="@string/app_name_settings_quality">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+    	<activity android:name=".ui.settings.SettingsDirectionLanguage" android:label="@string/app_name_settings_directionslanguage">
+			<intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+    	</activity>
+        <receiver android:name=".app.AdFreeResultIntentReceiver">
+            <intent-filter>
+                <action android:name="org.andnav2.adfree.intent.AD_FREE_SUCCESS" />
+                <action android:name="org.andnav2.adfree.intent.AD_FREE_FAIL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".app.APIIntentReceiver">
+            <intent-filter>
+                <action android:name="org.andnav.intent.ACTION_NAV_TO" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.andnav2.intent.ACTION_NAV_TO" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.andnav2.intent.ACTION_VIEW" />
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="android.intent.action.VIEW" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            	<category android:name="android.intent.category.BROWSABLE" />
+            	<data android:scheme="geo" />
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="android.intent.action.VIEW" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            	<category android:name="android.intent.category.BROWSABLE" />
+            	<data android:scheme="http" android:host="maps.google.com" android:path="" />
+            </intent-filter>
+            <intent-filter>
+            	<action android:name="android.intent.action.VIEW" />
+            	<category android:name="android.intent.category.DEFAULT" />
+            	<category android:name="android.intent.category.BROWSABLE" />
+            	<data android:scheme="http" android:host="maps.google.com" android:path="/maps" />
+            </intent-filter>
+        </receiver>
+        <!-- TTS-Configurationamanger 
+		<activity android:name="com.google.tts.ConfigurationManager" android:label="@string/veecheck_confirm_title" />
+		-->
+		<!-- Veecheck -->
+		<activity android:name=".app.veecheck.AndNav2VeecheckUpdateActivity" android:label="@string/veecheck_confirm_title"/>
+		<receiver android:name=".app.veecheck.AndNav2VeecheckRetriever">
+			<intent-filter>
+				<action
+					android:name="org.andnav2.VEECHECK_RESCHEDULE_CHECKS">
+				</action>
+			</intent-filter>
+			<intent-filter>
+				<action
+					android:name="org.andnav2.VEECHECK_CONSIDER_CHECK">
+				</action>
+			</intent-filter>
+		</receiver>
+		<service android:name=".app.veecheck.AndNav2VeecheckService">
+			<intent-filter>
+				<action
+					android:name="org.andnav2.VEECHECK_PERFORM_CHECK">
+				</action>
+				<data android:scheme="http"></data>
+			</intent-filter>
+		</service>
+		<!-- The application's publisher ID assigned by AdMob -->
+		<meta-data android:value="a1498285839c82e" android:name="ADMOB_PUBLISHER_ID" />
+	</application>
+</manifest>

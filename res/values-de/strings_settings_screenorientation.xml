@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="tv_settings_quickinfo_audio_focused">Audio-Einstellugen ändern...</string>
+	<string name="tv_settings_quickinfo_screenorientation_focused">Bildschirmausrichtung ändern...</string>
+	<string name="tv_settings_screenorientation_quickinfo_default">Ausrichtung ändern...</string>
+	<string name="tv_settings_screenorientation_user">Nutzer-basiert (Standard)</string>
+	<string name="tv_settings_screenorientation_sensor">Sensor-basiert</string>
+	<string name="tv_settings_screenorientation_landscape">Immer Landschafts-Ausrichtung</string>
+	<string name="tv_settings_screenorientation_portrait">Immer Portrait-Ausrichtung</string>
+</resources>
