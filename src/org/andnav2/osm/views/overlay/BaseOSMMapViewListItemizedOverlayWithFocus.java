@@ -3,8 +3,6 @@ package org.andnav2.osm.views.overlay;
 
 import java.util.List;
 
-import org.andnav2.R;
-
 import android.content.Context;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;

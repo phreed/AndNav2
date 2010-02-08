@@ -16,8 +16,6 @@ import org.andnav2.ui.sd.SDPOISearchList;
 import org.andnav2.ui.settings.SettingsMenu;
 import org.andnav2.ui.settings.SettingsSelectHome;
 import org.andnav2.ui.util.Util;
-import org.andnav2.util.BetaExpirationBlocker;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;

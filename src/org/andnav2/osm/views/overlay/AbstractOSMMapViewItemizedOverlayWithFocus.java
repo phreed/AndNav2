@@ -1,11 +1,18 @@
 // Created by plusminus on 20:50:06 - 03.10.2008
 package org.andnav2.osm.views.overlay;
 
+import java.util.List;
+
 import org.andnav2.R;
+import org.andnav2.osm.views.OSMMapView;
+
 import android.content.Context;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.RectF;
+import android.graphics.drawable.Drawable;
 
 public abstract class AbstractOSMMapViewItemizedOverlayWithFocus<T extends OSMMapViewOverlayItem> extends AbstractOSMMapViewItemizedOverlay<T> {
 	// ===========================================================
@@ -112,7 +119,6 @@ public abstract class AbstractOSMMapViewItemizedOverlayWithFocus<T extends OSMMa
 		return super.onTap(pIndex);
 	}
 
-	@Override
 	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
 		final List<T> overlayItems = this.getOverlayItems();
 		if(this.mFocusedItem == null) return;
