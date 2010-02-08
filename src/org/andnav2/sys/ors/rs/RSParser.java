@@ -40,21 +40,35 @@ public class RSParser extends DefaultHandler implements TimeConstants, Constants
 
 	private GeoPoint tmp;
 
+	@SuppressWarnings("unused")
 	private boolean inXLS = false;
+	@SuppressWarnings("unused")
 	private boolean inResponseHeader = false;
+	@SuppressWarnings("unused")
 	private boolean inResponse = false;
+	@SuppressWarnings("unused")
 	private boolean inDetermineRouteResponse = false;
+	@SuppressWarnings("unused")
 	private boolean inRouteSummary = false;
+	@SuppressWarnings("unused")
 	private boolean inTotalTime = false;
+	@SuppressWarnings("unused")
 	private boolean inTotalDistance = false;
 	private boolean inBoundingBox = false;
+	@SuppressWarnings("unused")
 	private boolean inPos = false;
 	private boolean inRouteGeometry = false;
+	@SuppressWarnings("unused")
 	private boolean inRouteHandle = false;
+	@SuppressWarnings("unused")
 	private boolean inLineString = false;
+	@SuppressWarnings("unused")
 	private boolean inRouteInstructionsList = false;
+	@SuppressWarnings("unused")
 	private boolean inRouteInstruction = false;
+	@SuppressWarnings("unused")
 	private boolean inInstruction = false;
+	@SuppressWarnings("unused")
 	private boolean inDistance = false;
 	private boolean inRouteInstructionGeometry = false;
 

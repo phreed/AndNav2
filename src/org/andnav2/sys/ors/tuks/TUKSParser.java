@@ -56,19 +56,32 @@ public class TUKSParser extends DefaultHandler implements Constants {
 
 	private List<TrafficItem> mTrafficFeatures;
 
+	@SuppressWarnings("unused")
 	private boolean inFeatureColection = false;
+	@SuppressWarnings("unused")
 	private boolean inFeatureMembers = false;
+	@SuppressWarnings("unused")
 	private boolean inFeatureMember = false;
+	@SuppressWarnings("unused")
 	private boolean inTrafficView = false;
+	@SuppressWarnings("unused")
 	private boolean inDescription = false;
+	@SuppressWarnings("unused")
 	private boolean inSeverity = false;
+	@SuppressWarnings("unused")
 	private boolean inGeometry = false;
+	@SuppressWarnings("unused")
 	private boolean inCoordinates = false;
 	private boolean inPoint = false;
+	@SuppressWarnings("unused")
 	private boolean inPos = false;
+	@SuppressWarnings("unused")
 	private boolean inBoundedBy;
+	@SuppressWarnings("unused")
 	private boolean inEnvelope;
+	@SuppressWarnings("unused")
 	private boolean inLowerCorner;
+	@SuppressWarnings("unused")
 	private boolean inUpperCorner;
 
 	protected GeocodedAddress mTmpGeocodedAddress;

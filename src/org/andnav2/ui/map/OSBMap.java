@@ -113,6 +113,7 @@ public class OSBMap extends OpenStreetMapAndNavBaseActivity implements OnItemTap
 	private OSMMapViewScaleIndicatorView mScaleIndicatorView;
 
 	private POIType mAddOSMPOIType;
+	@SuppressWarnings("unused")
 	private int mNewOSMPOINodeID = NOT_SET;
 
 	@Override

@@ -34,7 +34,7 @@ import android.util.Log;
  * 			&lt;/xls:POIContext&gt;
  * 			...
  * 			&lt;xls:POIContext&gt;
- * 				&lt;xls:POI POIName=&quot;Domgörgen&quot; description=&quot;bakery&quot; ID=&quot;270495053&quot;&gt;
+ * 				&lt;xls:POI POIName=&quot;Domgï¿½rgen&quot; description=&quot;bakery&quot; ID=&quot;270495053&quot;&gt;
  * 					&lt;gml:Point&gt;
  * 						&lt;gml:pos srsName=&quot;EPSG:4326&quot;&gt;7.0922473 50.7741497&lt;/gml:pos&gt;
  * 					&lt;/gml:Point&gt;
@@ -62,14 +62,23 @@ public class DSParser extends DefaultHandler implements TimeConstants, Constants
 	private ArrayList<ORSPOI> mPOIs;
 	private ORSPOI mCurPOI;
 
+	@SuppressWarnings("unused")
 	private boolean inXLS = false;
+	@SuppressWarnings("unused")
 	private boolean inRepsonseHeader = false;
+	@SuppressWarnings("unused")
 	private boolean inRepsonse = false;
+	@SuppressWarnings("unused")
 	private boolean inDirectoryResponse = false;
+	@SuppressWarnings("unused")
 	private boolean inPOIContext = false;
+	@SuppressWarnings("unused")
 	private boolean inPOI = false;
+	@SuppressWarnings("unused")
 	private boolean inPoint = false;
+	@SuppressWarnings("unused")
 	private boolean inPos = false;
+	@SuppressWarnings("unused")
 	private boolean inDistance = false;
 
 	// ===========================================================

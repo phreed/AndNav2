@@ -327,6 +327,7 @@ public class SDSavedTraceChooser extends AndNavBaseActivity implements OSMConsta
 		// Parcelable
 		// ===========================================================
 
+		@SuppressWarnings("unused")
 		public static final Parcelable.Creator<SavedTraceItem> CREATOR = new Parcelable.Creator<SavedTraceItem>() {
 			public SavedTraceItem createFromParcel(final Parcel in) {
 				return readFromParcel(in);
@@ -381,6 +382,7 @@ public class SDSavedTraceChooser extends AndNavBaseActivity implements OSMConsta
 			initAlphabet(context);
 		}
 
+		@SuppressWarnings("unused")
 		public void addItem(final SavedTraceItem it) {
 			this.mItems.add(it);
 			Collections.sort(this.mItems);

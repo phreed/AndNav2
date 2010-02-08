@@ -2,9 +2,7 @@
 package org.andnav2.util.constants;
 
 public interface Constants {
-	public static final boolean PROVERSION = true;
-	public static final boolean LITEVERSION = !PROVERSION;
-
+	
 	public static final int LAT_INDEX = 0;
 	public static final int LON_INDEX = 1;
 

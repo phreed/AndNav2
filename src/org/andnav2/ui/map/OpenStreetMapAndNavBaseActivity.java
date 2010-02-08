@@ -10,8 +10,6 @@ import org.andnav2.osm.views.overlay.OSMMapViewSimpleTraceOverlay;
 import org.andnav2.preferences.PreferenceConstants;
 import org.andnav2.preferences.Preferences;
 import org.andnav2.ui.map.overlay.ColorSchemeOverlay;
-import org.andnav2.util.BetaExpirationBlocker;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;

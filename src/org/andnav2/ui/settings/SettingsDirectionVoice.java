@@ -25,6 +25,7 @@ public class SettingsDirectionVoice extends AndNavBaseActivity {
 	// Final Fields
 	// ===========================================================
 
+	@SuppressWarnings("unused")
 	private static final String TEST_MESSAGE = "In 500 meters, turn right into King Street.";
 
 	// ===========================================================
@@ -90,6 +91,7 @@ public class SettingsDirectionVoice extends AndNavBaseActivity {
 	private void applyTopButtonListeners() {
 		new OnClickOnFocusChangedListenerAdapter(this.findViewById(R.id.ibtn_settings_directionvoice_testtts)){
 // FIXME			private TextToSpeech mTTS;
+			@SuppressWarnings("unused")
 			private boolean mTTSAvailable = false;
 
 			@Override

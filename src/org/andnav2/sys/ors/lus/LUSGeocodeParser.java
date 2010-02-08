@@ -30,7 +30,7 @@ import android.util.Log;
  *           &lt;/gml:Point&gt;
  *           &lt;xls:Address countryCode=&quot;de&quot;&gt;
  *             &lt;xls:StreetAddress&gt;
- *               &lt;xls:Street officialName=&quot;Maximilianstraße&quot;/&gt;
+ *               &lt;xls:Street officialName=&quot;Maximilianstraï¿½e&quot;/&gt;
  *             &lt;/xls:StreetAddress&gt;
  *             &lt;xls:Place type=&quot;CountrySubdivision&quot;&gt;Nordrhein-Westfalen&lt;/xls:Place&gt;
  *             &lt;xls:Place type=&quot;Municipality&quot;&gt;Bonn&lt;/xls:Place&gt;
@@ -60,20 +60,33 @@ public class LUSGeocodeParser extends DefaultHandler implements TimeConstants, C
 
 	private ArrayList<GeocodedAddress> mAddresses;
 
+	@SuppressWarnings("unused")
 	private boolean inXLS = false;
+	@SuppressWarnings("unused")
 	private boolean inResponseHeader = false;
+	@SuppressWarnings("unused")
 	private boolean inResponse = false;
+	@SuppressWarnings("unused")
 	private boolean inGeocodeResponse = false;
+	@SuppressWarnings("unused")
 	private boolean inGeocodeResponseList = false;
+	@SuppressWarnings("unused")
 	private boolean inGeocodedAddress = false;
+	@SuppressWarnings("unused")
 	private boolean inAddress = false;
+	@SuppressWarnings("unused")
 	private boolean inStreetAddress = false;
+	@SuppressWarnings("unused")
 	private boolean inStreet = false;
 	private boolean inPlaceCountrySubdivision = false;
 	private boolean inPlaceMunicipality = false;
+	@SuppressWarnings("unused")
 	private boolean inPostalCode = false;
+	@SuppressWarnings("unused")
 	private boolean inGeocodeMatchCode = false;
+	@SuppressWarnings("unused")
 	private boolean inPoint = false;
+	@SuppressWarnings("unused")
 	private boolean inPos = false;
 
 	private GeocodedAddress mTmpGeocodedAddress;

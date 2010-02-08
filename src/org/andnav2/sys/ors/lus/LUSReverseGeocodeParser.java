@@ -30,7 +30,7 @@ import android.util.Log;
  *           &lt;xls:StreetAddress&gt;
  *             &lt;xls:Street officialName=&quot;Quellenweg&quot;/&gt;
  *           &lt;/xls:StreetAddress&gt;
- *           &lt;xls:Place type=&quot;CountrySubdivision&quot;&gt;Baden-Württemberg&lt;/xls:Place&gt;
+ *           &lt;xls:Place type=&quot;CountrySubdivision&quot;&gt;Baden-Wï¿½rttemberg&lt;/xls:Place&gt;
  *           &lt;xls:Place type=&quot;Municipality&quot;&gt;Heidelberg&lt;/xls:Place&gt;
  *           &lt;xls:PostalCode&gt;69118&lt;/xls:PostalCode&gt;
  *         &lt;/xls:Address&gt;
@@ -45,7 +45,9 @@ public class LUSReverseGeocodeParser extends DefaultHandler implements TimeConst
 	// Constants
 	// ====================================
 
+	@SuppressWarnings("unused")
 	private static final int LATITUDE_OVERMAX = (int)(81 * 1E6);
+	@SuppressWarnings("unused")
 	private static final int LONGITUDE_OVERMAX = (int)(181 * 1E6);
 
 	// ====================================
@@ -56,19 +58,31 @@ public class LUSReverseGeocodeParser extends DefaultHandler implements TimeConst
 
 	private ArrayList<GeocodedAddress> mAddresses;
 
+	@SuppressWarnings("unused")
 	private boolean inXLS = false;
+	@SuppressWarnings("unused")
 	private boolean inResponseHeader = false;
+	@SuppressWarnings("unused")
 	private boolean inResponse = false;
+	@SuppressWarnings("unused")
 	private boolean inReverseGeocodeResponse = false;
+	@SuppressWarnings("unused")
 	private boolean inReverseGeocodedLocation = false;
+	@SuppressWarnings("unused")
 	private boolean inAddress = false;
+	@SuppressWarnings("unused")
 	private boolean inStreetAddress = false;
+	@SuppressWarnings("unused")
 	private boolean inStreet = false;
 	private boolean inPlaceCountrySubdivision = false;
 	private boolean inPlaceMunicipality = false;
+	@SuppressWarnings("unused")
 	private boolean inPostalCode = false;
+	@SuppressWarnings("unused")
 	private boolean inSearchCentreDistance = false;
+	@SuppressWarnings("unused")
 	private boolean inPoint = false;
+	@SuppressWarnings("unused")
 	private boolean inPos = false;
 
 	private GeocodedAddress mTmpGeocodedAddress;

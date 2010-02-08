@@ -9,7 +9,6 @@ import junit.framework.Assert;
 import org.andnav2.osm.views.OSMMapView;
 import org.andnav2.osm.views.OSMMapView.OSMMapViewProjection;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlay;
-import org.andnav2.sys.ors.adt.aoi.AreaOfInterest;
 import org.andnav2.sys.ors.adt.me.MobileEntity;
 import org.andnav2.ui.map.overlay.util.VisibilityFilter;
 

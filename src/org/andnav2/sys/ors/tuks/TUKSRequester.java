@@ -35,6 +35,7 @@ public class TUKSRequester {
 	public static final BoundingBoxE6 BBOX_TUKS = new BoundingBoxE6(57.9311,3.5425,49.955269,-8.164723);
 
 	private static String REQUESTURL_UNI = "http://openls.giub.uni-bonn.de/geoserver-osm/wfs";
+	@SuppressWarnings("unused")
 	private static String REQUESTURL_HOME = "http://88.153.123.28/geoserver/wfs";
 
 	// ===========================================================

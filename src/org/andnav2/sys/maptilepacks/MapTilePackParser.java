@@ -27,7 +27,9 @@ public class MapTilePackParser extends DefaultHandler implements Constants {
 
 	private List<MapTilePack> mMapTileList;
 
+	@SuppressWarnings("unused")
 	private boolean inMapTilePacks = false;
+	@SuppressWarnings("unused")
 	private boolean inMapTilePack = false;
 
 	// ===========================================================

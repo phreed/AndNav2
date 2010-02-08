@@ -43,6 +43,7 @@ public class OSMMapViewDirectedLocationOverlay extends OSMMapViewOverlay {
 
 	private final Matrix directionRotater = new Matrix();
 
+	@SuppressWarnings("unused")
 	private final float DIRECTION_ARROW_HOTSPOT_X;
 	private final float DIRECTION_ARROW_HOTSPOT_Y;
 

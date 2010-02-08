@@ -479,9 +479,10 @@ public class OpenStreetDDMap extends OpenStreetMapAndNavBaseActivity implements 
 		}
 	}
 
-	private void initGeneratedVoice() {
-		//		final String pkgName = AndNav2Application.class.getPackage().getName(); // Root Package!
-	}
+//	// FIXME : TTS
+//	private void initGeneratedVoice() {
+//		final String pkgName = AndNav2Application.class.getPackage().getName(); // Root Package!
+//	}
 
 	// ===========================================================
 	// Getter & Setter
@@ -1193,9 +1194,12 @@ public class OpenStreetDDMap extends OpenStreetMapAndNavBaseActivity implements 
 						}
 					}
 					/* Gets set on demand. */
+					@SuppressWarnings("unused")
 					final String fullTurnTextImproved;
+					@SuppressWarnings("unused")
 					final String distanceString = "In " + dve.LENGTH_UNITWISE + " " + dve.getUnitTextual(OpenStreetDDMap.this, OpenStreetDDMap.this.mDrivingDirectionsLanguage);
 
+					@SuppressWarnings("unused")
 					final String thenString;
 					if(pATC.hasThenCommand()){
 						final SimpleAudibleTurnCommand satc = pATC.getThenCommand();
@@ -1686,20 +1690,23 @@ public class OpenStreetDDMap extends OpenStreetMapAndNavBaseActivity implements 
 
 	/** Speaks out the next turn via TTS (If Navigator is ready). */
 	private void speakTurn() {
-		final String turnDescription = this.mHUDImpl.getTurnTurnDescriptionView().getTurnDescription().toString();
-		if(OpenStreetDDMap.this.mNavigator.isReady() && turnDescription != null && turnDescription.length() > 0){
-			final UnitSystem us = Preferences.getUnitSystem(OpenStreetDDMap.this);
-			final String[] lengthAndUnit;
-			if(OpenStreetDDMap.this.mRealtimeNav){
-				lengthAndUnit = us.getDistanceStringFull(OpenStreetDDMap.this, this.mDrivingDirectionsLanguage, null, OpenStreetDDMap.this.mNavigator.getDistanceToNextTurnPoint());
-			}else{ /* Static Navigation. */
-				final RouteInstruction nextInstruction = OpenStreetDDMap.this.mRoute.getRouteInstructions().get(OpenStreetDDMap.this.mStaticNavCurrentTurnIndex);
-				lengthAndUnit = us.getDistanceStringFull(OpenStreetDDMap.this, this.mDrivingDirectionsLanguage, null, nextInstruction.getLengthMeters());
-			}
-			final String textToSay = "In " + lengthAndUnit[UnitSystem.DISTSTRINGS_DIST_ID] + " " + lengthAndUnit[UnitSystem.DISTSTRINGS_UNIT_ID] + ", " + turnDescription;
-
-			// FIXME OpenStreetDDMap.this.mTTS.speak(SpeechImprover.improve(textToSay, OpenStreetDDMap.this.mRouteCountry), 0, null);
-		}
+		return;
+//		// FIXME : TTS
+//		if(! OpenStreetDDMap.this.mNavigator.isReady()) return;
+//		final String turnDescription = this.mHUDImpl.getTurnTurnDescriptionView().getTurnDescription().toString();
+//		if (turnDescription == null) return;
+//		if (turnDescription.length() < 1) return;
+//		
+//		final UnitSystem us = Preferences.getUnitSystem(OpenStreetDDMap.this);
+//		final String[] lengthAndUnit;
+//		if(OpenStreetDDMap.this.mRealtimeNav){
+//			lengthAndUnit = us.getDistanceStringFull(OpenStreetDDMap.this, this.mDrivingDirectionsLanguage, null, OpenStreetDDMap.this.mNavigator.getDistanceToNextTurnPoint());
+//		}else{ /* Static Navigation. */
+//			final RouteInstruction nextInstruction = OpenStreetDDMap.this.mRoute.getRouteInstructions().get(OpenStreetDDMap.this.mStaticNavCurrentTurnIndex);
+//			lengthAndUnit = us.getDistanceStringFull(OpenStreetDDMap.this, this.mDrivingDirectionsLanguage, null, nextInstruction.getLengthMeters());
+//		}
+//		final String textToSay = "In " + lengthAndUnit[UnitSystem.DISTSTRINGS_DIST_ID] + " " + lengthAndUnit[UnitSystem.DISTSTRINGS_UNIT_ID] + ", " + turnDescription;
+//		OpenStreetDDMap.this.mTTS.speak(SpeechImprover.improve(textToSay, OpenStreetDDMap.this.mRouteCountry), 0, null);
 	}
 
 	@Override
@@ -2312,10 +2319,11 @@ public class OpenStreetDDMap extends OpenStreetMapAndNavBaseActivity implements 
 			OpenStreetDDMap.this.mOSMapView.invalidate();
 			OpenStreetDDMap.this.refreshHUD();
 
-			if(OpenStreetDDMap.this.mDirectionVoiceEnabled){
-				final String turnDescription = OpenStreetDDMap.this.mRoute.getRouteInstructions().get(OpenStreetDDMap.this.mStaticNavNextTurnIndex).getDescription();
-				// FIXME OpenStreetDDMap.this.mTTS.speak(SpeechImprover.improve(turnDescription, OpenStreetDDMap.this.mRouteCountry), 0, null);
-			}
+//			// FIXME : TTS
+//			if(OpenStreetDDMap.this.mDirectionVoiceEnabled){
+//				final String turnDescription = OpenStreetDDMap.this.mRoute.getRouteInstructions().get(OpenStreetDDMap.this.mStaticNavNextTurnIndex).getDescription();
+//				OpenStreetDDMap.this.mTTS.speak(SpeechImprover.improve(turnDescription, OpenStreetDDMap.this.mRouteCountry), 0, null);
+//			}
 		}
 
 		public void onNavTo() {
@@ -2329,13 +2337,14 @@ public class OpenStreetDDMap extends OpenStreetMapAndNavBaseActivity implements 
 				OpenStreetDDMap.this.mStaticNavNextTurnIndex = Math.min(OpenStreetDDMap.this.mStaticNavCurrentTurnIndex + 1, turnPointsRaw.size() - 1);
 
 				if(OpenStreetDDMap.this.mDirectionVoiceEnabled){
-					final RouteInstruction currentInstruction = OpenStreetDDMap.this.mRoute.getRouteInstructions().get(OpenStreetDDMap.this.mStaticNavCurrentTurnIndex);
-					final RouteInstruction nextInstruction = OpenStreetDDMap.this.mRoute.getRouteInstructions().get(OpenStreetDDMap.this.mStaticNavNextTurnIndex);
-					final UnitSystem us = Preferences.getUnitSystem(OpenStreetDDMap.this);
-					final String[] lengthAndUnit = us.getDistanceStringFull(OpenStreetDDMap.this, OpenStreetDDMap.this.mDrivingDirectionsLanguage, null, currentInstruction.getLengthMeters());
-					final String turnDescription = "In " + lengthAndUnit[UnitSystem.DISTSTRINGS_DIST_ID] + " " + lengthAndUnit[UnitSystem.DISTSTRINGS_UNIT_ID] + ", " + nextInstruction.getDescription();
-
-					// FIXME OpenStreetDDMap.this.mTTS.speak(SpeechImprover.improve(turnDescription, OpenStreetDDMap.this.mRouteCountry), 0, null);
+//					// FIXME TTS
+//					final RouteInstruction currentInstruction = OpenStreetDDMap.this.mRoute.getRouteInstructions().get(OpenStreetDDMap.this.mStaticNavCurrentTurnIndex);
+//					final RouteInstruction nextInstruction = OpenStreetDDMap.this.mRoute.getRouteInstructions().get(OpenStreetDDMap.this.mStaticNavNextTurnIndex);
+//					final UnitSystem us = Preferences.getUnitSystem(OpenStreetDDMap.this);
+//					final String[] lengthAndUnit = us.getDistanceStringFull(OpenStreetDDMap.this, OpenStreetDDMap.this.mDrivingDirectionsLanguage, null, currentInstruction.getLengthMeters());
+//					final String turnDescription = "In " + lengthAndUnit[UnitSystem.DISTSTRINGS_DIST_ID] + " " + lengthAndUnit[UnitSystem.DISTSTRINGS_UNIT_ID] + ", " + nextInstruction.getDescription();
+//
+//					OpenStreetDDMap.this.mTTS.speak(SpeechImprover.improve(turnDescription, OpenStreetDDMap.this.mRouteCountry), 0, null);
 				}
 
 				if(OpenStreetDDMap.this.mStaticNavCurrentTurnIndex == turnPointsRaw.size() - 1){

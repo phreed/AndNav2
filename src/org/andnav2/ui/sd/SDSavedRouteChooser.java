@@ -327,6 +327,7 @@ public class SDSavedRouteChooser extends AndNavBaseActivity implements OSMConsta
 		// Parcelable
 		// ===========================================================
 
+		@SuppressWarnings("unused")
 		public static final Parcelable.Creator<SavedRouteItem> CREATOR = new Parcelable.Creator<SavedRouteItem>() {
 			public SavedRouteItem createFromParcel(final Parcel in) {
 				return readFromParcel(in);
@@ -381,6 +382,7 @@ public class SDSavedRouteChooser extends AndNavBaseActivity implements OSMConsta
 			initAlphabet(context);
 		}
 
+		@SuppressWarnings("unused")
 		public void addItem(final SavedRouteItem it) {
 			this.mItems.add(it);
 			Collections.sort(this.mItems);

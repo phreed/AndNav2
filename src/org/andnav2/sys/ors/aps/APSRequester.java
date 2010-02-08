@@ -67,7 +67,10 @@ public class APSRequester implements APSConstants {
 		}
 	}
 
-	private static Bitmap requestRestFulViaURL(final List<GeoPoint> pGeoPoints, final int pStartIndex) throws ORSException {
+	@SuppressWarnings("unused")
+	private static Bitmap requestRestFulViaURL(final List<GeoPoint> pGeoPoints, 
+			final int pStartIndex) throws ORSException 
+	{
 		Reader inURL = null;
 		try{
 			/* Prepare URL. */

@@ -26,7 +26,9 @@ public class DowntimeParser extends DefaultHandler implements Constants {
 
 	private DowntimeList mDowntimeList;
 
+	@SuppressWarnings("unused")
 	private boolean inDowntimes = false;
+	@SuppressWarnings("unused")
 	private boolean inDowntime = false;
 
 	// ===========================================================
