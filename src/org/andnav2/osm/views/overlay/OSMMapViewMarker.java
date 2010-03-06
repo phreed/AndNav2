@@ -35,15 +35,7 @@ public class OSMMapViewMarker {
 	 * 
 	 */
 	public OSMMapViewMarker(final Drawable marker, final Point hotspot) {
-		this.mMarker = marker;
-		this.mHotspot = hotspot;
-		this.mWidth = this.mMarker.getIntrinsicWidth();
-		this.mHeight = this.mMarker.getIntrinsicHeight();
-		
-		this.mFocusMarker = null;
-		this.mFocusHotspot = null;
-		this.mFocusWidth = 0;
-		this.mFocusHeight = 0;
+		this(marker, hotspot, null, null);
 	}
 	
 	public OSMMapViewMarker(final Drawable marker, final Point hotspot,
@@ -53,6 +45,13 @@ public class OSMMapViewMarker {
 		this.mHotspot = hotspot;
 		this.mWidth = this.mMarker.getIntrinsicWidth();
 		this.mHeight = this.mMarker.getIntrinsicHeight();
+		if (focusMarker == null || focusHotspot == null) {
+			this.mFocusMarker = null;
+			this.mFocusHotspot = null;
+			this.mFocusWidth = 0;
+			this.mFocusHeight = 0;
+			return;
+		}
 		
 		this.mFocusMarker = focusMarker;
 		this.mFocusHotspot = focusHotspot;

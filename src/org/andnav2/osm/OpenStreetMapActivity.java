@@ -28,7 +28,10 @@ import android.view.Window;
  * @author Nicolas Gramlich
  *
  */
-public abstract class OpenStreetMapActivity extends Activity implements DataStateChangedListener, OSMConstants, OSMMapViewConstants, AndNavLocationCallback {
+public abstract class OpenStreetMapActivity 
+extends Activity 
+implements DataStateChangedListener, OSMConstants, OSMMapViewConstants, AndNavLocationCallback 
+{
 	// ===========================================================
 	// Constants
 	// ===========================================================

@@ -27,7 +27,10 @@ extends OSMMapViewSpacialIndexItemizedOverlayWithFocus<TrafficOverlayItem>
 	// Constructors
 	// ===========================================================
 
-	public TrafficOverlay(final Context ctx, final List<TrafficOverlayItem> pList, final OnItemTapListener<TrafficOverlayItem> onItemTapListener) {
+	public TrafficOverlay(final Context ctx, 
+			              final List<TrafficOverlayItem> pList,
+			              final OnItemTapListener<TrafficOverlayItem> onItemTapListener)
+	{
 		super(ctx,
 				new TrafficOverlayManager(pList),
 				ctx.getResources().getDrawable(R.drawable.warning_severe_overlayitem),

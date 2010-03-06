@@ -13,7 +13,9 @@ import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 
 
-public class OSMMapViewOSBOverlay extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>{
+public class OSMMapViewOSBOverlay 
+extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
+{
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -28,7 +30,11 @@ public class OSMMapViewOSBOverlay extends OSMMapViewListItemizedOverlayWithFocus
 	// Constructors
 	// ===========================================================
 
-	public OSMMapViewOSBOverlay(final Context ctx, final List<OSMMapViewOSBOverlayItem> pList, final OnItemTapListener<OSMMapViewOSBOverlayItem> pOnItemTapListener) {
+	public OSMMapViewOSBOverlay(
+			final Context ctx, 
+			final List<OSMMapViewOSBOverlayItem> pList, 
+			final OnItemTapListener<OSMMapViewOSBOverlayItem> pOnItemTapListener) 
+	{
 		super(ctx,
 				pList,
 				ctx.getResources().getDrawable(R.drawable.osb_icon_bug_open),
@@ -59,18 +65,17 @@ public class OSMMapViewOSBOverlay extends OSMMapViewListItemizedOverlayWithFocus
 		final List<OSMMapViewOSBOverlayItem> overlayItems = this.getOverlayItems();
 		if(overlayItems == null || overlayItems.get(index).isOpenBug()){
 			return super.onDrawItem(c, index, curScreenCoords);
-		}else{
-			/* Save a reference to the original marker. */
-			final Drawable tmp = super.mMarker;
-			/* Swithc the marker that will be drawn with the 'closed'-marker. */
-			super.mMarker = this.mMarkerClosed;
-			/* Make superclass draw with that marker. */
-			final boolean itemWasDrawn = super.onDrawItem(c, index, curScreenCoords);
-			/* Revert changes. */
-			super.mMarker = tmp;
-
-			return itemWasDrawn;
 		}
+		/* Save a reference to the original marker. */
+		final Drawable tmp = super.mMarker;
+		/* Switch the marker that will be drawn with the 'closed'-marker. */
+		super.mMarker = this.mMarkerClosed;
+		/* Make superclass draw with that marker. */
+		final boolean itemWasDrawn = super.onDrawItem(c, index, curScreenCoords);
+		/* Revert changes. */
+		super.mMarker = tmp;
+
+		return itemWasDrawn;
 	}
 
 	// ===========================================================

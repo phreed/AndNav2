@@ -22,7 +22,9 @@ import android.view.MotionEvent;
  *
  * @param <T>
  */
-public abstract class OSMMapViewItemizedOverlay<T extends OSMMapViewOverlayItem> extends OSMMapViewOverlay {
+public abstract class OSMMapViewItemizedOverlay<T extends OSMMapViewOverlayItem> 
+extends OSMMapViewOverlay
+{
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -44,11 +46,19 @@ public abstract class OSMMapViewItemizedOverlay<T extends OSMMapViewOverlayItem>
 	// Constructors
 	// ===========================================================
 
-	public OSMMapViewItemizedOverlay(final Context ctx, final OnItemTapListener<T> aOnItemTapListener) {
+	public OSMMapViewItemizedOverlay(
+			final Context ctx, 
+			final OnItemTapListener<T> aOnItemTapListener) 
+	{
 		this(ctx, null, null, aOnItemTapListener);
 	}
 
-	public OSMMapViewItemizedOverlay(final Context ctx, final Drawable pMarker, final Point pMarkerHotspot, final OnItemTapListener<T> aOnItemTapListener) {
+	public OSMMapViewItemizedOverlay(
+			final Context ctx, 
+			final Drawable pMarker, 
+			final Point pMarkerHotspot, 
+			final OnItemTapListener<T> aOnItemTapListener) 
+	{
 		assert(ctx != null);
 
 		this.mMarker = (pMarker != null) ? pMarker : ctx.getResources().getDrawable(R.drawable.marker_default);
@@ -132,7 +142,8 @@ public abstract class OSMMapViewItemizedOverlay<T extends OSMMapViewOverlayItem>
 	 * @param pMarkerHotSpot
 	 * @return <code>true</code> if the item was actually drawn. <code>false</code> it was not drawn because it was out of the visible area.
 	 */
-	protected boolean onDrawItem(final Canvas c, final int index, final Point pMarkerHotSpot) {
+	protected boolean onDrawItem(final Canvas c, final int index, final Point pMarkerHotSpot) 
+	{
 		if(this.mMarker != null){
 			final int left = pMarkerHotSpot.x - this.mMarkerHotSpot.x;
 			final int right = left + this.mMarkerWidth;

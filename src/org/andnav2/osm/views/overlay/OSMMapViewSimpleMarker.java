@@ -10,7 +10,9 @@ import android.graphics.drawable.Drawable;
  * @author phreed
  *
  */
-public class OSMMapViewSimpleMarker extends OSMMapViewMarker {
+public class OSMMapViewSimpleMarker 
+extends OSMMapViewMarker 
+{
 
 	/**
 	 * @param marker

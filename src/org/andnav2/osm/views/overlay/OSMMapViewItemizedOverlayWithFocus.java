@@ -58,11 +58,22 @@ extends OSMMapViewItemizedOverlay<T>
 	// Constructors
 	// ===========================================================
 
-	public OSMMapViewItemizedOverlayWithFocus(final Context ctx, final OnItemTapListener<T> aOnItemTapListener) {
+	public OSMMapViewItemizedOverlayWithFocus(
+			final Context ctx, 
+			final OnItemTapListener<T> aOnItemTapListener) 
+	{
 		this(ctx, null, null, null, null, NOT_SET, aOnItemTapListener);
 	}
 
-	public OSMMapViewItemizedOverlayWithFocus(final Context ctx, final Drawable pMarker, final Point pMarkerHotspot, final Drawable pMarkerFocusedBase, final Point pMarkerFocusedHotSpot, final int pFocusedBackgroundColor, final OnItemTapListener<T> aOnItemTapListener) {
+	public OSMMapViewItemizedOverlayWithFocus(
+			final Context ctx, 
+			final Drawable pMarker, 
+			final Point pMarkerHotspot, 
+			final Drawable pMarkerFocusedBase, 
+			final Point pMarkerFocusedHotSpot, 
+			final int pFocusedBackgroundColor, 
+			final OnItemTapListener<T> aOnItemTapListener)
+	{
 		super(ctx, pMarker, pMarkerHotspot, aOnItemTapListener);
 
 		this.UNKNOWN = ctx.getString(R.string.unknown);

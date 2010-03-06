@@ -65,7 +65,10 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 
-public class OSBMap extends OpenStreetMapAndNavBaseActivity implements OnItemTapListener<OSMMapViewOSBOverlayItem> {
+public class OSBMap 
+extends OpenStreetMapAndNavBaseActivity 
+implements OnItemTapListener<OSMMapViewOSBOverlayItem> 
+{
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -100,7 +103,8 @@ public class OSBMap extends OpenStreetMapAndNavBaseActivity implements OnItemTap
 	// ===========================================================
 
 	private OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem> mOSBOverlay;
-	private final ArrayList<OSMMapViewOSBOverlayItem> mBugOverlayItems = new ArrayList<OSMMapViewOSBOverlayItem>();
+	private final ArrayList<OSMMapViewOSBOverlayItem> mBugOverlayItems = 
+		new ArrayList<OSMMapViewOSBOverlayItem>();
 	private int mBugOverlayItemsIndex = NOT_SET;
 	private ImageButton mIbtnCommentWrite;
 	private ImageButton mIbtnRefresh;

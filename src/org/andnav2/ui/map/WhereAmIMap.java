@@ -116,7 +116,8 @@ import com.admob.android.ads.AdView;
 
 public class WhereAmIMap 
 extends OpenStreetMapAndNavBaseActivity 
-implements PreferenceConstants, Constants, OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayItem>
+implements PreferenceConstants, Constants, 
+           OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayItem>
 {
 
 	// ===========================================================

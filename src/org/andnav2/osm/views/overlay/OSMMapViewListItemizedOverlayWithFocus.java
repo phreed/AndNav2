@@ -24,12 +24,25 @@ extends OSMMapViewItemizedOverlayWithFocus<T>
 	// Constructors
 	// ===========================================================
 
-	public OSMMapViewListItemizedOverlayWithFocus(final Context ctx, final List<T> pList, final OnItemTapListener<T> onItemTapListener) {
+	public OSMMapViewListItemizedOverlayWithFocus(
+			final Context ctx, 
+			final List<T> pList, 
+			final OnItemTapListener<T> onItemTapListener) 
+	{
 		super(ctx, onItemTapListener);
 		this.mItems = pList;
 	}
 
-	public OSMMapViewListItemizedOverlayWithFocus(final Context ctx, final List<T> pList, final Drawable pMarker, final Point pMarkerHotspot, final Drawable pMarkerFocusedBase, final Point pMarkerFocusedHotSpot, final int pFocusedBackgroundColor, final OnItemTapListener<T> pOnItemTapListener) {
+	public OSMMapViewListItemizedOverlayWithFocus(
+			final Context ctx, 
+			final List<T> pList, 
+			final Drawable pMarker, 
+			final Point pMarkerHotspot, 
+			final Drawable pMarkerFocusedBase, 
+			final Point pMarkerFocusedHotSpot, 
+			final int pFocusedBackgroundColor, 
+			final OnItemTapListener<T> pOnItemTapListener)
+	{
 		super(ctx, pMarker, pMarkerHotspot, pMarkerFocusedBase, pMarkerFocusedHotSpot, pFocusedBackgroundColor, pOnItemTapListener);
 		this.mItems = pList;
 	}

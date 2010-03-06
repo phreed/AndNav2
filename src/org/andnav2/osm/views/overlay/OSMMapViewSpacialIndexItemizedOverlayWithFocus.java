@@ -36,7 +36,16 @@ extends OSMMapViewItemizedOverlayWithFocus<T>
 	// Constructors
 	// ===========================================================
 
-	public OSMMapViewSpacialIndexItemizedOverlayWithFocus(final Context ctx, final ISpatialDataOrganizer<T> aManager, final Drawable pMarker, final Point pMarkerHotspot, final Drawable pMarkerFocusedBase, final Point pMarkerFocusedHotSpot, final int pFocusedBackgroundColor, final OnItemTapListener<T> pOnItemTapListener) {
+	public OSMMapViewSpacialIndexItemizedOverlayWithFocus(
+			final Context ctx, 
+			final ISpatialDataOrganizer<T> aManager, 
+			final Drawable pMarker, 
+			final Point pMarkerHotspot, 
+			final Drawable pMarkerFocusedBase, 
+			final Point pMarkerFocusedHotSpot, 
+			final int pFocusedBackgroundColor, 
+			final OnItemTapListener<T> pOnItemTapListener) 
+	{
 		super(ctx, pMarker, pMarkerHotspot, pMarkerFocusedBase, pMarkerFocusedHotSpot, pFocusedBackgroundColor, pOnItemTapListener);
 		this.mSpatialDataOrganizer = aManager;
 	}
