@@ -83,6 +83,7 @@ import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -650,18 +651,23 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if((this.mSensorManager.getSensors() & SensorManager.SENSOR_ORIENTATION) != 0){
-			this.mSensorManager.registerListener(this.mCompassRotateView, SensorManager.SENSOR_ORIENTATION, SensorManager.SENSOR_DELAY_UI);
-			this.mSensorManager.registerListener(this.mIvCompass, SensorManager.SENSOR_ORIENTATION, SensorManager.SENSOR_DELAY_UI);
-		}
+		 List<Sensor> orient_sensor_list = this.mSensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
+		 if (orient_sensor_list.size() < 1) return;
+		 
+		 this.mSensorManager.registerListener(this.mCompassRotateView,  orient_sensor_list.get(0), SensorManager.SENSOR_DELAY_UI);
+		 this.mSensorManager.registerListener(this.mIvCompass, orient_sensor_list.get(0), SensorManager.SENSOR_DELAY_UI);
+
 	}
 
 	@Override
 	protected void onPause() {
-		if((this.mSensorManager.getSensors() & SensorManager.SENSOR_ORIENTATION) != 0){
-			this.mSensorManager.unregisterListener(this.mCompassRotateView);
-			this.mSensorManager.unregisterListener(this.mIvCompass);
-		}
+		super.onResume();
+		List<Sensor> orient_sensor_list = this.mSensorManager.getSensorList(Sensor.TYPE_ORIENTATION);
+		if (orient_sensor_list.size() < 1) { super.onPause(); return; }
+		
+		this.mSensorManager.unregisterListener(this.mCompassRotateView,  orient_sensor_list.get(0));
+		this.mSensorManager.unregisterListener(this.mIvCompass, orient_sensor_list.get(0));
+
 		super.onPause();
 	}
 

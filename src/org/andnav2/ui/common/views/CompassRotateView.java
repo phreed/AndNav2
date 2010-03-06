@@ -5,13 +5,15 @@ import org.andnav2.R;
 import org.andnav2.util.constants.Constants;
 
 import android.content.Context;
-import android.hardware.SensorListener;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.AttributeSet;
 import android.widget.Toast;
 
 
-public class CompassRotateView extends RotateView implements SensorListener {
+public class CompassRotateView extends RotateView implements SensorEventListener {
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -66,21 +68,22 @@ public class CompassRotateView extends RotateView implements SensorListener {
 	// Methods from SuperClass/Interfaces
 	// ===========================================================
 
-	public void onAccuracyChanged(final int sensor, final int accuracy) {
-		if(!this.mToastShownOnce  && this.mActive && accuracy < SensorManager.SENSOR_STATUS_ACCURACY_MEDIUM){
-			this.mToastShownOnce = true;
-			Toast.makeText(this.getContext(), R.string.compass_please_callibrate, Toast.LENGTH_SHORT).show();
-		}
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {
+		 if(this.mToastShownOnce) return;
+		 if(! this.mActive) return;
+		 if(accuracy > SensorManager.SENSOR_STATUS_ACCURACY_LOW) return;
+		 this.mToastShownOnce = true;
+		 Toast.makeText(this.getContext(), R.string.compass_please_callibrate, Toast.LENGTH_SHORT).show();
 	}
 
-	public void onSensorChanged(final int sensor, final float[] values) {
-		//Log.d(TAG, "x: " + values[0] + "y: " + values[1] + "z: " + values[2]);
-		if(this.mActive){
-			synchronized (this) {
-				super.mHeading = values[0];
-				invalidate();
-			}
-		}
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		 if(! this.mActive) return;
+		 synchronized (this) {
+		      super.mHeading = event.values[0];
+		      invalidate();
+		 }
 	}
 
 	// ===========================================================
