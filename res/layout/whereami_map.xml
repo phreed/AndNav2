@@ -40,6 +40,14 @@
 		android:layout_centerHorizontal="true"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"/>
+	<!-- EntityControl, Upper Middle -->	
+	<view class="org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView" 
+		android:id="@+id/entity_overlay_control_whereami"
+		android:visibility="visible"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
 	<!-- Zoom Controls, Upper edged -->
 	<ImageView
 		android:id="@+id/iv_whereami_zoomin"

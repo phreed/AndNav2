@@ -186,6 +186,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 	private GeoPoint mGPLastMapClick;
 
 	private OSMMapViewItemizedOverlayControlView mMapItemControlView;
+	private OSMMapViewItemizedOverlayControlView mMapEntityControlView;
 	private OSMMapViewScaleIndicatorView mScaleIndicatorView;
 
 	private OSMMapViewDirectedLocationOverlay mMyLocationOverlay;
@@ -197,11 +198,16 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 	private CompassRotateView mCompassRotateView;
 
-	private ArrayList<OSMMapViewOverlayItem> mSearchPinList;
-	/** Currently selected index in mSearchPinList. */
+	private List<OSMMapViewOverlayItem> mSearchPinList;
 	private int mSearchPinListIndex;
+	private AbstractOSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mSearchPinOverlay;
 
-	private AbstractOSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mItemOverlay;
+	//private List<OSMMapViewOverlayItem> mSymbolList;
+	private List<OSMMapViewOverlayItem> mEntityList;
+	@SuppressWarnings("unused")
+	private int mEntityListIndex;
+	private AbstractOSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mEntityOverlay;
+	
 	private AreaOfInterestOverlay mAASOverlay;
 	private TrafficOverlay mTrafficOverlay;
 	private OSMMapViewSingleIconOverlay mStartFlagOverlay;
@@ -221,7 +227,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 	private AreaOfInterestOverlay mAreaOfAvoidingsOverlay;
 
-	private final ArrayList<AreaOfInterest> mAvoidAreas = new ArrayList<AreaOfInterest>();
+	private final List<AreaOfInterest> mAvoidAreas = new ArrayList<AreaOfInterest>();
 
 	private boolean mNavPointsCrosshairMode;
 
@@ -292,15 +298,20 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		//		overlays.add(overlay);
 	}
 
+	/** 
+	 * Managing Pin Overlay and its Items
+	 * 
+	 * @param pGeoPoint
+	 */
 	private void refreshPinOverlay(final GeoPoint pGeoPoint) {
-		final ArrayList<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>();
+		final List<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>();
 		items.add(new OSMMapViewOverlayItem(WhereAmIMap.this, pGeoPoint));
 		refreshPinOverlay(items);
 		WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 		WhereAmIMap.super.mOSMapView.getController().animateTo(pGeoPoint, AnimationType.MIDDLEPEAKSPEED);
 	}
 
-	private void refreshPinOverlay(final ArrayList<OSMMapViewOverlayItem> items){
+	private void refreshPinOverlay(final List<OSMMapViewOverlayItem> items){
 		this.mSearchPinListIndex = 0;
 
 		clearPinOverlay();
@@ -313,8 +324,8 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 		this.mSearchPinList = items;
 
-		this.mOSMapView.getOverlays().add(this.mItemOverlay = new BaseOSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mSearchPinList, this));
-		this.mItemOverlay.setAutoFocusItemsOnTap(false);
+		this.mOSMapView.getOverlays().add(this.mSearchPinOverlay = new BaseOSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mSearchPinList, this));
+		this.mSearchPinOverlay.setAutoFocusItemsOnTap(false);
 	}
 
 
@@ -326,8 +337,55 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		}
 
 		final List<OSMMapViewOverlay> overlays = this.mOSMapView.getOverlays();
-		if(this.mItemOverlay != null) {
-			overlays.remove(this.mItemOverlay);
+		if(this.mSearchPinOverlay != null) {
+			overlays.remove(this.mSearchPinOverlay);
+		}
+	}
+
+	
+	/** 
+	 * Managing Entity Overlay and its Symbols and Tactics.
+	 * 
+	 * @param pGeoPoint
+	 */
+	private void freshEntityOverlay(final GeoPoint pGeoPoint) {
+		if (pGeoPoint == null) return;
+		final List<OSMMapViewOverlayItem> symbols = new ArrayList<OSMMapViewOverlayItem>();
+		symbols.add(new OSMMapViewOverlayItem(WhereAmIMap.this, pGeoPoint));
+		freshEntityOverlay(symbols);
+		WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
+		WhereAmIMap.super.mOSMapView.getController().animateTo(pGeoPoint, AnimationType.MIDDLEPEAKSPEED);
+	}
+
+	private void freshEntityOverlay(final List<OSMMapViewOverlayItem> items){
+		this.mEntityListIndex = 0;
+
+		clearEntityOverlay();
+
+		this.mMapEntityControlView.setVisibility(View.VISIBLE);
+
+		final boolean nextPreviousEnabled = items.size() > 1;
+		this.mMapEntityControlView.setNextEnabled(nextPreviousEnabled);
+		this.mMapEntityControlView.setPreviousEnabled(nextPreviousEnabled);
+
+		this.mEntityList = items;
+
+		this.mOSMapView.getOverlays().add(this.mEntityOverlay = 
+			new BaseOSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mEntityList, this));
+		this.mEntityOverlay.setAutoFocusItemsOnTap(false);
+	}
+
+
+	private void clearEntityOverlay() {
+		this.mMapEntityControlView.setVisibility(View.GONE);
+
+		if(this.mEntityList != null) {
+			this.mEntityList.clear();
+		}
+
+		final List<OSMMapViewOverlay> overlays = this.mOSMapView.getOverlays();
+		if(this.mEntityOverlay != null) {
+			overlays.remove(this.mEntityOverlay);
 		}
 	}
 
@@ -353,6 +411,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		this.mIbtnNavPointsDoCancel = (ImageButton)this.findViewById(R.id.ibtn_whereami_setnavpoints_cancel);
 		this.mCompassRotateView = (CompassRotateView)this.findViewById(R.id.rotator_wheramimap);
 		this.mMapItemControlView = (OSMMapViewItemizedOverlayControlView)this.findViewById(R.id.itemizedoverlaycontrol_whereami);
+		this.mMapEntityControlView = (OSMMapViewItemizedOverlayControlView)this.findViewById(R.id.entity_overlay_control_whereami);
 		this.mScaleIndicatorView = (OSMMapViewScaleIndicatorView)this.findViewById(R.id.scaleindicatorview_whereami);
 		this.mScaleIndicatorView.setUnitSystem(Preferences.getUnitSystem(this));
 
@@ -415,6 +474,9 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 			this.mDoCenter = WhereAmIMap.CENTERMODE_AUTO;
 		}
 
+		
+		freshEntityOverlay(super.getLastKnownLocation(true));
+		
 		/* forces the ScaleIndicator-View to be refreshed in the beginning. */
 		super.mOSMapView.forceFireOnChangeListeners();
 	}
@@ -426,84 +488,84 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 	private boolean handlePossibleAction() {
 		final Intent iStartedWith = this.getIntent();
 		final String action = iStartedWith.getAction();
-		if(action != null){
-			if(action.equals(ANDNAV2_VIEW_ACTION)){
-				final Bundle extras = iStartedWith.getExtras();
-				/* Extract geopoint-Strings from the Bundle. */
-				final ArrayList<String> geoPointStrings = extras.getStringArrayList(APIIntentReceiver.WHEREAMI_EXTRAS_LOCATIONS_ID);
+		if(action == null) return false;
+		
+		if(action.equals(ANDNAV2_VIEW_ACTION)){
+			final Bundle extras = iStartedWith.getExtras();
+			/* Extract geopoint-Strings from the Bundle. */
+			final List<String> geoPointStrings = extras.getStringArrayList(APIIntentReceiver.WHEREAMI_EXTRAS_LOCATIONS_ID);
 
-				if(geoPointStrings.size() > 0){
-					/* And convert them to actual GeoPoints */
-					final ArrayList<GeoPoint> geoPoints = new ArrayList<GeoPoint>(geoPointStrings.size());
-					for (final String locationString : geoPointStrings) {
-						geoPoints.add(GeoPoint.fromIntString(locationString));
-					}
-
-
-					/* Extract descriptions and titles from the Bundle. */
-					final ArrayList<String> descriptions = extras.getStringArrayList(APIIntentReceiver.WHEREAMI_EXTRAS_LOCATIONS_DESCRIPTIONS_ID);
-					final ArrayList<String> titles = extras.getStringArrayList(APIIntentReceiver.WHEREAMI_EXTRAS_LOCATIONS_TITLES_ID);
-
-
-					/* Create overlay-items from the data extracted. */
-					final ArrayList<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>(geoPointStrings.size());
-					for(int i = 0; i < geoPointStrings.size(); i++) {
-						items.add(new OSMMapViewOverlayItem(titles.get(i), descriptions.get(i), geoPoints.get(i)));
-					}
-
-					/* Calculate the BoundingBox around the items. */
-					final BoundingBoxE6 itemBoundingBoxE6 = BoundingBoxE6.fromGeoPoints(geoPoints);
-
-					refreshPinOverlay(items);
-
-					WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
-
-					new Handler().postDelayed(new Runnable(){
-						public void run() {
-							if(items.size() == 1) {
-								WhereAmIMap.super.mOSMapView.setZoomLevel(13);
-							} else {
-								WhereAmIMap.super.mOSMapView.getController().zoomToSpan(itemBoundingBoxE6);
-							}
-
-							WhereAmIMap.super.mOSMapView.getController().animateTo(itemBoundingBoxE6.getCenter(), AnimationType.MIDDLEPEAKSPEED);
-						}
-					}, 500);
-
-					return true;
+			if(geoPointStrings.size() > 0){
+				/* And convert them to actual GeoPoints */
+				final List<GeoPoint> geoPoints = new ArrayList<GeoPoint>(geoPointStrings.size());
+				for (final String locationString : geoPointStrings) {
+					geoPoints.add(GeoPoint.fromIntString(locationString));
 				}
-			}else if(action.equals(android.content.Intent.ACTION_VIEW)){
-				final Uri data = iStartedWith.getData();
-				if(data != null && data.getScheme().equals("geo")){
 
-					/* Extract lat/lon-String. */
-					final String coordsString = iStartedWith.getData().getSchemeSpecificPart();
-					if(coordsString.length() > 0){
-						final String[] coordinates = coordsString.split(",");
-						try{
-							final double lat = Double.parseDouble(coordinates[this.LAT_INDEX]);
-							final double lon = Double.parseDouble(coordinates[this.LON_INDEX]);
 
-							this.mOSMapView.setZoomLevel(15);
-							this.mOSMapView.setMapCenter(new GeoPoint((int)(lat * 1E6), (int)(lon * 1E6)));
+				/* Extract descriptions and titles from the Bundle. */
+				final List<String> descriptions = extras.getStringArrayList(APIIntentReceiver.WHEREAMI_EXTRAS_LOCATIONS_DESCRIPTIONS_ID);
+				final List<String> titles = extras.getStringArrayList(APIIntentReceiver.WHEREAMI_EXTRAS_LOCATIONS_TITLES_ID);
 
-							this.mDoCenter = WhereAmIMap.CENTERMODE_NONE;
-							return true;
-						}catch(final NumberFormatException nfe){
-							final int qParamIndex = coordsString.indexOf("q=");
-							if(qParamIndex != -1){
-								final String textualQuery = coordsString.substring(qParamIndex + "q=".length());
-								if(textualQuery.length() > 0){
-									searchORSLocations(textualQuery);
 
-									this.mEtSearch.setText(textualQuery);
+				/* Create overlay-items from the data extracted. */
+				final List<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>(geoPointStrings.size());
+				for(int i = 0; i < geoPointStrings.size(); i++) {
+					items.add(new OSMMapViewOverlayItem(titles.get(i), descriptions.get(i), geoPoints.get(i)));
+				}
 
-									this.mDoCenter = WhereAmIMap.CENTERMODE_NONE;
-									return true;
-								}
-							}else{
-								Log.d(Constants.DEBUGTAG, "Could not parse \"" + iStartedWith.getData().toString() + "\"-Uri");
+				/* Calculate the BoundingBox around the items. */
+				final BoundingBoxE6 itemBoundingBoxE6 = BoundingBoxE6.fromGeoPoints(geoPoints);
+
+				refreshPinOverlay(items);
+
+				WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
+
+				new Handler().postDelayed(new Runnable(){
+					public void run() {
+						if(items.size() == 1) {
+							WhereAmIMap.super.mOSMapView.setZoomLevel(13);
+						} else {
+							WhereAmIMap.super.mOSMapView.getController().zoomToSpan(itemBoundingBoxE6);
+						}
+
+						WhereAmIMap.super.mOSMapView.getController().animateTo(itemBoundingBoxE6.getCenter(), AnimationType.MIDDLEPEAKSPEED);
+					}
+				}, 500);
+
+				return true;
+			}
+		}else if(action.equals(android.content.Intent.ACTION_VIEW)){
+			final Uri data = iStartedWith.getData();
+			if(data != null && data.getScheme().equals("geo")){
+
+				/* Extract lat/lon-String. */
+				final String coordsString = iStartedWith.getData().getSchemeSpecificPart();
+				if(coordsString.length() > 0){
+					final String[] coordinates = coordsString.split(",");
+					try{
+						final double lat = Double.parseDouble(coordinates[this.LAT_INDEX]);
+						final double lon = Double.parseDouble(coordinates[this.LON_INDEX]);
+
+						this.mOSMapView.setZoomLevel(15);
+						this.mOSMapView.setMapCenter(new GeoPoint((int)(lat * 1E6), (int)(lon * 1E6)));
+
+						this.mDoCenter = WhereAmIMap.CENTERMODE_NONE;
+						return true;
+					}catch(final NumberFormatException nfe){
+						final int qParamIndex = coordsString.indexOf("q=");
+						if(qParamIndex != -1){
+							final String textualQuery = coordsString.substring(qParamIndex + "q=".length());
+							if(textualQuery.length() > 0){
+								searchORSLocations(textualQuery);
+
+								this.mEtSearch.setText(textualQuery);
+
+								this.mDoCenter = WhereAmIMap.CENTERMODE_NONE;
+								return true;
 							}
+						}else{
+							Log.d(Constants.DEBUGTAG, "Could not parse \"" + iStartedWith.getData().toString() + "\"-Uri");
 						}
 					}
 				}
@@ -542,7 +604,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 			case REQUESTCODE_STRUCTURED_SEARCH_SD_MAINCHOOSE:
 				if(resultCode == SUBACTIVITY_RESULTCODE_CHAINCLOSE_SUCCESS || resultCode == SUBACTIVITY_RESULTCODE_SUCCESS){
 					final Bundle b = data.getExtras();
-					final ArrayList<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>();
+					final List<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>();
 
 					final int latE6 = b.getInt(EXTRAS_DESTINATION_LATITUDE_ID);
 					final int lonE6 = b.getInt(EXTRAS_DESTINATION_LONGITUDE_ID);
@@ -638,9 +700,9 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		this.mSearchPinListIndex = index;
 		final TrafficOverlayItem focusedItem = WhereAmIMap.this.mTrafficOverlay.getFocusedItem();
 		if(!item.equals(focusedItem)){
-			this.mItemOverlay.setFocusedItem(item);
+			this.mSearchPinOverlay.setFocusedItem(item);
 		}else{
-			this.mItemOverlay.unSetFocusedItem();
+			this.mSearchPinOverlay.unSetFocusedItem();
 		}
 
 		this.mOSMapView.getController().animateTo(item, AnimationType.MIDDLEPEAKSPEED);
@@ -1347,7 +1409,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		try{
 			final List<DBPOI> usedPOIs = DBManager.getPOIHistory(this);
 
-			final ArrayList<String> usedPOIStrings = new ArrayList<String>(usedPOIs.size());
+			final List<String> usedPOIStrings = new ArrayList<String>(usedPOIs.size());
 
 			for(final DBPOI poi : usedPOIs) {
 				usedPOIStrings.add(poi.getName());
@@ -1439,7 +1501,8 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		});
 	}
 
-	private void applyQuickButtonListeners() {
+	private void applyQuickButtonListeners() 
+	{
 		this.mMapItemControlView.setItemizedOverlayControlViewListener(new OSMMapViewItemizedOverlayControlView.ItemizedOverlayControlViewListener(){
 			public void onCenter() {
 				final OSMMapViewOverlayItem oi = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
@@ -1591,7 +1654,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 				new Thread(new Runnable(){
 					public void run() {
 						try {
-							final ArrayList<GeocodedAddress> addr = LUSRequester.requestReverseGeocode(WhereAmIMap.this, mapCenter, ReverseGeocodePreferenceType.STREETADDRESS);
+							final List<GeocodedAddress> addr = LUSRequester.requestReverseGeocode(WhereAmIMap.this, mapCenter, ReverseGeocodePreferenceType.STREETADDRESS);
 							runOnUiThread(new Runnable(){
 								public void run() {
 									if(addr == null || addr.size() == 0){
@@ -1810,7 +1873,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		new Thread(new Runnable(){
 			public void run() {
 				try {
-					final ArrayList<GeocodedAddress> ret = LUSRequester.requestFreeformAddress(WhereAmIMap.this, null, query);
+					final List<GeocodedAddress> ret = LUSRequester.requestFreeformAddress(WhereAmIMap.this, null, query);
 
 					runOnUiThread(new Runnable(){
 						public void run() {
@@ -1826,7 +1889,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 								}
 
 
-								final ArrayList<OSMMapViewOverlayItem> itemsFound = new ArrayList<OSMMapViewOverlayItem>();
+								final List<OSMMapViewOverlayItem> itemsFound = new ArrayList<OSMMapViewOverlayItem>();
 								for (final GeocodedAddress ga : ret) {
 									itemsFound.add(new OSMMapViewOverlayItem(ga.getMunicipality(), ga.toString(WhereAmIMap.this), ga));
 								}

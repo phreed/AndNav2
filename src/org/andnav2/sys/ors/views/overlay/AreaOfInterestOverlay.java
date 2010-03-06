@@ -39,7 +39,7 @@ public class AreaOfInterestOverlay extends OSMMapViewOverlay{
 		this.mAOIs.add(pAOI);
 	}
 
-	public AreaOfInterestOverlay(final ArrayList<AreaOfInterest> pAOIs){
+	public AreaOfInterestOverlay(final List<AreaOfInterest> pAOIs){
 		Assert.assertNotNull(pAOIs);
 		this.mAOIs = pAOIs;
 	}
