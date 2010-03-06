@@ -22,9 +22,9 @@ import org.andnav2.osm.views.OSMMapViewScaleIndicatorView;
 import org.andnav2.osm.views.OSMMapView.OSMMapViewProjection;
 import org.andnav2.osm.views.OSMMapView.OnChangeListener;
 import org.andnav2.osm.views.controller.OSMMapViewController.AnimationType;
-import org.andnav2.osm.views.overlay.AbstractOSMMapViewItemizedOverlay;
-import org.andnav2.osm.views.overlay.AbstractOSMMapViewItemizedOverlayWithFocus;
-import org.andnav2.osm.views.overlay.BaseOSMMapViewListItemizedOverlayWithFocus;
+import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlay;
+import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayWithFocus;
+import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewCrosshairOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewDirectedLocationOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView;
@@ -32,7 +32,7 @@ import org.andnav2.osm.views.overlay.OSMMapViewOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlayItem;
 import org.andnav2.osm.views.overlay.OSMMapViewSimpleLineOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewSingleIconOverlay;
-import org.andnav2.osm.views.overlay.AbstractOSMMapViewItemizedOverlay.OnItemTapListener;
+import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlay.OnItemTapListener;
 import org.andnav2.osm.views.tiles.OSMMapTileManager;
 import org.andnav2.osm.views.tiles.OSMMapTileProviderInfo;
 import org.andnav2.osm.views.tiles.adt.OSMTileInfo;
@@ -114,7 +114,10 @@ import android.widget.Toast;
 import com.admob.android.ads.AdView;
 
 
-public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements PreferenceConstants, Constants, AbstractOSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayItem>{
+public class WhereAmIMap 
+extends OpenStreetMapAndNavBaseActivity 
+implements PreferenceConstants, Constants, OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayItem>
+{
 
 	// ===========================================================
 	// Final Fields
@@ -200,13 +203,13 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 	private List<OSMMapViewOverlayItem> mSearchPinList;
 	private int mSearchPinListIndex;
-	private AbstractOSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mSearchPinOverlay;
+	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mSearchPinOverlay;
 
 	//private List<OSMMapViewOverlayItem> mSymbolList;
 	private List<OSMMapViewOverlayItem> mEntityList;
 	@SuppressWarnings("unused")
 	private int mEntityListIndex;
-	private AbstractOSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mEntityOverlay;
+	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mEntityOverlay;
 	
 	private AreaOfInterestOverlay mAASOverlay;
 	private TrafficOverlay mTrafficOverlay;
@@ -324,7 +327,8 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 		this.mSearchPinList = items;
 
-		this.mOSMapView.getOverlays().add(this.mSearchPinOverlay = new BaseOSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mSearchPinList, this));
+		this.mOSMapView.getOverlays().add(this.mSearchPinOverlay = 
+			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mSearchPinList, this));
 		this.mSearchPinOverlay.setAutoFocusItemsOnTap(false);
 	}
 
@@ -357,21 +361,21 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		WhereAmIMap.super.mOSMapView.getController().animateTo(pGeoPoint, AnimationType.MIDDLEPEAKSPEED);
 	}
 
-	private void freshEntityOverlay(final List<OSMMapViewOverlayItem> items){
+	private void freshEntityOverlay(final List<OSMMapViewOverlayItem> entities){
 		this.mEntityListIndex = 0;
 
 		clearEntityOverlay();
 
 		this.mMapEntityControlView.setVisibility(View.VISIBLE);
 
-		final boolean nextPreviousEnabled = items.size() > 1;
+		final boolean nextPreviousEnabled = entities.size() > 1;
 		this.mMapEntityControlView.setNextEnabled(nextPreviousEnabled);
 		this.mMapEntityControlView.setPreviousEnabled(nextPreviousEnabled);
 
-		this.mEntityList = items;
+		this.mEntityList = entities;
 
 		this.mOSMapView.getOverlays().add(this.mEntityOverlay = 
-			new BaseOSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mEntityList, this));
+			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mEntityList, this));
 		this.mEntityOverlay.setAutoFocusItemsOnTap(false);
 	}
 
@@ -410,7 +414,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		this.mIbtnNavPointsDoStart = (ImageButton)this.findViewById(R.id.ibtn_whereami_setnavpoints_start);
 		this.mIbtnNavPointsDoCancel = (ImageButton)this.findViewById(R.id.ibtn_whereami_setnavpoints_cancel);
 		this.mCompassRotateView = (CompassRotateView)this.findViewById(R.id.rotator_wheramimap);
-		this.mMapItemControlView = (OSMMapViewItemizedOverlayControlView)this.findViewById(R.id.itemizedoverlaycontrol_whereami);
+		this.mMapItemControlView = (OSMMapViewItemizedOverlayControlView)this.findViewById(R.id.itemized_overlay_control_whereami);
 		this.mMapEntityControlView = (OSMMapViewItemizedOverlayControlView)this.findViewById(R.id.entity_overlay_control_whereami);
 		this.mScaleIndicatorView = (OSMMapViewScaleIndicatorView)this.findViewById(R.id.scaleindicatorview_whereami);
 		this.mScaleIndicatorView.setUnitSystem(Preferences.getUnitSystem(this));

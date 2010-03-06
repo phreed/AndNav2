@@ -4,7 +4,7 @@ package org.andnav2.sys.osb.views.overlay;
 import java.util.List;
 
 import org.andnav2.R;
-import org.andnav2.osm.views.overlay.BaseOSMMapViewListItemizedOverlayWithFocus;
+import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -13,7 +13,7 @@ import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 
 
-public class OSMMapViewOSBOverlay extends BaseOSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>{
+public class OSMMapViewOSBOverlay extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>{
 	// ===========================================================
 	// Constants
 	// ===========================================================

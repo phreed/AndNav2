@@ -16,7 +16,9 @@ import android.graphics.drawable.Drawable;
  *
  * @param <T>
  */
-public class OSMMapViewSpacialIndexItemizedOverlayWithFocus<T extends OSMMapViewOverlayItem> extends AbstractOSMMapViewItemizedOverlayWithFocus<T> {
+public class OSMMapViewSpacialIndexItemizedOverlayWithFocus<T extends OSMMapViewOverlayItem> 
+extends OSMMapViewItemizedOverlayWithFocus<T> 
+{
 	// ===========================================================
 	// Constants
 	// ===========================================================

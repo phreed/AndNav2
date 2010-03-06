@@ -1,19 +1,14 @@
-// Created by plusminus on 23:36:12 - 18.01.2009
-package org.andnav2.sys.ors.views.overlay;
+// Created by plusminus on 7:28:43 PM - Mar 27, 2009
+package org.andnav2.osm.views.overlay;
 
 import java.util.List;
 
-import org.andnav2.R;
-import org.andnav2.osm.views.overlay.OSMMapViewSpacialIndexItemizedOverlayWithFocus;
-import org.andnav2.sys.ors.adt.ts.TrafficOverlayManager;
-
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.drawable.Drawable;
 
-
-public class TrafficOverlay 
-extends OSMMapViewSpacialIndexItemizedOverlayWithFocus<TrafficOverlayItem> 
+public class OSMMapViewListItemizedOverlayWithFocus<T extends OSMMapViewOverlayItem> 
+extends OSMMapViewItemizedOverlayWithFocus<T> 
 {
 	// ===========================================================
 	// Constants
@@ -23,27 +18,21 @@ extends OSMMapViewSpacialIndexItemizedOverlayWithFocus<TrafficOverlayItem>
 	// Fields
 	// ===========================================================
 
+	private List<T> mItems;
+
 	// ===========================================================
 	// Constructors
 	// ===========================================================
 
-	public TrafficOverlay(final Context ctx, final List<TrafficOverlayItem> pList, final OnItemTapListener<TrafficOverlayItem> onItemTapListener) {
-		super(ctx,
-				new TrafficOverlayManager(pList),
-				ctx.getResources().getDrawable(R.drawable.warning_severe_overlayitem),
-				new Point(16, 16),
-				ctx.getResources().getDrawable(R.drawable.warning_overlayitem_focused),
-				new Point(16, 16),
-				Color.argb(255, 130, 172, 223),
-				onItemTapListener);
-
-		/* Force to draw the actual icon below the focusing one. */
-		this.mDrawBaseIntemUnderFocusedItem = true;
-
-		/* No padding is needed, because we will draw nothing to there. */
-		super.mPaddingTitleLeft = 0;
+	public OSMMapViewListItemizedOverlayWithFocus(final Context ctx, final List<T> pList, final OnItemTapListener<T> onItemTapListener) {
+		super(ctx, onItemTapListener);
+		this.mItems = pList;
 	}
 
+	public OSMMapViewListItemizedOverlayWithFocus(final Context ctx, final List<T> pList, final Drawable pMarker, final Point pMarkerHotspot, final Drawable pMarkerFocusedBase, final Point pMarkerFocusedHotSpot, final int pFocusedBackgroundColor, final OnItemTapListener<T> pOnItemTapListener) {
+		super(ctx, pMarker, pMarkerHotspot, pMarkerFocusedBase, pMarkerFocusedHotSpot, pFocusedBackgroundColor, pOnItemTapListener);
+		this.mItems = pList;
+	}
 	// ===========================================================
 	// Getter & Setter
 	// ===========================================================
@@ -51,6 +40,16 @@ extends OSMMapViewSpacialIndexItemizedOverlayWithFocus<TrafficOverlayItem>
 	// ===========================================================
 	// Methods from SuperClass/Interfaces
 	// ===========================================================
+
+	@Override
+	public List<T> getOverlayItems() {
+		return this.mItems;
+	}
+
+	@Override
+	public void setOverlayItems(final List<T> pItems) {
+		this.mItems = pItems;
+	}
 
 	// ===========================================================
 	// Methods

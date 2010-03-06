@@ -17,11 +17,11 @@ import org.andnav2.osm.views.OSMMapViewScaleIndicatorView;
 import org.andnav2.osm.views.OSMMapView.OSMMapViewProjection;
 import org.andnav2.osm.views.OSMMapView.OnChangeListener;
 import org.andnav2.osm.views.controller.OSMMapViewController.AnimationType;
-import org.andnav2.osm.views.overlay.BaseOSMMapViewListItemizedOverlayWithFocus;
+import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewCrosshairOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewSimpleLocationOverlay;
-import org.andnav2.osm.views.overlay.AbstractOSMMapViewItemizedOverlay.OnItemTapListener;
+import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlay.OnItemTapListener;
 import org.andnav2.preferences.Preferences;
 import org.andnav2.sys.ftpc.api.FTPCRequester;
 import org.andnav2.sys.ors.adt.ds.POIGroup;
@@ -99,7 +99,7 @@ public class OSBMap extends OpenStreetMapAndNavBaseActivity implements OnItemTap
 	// Constructors
 	// ===========================================================
 
-	private BaseOSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem> mOSBOverlay;
+	private OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem> mOSBOverlay;
 	private final ArrayList<OSMMapViewOSBOverlayItem> mBugOverlayItems = new ArrayList<OSMMapViewOSBOverlayItem>();
 	private int mBugOverlayItemsIndex = NOT_SET;
 	private ImageButton mIbtnCommentWrite;

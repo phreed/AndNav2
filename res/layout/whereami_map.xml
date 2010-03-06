@@ -28,7 +28,7 @@
     </view>
     <!-- PinControl, Upper Middle -->
 	<view class="org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView" 
-		android:id="@+id/itemizedoverlaycontrol_whereami"
+		android:id="@+id/itemized_overlay_control_whereami"
 		android:visibility="gone"
 		android:layout_alignParentTop="true"
 		android:layout_centerHorizontal="true"
@@ -36,14 +36,14 @@
 		android:layout_height="wrap_content"/>
 	<view class="org.andnav2.osm.views.OSMMapViewScaleIndicatorView" 
 		android:id="@+id/scaleindicatorview_whereami"
-		android:layout_below="@id/itemizedoverlaycontrol_whereami"
+		android:layout_below="@id/itemized_overlay_control_whereami"
 		android:layout_centerHorizontal="true"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"/>
 	<!-- EntityControl, Upper Middle -->	
 	<view class="org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView" 
 		android:id="@+id/entity_overlay_control_whereami"
-		android:visibility="visible"
+		android:visibility="gone"
 		android:layout_alignParentTop="true"
 		android:layout_centerHorizontal="true"
 		android:layout_width="wrap_content"
