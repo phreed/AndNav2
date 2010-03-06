@@ -379,7 +379,7 @@ public class SDResolver extends AndNavBaseActivity {
 		// ===========================================================
 		// Parcelable
 		// ===========================================================
-
+	     @SuppressWarnings("unused")
 		public static final Parcelable.Creator<GeocodedAddressItem> CREATOR = new Parcelable.Creator<GeocodedAddressItem>() {
 			public GeocodedAddressItem createFromParcel(final Parcel in) {
 				return readFromParcel(in);
@@ -468,6 +468,7 @@ public class SDResolver extends AndNavBaseActivity {
 			this.mContext = context;
 		}
 
+	     @SuppressWarnings("unused")
 		public void addItem(final GeocodedAddressItem it) {
 			this.mItems.add(it);
 			Collections.sort(this.mItems);

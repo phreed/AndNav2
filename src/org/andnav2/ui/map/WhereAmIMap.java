@@ -192,7 +192,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 	private TrafficFeed mCurrentTrafficFeed;
 
-	private int mDoCenter = this.CENTERMODE_AUTO;
+	private int mDoCenter = WhereAmIMap.CENTERMODE_AUTO;
 
 	private CompassRotateView mCompassRotateView;
 
@@ -295,7 +295,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		final ArrayList<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>();
 		items.add(new OSMMapViewOverlayItem(WhereAmIMap.this, pGeoPoint));
 		refreshPinOverlay(items);
-		WhereAmIMap.this.updateUIForAutoCenterChange(this.CENTERMODE_NONE);
+		WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 		WhereAmIMap.super.mOSMapView.getController().animateTo(pGeoPoint, AnimationType.MIDDLEPEAKSPEED);
 	}
 
@@ -411,7 +411,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 			/* Show the user why the map is auto-centering on the user. */
 			Toast.makeText(WhereAmIMap.this, R.string.toast_autofollow_enabled, Toast.LENGTH_SHORT).show();
-			this.mDoCenter = this.CENTERMODE_AUTO;
+			this.mDoCenter = WhereAmIMap.CENTERMODE_AUTO;
 		}
 
 		/* forces the ScaleIndicator-View to be refreshed in the beginning. */
@@ -455,7 +455,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 					refreshPinOverlay(items);
 
-					WhereAmIMap.this.updateUIForAutoCenterChange(this.CENTERMODE_NONE);
+					WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 
 					new Handler().postDelayed(new Runnable(){
 						public void run() {
@@ -486,7 +486,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 							this.mOSMapView.setZoomLevel(15);
 							this.mOSMapView.setMapCenter(new GeoPoint((int)(lat * 1E6), (int)(lon * 1E6)));
 
-							this.mDoCenter = this.CENTERMODE_NONE;
+							this.mDoCenter = WhereAmIMap.CENTERMODE_NONE;
 							return true;
 						}catch(final NumberFormatException nfe){
 							final int qParamIndex = coordsString.indexOf("q=");
@@ -497,7 +497,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 									this.mEtSearch.setText(textualQuery);
 
-									this.mDoCenter = this.CENTERMODE_NONE;
+									this.mDoCenter = WhereAmIMap.CENTERMODE_NONE;
 									return true;
 								}
 							}else{
@@ -549,7 +549,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 					items.add(new OSMMapViewOverlayItem(this, gp));
 					refreshPinOverlay(items);
-					WhereAmIMap.this.updateUIForAutoCenterChange(this.CENTERMODE_NONE);
+					WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 					WhereAmIMap.super.mOSMapView.getController().animateTo(gp, AnimationType.MIDDLEPEAKSPEED);
 				}
 				break;
@@ -591,7 +591,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 			toggleCompass();
 		}
 
-		updateUIForAutoCenterChange(savedInstanceState.getInt(this.STATE_AUTOCENTER_ID, this.CENTERMODE_AUTO));
+		updateUIForAutoCenterChange(savedInstanceState.getInt(this.STATE_AUTOCENTER_ID, WhereAmIMap.CENTERMODE_AUTO));
 
 		if(savedInstanceState.getBoolean(this.STATE_ETSEARCHVISIBLE_ID)) {
 			handleSearchOpen();
@@ -1107,7 +1107,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 					this.mMyLocationOverlay.setAccuracy(pLocation.getHorizontalPositioningError());
 				}
 			}
-			if(this.mDoCenter == this.CENTERMODE_AUTO && System.currentTimeMillis() > this.mAutoCenterBlockedUntil){
+			if(this.mDoCenter == WhereAmIMap.CENTERMODE_AUTO && System.currentTimeMillis() > this.mAutoCenterBlockedUntil){
 				this.mOSMapView.setMapCenter(pLocation);
 			}
 		}
@@ -1510,7 +1510,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 					updateUIForNavPointsCrosshairMode(false);
 				}else{
 					/* Disable Auto-Follow. */
-					updateUIForAutoCenterChange(WhereAmIMap.this.CENTERMODE_NONE);
+					updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 
 					WhereAmIMap.this.mDestinationFlagOverlay.setVisible(false);
 					WhereAmIMap.this.mStartFlagOverlay.setVisible(false);
@@ -1715,7 +1715,7 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 		if(!aProviderInfo.hasBoundingBox() || aProviderInfo.BOUNDINGBOXE6.contains(super.mOSMapView.getMapCenter())){
 			super.mOSMapView.setProviderInfo(aProviderInfo);
 		}else{
-			updateUIForAutoCenterChange(this.CENTERMODE_NONE);
+			updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 
 			super.mOSMapView.setProviderInfo(aProviderInfo);
 			/* Finally center and zoom on the center of the BoundingBox. */
@@ -1731,13 +1731,13 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 
 		WhereAmIMap.this.mDoCenter = pNewMode;
 
-		if(WhereAmIMap.this.mDoCenter == this.CENTERMODE_AUTO){
+		if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_AUTO){
 			WhereAmIMap.this.mIbtnCenter.setImageResource(R.drawable.person_focused_small);
 			Toast.makeText(WhereAmIMap.this, R.string.toast_autofollow_enabled, Toast.LENGTH_SHORT).show();
-		}else if(WhereAmIMap.this.mDoCenter == this.CENTERMODE_ONCE){
+		}else if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_ONCE){
 			WhereAmIMap.this.mIbtnCenter.setImageResource(R.drawable.person_focused_once_small);
 			Toast.makeText(WhereAmIMap.this, R.string.toast_autofollow_once, Toast.LENGTH_SHORT).show();
-		}else if(WhereAmIMap.this.mDoCenter == this.CENTERMODE_NONE){
+		}else if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_NONE){
 			WhereAmIMap.this.mIbtnCenter.setImageResource(R.drawable.person_small);
 			Toast.makeText(WhereAmIMap.this, R.string.toast_autofollow_disabled, Toast.LENGTH_SHORT).show();
 		}
@@ -1815,8 +1815,8 @@ public class WhereAmIMap extends OpenStreetMapAndNavBaseActivity implements Pref
 								final BoundingBoxE6 bBox = BoundingBoxE6.fromGeoPoints(ret);
 
 								/* Disable Auto-Follow. */
-								if(WhereAmIMap.this.mDoCenter == WhereAmIMap.this.CENTERMODE_AUTO) {
-									updateUIForAutoCenterChange(WhereAmIMap.this.CENTERMODE_NONE);
+								if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_AUTO) {
+									updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 								}
 
 

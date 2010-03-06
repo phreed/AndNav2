@@ -79,19 +79,29 @@ public class AASParser extends DefaultHandler implements Constants {
 
 	private GeoPoint mTmpGeoPoint;
 
-	private boolean inAAS = false;
-	private boolean inRepsonseHeader = false;
-	private boolean inRepsonse = false;
-	private boolean inAccessibilityResponse = false;
-	private boolean inAccessibilitySummary = false;
-	private boolean inNumberOfLocations = false;
-	private boolean inBoundingBox = false;
-	private boolean inPos = false;
-	private boolean inAccessibilityGeometry = false;
-	private boolean inPolygon = false;
-	private boolean inExterior = false;
-	private boolean inLinearRing = false;
-	private boolean inInterior = false;
+	 @SuppressWarnings("unused")
+     private boolean inAAS = false;
+     @SuppressWarnings("unused")
+     private boolean inRepsonseHeader = false;
+     @SuppressWarnings("unused")
+     private boolean inRepsonse = false;
+     @SuppressWarnings("unused")
+     private boolean inAccessibilityResponse = false;
+     @SuppressWarnings("unused")
+     private boolean inAccessibilitySummary = false;
+     @SuppressWarnings("unused")
+     private boolean inNumberOfLocations = false;
+     private boolean inBoundingBox = false;
+     @SuppressWarnings("unused")
+     private boolean inPos = false;
+     private boolean inAccessibilityGeometry = false;
+     @SuppressWarnings("unused")
+     private boolean inPolygon = false;
+     private boolean inExterior = false;
+     @SuppressWarnings("unused")
+     private boolean inLinearRing = false;
+     @SuppressWarnings("unused")
+     private boolean inInterior = false;
 
 	// ===========================================================
 	// Getter & Setter

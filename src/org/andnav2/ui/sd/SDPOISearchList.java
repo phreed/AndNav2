@@ -516,7 +516,7 @@ public class SDPOISearchList extends AndNavGPSActivity {
 		// ===========================================================
 		// Parcelable
 		// ===========================================================
-
+	     @SuppressWarnings("unused")
 		public static final Parcelable.Creator<POIItem> CREATOR = new Parcelable.Creator<POIItem>() {
 			public POIItem createFromParcel(final Parcel in) {
 				return readFromParcel(in);
@@ -590,6 +590,7 @@ public class SDPOISearchList extends AndNavGPSActivity {
 			this.mContext = context;
 		}
 
+	     @SuppressWarnings("unused")
 		public void addItem(final POIItem it) {
 			this.mItems.add(it);
 			Collections.sort(this.mItems);

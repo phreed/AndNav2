@@ -80,7 +80,7 @@ public class SettingsSelectHome extends AndNavBaseActivity{
 			public void onClicked(final View me) {
 				/* Load SetHomeMap-MapActivity. */
 				final Intent setHomeViaMapIntent = new Intent(SettingsSelectHome.this, SetHomeMap.class);
-				SettingsSelectHome.this.startActivityForResult(setHomeViaMapIntent, SettingsSelectHome.this.SETHOME_VIA_MAP_REQUESTCODE);
+				SettingsSelectHome.this.startActivityForResult(setHomeViaMapIntent, SettingsSelectHome.SETHOME_VIA_MAP_REQUESTCODE);
 			}
 		};
 
@@ -94,7 +94,7 @@ public class SettingsSelectHome extends AndNavBaseActivity{
 				b.putInt(MODE_SD, MODE_SD_SETHOME);
 
 				sdMainchooseIntent.putExtras(b);
-				SettingsSelectHome.this.startActivityForResult(sdMainchooseIntent, SettingsSelectHome.this.SETHOME_VIA_SD_REQUESTCODE);
+				SettingsSelectHome.this.startActivityForResult(sdMainchooseIntent, SettingsSelectHome.SETHOME_VIA_SD_REQUESTCODE);
 			}
 		};
 	}

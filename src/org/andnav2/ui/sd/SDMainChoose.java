@@ -2,6 +2,7 @@
 package org.andnav2.ui.sd;
 
 import org.andnav2.R;
+
 import org.andnav2.db.DBManager;
 import org.andnav2.db.DataBaseException;
 import org.andnav2.osm.adt.GeoPoint;
@@ -230,7 +231,7 @@ public class SDMainChoose extends AndNavBaseActivity {
 			final boolean externalMediaMounted = android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED);
 
 			final View loadSavedButton = this.findViewById(R.id.ibtn_sd_mainchoose_load_saved);
-			/* Loading only for Destinatio-Search. */
+			/* Loading only for Destination-Search. */
 			loadSavedButton.setEnabled(externalMediaMounted && this.bundleCreatedWith.getInt(MODE_SD) == MODE_SD_DESTINATION);
 
 			/* Set OnClickListener for Contacts-Button. */
@@ -245,8 +246,9 @@ public class SDMainChoose extends AndNavBaseActivity {
 			};
 
 			final View loadTraceButton = this.findViewById(R.id.ibtn_sd_mainchoose_load_trace);
-			/* Loading only for Destinatio-Search. */
-			loadTraceButton.setEnabled(false && externalMediaMounted && this.bundleCreatedWith.getInt(MODE_SD) == MODE_SD_DESTINATION); // TODO Remove false.
+			/* Loading only for Destination-Search. */
+			// loadTraceButton.setEnabled(false && externalMediaMounted && this.bundleCreatedWith.getInt(MODE_SD) == MODE_SD_DESTINATION); // TODO Remove false.
+			loadTraceButton.setEnabled(externalMediaMounted && this.bundleCreatedWith.getInt(MODE_SD) == MODE_SD_DESTINATION); // TODO Remove false.
 
 			/* Set OnClickListener for Contacts-Button. */
 			new OnClickOnFocusChangedListenerAdapter(loadTraceButton) {

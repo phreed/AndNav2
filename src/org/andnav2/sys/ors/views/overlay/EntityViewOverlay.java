@@ -94,9 +94,11 @@ public class EntityViewOverlay extends OSMMapViewOverlay {
 		}
 	}
 
+
 	@Override
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
-		// Nothing
+	protected void onDrawFinished(final Canvas c, OSMMapView osmv) {
+		// TODO Auto-generated method stub
+		
 	}
 
 
