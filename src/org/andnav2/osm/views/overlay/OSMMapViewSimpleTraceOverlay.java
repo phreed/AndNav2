@@ -102,7 +102,7 @@ public class OSMMapViewSimpleTraceOverlay extends OSMMapViewOverlay implements C
 	}
 
 	@Override
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
+	protected void onDrawFinished(final Canvas c, final OSMMapView osmv) {
 		// Nothing
 	}
 

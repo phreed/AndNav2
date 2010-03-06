@@ -62,7 +62,7 @@ public class OSMMapViewOSBOverlay extends BaseOSMMapViewListItemizedOverlayWithF
 		}else{
 			/* Save a reference to the original marker. */
 			final Drawable tmp = super.mMarker;
-			/* Switch the marker that will be drawn with the 'closed'-marker. */
+			/* Swithc the marker that will be drawn with the 'closed'-marker. */
 			super.mMarker = this.mMarkerClosed;
 			/* Make superclass draw with that marker. */
 			final boolean itemWasDrawn = super.onDrawItem(c, index, curScreenCoords);

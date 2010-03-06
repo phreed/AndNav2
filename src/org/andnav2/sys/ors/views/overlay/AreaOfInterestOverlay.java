@@ -39,7 +39,7 @@ public class AreaOfInterestOverlay extends OSMMapViewOverlay{
 		this.mAOIs.add(pAOI);
 	}
 
-	public AreaOfInterestOverlay(final List<AreaOfInterest> pAOIs){
+	public AreaOfInterestOverlay(final ArrayList<AreaOfInterest> pAOIs){
 		Assert.assertNotNull(pAOIs);
 		this.mAOIs = pAOIs;
 	}
@@ -81,7 +81,7 @@ public class AreaOfInterestOverlay extends OSMMapViewOverlay{
 	}
 
 	@Override
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
+	protected void onDrawFinished(final Canvas c, final OSMMapView osmv) {
 		// Nothing
 	}
 

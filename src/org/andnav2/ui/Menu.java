@@ -16,6 +16,8 @@ import org.andnav2.ui.sd.SDPOISearchList;
 import org.andnav2.ui.settings.SettingsMenu;
 import org.andnav2.ui.settings.SettingsSelectHome;
 import org.andnav2.ui.util.Util;
+import org.andnav2.util.BetaExpirationBlocker;
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -104,12 +106,6 @@ public class Menu extends AndNavGPSActivity {
 	// Methods
 	// ===========================================================
 
-	/**
-	 * Associate the appropriate listeners to views.
-	 * Two styles:
-	 *  - get the view and associate an anonymous listener.
-	 *  - create an anonymous listener passing the view to which it is associated as an argument.
-	 */
 	private void applyMenuButtonListeners() {
 		findViewById(R.id.btn_bug).setOnClickListener(new OnClickListener() {
 			public void onClick(final View v) {
@@ -129,13 +125,15 @@ public class Menu extends AndNavGPSActivity {
 			}
 		});
 
-		/* Set OnClickListener for Where-am-I-Button (Map). */
+		/* Set OnClickListener for Where-am-I-Button. */
 		new OnClickOnFocusChangedListenerAdapter(this.findViewById(R.id.ibtn_whereami)){
 			@Override
 			public void onBoth(final View v, final boolean justGotFocus) {
-				if(! justGotFocus) return;
-				if(! Menu.super.mMenuVoiceEnabled) return;
-				MediaPlayer.create(Menu.this, R.raw.where_am_i).start();
+				if(justGotFocus){
+					if(Menu.super.mMenuVoiceEnabled) {
+						MediaPlayer.create(Menu.this, R.raw.where_am_i).start();
+					}
+				}
 			}
 
 			@Override
@@ -148,9 +146,11 @@ public class Menu extends AndNavGPSActivity {
 		new OnClickOnFocusChangedListenerAdapter(this.findViewById(R.id.ibtn_searchdestination)){
 			@Override
 			public void onBoth(final View v, final boolean justGotFocus) {
-				if(! justGotFocus) return;
-				if(! Menu.super.mMenuVoiceEnabled) return;
-				MediaPlayer.create(Menu.this, R.raw.search_destination).start();
+				if(justGotFocus){
+					if(Menu.super.mMenuVoiceEnabled) {
+						MediaPlayer.create(Menu.this, R.raw.search_destination).start();
+					}
+				}
 			}
 
 			@Override
@@ -163,9 +163,11 @@ public class Menu extends AndNavGPSActivity {
 		new OnClickOnFocusChangedListenerAdapter(this.findViewById(R.id.ibtn_routehome)){
 			@Override
 			public void onBoth(final View v, final boolean justGotFocus) {
-				if(! justGotFocus) return;
-				if(! Menu.super.mMenuVoiceEnabled) return;
-				MediaPlayer.create(Menu.this, R.raw.home_sweet_home).start();
+				if(justGotFocus){
+					if(Menu.super.mMenuVoiceEnabled) {
+						MediaPlayer.create(Menu.this, R.raw.home_sweet_home).start();
+					}
+				}
 			}
 
 			@Override
@@ -178,9 +180,11 @@ public class Menu extends AndNavGPSActivity {
 		new OnClickOnFocusChangedListenerAdapter(this.findViewById(R.id.ibtn_settings)){
 			@Override
 			public void onBoth(final View v, final boolean justGotFocus) {
-				if(! justGotFocus) return;
-				if(! Menu.super.mMenuVoiceEnabled) return;
-				MediaPlayer.create(Menu.this, R.raw.settings).start();
+				if(justGotFocus){
+					if(Menu.super.mMenuVoiceEnabled) {
+						MediaPlayer.create(Menu.this, R.raw.settings).start();
+					}
+				}
 			}
 
 			@Override
@@ -193,9 +197,11 @@ public class Menu extends AndNavGPSActivity {
 		new OnClickOnFocusChangedListenerAdapter(this.findViewById(R.id.ibtn_hospital)){
 			@Override
 			public void onBoth(final View v, final boolean justGotFocus) {
-				if(! justGotFocus) return;
-				if(! Menu.super.mMenuVoiceEnabled) return;
-				MediaPlayer.create(Menu.this, R.raw.first_aid).start();
+				if(justGotFocus){
+					if(Menu.super.mMenuVoiceEnabled) {
+						MediaPlayer.create(Menu.this, R.raw.first_aid).start();
+					}
+				}
 			}
 
 			@Override
@@ -208,9 +214,11 @@ public class Menu extends AndNavGPSActivity {
 		new OnClickOnFocusChangedListenerAdapter(this.findViewById(R.id.ibtn_quit)){
 			@Override
 			public void onBoth(final View v, final boolean justGotFocus) {
-				if(! justGotFocus) return;
-				if(! Menu.super.mMenuVoiceEnabled) return;
-				MediaPlayer.create(Menu.this, R.raw.quit).start();
+				if(justGotFocus){
+					if(Menu.super.mMenuVoiceEnabled) {
+						MediaPlayer.create(Menu.this, R.raw.quit).start();
+					}
+				}
 			}
 
 			@Override
@@ -414,9 +422,6 @@ public class Menu extends AndNavGPSActivity {
 		}
 	}
 
-	/**
-	 * Start the main map activity.
-	 */
 	private void startWhereAmIActivity() {
 		/* Load WhereAmI-MapActivity. */
 		final Intent whereAmIIntent = new Intent(Menu.this, WhereAmIMap.class);

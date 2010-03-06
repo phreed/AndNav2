@@ -38,13 +38,13 @@
 	<string name="wherami_dialog_locality">Locality:</string>
 	<string name="wherami_dialog_thoroughfare">Thoroughfare:</string>
 	<string name="wherami_dialog_distance">Distance:</string>
-	<string name="wherami_dialog_streetname">Street Name:</string>
-	<string name="wherami_dialog_streetnumber">Street Number:</string>
+	<string name="wherami_dialog_streetname">Streetname:</string>
+	<string name="wherami_dialog_streetnumber">Streetnumber:</string>
 	<string name="wherami_dialog_feature">Feature:</string>
-	<string name="wherami_dialog_zipcode">Zip Code:</string>
-	<string name="wherami_dialog_cityname">City Name:</string>
+	<string name="wherami_dialog_zipcode">ZipCode:</string>
+	<string name="wherami_dialog_cityname">CityName:</string>
 	<string name="wherami_dialog_phone">Phone:</string>
-	<string name="wherami_dialog_adminarea">Admin Area:</string>
+	<string name="wherami_dialog_adminarea">AdminArea:</string>
 	<string name="wherami_dialog_subadminarea">Sub.AdminArea:</string>
 	<string name="wherami_dialog_country">Country:</string>
 	

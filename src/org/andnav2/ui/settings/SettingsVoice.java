@@ -27,7 +27,6 @@ public class SettingsVoice extends AndNavBaseActivity {
 	// Final Fields
 	// ===========================================================
 
-	@SuppressWarnings("unused")
 	private static final String TEST_MESSAGE = "Text to speech is working properly.";
 
 	protected static final int ADVANCED_REQUESTCODE = 0x1337;
@@ -78,7 +77,6 @@ public class SettingsVoice extends AndNavBaseActivity {
 			case DIALOG_SHOWTTS:
 				return CommonDialogFactory.createTTSConfigOrTestDialog(SettingsVoice.this, new CommonCallbackAdapter<Integer>(){
 // FIXME 					private TextToSpeech mTTS;
-					@SuppressWarnings("unused")
 					private boolean mTTSAvailable = false;
 
 					@Override

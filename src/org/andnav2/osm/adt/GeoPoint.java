@@ -132,13 +132,13 @@ public class GeoPoint implements IGeoPoint, Parcelable, MathConstants, GeoConsta
 
 	public String toMultiLineUserString(final Context ctx){
 		return new StringBuilder()
-			.append(ctx.getString(R.string.latitude))
-			.append(": ")
-			.append(this.getLatitudeAsDouble())
-			.append('\n')
-			.append(ctx.getString(R.string.longitude))
-			.append(": ")
-			.append(this.getLongitudeAsDouble()).toString();
+		.append(ctx.getString(R.string.latitude))
+		.append(": ")
+		.append(this.getLatitudeAsDouble())
+		.append('\n')
+		.append(ctx.getString(R.string.longitude))
+		.append(": ")
+		.append(this.getLongitudeAsDouble()).toString();
 	}
 
 	/**

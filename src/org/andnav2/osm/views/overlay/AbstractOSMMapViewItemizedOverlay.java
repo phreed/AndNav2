@@ -3,6 +3,7 @@ package org.andnav2.osm.views.overlay;
 
 import java.util.List;
 
+import org.andnav2.R;
 import org.andnav2.osm.views.OSMMapView;
 import org.andnav2.osm.views.OSMMapView.OSMMapViewProjection;
 
@@ -15,8 +16,7 @@ import android.view.MotionEvent;
 
 /**
  * Draws a list of {@link OSMMapViewOverlayItem} as markers to a map.
- * The item with the lowest index is drawn as last and therefore the 'topmost' marker. 
- * It also gets checked for onTap first.
+ * The item with the lowest index is drawn as last and therefore the 'topmost' marker. It also gets checked for onTap first.
  * This class is generic, because you then you get your custom item-class passed back in onTap().
  * @author Nicolas Gramlich
  *
@@ -26,6 +26,8 @@ public abstract class AbstractOSMMapViewItemizedOverlay<T extends OSMMapViewOver
 	// ===========================================================
 	// Constants
 	// ===========================================================
+
+	private static final Point DEFAULTMARKER_HOTSPOT = new Point(13, 47);
 
 	// ===========================================================
 	// Fields
@@ -42,13 +44,16 @@ public abstract class AbstractOSMMapViewItemizedOverlay<T extends OSMMapViewOver
 	// Constructors
 	// ===========================================================
 
+	public AbstractOSMMapViewItemizedOverlay(final Context ctx, final OnItemTapListener<T> aOnItemTapListener) {
+		this(ctx, null, null, aOnItemTapListener);
+	}
+
 	public AbstractOSMMapViewItemizedOverlay(final Context ctx, final Drawable pMarker, final Point pMarkerHotspot, final OnItemTapListener<T> aOnItemTapListener) {
 		assert(ctx != null);
-		assert(pMarker != null);
-		assert(pMarkerHotspot != null);
 
-		this.mMarker = pMarker;
-		this.mMarkerHotSpot = pMarkerHotspot;
+		this.mMarker = (pMarker != null) ? pMarker : ctx.getResources().getDrawable(R.drawable.marker_default);
+
+		this.mMarkerHotSpot = (pMarkerHotspot != null) ? pMarkerHotspot : DEFAULTMARKER_HOTSPOT;
 
 		this.mOnItemTapListener = aOnItemTapListener;
 
@@ -85,32 +90,38 @@ public abstract class AbstractOSMMapViewItemizedOverlay<T extends OSMMapViewOver
 	}
 
 	@Override
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
+	protected void onDrawFinished(final Canvas c, final OSMMapView osmv) {
 		return;
 	}
 
 	@Override
 	public void onDraw(final Canvas c, final OSMMapView mapView) {
 		final List<T> overlayItems = this.getOverlayItems();
-		if(overlayItems == null) return;
-		if(overlayItems.size() < 1) return;
-		
-		final OSMMapViewProjection pj = mapView.getProjection();
+		if(overlayItems != null && overlayItems.size() > 0){
+			final OSMMapViewProjection pj = mapView.getProjection();
 
-		/* Point to be reused. */
-		final Point markerHotSpot = new Point();
+			/* Point to be reused. */
+			final Point markerHotSpot = new Point();
 
-		/* Drag to local field. */
-		final int drawnItemsLimit = this.mDrawnItemsLimit;
-		int itemsDrawn = 0;
+			/* Drag to local field. */
+			final int drawnItemsLimit = this.mDrawnItemsLimit;
+			int itemsDrawn = 0;
 
-		/* Draw in backward cycle, so the items with the least index are on the front. */
-		for(int i = overlayItems.size() - 1; i >= 0; i--){
-			final T item = overlayItems.get(i);
-			pj.toPixels(item, markerHotSpot);
+			/* Draw in backward cycle, so the items with the least index are on the front. */
+			for(int i = overlayItems.size() - 1; i >= 0; i--){
+				final T item = overlayItems.get(i);
+				pj.toPixels(item, markerHotSpot);
 
-			if(onDrawItem(c, i, markerHotSpot) ) itemsDrawn++;
-			if(itemsDrawn >= drawnItemsLimit) break;
+				final boolean itemWasDrawn = onDrawItem(c, i, markerHotSpot);
+
+				if(itemWasDrawn) {
+					itemsDrawn++;
+				}
+
+				if(itemsDrawn >= drawnItemsLimit) {
+					break;
+				}
+			}
 		}
 	}
 
@@ -118,31 +129,33 @@ public abstract class AbstractOSMMapViewItemizedOverlay<T extends OSMMapViewOver
 	 * 
 	 * @param c
 	 * @param index
-	 * @param pMarkerPinSpot the hot spot of the item.  Where the marker should be pointing/located.
-	 * @return <code>true</code> if the item was actually drawn. <code>false</code> it was not 
-	 *         drawn because it was outside of the visible area.
+	 * @param pMarkerHotSpot
+	 * @return <code>true</code> if the item was actually drawn. <code>false</code> it was not drawn because it was out of the visible area.
 	 */
-	protected boolean onDrawItem(final Canvas c, final int index, final Point pMarkerPinSpot) {
-		if(this.mMarker == null) return false;
-	
-		final int left = pMarkerPinSpot.x - this.mMarkerHotSpot.x;
-		final int right = left + this.mMarkerWidth;
-		final int top = pMarkerPinSpot.y - this.mMarkerHotSpot.y;
-		final int bottom = top + this.mMarkerHeight;
+	protected boolean onDrawItem(final Canvas c, final int index, final Point pMarkerHotSpot) {
+		if(this.mMarker != null){
+			final int left = pMarkerHotSpot.x - this.mMarkerHotSpot.x;
+			final int right = left + this.mMarkerWidth;
+			final int top = pMarkerHotSpot.y - this.mMarkerHotSpot.y;
+			final int bottom = top + this.mMarkerHeight;
 
-		if(right < 0) return false;
-		if(bottom < 0) return false;
-		
-		final int height = c.getHeight() * 2;
-		final int width = c.getWidth() * 2;
-		
-		if(left > width) return false;
-		if(top > height) return false;
-			
-		/* Draw item. */
-		this.mMarker.setBounds(left, top, right, bottom);
-		this.mMarker.draw(c);
-		return true; /* Item was drawn. */
+			final int height = c.getHeight() * 2;
+			final int width = c.getWidth() * 2;
+			if(right < 0
+					|| bottom < 0
+					|| left > width
+					|| top > height){
+				/* Item was NOT drawn. */
+				return false;
+			}else{
+				/* Draw item. */
+				this.mMarker.setBounds(left, top, right, bottom);
+				this.mMarker.draw(c);
+				return true; /* Item was drawn. */
+			}
+		}else{
+			return false;
+		}
 	}
 
 	@Override
@@ -185,10 +198,12 @@ public abstract class AbstractOSMMapViewItemizedOverlay<T extends OSMMapViewOver
 	// ===========================================================
 
 	protected boolean onTap(final int pIndex) {
-		if(this.mOnItemTapListener == null) return false;
 		final List<T> overlayItems = this.getOverlayItems();
-		if(overlayItems == null) return false;
-		return this.mOnItemTapListener.onItemTap(pIndex, overlayItems.get(pIndex));
+		if(this.mOnItemTapListener != null && overlayItems != null) {
+			return this.mOnItemTapListener.onItemTap(pIndex, overlayItems.get(pIndex));
+		} else {
+			return false;
+		}
 	}
 
 	// ===========================================================

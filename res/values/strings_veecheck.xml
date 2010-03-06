@@ -3,7 +3,7 @@
 	<string name="veecheck_notify_ticker">AndNav2 Update available</string> 
 	<string name="veecheck_notify_title">AndNav2 Update available</string> 
 	<string name="veecheck_notify_message">Download the latest version...</string> 
-	<string name="veecheck_pref_category">Sample Settings</string> 
+	<string name="veecheck_pref_category">Veecheck Sample Settings</string> 
 	<string name="veecheck_pref_enabled_title">Enabled</string> 
 	<string name="veecheck_pref_enabled_summary">Whether checking is enabled or not.</string> 
 	<string name="veecheck_pref_check_uri_title">Check URI</string> 

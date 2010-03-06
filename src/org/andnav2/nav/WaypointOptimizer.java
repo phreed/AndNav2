@@ -4,6 +4,7 @@ package org.andnav2.nav;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.andnav2.nav.util.Util;
 import org.andnav2.osm.adt.GeoPoint;
 
 

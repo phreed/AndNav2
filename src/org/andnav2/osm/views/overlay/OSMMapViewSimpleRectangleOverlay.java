@@ -86,7 +86,7 @@ public class OSMMapViewSimpleRectangleOverlay extends OSMMapViewOverlay {
 	}
 
 	@Override
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
+	protected void onDrawFinished(final Canvas c, final OSMMapView osmv) {
 		/* Nothing. */
 	}
 

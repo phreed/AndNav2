@@ -11,9 +11,7 @@ import android.view.MotionEvent;
 
 
 /**
- * Base class representing an overlay which may be displayed on top of a {@link OSMMapView}. 
- * To add an overlay, subclass this class, create an instance, and 
- * add it to the list obtained from getOverlays() of {@link OSMMapView}.
+ * Base class representing an overlay which may be displayed on top of a {@link OSMMapView}. To add an overlay, subclass this class, create an instance, and add it to the list obtained from getOverlays() of {@link OSMMapView}.
  * @author Nicolas Gramlich
  */
 public abstract class OSMMapViewOverlay implements OSMConstants {
@@ -48,15 +46,14 @@ public abstract class OSMMapViewOverlay implements OSMConstants {
 	// ===========================================================
 
 	/**
-	 * Managed Draw calls gives Overlays the possibility to first draw manually and after that do a final draw. 
-	 * This is very useful, the last item/marker to be drawn needs to be <b>topmost</b>.
+	 * Managed Draw calls gives Overlays the possibility to first draw manually and after that do a final draw. This is very useful, i sth. to be drawn needs to be <b>topmost</b>.
 	 */
 	public void onManagedDraw(final Canvas c, final OSMMapView osmv){
 		try{
-			if(! this.mVisible) return;
-			onDraw(c, osmv);
-			onDrawFocused(c, osmv);
-			
+			if(this.mVisible){
+				onDraw(c, osmv);
+				onDrawFinished(c, osmv);
+			}
 		}catch(final Throwable t){
 			Log.e(DEBUGTAG, "Error in onManagedDraw();", t);
 		}
@@ -64,7 +61,7 @@ public abstract class OSMMapViewOverlay implements OSMConstants {
 
 	protected abstract void onDraw(final Canvas c, final OSMMapView osmv);
 
-	protected abstract void onDrawFocused(final Canvas c, final OSMMapView osmv);
+	protected abstract void onDrawFinished(final Canvas c, final OSMMapView osmv);
 
 	public abstract void release();
 

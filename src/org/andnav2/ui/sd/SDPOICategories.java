@@ -11,7 +11,6 @@ import org.andnav2.sys.ors.adt.ds.POIGroup;
 import org.andnav2.sys.ors.adt.ds.POIType;
 import org.andnav2.ui.common.CommonDialogFactory;
 import org.andnav2.ui.common.activities.BasePOICategorySelectionActivity;
-import org.andnav2.util.settings.Version;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -70,10 +69,11 @@ public class SDPOICategories extends BasePOICategorySelectionActivity {
 
 				/* LITEVERSION */
 				final POIType p = POIType.fromRawName(poiTypeRawName);
-				if(Version.is_lite() && !p.isInGroup(POIGroup.MOSTUSED)){
+				if(LITEVERSION && !p.isInGroup(POIGroup.MOSTUSED)){
 					showDialog(DIALOG_NOTINLITEVERSION);
 					return true;
 				}
+
 
 				final UnitSystem us = Preferences.getUnitSystem(SDPOICategories.this);
 

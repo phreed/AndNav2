@@ -43,7 +43,6 @@ public class OSMMapViewDirectedLocationOverlay extends OSMMapViewOverlay {
 
 	private final Matrix directionRotater = new Matrix();
 
-	@SuppressWarnings("unused")
 	private final float DIRECTION_ARROW_HOTSPOT_X;
 	private final float DIRECTION_ARROW_HOTSPOT_Y;
 
@@ -114,7 +113,7 @@ public class OSMMapViewDirectedLocationOverlay extends OSMMapViewOverlay {
 	}
 
 	@Override
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
+	protected void onDrawFinished(final Canvas c, final OSMMapView osmv) {
 		return;
 	}
 

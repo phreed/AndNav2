@@ -14,6 +14,7 @@ import android.graphics.Point;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 
+
 public abstract class AbstractOSMMapViewItemizedOverlayWithFocus<T extends OSMMapViewOverlayItem> extends AbstractOSMMapViewItemizedOverlay<T> {
 	// ===========================================================
 	// Constants
@@ -55,19 +56,24 @@ public abstract class AbstractOSMMapViewItemizedOverlayWithFocus<T extends OSMMa
 	// Constructors
 	// ===========================================================
 
+	public AbstractOSMMapViewItemizedOverlayWithFocus(final Context ctx, final OnItemTapListener<T> aOnItemTapListener) {
+		this(ctx, null, null, null, null, NOT_SET, aOnItemTapListener);
+	}
+
 	public AbstractOSMMapViewItemizedOverlayWithFocus(final Context ctx, final Drawable pMarker, final Point pMarkerHotspot, final Drawable pMarkerFocusedBase, final Point pMarkerFocusedHotSpot, final int pFocusedBackgroundColor, final OnItemTapListener<T> aOnItemTapListener) {
 		super(ctx, pMarker, pMarkerHotspot, aOnItemTapListener);
 
 		this.UNKNOWN = ctx.getString(R.string.unknown);
 
-		this.mMarkerFocusedBase = (pMarkerFocusedBase != null) ? pMarkerFocusedBase 
-		        : ctx.getResources().getDrawable(R.drawable.marker_default_focused_base);
+		this.mMarkerFocusedBase = (pMarkerFocusedBase != null) ? pMarkerFocusedBase : ctx.getResources().getDrawable(R.drawable.marker_default_focused_base);
 
-		this.mMarkerFocusedHotSpot = (pMarkerFocusedHotSpot != null) ? pMarkerFocusedHotSpot 
-				: DEFAULTMARKER_FOCUSED_HOTSPOT;
+		this.mMarkerFocusedHotSpot = (pMarkerFocusedHotSpot != null) ? pMarkerFocusedHotSpot : DEFAULTMARKER_FOCUSED_HOTSPOT;
 
-		this.mMarkerFocusedBackgroundColor = (pFocusedBackgroundColor != NOT_SET) 
-			? pFocusedBackgroundColor : DEFAULTMARKER_BACKGROUNDCOLOR;
+		if(pFocusedBackgroundColor != NOT_SET) {
+			this.mMarkerFocusedBackgroundColor = pFocusedBackgroundColor;
+		} else {
+			this.mMarkerFocusedBackgroundColor = DEFAULTMARKER_BACKGROUNDCOLOR;
+		}
 
 		this.mMarkerBackgroundPaint = new Paint(); // Color is set in onDraw(...)
 
@@ -116,120 +122,128 @@ public abstract class AbstractOSMMapViewItemizedOverlayWithFocus<T extends OSMMa
 		if(this.mFocusItemsOnTap) {
 			this.mFocusedItem = getOverlayItems().get(pIndex);
 		}
+
 		return super.onTap(pIndex);
 	}
 
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
+	@Override
+	protected void onDrawFinished(final Canvas c, final OSMMapView osmv) {
 		final List<T> overlayItems = this.getOverlayItems();
-		if(this.mFocusedItem == null) return;
-		if(overlayItems == null) return;
-		final Point screenCoords = new Point();
-
-		osmv.getProjection().toPixels(this.mFocusedItem, screenCoords);
-
-		if(this.mDrawBaseIntemUnderFocusedItem) {
-			super.onDrawItem(c, 0, screenCoords);
-		}
-
-		/* Calculate and set the bounds of the marker. */
-		final int left = screenCoords.x - this.mMarkerFocusedHotSpot.x;
-		final int right = left + this.mMarkerFocusedWidth;
-		final int top = screenCoords.y - this.mMarkerFocusedHotSpot.y;
-		final int bottom = top + this.mMarkerFocusedHeight;
-		this.mMarkerFocusedBase.setBounds(left, top, right, bottom);
-
-		/* Strings of the OverlayItem, we need. */
-		final String itemTitle = (this.mFocusedItem.mTitle == null) ? this.UNKNOWN : this.mFocusedItem.mTitle;
-		final String itemDescription = (this.mFocusedItem.mDescription == null) ? this.UNKNOWN : this.mFocusedItem.mDescription;
-
-		/* Store the width needed for each char in the description to a float array. This is pretty efficient. */
-		final float[] widths = new float[itemDescription.length()];
-		this.mDescriptionPaint.getTextWidths(itemDescription, widths);
-
-		final StringBuilder sb = new StringBuilder();
-		int maxWidth = 0;
-		int curLineWidth = 0;
-		int lastStop = 0;
-		int i;
-		int lastwhitespace = 0;
-		/* Loop through the charwidth array and harshly insert a linebreak,
-		 * when the width gets bigger than DESCRIPTION_MAXWIDTH. */
-		for (i = 0; i < widths.length; i++) {
-			final char curChar = itemDescription.charAt(i);
-			if(!Character.isLetter(curChar)) {
-				lastwhitespace = i;
+		if(this.mFocusedItem != null && overlayItems != null){
+			if(this.mFocusedItem == null) {
+				return;
 			}
 
-			final float charwidth = widths[i];
 
-			if(curLineWidth + charwidth > DESCRIPTION_MAXWIDTH || curChar == '\n'){
-				if(lastStop == lastwhitespace) {
-					i--;
-				} else {
-					i = lastwhitespace;
-				}
+			final Point screenCoords = new Point();
 
-				sb.append(itemDescription.subSequence(lastStop, i));
-				if(curChar != '\n') {
-					sb.append('\n');
-				}
+			osmv.getProjection().toPixels(this.mFocusedItem, screenCoords);
 
-				lastStop = i;
-				maxWidth = Math.max(maxWidth, curLineWidth);
-				curLineWidth = 0;
+			if(this.mDrawBaseIntemUnderFocusedItem) {
+				super.onDrawItem(c, 0, screenCoords);
 			}
 
-			curLineWidth += charwidth;
-		}
-		/* Add the last line to the rest to the buffer. */
-		if(i != lastStop){
-			final String rest = itemDescription.substring(lastStop, i);
 
-			maxWidth = Math.max(maxWidth, (int)this.mDescriptionPaint.measureText(rest));
+			/* Calculate and set the bounds of the marker. */
+			final int left = screenCoords.x - this.mMarkerFocusedHotSpot.x;
+			final int right = left + this.mMarkerFocusedWidth;
+			final int top = screenCoords.y - this.mMarkerFocusedHotSpot.y;
+			final int bottom = top + this.mMarkerFocusedHeight;
+			this.mMarkerFocusedBase.setBounds(left, top, right, bottom);
 
-			sb.append(rest);
-		}
-		final String[] lines = sb.toString().split("\n");
+			/* Strings of the OverlayItem, we need. */
+			final String itemTitle = (this.mFocusedItem.mTitle == null) ? this.UNKNOWN : this.mFocusedItem.mTitle;
+			final String itemDescription = (this.mFocusedItem.mDescription == null) ? this.UNKNOWN : this.mFocusedItem.mDescription;
 
-		/* The title also needs to be taken into consideration for the width calculation. */
-		final int titleWidth = (int)this.mDescriptionPaint.measureText(itemTitle) + this.mPaddingTitleLeft + this.mPaddingTitleRight;
+			/* Store the width needed for each char in the description to a float array. This is pretty efficient. */
+			final float[] widths = new float[itemDescription.length()];
+			this.mDescriptionPaint.getTextWidths(itemDescription, widths);
 
-		maxWidth = Math.max(maxWidth, titleWidth);
-		final int descWidth = Math.min(maxWidth, DESCRIPTION_MAXWIDTH);
+			final StringBuilder sb = new StringBuilder();
+			int maxWidth = 0;
+			int curLineWidth = 0;
+			int lastStop = 0;
+			int i;
+			int lastwhitespace = 0;
+			/* Loop through the charwidth array and harshly insert a linebreak,
+			 * when the width gets bigger than DESCRIPTION_MAXWIDTH. */
+			for (i = 0; i < widths.length; i++) {
+				final char curChar = itemDescription.charAt(i);
+				if(!Character.isLetter(curChar)) {
+					lastwhitespace = i;
+				}
 
-		/* Calculate the bounds of the Description box that needs to be drawn. */
-		final int descBoxLeft = left - descWidth / 2 - DESCRIPTION_BOX_PADDING + this.mMarkerFocusedWidth / 2;
-		final int descBoxRight = descBoxLeft + descWidth + 2 * DESCRIPTION_BOX_PADDING;
-		final int descBoxBottom = top;
-		final int descBoxTop = descBoxBottom
+				final float charwidth = widths[i];
+
+				if(curLineWidth + charwidth > DESCRIPTION_MAXWIDTH || curChar == '\n'){
+					if(lastStop == lastwhitespace) {
+						i--;
+					} else {
+						i = lastwhitespace;
+					}
+
+					sb.append(itemDescription.subSequence(lastStop, i));
+					if(curChar != '\n') {
+						sb.append('\n');
+					}
+
+					lastStop = i;
+					maxWidth = Math.max(maxWidth, curLineWidth);
+					curLineWidth = 0;
+				}
+
+				curLineWidth += charwidth;
+			}
+			/* Add the last line to the rest to the buffer. */
+			if(i != lastStop){
+				final String rest = itemDescription.substring(lastStop, i);
+
+				maxWidth = Math.max(maxWidth, (int)this.mDescriptionPaint.measureText(rest));
+
+				sb.append(rest);
+			}
+			final String[] lines = sb.toString().split("\n");
+
+			/* The title also needs to be taken into consideration for the width calculation. */
+			final int titleWidth = (int)this.mDescriptionPaint.measureText(itemTitle) + this.mPaddingTitleLeft + this.mPaddingTitleRight;
+
+			maxWidth = Math.max(maxWidth, titleWidth);
+			final int descWidth = Math.min(maxWidth, DESCRIPTION_MAXWIDTH);
+
+			/* Calculate the bounds of the Description box that needs to be drawn. */
+			final int descBoxLeft = left - descWidth / 2 - DESCRIPTION_BOX_PADDING + this.mMarkerFocusedWidth / 2;
+			final int descBoxRight = descBoxLeft + descWidth + 2 * DESCRIPTION_BOX_PADDING;
+			final int descBoxBottom = top;
+			final int descBoxTop = descBoxBottom
 			- DESCRIPTION_TITLE_EXTRA_LINE_HEIGHT
 			- (lines.length + 1) * DESCRIPTION_LINE_HEIGHT /* +1 because of the title. */
 			- 2 * DESCRIPTION_BOX_PADDING;
 
-		/* Twice draw a RoundRect, once in black with 1px as a small border. */
-		this.mMarkerBackgroundPaint.setColor(Color.BLACK);
-		c.drawRoundRect(new RectF(descBoxLeft - 1, descBoxTop - 1, descBoxRight + 1, descBoxBottom + 1),
-				DESCRIPTION_BOX_CORNERWIDTH, DESCRIPTION_BOX_CORNERWIDTH,
-				this.mDescriptionPaint);
-		this.mMarkerBackgroundPaint.setColor(this.mMarkerFocusedBackgroundColor);
-		c.drawRoundRect(new RectF(descBoxLeft, descBoxTop, descBoxRight, descBoxBottom),
-				DESCRIPTION_BOX_CORNERWIDTH, DESCRIPTION_BOX_CORNERWIDTH,
-				this.mMarkerBackgroundPaint);
+			/* Twice draw a RoundRect, once in black with 1px as a small border. */
+			this.mMarkerBackgroundPaint.setColor(Color.BLACK);
+			c.drawRoundRect(new RectF(descBoxLeft - 1, descBoxTop - 1, descBoxRight + 1, descBoxBottom + 1),
+					DESCRIPTION_BOX_CORNERWIDTH, DESCRIPTION_BOX_CORNERWIDTH,
+					this.mDescriptionPaint);
+			this.mMarkerBackgroundPaint.setColor(this.mMarkerFocusedBackgroundColor);
+			c.drawRoundRect(new RectF(descBoxLeft, descBoxTop, descBoxRight, descBoxBottom),
+					DESCRIPTION_BOX_CORNERWIDTH, DESCRIPTION_BOX_CORNERWIDTH,
+					this.mMarkerBackgroundPaint);
 
-		final int descLeft = descBoxLeft + DESCRIPTION_BOX_PADDING;
-		int descTextLineBottom = descBoxBottom - DESCRIPTION_BOX_PADDING;
+			final int descLeft = descBoxLeft + DESCRIPTION_BOX_PADDING;
+			int descTextLineBottom = descBoxBottom - DESCRIPTION_BOX_PADDING;
 
-		/* Draw all the lines of the description. */
-		for(int j = lines.length - 1; j >= 0; j--){
-			c.drawText(lines[j].trim(), descLeft, descTextLineBottom, this.mDescriptionPaint);
-			descTextLineBottom -= DESCRIPTION_LINE_HEIGHT;
+			/* Draw all the lines of the description. */
+			for(int j = lines.length - 1; j >= 0; j--){
+				c.drawText(lines[j].trim(), descLeft, descTextLineBottom, this.mDescriptionPaint);
+				descTextLineBottom -= DESCRIPTION_LINE_HEIGHT;
+			}
+			/* Draw the title. */
+			c.drawText(itemTitle, descLeft + this.mPaddingTitleLeft, descTextLineBottom - DESCRIPTION_TITLE_EXTRA_LINE_HEIGHT, this.mTitlePaint);
+			c.drawLine(descBoxLeft, descTextLineBottom, descBoxRight, descTextLineBottom, this.mDescriptionPaint);
+
+			/* Finally draw the marker base. This is done in the end to make it look better. */
+			this.mMarkerFocusedBase.draw(c);
 		}
-		/* Draw the title. */
-		c.drawText(itemTitle, descLeft + this.mPaddingTitleLeft, descTextLineBottom - DESCRIPTION_TITLE_EXTRA_LINE_HEIGHT, this.mTitlePaint);
-		c.drawLine(descBoxLeft, descTextLineBottom, descBoxRight, descTextLineBottom, this.mDescriptionPaint);
-
-		/* Finally draw the marker base. This is done in the end to make it look better. */
-		this.mMarkerFocusedBase.draw(c);
 	}
 
 	// ===========================================================

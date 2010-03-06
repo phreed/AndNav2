@@ -60,7 +60,6 @@ public class MapDrivingDirectionsOverlay extends OSMMapViewOverlay implements Co
 	private final Bitmap MARKER_END;
 	private final Bitmap DIRECTION_ARROW;
 
-	@SuppressWarnings("unused")
 	private final float DIRECTION_ARROW_HOTSPOT_X;
 	private final float DIRECTION_ARROW_HOTSPOT_Y;
 	private final float DIRECTION_ARROW_CENTER_X;
@@ -227,7 +226,7 @@ public class MapDrivingDirectionsOverlay extends OSMMapViewOverlay implements Co
 	}
 
 	@Override
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
+	protected void onDrawFinished(final Canvas c, final OSMMapView osmv) {
 		// Nothing
 	}
 

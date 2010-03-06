@@ -87,7 +87,7 @@ public class ColorSchemeOverlay extends OSMMapViewOverlay implements PreferenceC
 	}
 
 	@Override
-	protected void onDrawFocused(final Canvas c, final OSMMapView osmv) {
+	protected void onDrawFinished(final Canvas c, final OSMMapView osmv) {
 		return;
 	}
 
