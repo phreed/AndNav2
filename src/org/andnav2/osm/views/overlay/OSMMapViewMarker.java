@@ -19,10 +19,11 @@ import android.graphics.Point;
 public class OSMMapViewMarker {
 
 	final protected Drawable mMarker;
-	final protected Point mHotspot;
+	final protected Point mHotSpot;
 	final protected int mWidth, mHeight;
 	
 	protected Point mLocation;
+	
 	/**
 	 * 
 	 */
@@ -31,7 +32,7 @@ public class OSMMapViewMarker {
 			final Point hotspot)
 	{
 		this.mMarker = marker;
-		this.mHotspot = hotspot;
+		this.mHotSpot = hotspot;
 		this.mWidth = this.mMarker.getIntrinsicWidth();
 		this.mHeight = this.mMarker.getIntrinsicHeight();
 	}
@@ -50,8 +51,8 @@ public class OSMMapViewMarker {
 		if (location == null && this.mLocation == null) return false;
 		Point locate = (location == null) ? this.mLocation : location;
 		
-		final int left = locate.x - this.mHotspot.x;
-		final int top = locate.y - this.mHotspot.y;
+		final int left = locate.x - this.mHotSpot.x;
+		final int top = locate.y - this.mHotSpot.y;
 		
 		final int right = left + this.mWidth;
 		final int bottom = top + this.mHeight;
@@ -85,6 +86,14 @@ public class OSMMapViewMarker {
 	
 	public void setColorFilter(ColorFilter cf) { this.mMarker.setColorFilter(cf); }
 	
-	public Point getHotSpot() { return this.mHotspot; }
+	public Point getHotSpot() { return this.mHotSpot; }
+
+	public void setBounds(int left, int top, int right, int bottom) {
+		this.mMarker.setBounds(left, top, right, bottom);
+	}
+
+	public void draw(Canvas canvas) {
+		this.mMarker.draw(canvas);
+	}
 
 }

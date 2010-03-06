@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.andnav2.R;
 import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
+import org.andnav2.osm.views.overlay.OSMMapViewMarker;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -24,12 +25,15 @@ extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
 	// Fields
 	// ===========================================================
 
-	protected Drawable mMarkerClosed;
+	protected OSMMapViewMarker mMarkerClosed;
 
 	// ===========================================================
 	// Constructors
 	// ===========================================================
 
+	final private Drawable mClosed;
+	final private Point mOrigin;
+	
 	public OSMMapViewOSBOverlay(
 			final Context ctx, 
 			final List<OSMMapViewOSBOverlayItem> pList, 
@@ -44,7 +48,9 @@ extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
 				Color.WHITE,
 				pOnItemTapListener);
 
-		this.mMarkerClosed = ctx.getResources().getDrawable(R.drawable.osb_icon_bug_closed);
+		mClosed = ctx.getResources().getDrawable(R.drawable.osb_icon_bug_closed);
+		mOrigin = new Point();
+		this.mMarkerClosed = new OSMMapViewMarker(mClosed, mOrigin);
 
 		/* Force to draw the actual icon below the focusing one. */
 		this.mDrawBaseIntemUnderFocusedItem = true;
@@ -67,7 +73,7 @@ extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
 			return super.onDrawItem(c, index, curScreenCoords);
 		}
 		/* Save a reference to the original marker. */
-		final Drawable tmp = super.mMarker;
+		final OSMMapViewMarker tmp = super.mMarker;
 		/* Switch the marker that will be drawn with the 'closed'-marker. */
 		super.mMarker = this.mMarkerClosed;
 		/* Make superclass draw with that marker. */

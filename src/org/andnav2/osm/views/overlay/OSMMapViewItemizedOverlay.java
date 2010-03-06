@@ -36,9 +36,8 @@ extends OSMMapViewOverlay
 	// ===========================================================
 
 	private OnItemTapListener<T> mOnItemTapListener;
-	private final Point mMarkerHotSpot;
-	protected Drawable mMarker;
-	private final int mMarkerWidth, mMarkerHeight;
+	protected OSMMapViewMarker mMarker;
+	private int mMarkerWidth, mMarkerHeight;
 
 	private int mDrawnItemsLimit = Integer.MAX_VALUE;
 
@@ -61,9 +60,10 @@ extends OSMMapViewOverlay
 	{
 		assert(ctx != null);
 
-		this.mMarker = (pMarker != null) ? pMarker : ctx.getResources().getDrawable(R.drawable.marker_default);
-
-		this.mMarkerHotSpot = (pMarkerHotspot != null) ? pMarkerHotspot : DEFAULTMARKER_HOTSPOT;
+		this.mMarker = new OSMMapViewMarker(
+				(pMarker != null) ? pMarker 
+						           : ctx.getResources().getDrawable(R.drawable.marker_default),
+				(pMarkerHotspot != null) ? pMarkerHotspot : DEFAULTMARKER_HOTSPOT);
 
 		this.mOnItemTapListener = aOnItemTapListener;
 
@@ -145,9 +145,9 @@ extends OSMMapViewOverlay
 	protected boolean onDrawItem(final Canvas c, final int index, final Point pMarkerHotSpot) 
 	{
 		if(this.mMarker != null){
-			final int left = pMarkerHotSpot.x - this.mMarkerHotSpot.x;
+			final int left = pMarkerHotSpot.x - this.mMarker.getHotSpot().x;
 			final int right = left + this.mMarkerWidth;
-			final int top = pMarkerHotSpot.y - this.mMarkerHotSpot.y;
+			final int top = pMarkerHotSpot.y - this.mMarker.getHotSpot().y;
 			final int bottom = top + this.mMarkerHeight;
 
 			final int height = c.getHeight() * 2;
@@ -188,9 +188,9 @@ extends OSMMapViewOverlay
 				final T mItem = overlayItems.get(i);
 				pj.toPixels(mItem, mCurScreenCoords);
 
-				final int left = mCurScreenCoords.x - this.mMarkerHotSpot.x;
+				final int left = mCurScreenCoords.x - this.mMarker.getHotSpot().x;
 				final int right = left + markerWidth;
-				final int top = mCurScreenCoords.y - this.mMarkerHotSpot.y;
+				final int top = mCurScreenCoords.y - this.mMarker.getHotSpot().y;
 				final int bottom = top + markerHeight;
 
 				curMarkerBounds.set(left, top, right, bottom);
