@@ -5,11 +5,8 @@ import java.util.List;
 
 import org.andnav2.osm.views.OSMMapView;
 import org.andnav2.sys.ors.adt.ts.ISpatialDataOrganizer;
-
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Point;
-import android.graphics.drawable.Drawable;
 
 /**
  * @author Nicolas Gramlich
@@ -39,14 +36,11 @@ extends OSMMapViewItemizedOverlayWithFocus<T>
 	public OSMMapViewSpacialIndexItemizedOverlayWithFocus(
 			final Context ctx, 
 			final ISpatialDataOrganizer<T> aManager, 
-			final Drawable pMarker, 
-			final Point pMarkerHotspot, 
-			final Drawable pMarkerFocusedBase, 
-			final Point pMarkerFocusedHotSpot, 
-			final int pFocusedBackgroundColor, 
+			final OSMMapViewMarker pMarker, 
+			final OSMMapViewMarkerForFocus pMarkerFocusedBase, 
 			final OnItemTapListener<T> pOnItemTapListener) 
 	{
-		super(ctx, pMarker, pMarkerHotspot, pMarkerFocusedBase, pMarkerFocusedHotSpot, pFocusedBackgroundColor, pOnItemTapListener);
+		super(ctx, pMarker, pMarkerFocusedBase, pOnItemTapListener);
 		this.mSpatialDataOrganizer = aManager;
 	}
 

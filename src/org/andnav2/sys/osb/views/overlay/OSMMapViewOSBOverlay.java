@@ -6,6 +6,7 @@ import java.util.List;
 import org.andnav2.R;
 import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewMarker;
+import org.andnav2.osm.views.overlay.OSMMapViewMarkerForFocus;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -40,13 +41,16 @@ extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
 			final OnItemTapListener<OSMMapViewOSBOverlayItem> pOnItemTapListener) 
 	{
 		super(ctx,
-				pList,
-				ctx.getResources().getDrawable(R.drawable.osb_icon_bug_open),
-				new Point(16,16),
-				ctx.getResources().getDrawable(R.drawable.osb_marker_focused_base),
-				new Point(16,20),
-				Color.WHITE,
+				pList,  
+				new OSMMapViewMarker(
+						ctx.getResources().getDrawable(R.drawable.osb_icon_bug_open),
+						new Point(16,16)),
+				new OSMMapViewMarkerForFocus(
+						ctx.getResources().getDrawable(R.drawable.osb_marker_focused_base),
+						new Point(16,20),
+						Color.WHITE),
 				pOnItemTapListener);
+		
 
 		mClosed = ctx.getResources().getDrawable(R.drawable.osb_icon_bug_closed);
 		mOrigin = new Point();

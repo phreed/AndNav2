@@ -11,7 +11,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.view.MotionEvent;
 
 /**
@@ -49,21 +48,19 @@ extends OSMMapViewOverlay
 			final Context ctx, 
 			final OnItemTapListener<T> aOnItemTapListener) 
 	{
-		this(ctx, null, null, aOnItemTapListener);
+		this(ctx, null, aOnItemTapListener);
 	}
 
 	public OSMMapViewItemizedOverlay(
 			final Context ctx, 
-			final Drawable pMarker, 
-			final Point pMarkerHotspot, 
+			final OSMMapViewMarker pMarker, 
 			final OnItemTapListener<T> aOnItemTapListener) 
 	{
 		assert(ctx != null);
-
-		this.mMarker = new OSMMapViewMarker(
-				(pMarker != null) ? pMarker 
-						           : ctx.getResources().getDrawable(R.drawable.marker_default),
-				(pMarkerHotspot != null) ? pMarkerHotspot : DEFAULTMARKER_HOTSPOT);
+		this.mMarker = (pMarker != null) ? pMarker
+				: new OSMMapViewMarker(
+						ctx.getResources().getDrawable(R.drawable.marker_default),
+				        DEFAULTMARKER_HOTSPOT);
 
 		this.mOnItemTapListener = aOnItemTapListener;
 

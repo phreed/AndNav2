@@ -5,14 +5,12 @@ import java.util.List;
 
 import org.andnav2.R;
 import org.andnav2.osm.views.OSMMapView;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.RectF;
-import android.graphics.drawable.Drawable;
 
 
 public abstract 
@@ -32,7 +30,7 @@ extends OSMMapViewItemizedOverlay<T>
 
 
 	protected static final Point DEFAULTMARKER_FOCUSED_HOTSPOT = new Point(10, 19);
-	protected static final int DEFAULTMARKER_BACKGROUNDCOLOR = Color.rgb(101, 185, 74);
+	protected static final int DEFAULTMARKER_BACKGROUNDCOLOR = Color.rgb(101, 185, 200);
 
 	protected static final int DESCRIPTION_MAXWIDTH = 200;
 
@@ -40,7 +38,7 @@ extends OSMMapViewItemizedOverlay<T>
 	// Fields
 	// ===========================================================
 
-	private OSMMapViewMarkerWithFocus mMarkerFocusedBase;
+	private OSMMapViewMarkerForFocus mMarkerFocusedBase;
 
 	private final int mMarkerFocusedBackgroundColor;
 	private final int mMarkerFocusedWidth, mMarkerFocusedHeight;
@@ -64,35 +62,28 @@ extends OSMMapViewItemizedOverlay<T>
 			final Context ctx, 
 			final OnItemTapListener<T> aOnItemTapListener) 
 	{
-		this(ctx, null, null, null, null, NOT_SET, aOnItemTapListener);
+		this(ctx, null, null, aOnItemTapListener);
 	}
 
 	public OSMMapViewItemizedOverlayWithFocus(
 			final Context ctx, 
-			final Drawable pMarker, 
-			final Point pMarkerHotspot, 
-			final Drawable pMarkerFocusedBase, 
-			final Point pMarkerFocusedHotSpot, 
-			final int pFocusedBackgroundColor, 
+			final OSMMapViewMarker pMarker, 
+			final OSMMapViewMarkerForFocus pMarkerFocusedBase, 
 			final OnItemTapListener<T> aOnItemTapListener)
 	{
-		super(ctx, pMarker, pMarkerHotspot, aOnItemTapListener);
+		super(ctx, pMarker, aOnItemTapListener);
 
 		this.UNKNOWN = ctx.getString(R.string.unknown);
 
-		Drawable drawing = (pMarkerFocusedBase != null) 
-				? pMarkerFocusedBase 
-				: ctx.getResources().getDrawable(R.drawable.marker_default_focused_base);
-		Point hotspot = (pMarkerFocusedHotSpot != null) 
-				? pMarkerFocusedHotSpot : DEFAULTMARKER_FOCUSED_HOTSPOT;
-		this.mMarkerFocusedBase = new OSMMapViewMarkerWithFocus(drawing, hotspot);
+		this.mMarkerFocusedBase = (pMarkerFocusedBase != null)
+					? pMarkerFocusedBase
+					: new OSMMapViewMarkerForFocus(
+							ctx.getResources().getDrawable(R.drawable.marker_default_focused_base),
+							DEFAULTMARKER_FOCUSED_HOTSPOT,
+							DEFAULTMARKER_BACKGROUNDCOLOR);
 		
-		if(pFocusedBackgroundColor != NOT_SET) {
-			this.mMarkerFocusedBackgroundColor = pFocusedBackgroundColor;
-		} else {
-			this.mMarkerFocusedBackgroundColor = DEFAULTMARKER_BACKGROUNDCOLOR;
-		}
-
+		this.mMarkerFocusedBackgroundColor = mMarkerFocusedBase.getBackgroundColor();
+		
 		this.mMarkerBackgroundPaint = new Paint(); // Color is set in onDraw(...)
 
 		this.mDescriptionPaint = new Paint();
