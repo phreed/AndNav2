@@ -20,7 +20,10 @@ import android.os.Parcelable;
  * @author Nicolas Gramlich
  *
  */
-public class GeoPoint implements IGeoPoint, Parcelable, MathConstants, GeoConstants, OSMConstants, GMLXMLConstants, OSMTraceAPIConstants {
+public class GeoPoint 
+implements IGeoPoint, Parcelable, MathConstants, GeoConstants, OSMConstants, 
+			GMLXMLConstants, OSMTraceAPIConstants 
+{
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -45,7 +48,8 @@ public class GeoPoint implements IGeoPoint, Parcelable, MathConstants, GeoConsta
 		this(pGeoPoint.mLatitudeE6, pGeoPoint.mLongitudeE6);
 	}
 
-	public static GeoPoint fromCenterBetween(final GeoPoint geoPointA, final GeoPoint geoPointB) {
+	public static GeoPoint fromCenterBetween(final GeoPoint geoPointA, final GeoPoint geoPointB) 
+	{
 		return new GeoPoint((geoPointA.getLatitudeE6() + geoPointB.getLatitudeE6()) / 2,
 				(geoPointA.getLongitudeE6() + geoPointB.getLongitudeE6()) / 2);
 	}

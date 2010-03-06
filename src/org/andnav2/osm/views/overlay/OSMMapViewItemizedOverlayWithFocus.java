@@ -30,7 +30,7 @@ extends OSMMapViewItemizedOverlay<T>
 
 
 	protected static final Point DEFAULTMARKER_FOCUSED_HOTSPOT = new Point(10, 19);
-	protected static final int DEFAULTMARKER_BACKGROUNDCOLOR = Color.rgb(101, 185, 200);
+	protected static final int DEFAULTMARKER_BACKGROUNDCOLOR = Color.rgb(101, 185, 74);
 
 	protected static final int DESCRIPTION_MAXWIDTH = 200;
 

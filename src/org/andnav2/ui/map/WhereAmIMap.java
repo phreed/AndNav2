@@ -28,6 +28,8 @@ import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewCrosshairOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewDirectedLocationOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView;
+import org.andnav2.osm.views.overlay.OSMMapViewMarker;
+import org.andnav2.osm.views.overlay.OSMMapViewMarkerForFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlayItem;
 import org.andnav2.osm.views.overlay.OSMMapViewSimpleLineOverlay;
@@ -327,9 +329,9 @@ implements PreferenceConstants, Constants,
 		this.mMapItemControlView.setPreviousEnabled(nextPreviousEnabled);
 
 		this.mSearchPinList = items;
-
-		this.mOSMapView.getOverlays().add(this.mSearchPinOverlay = 
-			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mSearchPinList, this));
+		this.mSearchPinOverlay = 
+			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mSearchPinList, this);
+		this.mOSMapView.getOverlays().add(this.mSearchPinOverlay);
 		this.mSearchPinOverlay.setAutoFocusItemsOnTap(false);
 	}
 
@@ -375,8 +377,19 @@ implements PreferenceConstants, Constants,
 
 		this.mEntityList = entities;
 
-		this.mOSMapView.getOverlays().add(this.mEntityOverlay = 
-			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mEntityList, this));
+		OSMMapViewMarker marker = new OSMMapViewMarker(
+				this.getResources().getDrawable(R.drawable.battery),
+				new Point());
+		
+		OSMMapViewMarkerForFocus focus = new OSMMapViewMarkerForFocus(
+				this.getResources().getDrawable(R.drawable.marker_default_focused_base),
+				new Point(),
+				50);
+		
+		this.mEntityOverlay = 
+			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(
+					this, this.mEntityList, marker, focus, this);
+		this.mOSMapView.getOverlays().add(this.mEntityOverlay);
 		this.mEntityOverlay.setAutoFocusItemsOnTap(false);
 	}
 
@@ -1508,42 +1521,44 @@ implements PreferenceConstants, Constants,
 
 	private void applyQuickButtonListeners() 
 	{
-		this.mMapItemControlView.setItemizedOverlayControlViewListener(new OSMMapViewItemizedOverlayControlView.ItemizedOverlayControlViewListener(){
-			public void onCenter() {
-				final OSMMapViewOverlayItem oi = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
-				WhereAmIMap.this.mOSMapView.getController().animateTo(oi, AnimationType.MIDDLEPEAKSPEED);
-			}
-
-			public void onNavTo() {
-				final GeoPoint gp = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
-
-				final String aPOIName = WhereAmIMap.this.mEtSearch.getText().toString();
-				try {
-					DBManager.addPOIToHistory(WhereAmIMap.this, aPOIName, gp.getLatitudeE6(), gp.getLongitudeE6());
-				} catch (final DataBaseException e) {
-					//					Log.e(DEBUGTAG, "Error adding POI", e);
+		this.mMapItemControlView.setItemizedOverlayControlViewListener(
+				new OSMMapViewItemizedOverlayControlView.ItemizedOverlayControlViewListener()
+				{
+				public void onCenter() {
+					final OSMMapViewOverlayItem oi = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
+					WhereAmIMap.this.mOSMapView.getController().animateTo(oi, AnimationType.MIDDLEPEAKSPEED);
 				}
-
-				doNavToGeoPoint(gp);
-			}
-
-			public void onNext() {
-				WhereAmIMap.this.mSearchPinListIndex++;
-				WhereAmIMap.this.mSearchPinListIndex = WhereAmIMap.this.mSearchPinListIndex % WhereAmIMap.this.mSearchPinList.size();
-				final OSMMapViewOverlayItem oi = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
-				WhereAmIMap.this.mOSMapView.getController().animateTo(oi, AnimationType.MIDDLEPEAKSPEED);
-			}
-
-			public void onPrevious() {
-				if(WhereAmIMap.this.mSearchPinListIndex == 0) {
-					WhereAmIMap.this.mSearchPinListIndex = WhereAmIMap.this.mSearchPinList.size() - 1;
-				} else {
-					WhereAmIMap.this.mSearchPinListIndex--;
+	
+				public void onNavTo() {
+					final GeoPoint gp = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
+	
+					final String aPOIName = WhereAmIMap.this.mEtSearch.getText().toString();
+					try {
+						DBManager.addPOIToHistory(WhereAmIMap.this, aPOIName, gp.getLatitudeE6(), gp.getLongitudeE6());
+					} catch (final DataBaseException e) {
+						//					Log.e(DEBUGTAG, "Error adding POI", e);
+					}
+	
+					doNavToGeoPoint(gp);
 				}
-
-				final OSMMapViewOverlayItem oi = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
-				WhereAmIMap.this.mOSMapView.getController().animateTo(oi, AnimationType.MIDDLEPEAKSPEED);
-			}
+	
+				public void onNext() {
+					WhereAmIMap.this.mSearchPinListIndex++;
+					WhereAmIMap.this.mSearchPinListIndex = WhereAmIMap.this.mSearchPinListIndex % WhereAmIMap.this.mSearchPinList.size();
+					final OSMMapViewOverlayItem oi = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
+					WhereAmIMap.this.mOSMapView.getController().animateTo(oi, AnimationType.MIDDLEPEAKSPEED);
+				}
+	
+				public void onPrevious() {
+					if(WhereAmIMap.this.mSearchPinListIndex == 0) {
+						WhereAmIMap.this.mSearchPinListIndex = WhereAmIMap.this.mSearchPinList.size() - 1;
+					} else {
+						WhereAmIMap.this.mSearchPinListIndex--;
+					}
+	
+					final OSMMapViewOverlayItem oi = WhereAmIMap.this.mSearchPinList.get(WhereAmIMap.this.mSearchPinListIndex);
+					WhereAmIMap.this.mOSMapView.getController().animateTo(oi, AnimationType.MIDDLEPEAKSPEED);
+				}
 		});
 
 		/* Left side. */

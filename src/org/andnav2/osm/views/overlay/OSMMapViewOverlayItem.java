@@ -12,7 +12,9 @@ import android.content.Context;
  * @author Nicolas Gramlich
  *
  */
-public class OSMMapViewOverlayItem extends GeoPoint{
+public class OSMMapViewOverlayItem 
+extends GeoPoint
+{
 	// ===========================================================
 	// Constants
 	// ===========================================================
@@ -28,21 +30,32 @@ public class OSMMapViewOverlayItem extends GeoPoint{
 	// Constructors
 	// ===========================================================
 
-	public OSMMapViewOverlayItem(final Context ctx, final GeoPoint pGeoPoint) {
+	public OSMMapViewOverlayItem(
+			final Context ctx, 
+			final GeoPoint pGeoPoint)
+	{
 		this(ctx.getString(R.string.coordinates), pGeoPoint.toMultiLineUserString(ctx), pGeoPoint.getLatitudeE6(), pGeoPoint.getLongitudeE6());
 	}
 
-	public OSMMapViewOverlayItem(final String aTitle, final String aDescription, final GeoPoint pGeoPoint) {
+	public OSMMapViewOverlayItem(
+			final String aTitle, 
+			final String aDescription, 
+			final GeoPoint pGeoPoint) 
+	{
 		this(aTitle, aDescription, pGeoPoint.getLatitudeE6(), pGeoPoint.getLongitudeE6());
 	}
-
 
 	/**
 	 * @param aTitle this should be <b>singleLine</b> (no <code>'\n'</code> )
 	 * @param aDescription a <b>multiLine</b> description ( <code>'\n'</code> possible)
 	 * @param aGeoPoint
 	 */
-	public OSMMapViewOverlayItem(final String aTitle, final String aDescription, final int pLatitudeE6, final int pLongitudeE6) {
+	public OSMMapViewOverlayItem(
+			final String aTitle, 
+			final String aDescription, 
+			final int pLatitudeE6, 
+			final int pLongitudeE6) 
+	{
 		super(pLatitudeE6, pLongitudeE6);
 		this.mTitle = aTitle;
 		this.mDescription = aDescription;
