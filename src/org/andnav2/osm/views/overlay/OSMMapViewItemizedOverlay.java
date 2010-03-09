@@ -4,6 +4,7 @@ package org.andnav2.osm.views.overlay;
 import java.util.List;
 
 import org.andnav2.R;
+import org.andnav2.osm.adt.GeoPoint;
 import org.andnav2.osm.views.OSMMapView;
 import org.andnav2.osm.views.OSMMapView.OSMMapViewProjection;
 
@@ -110,19 +111,16 @@ extends OSMMapViewOverlay
 		
 		final OSMMapViewProjection pj = mapView.getProjection();
 
-		/* Point to be reused. */
-		final Point markerHotSpot = new Point();
-
 		/* Drag to local field. */
 		final int drawnItemsLimit = this.mDrawnItemsLimit;
 		int itemsDrawn = 0;
 
 		/* Draw in backward cycle, so the items with the least index are in the front. */
-		for(int i = overlayItems.size() - 1; i >= 0; i--){
+		for(int i = overlayItems.size() - 1; i >= 0; i--) {
 			final T item = overlayItems.get(i);
-			pj.toPixels(item, markerHotSpot);
+			MapPoint mp = new MapPoint(item, pj);
 
-			final boolean itemWasDrawn = onDrawItem(c, i, markerHotSpot);
+			final boolean itemWasDrawn = onDrawItem(c, i, mp);
 
 			if(itemWasDrawn) itemsDrawn++;
 
@@ -137,26 +135,26 @@ extends OSMMapViewOverlay
 	 * @param pMarkerHotSpot
 	 * @return <code>true</code> if the item was actually drawn. <code>false</code> it was not drawn because it was out of the visible area.
 	 */
-	protected boolean onDrawItem(final Canvas c, final int index, final Point pMarkerHotSpot) 
+	protected boolean onDrawItem(final Canvas canvas, final int index, final MapPoint location) 
 	{
 		if(this.mMarker == null) return false;
 		
-		final int left = pMarkerHotSpot.x - this.mMarker.getHotSpot().x;
+		final int left = location.asPoint().x - this.mMarker.getHotSpot().x;
 		final int right = left + this.mMarkerWidth;
-		final int top = pMarkerHotSpot.y - this.mMarker.getHotSpot().y;
+		final int top = location.asPoint().y - this.mMarker.getHotSpot().y;
 		final int bottom = top + this.mMarkerHeight;
 
 		if(right < 0) return false;
 		if(bottom < 0) return false;
 		
-		final int height = c.getHeight() * 2;
-		final int width = c.getWidth() * 2;
+		final int height = canvas.getHeight() * 2;
+		final int width = canvas.getWidth() * 2;
 		if(left > width) return false;
 		if(top > height) return false;
 		
 		/* Draw item. */
 		this.mMarker.setBounds(left, top, right, bottom);
-		this.mMarker.draw(c);
+		this.mMarker.onDraw(canvas, location);
 		return true; /* Item was drawn. */
 	}
 

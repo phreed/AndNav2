@@ -14,6 +14,7 @@ import org.andnav2.util.constants.GeoConstants;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.graphics.Point;
 
 /**
  * 
@@ -124,6 +125,10 @@ implements IGeoPoint, Parcelable, MathConstants,
 
 	public double getLatitudeAsDouble() {
 		return this.mLatitudeE6 / 1E6;
+	}
+	
+	public Point asPointE6() {
+		return new Point(this.mLongitudeE6, this.mLatitudeE6);
 	}
 
 	// ===========================================================

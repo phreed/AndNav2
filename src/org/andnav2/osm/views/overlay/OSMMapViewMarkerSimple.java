@@ -3,6 +3,8 @@
  */
 package org.andnav2.osm.views.overlay;
 
+import org.andnav2.osm.adt.GeoPoint;
+
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.Drawable;
@@ -50,9 +52,11 @@ implements OSMMapViewMarker
 	 * If marker cannot be drawn it returns false.
 	 * 
 	 */
-	public boolean onDraw(final Canvas canvas, final Point location) {
+	@Override
+	public boolean onDraw(final Canvas canvas, final MapPoint location) {
+		
 		if (location == null && this.mLocation == null) return false;
-		Point locate = (location == null) ? this.mLocation : location;
+		Point locate = (location == null) ? this.mLocation : location.asPoint();
 		
 		final int left = locate.x - this.mHotSpot.x;
 		final int top = locate.y - this.mHotSpot.y;
@@ -74,10 +78,11 @@ implements OSMMapViewMarker
 		return true;
 	}
 
-	public boolean onDrawFocused(Canvas canvas, final Point location) {
-		return onDraw(canvas, location);
+	@Override
+	public boolean onDrawFocused(Canvas canvas, final MapPoint mp) {
+		return onDraw(canvas, mp);
 	}
-
+	
 	/**
 	 * wrapper methods - they pass through to the wrapped object.
 	 */
@@ -94,9 +99,11 @@ implements OSMMapViewMarker
 	public void setBounds(int left, int top, int right, int bottom) {
 		this.mMarker.setBounds(left, top, right, bottom);
 	}
-
-	public void draw(Canvas canvas) {
-		this.mMarker.draw(canvas);
+	
+	public void draw(Canvas c, MapPoint mp) {
+		// TODO Auto-generated method stub
+		
 	}
+
 
 }

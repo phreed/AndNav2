@@ -388,11 +388,13 @@ implements PreferenceConstants, Constants,
 		this.mEntityList = entities;
 
 		OSMMapViewMarker marker = new OSMMapViewMarkerSimple(
-				this.getResources().getDrawable(R.drawable.mil_sfgpuci_50),
+				this.getResources().getDrawable(R.drawable.mil_sfgpuci_20),
 				new Point());
 		
+		//marker = new OSMMapViewMarkerSimple(this);
+				
 		OSMMapViewMarkerForFocus focus = new OSMMapViewMarkerForFocus(
-				this.getResources().getDrawable(R.drawable.mil_sfgpuci),
+				this.getResources().getDrawable(R.drawable.mil_sfgpuci_80),
 				new Point(),
 				50);
 		

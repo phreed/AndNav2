@@ -3,6 +3,9 @@
  */
 package org.andnav2.osm.views.overlay;
 
+import org.andnav2.R;
+import org.andnav2.osm.adt.GeoPoint;
+
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.Drawable;
@@ -27,10 +30,12 @@ public  interface OSMMapViewMarker
 	 * If marker cannot be drawn it returns false.
 	 * 
 	 */
-	public boolean onDraw(final Canvas canvas, final Point location) ;
+	public boolean onDraw(final Canvas canvas, final MapPoint location) ;
 
-	public boolean onDrawFocused(Canvas canvas, final Point location) ;
+	public boolean onDrawFocused(Canvas canvas, final MapPoint location) ;
 
+	public void draw(Canvas canvas, MapPoint mp) ;
+	
 	/**
 	 * wrapper methods - they pass through to the wrapped object.
 	 */
@@ -45,7 +50,5 @@ public  interface OSMMapViewMarker
 	public Point getHotSpot() ;
 
 	public void setBounds(int left, int top, int right, int bottom);
-
-	public void draw(Canvas canvas);
 
 }

@@ -4,6 +4,8 @@
  */
 package org.andnav2.osm.views.overlay;
 
+import org.andnav2.osm.adt.GeoPoint;
+
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
@@ -47,7 +49,7 @@ extends OSMMapViewMarkerSimple
 	 * 
 	 */
 	
-	public boolean onDrawFocused(Canvas canvas, final Point location) {
+	public boolean onDrawFocused(Canvas canvas, final MapPoint location) {
 		return onDraw(canvas, location);
 //			final List<T> overlayItems = this.getOverlayItems();
 //			if(this.mFocusedItem == null) return;
@@ -165,5 +167,6 @@ extends OSMMapViewMarkerSimple
 	
 	public int getBackgroundColor() { return this.mBackgroundColor; }
 
+	
 }
 

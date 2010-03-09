@@ -4,6 +4,7 @@ package org.andnav2.sys.osb.views.overlay;
 import java.util.List;
 
 import org.andnav2.R;
+import org.andnav2.osm.views.overlay.MapPoint;
 import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewMarker;
 import org.andnav2.osm.views.overlay.OSMMapViewMarkerSimple;
@@ -72,17 +73,18 @@ extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
 	 * Need to override the default-functionality, because we need two different map-markers.
 	 */
 	@Override
-	protected boolean onDrawItem(final Canvas c, final int index, final Point curScreenCoords) {
+	protected boolean onDrawItem(final Canvas c, final int index, final MapPoint mp) 
+	{
 		final List<OSMMapViewOSBOverlayItem> overlayItems = this.getOverlayItems();
 		if(overlayItems == null || overlayItems.get(index).isOpenBug()){
-			return super.onDrawItem(c, index, curScreenCoords);
+			return super.onDrawItem(c, index, mp);
 		}
 		/* Save a reference to the original marker. */
 		final OSMMapViewMarker tmp = super.mMarker;
 		/* Switch the marker that will be drawn with the 'closed'-marker. */
 		super.mMarker = this.mMarkerClosed;
 		/* Make superclass draw with that marker. */
-		final boolean itemWasDrawn = super.onDrawItem(c, index, curScreenCoords);
+		final boolean itemWasDrawn = super.onDrawItem(c, index, mp);
 		/* Revert changes. */
 		super.mMarker = tmp;
 

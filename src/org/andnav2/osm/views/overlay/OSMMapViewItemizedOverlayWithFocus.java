@@ -142,18 +142,16 @@ extends OSMMapViewItemizedOverlay<T>
 		final List<T> overlayItems = this.getOverlayItems();
 		if(overlayItems == null) return;
 		
-		final Point screenCoords = new Point();
-
-		osmv.getProjection().toPixels(this.mFocusedItem, screenCoords);
-
+		final MapPoint mp = new MapPoint(this.mFocusedItem, osmv);
+		
 		if(this.mDrawBaseIntemUnderFocusedItem) {
-			super.onDrawItem(c, 0, screenCoords);
+			super.onDrawItem(c, 0, mp);
 		}
 		
 		/* Calculate and set the bounds of the marker. */
-		final int left = screenCoords.x - this.mMarker.getHotSpot().x;
+		final int left = mp.asPoint().x - this.mMarker.getHotSpot().x;
 		final int right = left + this.mMarkerFocusedWidth;
-		final int top = screenCoords.y - this.mMarker.getHotSpot().y;
+		final int top = mp.asPoint().y - this.mMarker.getHotSpot().y;
 		final int bottom = top + this.mMarkerFocusedHeight;
 		this.mMarkerFocusedBase.setBounds(left, top, right, bottom);
 
@@ -248,7 +246,7 @@ extends OSMMapViewItemizedOverlay<T>
 		c.drawLine(descBoxLeft, descTextLineBottom, descBoxRight, descTextLineBottom, this.mDescriptionPaint);
 
 		/* Finally draw the marker base. This is done in the end to make it look better. */
-		this.mMarkerFocusedBase.draw(c);
+		this.mMarkerFocusedBase.draw(c, mp);
 	}
 
 	// ===========================================================
