@@ -6,6 +6,7 @@ import java.util.List;
 import org.andnav2.R;
 import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewMarker;
+import org.andnav2.osm.views.overlay.OSMMapViewMarkerSimple;
 import org.andnav2.osm.views.overlay.OSMMapViewMarkerForFocus;
 
 import android.content.Context;
@@ -26,7 +27,7 @@ extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
 	// Fields
 	// ===========================================================
 
-	protected OSMMapViewMarker mMarkerClosed;
+	protected OSMMapViewMarkerSimple mMarkerClosed;
 
 	// ===========================================================
 	// Constructors
@@ -42,7 +43,7 @@ extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
 	{
 		super(ctx,
 				pList,  
-				new OSMMapViewMarker(
+				new OSMMapViewMarkerSimple(
 						ctx.getResources().getDrawable(R.drawable.osb_icon_bug_open),
 						new Point(16,16)),
 				new OSMMapViewMarkerForFocus(
@@ -54,7 +55,7 @@ extends OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOSBOverlayItem>
 
 		mClosed = ctx.getResources().getDrawable(R.drawable.osb_icon_bug_closed);
 		mOrigin = new Point();
-		this.mMarkerClosed = new OSMMapViewMarker(mClosed, mOrigin);
+		this.mMarkerClosed = new OSMMapViewMarkerSimple(mClosed, mOrigin);
 
 		/* Force to draw the actual icon below the focusing one. */
 		this.mDrawBaseIntemUnderFocusedItem = true;

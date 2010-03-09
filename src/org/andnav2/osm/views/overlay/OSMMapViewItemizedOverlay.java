@@ -15,7 +15,8 @@ import android.view.MotionEvent;
 
 /**
  * Draws a list of {@link OSMMapViewOverlayItem} as markers to a map.
- * The item with the lowest index is drawn as last and therefore the 'topmost' marker. It also gets checked for onTap first.
+ * The item with the lowest index is drawn as last and therefore the 'topmost' marker. 
+ * It also gets checked for onTap first.
  * This class is generic, because you then you get your custom item-class passed back in onTap().
  * @author Nicolas Gramlich
  *
@@ -58,7 +59,7 @@ extends OSMMapViewOverlay
 	{
 		assert(ctx != null);
 		this.mMarker = (pMarker != null) ? pMarker
-				: new OSMMapViewMarker(
+				: new OSMMapViewMarkerSimple(
 						ctx.getResources().getDrawable(R.drawable.marker_default),
 				        DEFAULTMARKER_HOTSPOT);
 
@@ -104,31 +105,28 @@ extends OSMMapViewOverlay
 	@Override
 	public void onDraw(final Canvas c, final OSMMapView mapView) {
 		final List<T> overlayItems = this.getOverlayItems();
-		if(overlayItems != null && overlayItems.size() > 0){
-			final OSMMapViewProjection pj = mapView.getProjection();
+		if(overlayItems == null) return;
+		if(overlayItems.size() < 1) return;
+		
+		final OSMMapViewProjection pj = mapView.getProjection();
 
-			/* Point to be reused. */
-			final Point markerHotSpot = new Point();
+		/* Point to be reused. */
+		final Point markerHotSpot = new Point();
 
-			/* Drag to local field. */
-			final int drawnItemsLimit = this.mDrawnItemsLimit;
-			int itemsDrawn = 0;
+		/* Drag to local field. */
+		final int drawnItemsLimit = this.mDrawnItemsLimit;
+		int itemsDrawn = 0;
 
-			/* Draw in backward cycle, so the items with the least index are on the front. */
-			for(int i = overlayItems.size() - 1; i >= 0; i--){
-				final T item = overlayItems.get(i);
-				pj.toPixels(item, markerHotSpot);
+		/* Draw in backward cycle, so the items with the least index are in the front. */
+		for(int i = overlayItems.size() - 1; i >= 0; i--){
+			final T item = overlayItems.get(i);
+			pj.toPixels(item, markerHotSpot);
 
-				final boolean itemWasDrawn = onDrawItem(c, i, markerHotSpot);
+			final boolean itemWasDrawn = onDrawItem(c, i, markerHotSpot);
 
-				if(itemWasDrawn) {
-					itemsDrawn++;
-				}
+			if(itemWasDrawn) itemsDrawn++;
 
-				if(itemsDrawn >= drawnItemsLimit) {
-					break;
-				}
-			}
+			if(itemsDrawn >= drawnItemsLimit) break;
 		}
 	}
 
@@ -141,62 +139,59 @@ extends OSMMapViewOverlay
 	 */
 	protected boolean onDrawItem(final Canvas c, final int index, final Point pMarkerHotSpot) 
 	{
-		if(this.mMarker != null){
-			final int left = pMarkerHotSpot.x - this.mMarker.getHotSpot().x;
-			final int right = left + this.mMarkerWidth;
-			final int top = pMarkerHotSpot.y - this.mMarker.getHotSpot().y;
-			final int bottom = top + this.mMarkerHeight;
+		if(this.mMarker == null) return false;
+		
+		final int left = pMarkerHotSpot.x - this.mMarker.getHotSpot().x;
+		final int right = left + this.mMarkerWidth;
+		final int top = pMarkerHotSpot.y - this.mMarker.getHotSpot().y;
+		final int bottom = top + this.mMarkerHeight;
 
-			final int height = c.getHeight() * 2;
-			final int width = c.getWidth() * 2;
-			if(right < 0
-					|| bottom < 0
-					|| left > width
-					|| top > height){
-				/* Item was NOT drawn. */
-				return false;
-			}else{
-				/* Draw item. */
-				this.mMarker.setBounds(left, top, right, bottom);
-				this.mMarker.draw(c);
-				return true; /* Item was drawn. */
-			}
-		}else{
-			return false;
-		}
+		if(right < 0) return false;
+		if(bottom < 0) return false;
+		
+		final int height = c.getHeight() * 2;
+		final int width = c.getWidth() * 2;
+		if(left > width) return false;
+		if(top > height) return false;
+		
+		/* Draw item. */
+		this.mMarker.setBounds(left, top, right, bottom);
+		this.mMarker.draw(c);
+		return true; /* Item was drawn. */
 	}
 
 	@Override
 	public boolean onSingleTapUp(final MotionEvent event, final OSMMapView mapView) {
 		final List<T> overlayItems = this.getOverlayItems();
-		if(this.mMarker != null && overlayItems != null && overlayItems.size() > 0){
-			final OSMMapViewProjection pj = mapView.getProjection();
-			final int eventX = (int)event.getX();
-			final int eventY = (int)event.getY();
+		if(this.mMarker == null) return super.onSingleTapUp(event, mapView);
+		if(overlayItems == null) return super.onSingleTapUp(event, mapView);
+		if(overlayItems.size() < 1) return super.onSingleTapUp(event, mapView);
+		
+		final OSMMapViewProjection pj = mapView.getProjection();
+		final int eventX = (int)event.getX();
+		final int eventY = (int)event.getY();
 
-			final int markerWidth = this.mMarker.getIntrinsicWidth();
-			final int markerHeight = this.mMarker.getIntrinsicHeight();
+		final int markerWidth = this.mMarker.getIntrinsicWidth();
+		final int markerHeight = this.mMarker.getIntrinsicHeight();
 
-			/* These objects are created to avoid construct new ones every cycle. */
-			final Rect curMarkerBounds = new Rect();
-			final Point mCurScreenCoords = new Point();
+		/* These objects are created to avoid construct new ones every cycle. */
+		final Rect curMarkerBounds = new Rect();
+		final Point mCurScreenCoords = new Point();
 
-			for(int i = 0; i < overlayItems.size(); i++){
-				final T mItem = overlayItems.get(i);
-				pj.toPixels(mItem, mCurScreenCoords);
+		for(int i = 0; i < overlayItems.size(); i++){
+			final T mItem = overlayItems.get(i);
+			pj.toPixels(mItem, mCurScreenCoords);
 
-				final int left = mCurScreenCoords.x - this.mMarker.getHotSpot().x;
-				final int right = left + markerWidth;
-				final int top = mCurScreenCoords.y - this.mMarker.getHotSpot().y;
-				final int bottom = top + markerHeight;
+			final int left = mCurScreenCoords.x - this.mMarker.getHotSpot().x;
+			final int right = left + markerWidth;
+			final int top = mCurScreenCoords.y - this.mMarker.getHotSpot().y;
+			final int bottom = top + markerHeight;
 
-				curMarkerBounds.set(left, top, right, bottom);
-				if(curMarkerBounds.contains(eventX, eventY)) {
-					if(onTap(i)) {
-						return true;
-					}
-				}
-			}
+			curMarkerBounds.set(left, top, right, bottom);
+			if(! curMarkerBounds.contains(eventX, eventY)) continue;
+			if(!onTap(i)) continue;
+			
+			return true;
 		}
 		return super.onSingleTapUp(event, mapView);
 	}
@@ -207,11 +202,10 @@ extends OSMMapViewOverlay
 
 	protected boolean onTap(final int pIndex) {
 		final List<T> overlayItems = this.getOverlayItems();
-		if(this.mOnItemTapListener != null && overlayItems != null) {
-			return this.mOnItemTapListener.onItemTap(pIndex, overlayItems.get(pIndex));
-		} else {
-			return false;
-		}
+		if(this.mOnItemTapListener == null) return false;
+		if(overlayItems == null) return false;
+		
+		return this.mOnItemTapListener.onItemTap(pIndex, overlayItems.get(pIndex));
 	}
 
 	// ===========================================================

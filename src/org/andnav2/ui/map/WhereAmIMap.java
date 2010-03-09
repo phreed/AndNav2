@@ -29,7 +29,9 @@ import org.andnav2.osm.views.overlay.OSMMapViewCrosshairOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewDirectedLocationOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView;
 import org.andnav2.osm.views.overlay.OSMMapViewMarker;
+import org.andnav2.osm.views.overlay.OSMMapViewMarkerSimple;
 import org.andnav2.osm.views.overlay.OSMMapViewMarkerForFocus;
+import org.andnav2.osm.views.overlay.OSMMapViewMarkerSymbol;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlayItem;
 import org.andnav2.osm.views.overlay.OSMMapViewSimpleLineOverlay;
@@ -358,7 +360,15 @@ implements PreferenceConstants, Constants,
 	private void freshEntityOverlay(final GeoPoint pGeoPoint) {
 		if (pGeoPoint == null) return;
 		final List<OSMMapViewOverlayItem> symbols = new ArrayList<OSMMapViewOverlayItem>();
+		
 		symbols.add(new OSMMapViewOverlayItem(WhereAmIMap.this, pGeoPoint));
+		for (int ix = 0; ix < 50; ++ix) {
+			int dx = pGeoPoint.getLatitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e4));
+			int dy = pGeoPoint.getLongitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e4));
+			GeoPoint pt = new GeoPoint(dx,dy);
+			symbols.add(new OSMMapViewOverlayItem(WhereAmIMap.this, pt));
+		}
+		
 		freshEntityOverlay(symbols);
 		WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 		WhereAmIMap.super.mOSMapView.getController().animateTo(pGeoPoint, AnimationType.MIDDLEPEAKSPEED);
@@ -377,12 +387,12 @@ implements PreferenceConstants, Constants,
 
 		this.mEntityList = entities;
 
-		OSMMapViewMarker marker = new OSMMapViewMarker(
-				this.getResources().getDrawable(R.drawable.battery),
+		OSMMapViewMarker marker = new OSMMapViewMarkerSimple(
+				this.getResources().getDrawable(R.drawable.mil_sfgpuci_50),
 				new Point());
 		
 		OSMMapViewMarkerForFocus focus = new OSMMapViewMarkerForFocus(
-				this.getResources().getDrawable(R.drawable.marker_default_focused_base),
+				this.getResources().getDrawable(R.drawable.mil_sfgpuci),
 				new Point(),
 				50);
 		

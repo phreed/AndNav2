@@ -36,7 +36,7 @@ extends OSMMapViewItemizedOverlayWithFocus<T>
 	public OSMMapViewSpacialIndexItemizedOverlayWithFocus(
 			final Context ctx, 
 			final ISpatialDataOrganizer<T> aManager, 
-			final OSMMapViewMarker pMarker, 
+			final OSMMapViewMarkerSimple pMarker, 
 			final OSMMapViewMarkerForFocus pMarkerFocusedBase, 
 			final OnItemTapListener<T> pOnItemTapListener) 
 	{

@@ -21,7 +21,8 @@ import android.os.Parcelable;
  *
  */
 public class GeoPoint 
-implements IGeoPoint, Parcelable, MathConstants, GeoConstants, OSMConstants, 
+implements IGeoPoint, Parcelable, MathConstants, 
+			GeoConstants, OSMConstants, 
 			GMLXMLConstants, OSMTraceAPIConstants 
 {
 	// ===========================================================
@@ -67,9 +68,9 @@ implements IGeoPoint, Parcelable, MathConstants, GeoConstants, OSMConstants,
 	 */
 	public static GeoPoint fromDoubleString(final String s, final char spacer) {
 		final int spacerPos = s.indexOf(spacer);
-		return new GeoPoint((int) (Double.parseDouble(s.substring(0,
-				spacerPos)) * 1E6), (int) (Double.parseDouble(s.substring(
-						spacerPos + 1, s.length())) * 1E6));
+		return new GeoPoint(
+				(int) (Double.parseDouble(s.substring(0, spacerPos)) * 1E6), 
+				(int) (Double.parseDouble(s.substring(spacerPos + 1, s.length())) * 1E6));
 	}
 
 	/**
@@ -80,10 +81,9 @@ implements IGeoPoint, Parcelable, MathConstants, GeoConstants, OSMConstants,
 	 */
 	public static GeoPoint fromInvertedDoubleString(final String s, final char spacer) {
 		final int spacerPos = s.indexOf(spacer);
-		return new GeoPoint((int) (Double.parseDouble(s.substring(
-				spacerPos + 1, s.length())) * 1E6),
-				(int) (Double.parseDouble(s.substring(0,
-						spacerPos)) * 1E6));
+		return new GeoPoint(
+				(int) (Double.parseDouble(s.substring(spacerPos + 1, s.length())) * 1E6),
+				(int) (Double.parseDouble(s.substring(0, spacerPos)) * 1E6));
 	}
 
 	/**
@@ -93,7 +93,8 @@ implements IGeoPoint, Parcelable, MathConstants, GeoConstants, OSMConstants,
 	 */
 	public static GeoPoint fromIntString(final String s){
 		final int commaPos = s.indexOf(',');
-		return new GeoPoint(Integer.parseInt(s.substring(0,commaPos)),
+		return new GeoPoint(
+				Integer.parseInt(s.substring(0,commaPos)),
 				Integer.parseInt(s.substring(commaPos+1)));
 	}
 

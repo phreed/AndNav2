@@ -4,7 +4,7 @@ package org.andnav2.sys.ors.views.overlay;
 import java.util.List;
 
 import org.andnav2.R;
-import org.andnav2.osm.views.overlay.OSMMapViewMarker;
+import org.andnav2.osm.views.overlay.OSMMapViewMarkerSimple;
 import org.andnav2.osm.views.overlay.OSMMapViewMarkerForFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewSpacialIndexItemizedOverlayWithFocus;
 import org.andnav2.sys.ors.adt.ts.TrafficOverlayManager;
@@ -36,7 +36,7 @@ extends OSMMapViewSpacialIndexItemizedOverlayWithFocus<TrafficOverlayItem>
 	{
 		super(ctx,
 				new TrafficOverlayManager(pList),
-				new OSMMapViewMarker(
+				new OSMMapViewMarkerSimple(
 						ctx.getResources().getDrawable(R.drawable.warning_severe_overlayitem),
 				        new Point(16, 16)),
 				new OSMMapViewMarkerForFocus(

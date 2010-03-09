@@ -34,7 +34,10 @@ extends GeoPoint
 			final Context ctx, 
 			final GeoPoint pGeoPoint)
 	{
-		this(ctx.getString(R.string.coordinates), pGeoPoint.toMultiLineUserString(ctx), pGeoPoint.getLatitudeE6(), pGeoPoint.getLongitudeE6());
+		this(ctx.getString(R.string.coordinates), 
+				pGeoPoint.toMultiLineUserString(ctx),
+				pGeoPoint.getLatitudeE6(),
+				pGeoPoint.getLongitudeE6());
 	}
 
 	public OSMMapViewOverlayItem(
