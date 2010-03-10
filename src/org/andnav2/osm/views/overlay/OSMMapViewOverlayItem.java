@@ -30,22 +30,27 @@ extends GeoPoint
 	// Constructors
 	// ===========================================================
 
-	public OSMMapViewOverlayItem(
+	static public OSMMapViewOverlayItem get_instance(
 			final Context ctx, 
 			final GeoPoint pGeoPoint)
 	{
-		this(ctx.getString(R.string.coordinates), 
+		return new OSMMapViewOverlayItem(
+				ctx.getString(R.string.coordinates), 
 				pGeoPoint.toMultiLineUserString(ctx),
 				pGeoPoint.getLatitudeE6(),
 				pGeoPoint.getLongitudeE6());
 	}
 
-	public OSMMapViewOverlayItem(
+	static public OSMMapViewOverlayItem get_instance(
 			final String aTitle, 
 			final String aDescription, 
 			final GeoPoint pGeoPoint) 
 	{
-		this(aTitle, aDescription, pGeoPoint.getLatitudeE6(), pGeoPoint.getLongitudeE6());
+		return new OSMMapViewOverlayItem(
+				aTitle, 
+				aDescription, 
+				pGeoPoint.getLatitudeE6(), 
+				pGeoPoint.getLongitudeE6());
 	}
 
 	/**
@@ -53,7 +58,7 @@ extends GeoPoint
 	 * @param aDescription a <b>multiLine</b> description ( <code>'\n'</code> possible)
 	 * @param aGeoPoint
 	 */
-	public OSMMapViewOverlayItem(
+	protected OSMMapViewOverlayItem(
 			final String aTitle, 
 			final String aDescription, 
 			final int pLatitudeE6, 

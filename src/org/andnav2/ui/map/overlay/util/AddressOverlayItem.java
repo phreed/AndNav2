@@ -24,8 +24,13 @@ public class AddressOverlayItem extends OSMMapViewOverlayItem {
 	// Constructors
 	// ===========================================================
 
-	private AddressOverlayItem(final String title, final String snippet, final GeoPoint point, final Address pAddress) {
-		super(title, snippet, point);
+	private AddressOverlayItem(
+			final String title, 
+			final String snippet, 
+			final GeoPoint point, 
+			final Address pAddress) 
+	{
+		super(title, snippet, point.getLatitudeE6(), point.getLongitudeE6());
 		this.mAddress = pAddress;
 	}
 

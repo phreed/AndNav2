@@ -23,7 +23,7 @@ import android.view.MotionEvent;
  *
  * @param <T>
  */
-public abstract class OSMMapViewItemizedOverlay<T extends OSMMapViewOverlayItem> 
+public abstract class OSMMapViewItemizedOverlay<T extends GeoPoint> 
 extends OSMMapViewOverlay
 {
 	// ===========================================================
@@ -133,7 +133,8 @@ extends OSMMapViewOverlay
 	 * @param c
 	 * @param index
 	 * @param pMarkerHotSpot
-	 * @return <code>true</code> if the item was actually drawn. <code>false</code> it was not drawn because it was out of the visible area.
+	 * @return <code>true</code> if the item was actually drawn. 
+	 * 	<code>false</code> it was not drawn because it was out of the visible area.
 	 */
 	protected boolean onDrawItem(final Canvas canvas, final int index, final MapPoint location) 
 	{

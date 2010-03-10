@@ -21,7 +21,6 @@ import android.graphics.Point;
 public class OSMMapViewMarkerSimple 
 implements OSMMapViewMarker
 {
-
 	final protected Drawable mMarker;
 	final protected Point mHotSpot;
 	final protected int mWidth, mHeight;
@@ -89,8 +88,12 @@ implements OSMMapViewMarker
 	public int getOpacity() { return this.mMarker.getOpacity(); }
 	public void setAlpha(int alpha) { this.mMarker.setAlpha(alpha); }
 	
-	public int getIntrinsicWidth() { return this.mMarker.getIntrinsicWidth(); }
-	public int getIntrinsicHeight() { return this.mMarker.getIntrinsicHeight(); }
+	public int getIntrinsicWidth() { 
+		return this.mMarker.getIntrinsicWidth();
+	}
+	public int getIntrinsicHeight() { 
+		return this.mMarker.getIntrinsicHeight(); 
+	}
 	
 	public void setColorFilter(ColorFilter cf) { this.mMarker.setColorFilter(cf); }
 	

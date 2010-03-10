@@ -3,12 +3,8 @@
  */
 package org.andnav2.osm.views.overlay;
 
-import org.andnav2.R;
-import org.andnav2.osm.adt.GeoPoint;
-
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
-import android.graphics.drawable.Drawable;
 import android.graphics.Point;
 
 

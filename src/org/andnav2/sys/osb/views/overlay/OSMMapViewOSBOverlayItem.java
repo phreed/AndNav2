@@ -31,7 +31,9 @@ public class OSMMapViewOSBOverlayItem extends OSMMapViewOverlayItem implements P
 	// ===========================================================
 
 	public OSMMapViewOSBOverlayItem(final OpenStreetBug b) {
-		super((b.isOpen()) ? "Open Bug" : "Closed Bug", b.getDesription(), b); // TODO i18n
+		super((b.isOpen()) ? "Open Bug" : "Closed Bug", 
+				b.getDesription(), 
+				b.getLatitudeE6(), b.getLongitudeE6()); // TODO i18n
 		this.mIsOpen = b.isOpen();
 		this.mBaseBug = b;
 	}

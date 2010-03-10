@@ -16,73 +16,112 @@ import android.graphics.drawable.Drawable;
  * @author phreed
  *
  */
-enum STD_IDENTITY { FRIEND, HOSTILE, UNKNOWN, NEUTRAL };
 
 public class OSMMapViewMarkerSymbol
 implements OSMMapViewMarker 
 {
-
-	/**
-	 * @param marker
-	 * @param hotspot
-	 */
 	private Context mCtx;
-	private Drawable mMarker;
-	private Point mHotSpot;
-	private int mWidth, mHeight;
 	
 	public OSMMapViewMarkerSymbol(Context ctx) {
 		super();
 		mCtx = ctx;
-		
 	}
 	
 	@Override
 	public Point getHotSpot() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Point(0,0);
 	}
 
 	@Override
 	public int getIntrinsicHeight() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 20;
 	}
 
 	@Override
 	public int getIntrinsicWidth() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 20;
 	}
 
 	@Override
 	public int getOpacity() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public boolean onDraw(Canvas canvas, MapPoint location) {
-		mCtx.getResources().getDrawable(R.drawable.marker_default);
+		if (location == null) return false;
+		
+		GeoPoint gp = location.asGeoPoint();
+		if (!(gp instanceof OSMMapViewOverlaySymbol)) return false;
+		OSMMapViewOverlaySymbol gps = (OSMMapViewOverlaySymbol)gp;
+		
+		Drawable item;
+		int iwidth;
+		int iheight;
+		Point hot_spot;
+	
+		switch (gps.get_std_identity()) {
+		case FRIEND:
+			item = mCtx.getResources().getDrawable(R.drawable.mil_sfgpuci_20);
+			iwidth = item.getIntrinsicWidth();
+			iheight = item.getIntrinsicHeight();
+			hot_spot = new Point(3,5);
+			break;
+		case HOSTILE:
+			item = mCtx.getResources().getDrawable(R.drawable.mil_shgpuci_20);
+			iwidth = item.getIntrinsicWidth();
+			iheight = item.getIntrinsicHeight();
+			hot_spot = new Point(3,5);
+			break;
+		case UNKNOWN:
+			item = mCtx.getResources().getDrawable(R.drawable.mil_sugpuci_20);
+			iwidth = item.getIntrinsicWidth();
+			iheight = item.getIntrinsicHeight();
+			hot_spot = new Point(3,5);
+			break;
+		case NEUTRAL:
+			item = mCtx.getResources().getDrawable(R.drawable.mil_sngpuci_20);
+			iwidth = item.getIntrinsicWidth();
+			iheight = item.getIntrinsicHeight();
+			hot_spot = new Point(3,5);
+			break;
+		default: return false;
+		}
+		
+		Point locate = location.asPoint();
+		
+		final int left = locate.x - hot_spot.x;
+		final int top = locate.y - hot_spot.y;
+		
+		final int right = left + iwidth;
+		final int bottom = top + iheight;
+
+		if(right < 0) return false;
+		if(bottom < 0) return false;
+		
+		final int height = canvas.getHeight() * 2;
+		final int width = canvas.getWidth() * 2;
+		
+		if(left > width) return false;
+		if(top > height) return false;
+			
+		item.setBounds(left, top, right, bottom);
+		item.draw(canvas);
 		return false;
 	}
 
 	@Override
 	public boolean onDrawFocused(Canvas canvas, MapPoint location) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void draw(Canvas canvas, MapPoint mp) {
-		
 	}
 
 
 	@Override
 	public void relocate(Point location) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -103,40 +142,10 @@ implements OSMMapViewMarker
 		
 	}
 	
-	private STD_IDENTITY mSi;
-	
-	public void set_std_identity(STD_IDENTITY si) { 
-		mSi = si; 
-		_determine_marker();
+	public void draw(OSMMapViewOverlaySymbol sym) {
+		
+		
 	}
 
-	private void _determine_marker() {
-		switch (mSi) {
-		case FRIEND:
-			this.mMarker = mCtx.getResources().getDrawable(R.drawable.mil_sfgpuci_20);
-			this.mWidth = this.mMarker.getIntrinsicWidth();
-			this.mHeight = this.mMarker.getIntrinsicHeight();
-			this.mHotSpot = new Point(3,5);
-			break;
-		case HOSTILE:
-			this.mMarker = mCtx.getResources().getDrawable(R.drawable.mil_shgpuci_20);
-			this.mWidth = this.mMarker.getIntrinsicWidth();
-			this.mHeight = this.mMarker.getIntrinsicHeight();
-			this.mHotSpot = new Point(3,5);
-			break;
-		case UNKNOWN:
-			this.mMarker = mCtx.getResources().getDrawable(R.drawable.mil_sugpuci_20);
-			this.mWidth = this.mMarker.getIntrinsicWidth();
-			this.mHeight = this.mMarker.getIntrinsicHeight();
-			this.mHotSpot = new Point(3,5);
-			break;
-		case NEUTRAL:
-			this.mMarker = mCtx.getResources().getDrawable(R.drawable.mil_sngpuci_20);
-			this.mWidth = this.mMarker.getIntrinsicWidth();
-			this.mHeight = this.mMarker.getIntrinsicHeight();
-			this.mHotSpot = new Point(3,5);
-			break;
-		}
-	}
 
 }

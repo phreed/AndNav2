@@ -22,6 +22,7 @@ import org.andnav2.osm.views.OSMMapViewScaleIndicatorView;
 import org.andnav2.osm.views.OSMMapView.OSMMapViewProjection;
 import org.andnav2.osm.views.OSMMapView.OnChangeListener;
 import org.andnav2.osm.views.controller.OSMMapViewController.AnimationType;
+import org.andnav2.osm.views.overlay.OSMMapViewOverlaySymbol;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayWithFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewListItemizedOverlayWithFocus;
@@ -120,8 +121,7 @@ import com.admob.android.ads.AdView;
 
 public class WhereAmIMap 
 extends OpenStreetMapAndNavBaseActivity 
-implements PreferenceConstants, Constants, 
-           OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayItem>
+implements PreferenceConstants, Constants
 {
 
 	// ===========================================================
@@ -210,11 +210,11 @@ implements PreferenceConstants, Constants,
 	private int mSearchPinListIndex;
 	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mSearchPinOverlay;
 
-	//private List<OSMMapViewOverlayItem> mSymbolList;
-	private List<OSMMapViewOverlayItem> mEntityList;
+	//private List<OSMMapViewOverlayTactic> mTacticList;
+	private List<OSMMapViewOverlaySymbol> mSymbolList;
 	@SuppressWarnings("unused")
-	private int mEntityListIndex;
-	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mEntityOverlay;
+	private int mSymbolListIndex;
+	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlaySymbol> mSymbolOverlay;
 	
 	private AreaOfInterestOverlay mAASOverlay;
 	private TrafficOverlay mTrafficOverlay;
@@ -257,24 +257,28 @@ implements PreferenceConstants, Constants,
 		this.mMyLocationOverlay = new OSMMapViewDirectedLocationOverlay(this, Preferences.getHUDImplVariationDirectionArrowDescriptor(this));
 		this.mMyLocationOverlay.setLocation(getLastKnownLocation(true));
 
-		this.mTrafficOverlay = new TrafficOverlay(this, new ArrayList<TrafficOverlayItem>(), new OnItemTapListener<TrafficOverlayItem>(){
-			public boolean onItemTap(final int index, final TrafficOverlayItem item) {
-				if(index >= WhereAmIMap.this.mTrafficOverlay.getOverlayItems().size()) {
-					throw new IllegalArgumentException();
-				}
-
-				final TrafficOverlayItem focusedItem = WhereAmIMap.this.mTrafficOverlay.getFocusedItem();
-				if(!item.equals(focusedItem)){
-					WhereAmIMap.this.mTrafficOverlay.setFocusedItem(item);
-				}else{
-					WhereAmIMap.this.mTrafficOverlay.unSetFocusedItem();
-				}
-
-				WhereAmIMap.this.mOSMapView.getController().animateTo(item, AnimationType.MIDDLEPEAKSPEED);
-
-				return true;
-			}
-		});
+		this.mTrafficOverlay = new TrafficOverlay(
+				this, 
+				new ArrayList<TrafficOverlayItem>(), 
+				new OnItemTapListener<TrafficOverlayItem>()
+				{
+					public boolean onItemTap(final int index, final TrafficOverlayItem item) {
+						if(index >= WhereAmIMap.this.mTrafficOverlay.getOverlayItems().size()) {
+							throw new IllegalArgumentException();
+						}
+		
+						final TrafficOverlayItem focusedItem = WhereAmIMap.this.mTrafficOverlay.getFocusedItem();
+						if(!item.equals(focusedItem)){
+							WhereAmIMap.this.mTrafficOverlay.setFocusedItem(item);
+						}else{
+							WhereAmIMap.this.mTrafficOverlay.unSetFocusedItem();
+						}
+		
+						WhereAmIMap.this.mOSMapView.getController().animateTo(item, AnimationType.MIDDLEPEAKSPEED);
+		
+						return true;
+					}
+				});
 		this.mTrafficOverlay.setDrawnItemsLimit(50);
 		this.mTrafficOverlay.setAutoFocusItemsOnTap(false);
 
@@ -313,7 +317,8 @@ implements PreferenceConstants, Constants,
 	 */
 	private void refreshPinOverlay(final GeoPoint pGeoPoint) {
 		final List<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>();
-		items.add(new OSMMapViewOverlayItem(WhereAmIMap.this, pGeoPoint));
+		OSMMapViewOverlayItem pt = OSMMapViewOverlayItem.get_instance(WhereAmIMap.this, pGeoPoint);
+		items.add(pt);
 		refreshPinOverlay(items);
 		WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 		WhereAmIMap.super.mOSMapView.getController().animateTo(pGeoPoint, AnimationType.MIDDLEPEAKSPEED);
@@ -331,8 +336,11 @@ implements PreferenceConstants, Constants,
 		this.mMapItemControlView.setPreviousEnabled(nextPreviousEnabled);
 
 		this.mSearchPinList = items;
+        OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayItem> tapper = null;
+        // FIXME
+        		//new OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayItem>()
 		this.mSearchPinOverlay = 
-			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mSearchPinList, this);
+			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(this, this.mSearchPinList, tapper);
 		this.mOSMapView.getOverlays().add(this.mSearchPinOverlay);
 		this.mSearchPinOverlay.setAutoFocusItemsOnTap(false);
 	}
@@ -341,14 +349,10 @@ implements PreferenceConstants, Constants,
 	private void clearPinOverlay() {
 		this.mMapItemControlView.setVisibility(View.GONE);
 
-		if(this.mSearchPinList != null) {
-			this.mSearchPinList.clear();
-		}
+		if(this.mSearchPinList != null) this.mSearchPinList.clear();
 
 		final List<OSMMapViewOverlay> overlays = this.mOSMapView.getOverlays();
-		if(this.mSearchPinOverlay != null) {
-			overlays.remove(this.mSearchPinOverlay);
-		}
+		if(this.mSearchPinOverlay != null) overlays.remove(this.mSearchPinOverlay);
 	}
 
 	
@@ -357,68 +361,74 @@ implements PreferenceConstants, Constants,
 	 * 
 	 * @param pGeoPoint
 	 */
-	private void freshEntityOverlay(final GeoPoint pGeoPoint) {
-		if (pGeoPoint == null) return;
-		final List<OSMMapViewOverlayItem> symbols = new ArrayList<OSMMapViewOverlayItem>();
+	private void freshSymbolOverlay(final GeoPoint gp) {
+		if (gp == null) return;
+		final List<OSMMapViewOverlaySymbol> symbols = new ArrayList<OSMMapViewOverlaySymbol>();
 		
-		symbols.add(new OSMMapViewOverlayItem(WhereAmIMap.this, pGeoPoint));
 		for (int ix = 0; ix < 50; ++ix) {
-			int dx = pGeoPoint.getLatitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e4));
-			int dy = pGeoPoint.getLongitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e4));
-			GeoPoint pt = new GeoPoint(dx,dy);
-			symbols.add(new OSMMapViewOverlayItem(WhereAmIMap.this, pt));
+			int dx = gp.getLatitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e4));
+			int dy = gp.getLongitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e4));
+			OSMMapViewOverlaySymbol pt = OSMMapViewOverlaySymbol
+				.get_instance(Integer.toString(ix), Integer.toString(ix), dx,dy);
+			
+			OSMMapViewOverlaySymbol.STD_IDENTITY si;
+			switch (ix % 4) {
+			case 0: si = OSMMapViewOverlaySymbol.STD_IDENTITY.FRIEND; break;
+			case 1: si = OSMMapViewOverlaySymbol.STD_IDENTITY.HOSTILE; break;
+			case 2: si = OSMMapViewOverlaySymbol.STD_IDENTITY.UNKNOWN; break;
+			case 3: si = OSMMapViewOverlaySymbol.STD_IDENTITY.NEUTRAL; break;
+			default: si = OSMMapViewOverlaySymbol.STD_IDENTITY.FRIEND;
+			}
+			pt.set_std_identity(si);
+			symbols.add(pt);
 		}
 		
-		freshEntityOverlay(symbols);
+		freshSymbolOverlay(symbols);
+		
 		WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
-		WhereAmIMap.super.mOSMapView.getController().animateTo(pGeoPoint, AnimationType.MIDDLEPEAKSPEED);
+		WhereAmIMap.super.mOSMapView.getController().animateTo(gp, AnimationType.MIDDLEPEAKSPEED);
 	}
 
-	private void freshEntityOverlay(final List<OSMMapViewOverlayItem> entities){
-		this.mEntityListIndex = 0;
 
-		clearEntityOverlay();
+	private void freshSymbolOverlay(final List<OSMMapViewOverlaySymbol> symbols){
+		this.mSymbolListIndex = 0;
+
+		clearSymbolOverlay();
 
 		this.mMapEntityControlView.setVisibility(View.VISIBLE);
 
-		final boolean nextPreviousEnabled = entities.size() > 1;
+		final boolean nextPreviousEnabled = symbols.size() > 1;
 		this.mMapEntityControlView.setNextEnabled(nextPreviousEnabled);
 		this.mMapEntityControlView.setPreviousEnabled(nextPreviousEnabled);
 
-		this.mEntityList = entities;
+		this.mSymbolList = symbols;
 
-		OSMMapViewMarker marker = new OSMMapViewMarkerSimple(
-				this.getResources().getDrawable(R.drawable.mil_sfgpuci_20),
-				new Point());
-		
-		//marker = new OSMMapViewMarkerSimple(this);
+		OSMMapViewMarker marker = new OSMMapViewMarkerSymbol(this);
 				
 		OSMMapViewMarkerForFocus focus = new OSMMapViewMarkerForFocus(
 				this.getResources().getDrawable(R.drawable.mil_sfgpuci_80),
 				new Point(),
 				50);
-		
-		this.mEntityOverlay = 
-			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayItem>(
-					this, this.mEntityList, marker, focus, this);
-		this.mOSMapView.getOverlays().add(this.mEntityOverlay);
-		this.mEntityOverlay.setAutoFocusItemsOnTap(false);
+		// FIXME
+		OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlaySymbol> tapper = null;
+ 		//new OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlaySymbol>()
+		this.mSymbolOverlay = 
+			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlaySymbol>(
+					this, this.mSymbolList, marker, focus, tapper);
+		this.mOSMapView.getOverlays().add(this.mSymbolOverlay);
+		this.mSymbolOverlay.setAutoFocusItemsOnTap(false);
 	}
 
 
-	private void clearEntityOverlay() {
+	private void clearSymbolOverlay() {
 		this.mMapEntityControlView.setVisibility(View.GONE);
 
-		if(this.mEntityList != null) {
-			this.mEntityList.clear();
-		}
+		if(this.mSymbolList != null)  this.mSymbolList.clear();
 
 		final List<OSMMapViewOverlay> overlays = this.mOSMapView.getOverlays();
-		if(this.mEntityOverlay != null) {
-			overlays.remove(this.mEntityOverlay);
-		}
+		if(this.mSymbolOverlay != null) overlays.remove(this.mSymbolOverlay);
 	}
-
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(final Bundle icicle) {
@@ -505,7 +515,7 @@ implements PreferenceConstants, Constants,
 		}
 
 		
-		freshEntityOverlay(super.getLastKnownLocation(true));
+		freshSymbolOverlay(super.getLastKnownLocation(true));
 		
 		/* forces the ScaleIndicator-View to be refreshed in the beginning. */
 		super.mOSMapView.forceFireOnChangeListeners();
@@ -541,7 +551,7 @@ implements PreferenceConstants, Constants,
 				/* Create overlay-items from the data extracted. */
 				final List<OSMMapViewOverlayItem> items = new ArrayList<OSMMapViewOverlayItem>(geoPointStrings.size());
 				for(int i = 0; i < geoPointStrings.size(); i++) {
-					items.add(new OSMMapViewOverlayItem(titles.get(i), descriptions.get(i), geoPoints.get(i)));
+					items.add(OSMMapViewOverlayItem.get_instance(titles.get(i), descriptions.get(i), geoPoints.get(i)));
 				}
 
 				/* Calculate the BoundingBox around the items. */
@@ -640,7 +650,7 @@ implements PreferenceConstants, Constants,
 					final int lonE6 = b.getInt(EXTRAS_DESTINATION_LONGITUDE_ID);
 					final GeoPoint gp = new GeoPoint(latE6, lonE6);
 
-					items.add(new OSMMapViewOverlayItem(this, gp));
+					items.add(OSMMapViewOverlayItem.get_instance(this, gp));
 					refreshPinOverlay(items);
 					WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
 					WhereAmIMap.super.mOSMapView.getController().animateTo(gp, AnimationType.MIDDLEPEAKSPEED);
@@ -1923,7 +1933,7 @@ implements PreferenceConstants, Constants,
 
 								final List<OSMMapViewOverlayItem> itemsFound = new ArrayList<OSMMapViewOverlayItem>();
 								for (final GeocodedAddress ga : ret) {
-									itemsFound.add(new OSMMapViewOverlayItem(ga.getMunicipality(), ga.toString(WhereAmIMap.this), ga));
+									itemsFound.add(OSMMapViewOverlayItem.get_instance(ga.getMunicipality(), ga.toString(WhereAmIMap.this), ga));
 								}
 
 								final int foundItemsSize = ret.size();

@@ -3,6 +3,8 @@ package org.andnav2.osm.views.overlay;
 
 import java.util.List;
 
+import org.andnav2.ui.map.WhereAmIMap;
+
 import android.content.Context;
 
 public class OSMMapViewListItemizedOverlayWithFocus<T extends OSMMapViewOverlayItem> 
