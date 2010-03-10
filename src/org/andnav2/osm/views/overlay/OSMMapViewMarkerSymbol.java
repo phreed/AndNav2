@@ -13,6 +13,8 @@ import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 
 /**
+ * This is the object which knows how to draw items of a particular type namely symbols.
+ * 
  * @author phreed
  *
  */
@@ -65,25 +67,25 @@ implements OSMMapViewMarker
 			item = mCtx.getResources().getDrawable(R.drawable.mil_sfgpuci_20);
 			iwidth = item.getIntrinsicWidth();
 			iheight = item.getIntrinsicHeight();
-			hot_spot = new Point(3,5);
+			hot_spot = new Point(10,10);
 			break;
 		case HOSTILE:
 			item = mCtx.getResources().getDrawable(R.drawable.mil_shgpuci_20);
 			iwidth = item.getIntrinsicWidth();
 			iheight = item.getIntrinsicHeight();
-			hot_spot = new Point(3,5);
+			hot_spot = new Point(10,10);
 			break;
 		case UNKNOWN:
 			item = mCtx.getResources().getDrawable(R.drawable.mil_sugpuci_20);
 			iwidth = item.getIntrinsicWidth();
 			iheight = item.getIntrinsicHeight();
-			hot_spot = new Point(3,5);
+			hot_spot = new Point(10,10);
 			break;
 		case NEUTRAL:
 			item = mCtx.getResources().getDrawable(R.drawable.mil_sngpuci_20);
 			iwidth = item.getIntrinsicWidth();
 			iheight = item.getIntrinsicHeight();
-			hot_spot = new Point(3,5);
+			hot_spot = new Point(10,10);
 			break;
 		default: return false;
 		}
@@ -116,11 +118,6 @@ implements OSMMapViewMarker
 	}
 
 	@Override
-	public void draw(Canvas canvas, MapPoint mp) {
-	}
-
-
-	@Override
 	public void relocate(Point location) {
 	}
 
@@ -131,21 +128,9 @@ implements OSMMapViewMarker
 	}
 
 	@Override
-	public void setBounds(int left, int top, int right, int bottom) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void setColorFilter(ColorFilter cf) {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	public void draw(OSMMapViewOverlaySymbol sym) {
-		
-		
-	}
-
 
 }

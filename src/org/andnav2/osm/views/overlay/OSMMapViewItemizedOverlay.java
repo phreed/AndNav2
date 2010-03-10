@@ -38,8 +38,6 @@ extends OSMMapViewOverlay
 
 	private OnItemTapListener<T> mOnItemTapListener;
 	protected OSMMapViewMarker mMarker;
-	private int mMarkerWidth, mMarkerHeight;
-
 	private int mDrawnItemsLimit = Integer.MAX_VALUE;
 
 	// ===========================================================
@@ -66,8 +64,8 @@ extends OSMMapViewOverlay
 
 		this.mOnItemTapListener = aOnItemTapListener;
 
-		this.mMarkerWidth = this.mMarker.getIntrinsicWidth();
-		this.mMarkerHeight = this.mMarker.getIntrinsicHeight();
+		this.mMarker.getIntrinsicWidth();
+		this.mMarker.getIntrinsicHeight();
 	}
 
 	// ===========================================================
@@ -140,21 +138,6 @@ extends OSMMapViewOverlay
 	{
 		if(this.mMarker == null) return false;
 		
-		final int left = location.asPoint().x - this.mMarker.getHotSpot().x;
-		final int right = left + this.mMarkerWidth;
-		final int top = location.asPoint().y - this.mMarker.getHotSpot().y;
-		final int bottom = top + this.mMarkerHeight;
-
-		if(right < 0) return false;
-		if(bottom < 0) return false;
-		
-		final int height = canvas.getHeight() * 2;
-		final int width = canvas.getWidth() * 2;
-		if(left > width) return false;
-		if(top > height) return false;
-		
-		/* Draw item. */
-		this.mMarker.setBounds(left, top, right, bottom);
 		this.mMarker.onDraw(canvas, location);
 		return true; /* Item was drawn. */
 	}

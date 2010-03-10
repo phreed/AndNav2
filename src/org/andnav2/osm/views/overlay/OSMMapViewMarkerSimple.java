@@ -3,8 +3,6 @@
  */
 package org.andnav2.osm.views.overlay;
 
-import org.andnav2.osm.adt.GeoPoint;
-
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.Drawable;
@@ -98,15 +96,5 @@ implements OSMMapViewMarker
 	public void setColorFilter(ColorFilter cf) { this.mMarker.setColorFilter(cf); }
 	
 	public Point getHotSpot() { return this.mHotSpot; }
-
-	public void setBounds(int left, int top, int right, int bottom) {
-		this.mMarker.setBounds(left, top, right, bottom);
-	}
-	
-	public void draw(Canvas c, MapPoint mp) {
-		// TODO Auto-generated method stub
-		
-	}
-
 
 }

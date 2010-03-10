@@ -22,6 +22,9 @@ import org.andnav2.osm.views.OSMMapViewScaleIndicatorView;
 import org.andnav2.osm.views.OSMMapView.OSMMapViewProjection;
 import org.andnav2.osm.views.OSMMapView.OnChangeListener;
 import org.andnav2.osm.views.controller.OSMMapViewController.AnimationType;
+import org.andnav2.osm.views.overlay.OSMMapViewMarkerObstacle;
+import org.andnav2.osm.views.overlay.OSMMapViewMarkerTactic;
+import org.andnav2.osm.views.overlay.OSMMapViewOverlayObstacle;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlaySymbol;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayWithFocus;
@@ -30,11 +33,11 @@ import org.andnav2.osm.views.overlay.OSMMapViewCrosshairOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewDirectedLocationOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlayControlView;
 import org.andnav2.osm.views.overlay.OSMMapViewMarker;
-import org.andnav2.osm.views.overlay.OSMMapViewMarkerSimple;
 import org.andnav2.osm.views.overlay.OSMMapViewMarkerForFocus;
 import org.andnav2.osm.views.overlay.OSMMapViewMarkerSymbol;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewOverlayItem;
+import org.andnav2.osm.views.overlay.OSMMapViewOverlayTactic;
 import org.andnav2.osm.views.overlay.OSMMapViewSimpleLineOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewSingleIconOverlay;
 import org.andnav2.osm.views.overlay.OSMMapViewItemizedOverlay.OnItemTapListener;
@@ -210,11 +213,18 @@ implements PreferenceConstants, Constants
 	private int mSearchPinListIndex;
 	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayItem> mSearchPinOverlay;
 
-	//private List<OSMMapViewOverlayTactic> mTacticList;
 	private List<OSMMapViewOverlaySymbol> mSymbolList;
+	private List<OSMMapViewOverlayTactic> mTacticList;
+	private List<OSMMapViewOverlayObstacle> mObstacleList;
 	@SuppressWarnings("unused")
 	private int mSymbolListIndex;
+	@SuppressWarnings("unused")
+	private int mTacticListIndex;
+	@SuppressWarnings("unused")
+	private int mObstacleListIndex;
 	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlaySymbol> mSymbolOverlay;
+	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayTactic> mTacticOverlay;
+	private OSMMapViewItemizedOverlayWithFocus<OSMMapViewOverlayObstacle> mObstacleOverlay;
 	
 	private AreaOfInterestOverlay mAASOverlay;
 	private TrafficOverlay mTrafficOverlay;
@@ -357,7 +367,152 @@ implements PreferenceConstants, Constants
 
 	
 	/** 
-	 * Managing Entity Overlay and its Symbols and Tactics.
+	 * Managing Obstacle Overlay.
+	 * 
+	 * @param pGeoPoint
+	 */
+	private void freshObstacleOverlay(final GeoPoint gp) {
+		if (gp == null) return;
+		final List<OSMMapViewOverlayObstacle> tactics = new ArrayList<OSMMapViewOverlayObstacle>();
+		
+		for (int ix = 0; ix < 3; ++ix) {
+			int dx = gp.getLatitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e5));
+			int dy = gp.getLongitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e5));
+			OSMMapViewOverlayObstacle pt = OSMMapViewOverlayObstacle
+				.get_instance(Integer.toString(ix), Integer.toString(ix), dx,dy);
+			
+			OSMMapViewOverlayObstacle.TYPE type;
+			switch (ix % 3) {
+			case 0: type = OSMMapViewOverlayObstacle.TYPE.M_OAR; break;
+			case 1: type = OSMMapViewOverlayObstacle.TYPE.M_OFD; break;
+			case 2: type = OSMMapViewOverlayObstacle.TYPE.M_OGL; break;
+			default: type = OSMMapViewOverlayObstacle.TYPE.M_OAR;
+			}
+			pt.set_type(type);
+			tactics.add(pt);
+		}
+		
+		freshObstacleOverlay(tactics);
+		
+		WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
+		WhereAmIMap.super.mOSMapView.getController().animateTo(gp, AnimationType.MIDDLEPEAKSPEED);
+	}
+
+
+	private void freshObstacleOverlay(final List<OSMMapViewOverlayObstacle> tactics){
+		this.mObstacleListIndex = 0;
+
+		clearObstacleOverlay();
+
+		this.mMapEntityControlView.setVisibility(View.VISIBLE);
+
+		final boolean nextPreviousEnabled = tactics.size() > 1;
+		this.mMapEntityControlView.setNextEnabled(nextPreviousEnabled);
+		this.mMapEntityControlView.setPreviousEnabled(nextPreviousEnabled);
+
+		this.mObstacleList = tactics;
+
+		OSMMapViewMarker marker = new OSMMapViewMarkerObstacle(this);
+				
+		OSMMapViewMarkerForFocus focus = new OSMMapViewMarkerForFocus(
+				this.getResources().getDrawable(R.drawable.mil_sfgpuci_80),
+				new Point(),
+				50);
+		// FIXME
+		OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayObstacle> tapper = null;
+ 		//new OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayObstacle>()
+		this.mObstacleOverlay = 
+			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayObstacle>(
+					this, this.mObstacleList, marker, focus, tapper);
+		this.mOSMapView.getOverlays().add(this.mObstacleOverlay);
+		this.mObstacleOverlay.setAutoFocusItemsOnTap(false);
+	}
+
+
+	private void clearObstacleOverlay() {
+		this.mMapEntityControlView.setVisibility(View.GONE);
+
+		if(this.mObstacleList != null)  this.mObstacleList.clear();
+
+		final List<OSMMapViewOverlay> overlays = this.mOSMapView.getOverlays();
+		if(this.mObstacleOverlay != null) overlays.remove(this.mObstacleOverlay);
+	}
+	/** 
+	 * Managing Tactic Overlay.
+	 * 
+	 * @param pGeoPoint
+	 */
+	private void freshTacticOverlay(final GeoPoint gp) {
+		if (gp == null) return;
+		final List<OSMMapViewOverlayTactic> tactics = new ArrayList<OSMMapViewOverlayTactic>();
+		
+		for (int ix = 0; ix < 3; ++ix) {
+			int dx = gp.getLatitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e5));
+			int dy = gp.getLongitudeE6() + (int) Math.round(((Math.random()-0.5) * ix * 1e5));
+			OSMMapViewOverlayTactic pt = OSMMapViewOverlayTactic
+				.get_instance(Integer.toString(ix), Integer.toString(ix), dx,dy);
+			
+			OSMMapViewOverlayTactic.TYPE type;
+			switch (ix % 4) {
+			case 0: type = OSMMapViewOverlayTactic.TYPE.G_OAO; break;
+			case 1: type = OSMMapViewOverlayTactic.TYPE.G_OAS; break;
+			case 2: type = OSMMapViewOverlayTactic.TYPE.G_PA; break;
+			case 3: type = OSMMapViewOverlayTactic.TYPE.G_SAN; break;
+			case 4: type = OSMMapViewOverlayTactic.TYPE.G_SAT; break;
+			default: type = OSMMapViewOverlayTactic.TYPE.G_OAO;
+			}
+			pt.set_type(type);
+			tactics.add(pt);
+		}
+		
+		freshTacticOverlay(tactics);
+		
+		WhereAmIMap.this.updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
+		WhereAmIMap.super.mOSMapView.getController().animateTo(gp, AnimationType.MIDDLEPEAKSPEED);
+	}
+
+
+	private void freshTacticOverlay(final List<OSMMapViewOverlayTactic> tactics){
+		this.mTacticListIndex = 0;
+
+		clearTacticOverlay();
+
+		this.mMapEntityControlView.setVisibility(View.VISIBLE);
+
+		final boolean nextPreviousEnabled = tactics.size() > 1;
+		this.mMapEntityControlView.setNextEnabled(nextPreviousEnabled);
+		this.mMapEntityControlView.setPreviousEnabled(nextPreviousEnabled);
+
+		this.mTacticList = tactics;
+
+		OSMMapViewMarker marker = new OSMMapViewMarkerTactic(this);
+				
+		OSMMapViewMarkerForFocus focus = new OSMMapViewMarkerForFocus(
+				this.getResources().getDrawable(R.drawable.mil_sfgpuci_80),
+				new Point(),
+				50);
+		// FIXME
+		OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayTactic> tapper = null;
+ 		//new OSMMapViewItemizedOverlay.OnItemTapListener<OSMMapViewOverlayTactic>()
+		this.mTacticOverlay = 
+			new OSMMapViewListItemizedOverlayWithFocus<OSMMapViewOverlayTactic>(
+					this, this.mTacticList, marker, focus, tapper);
+		this.mOSMapView.getOverlays().add(this.mTacticOverlay);
+		this.mTacticOverlay.setAutoFocusItemsOnTap(false);
+	}
+
+
+	private void clearTacticOverlay() {
+		this.mMapEntityControlView.setVisibility(View.GONE);
+
+		if(this.mTacticList != null)  this.mTacticList.clear();
+
+		final List<OSMMapViewOverlay> overlays = this.mOSMapView.getOverlays();
+		if(this.mTacticOverlay != null) overlays.remove(this.mTacticOverlay);
+	}
+	
+	/** 
+	 * Managing Symbol Overlay.
 	 * 
 	 * @param pGeoPoint
 	 */
@@ -516,6 +671,8 @@ implements PreferenceConstants, Constants
 
 		
 		freshSymbolOverlay(super.getLastKnownLocation(true));
+		freshTacticOverlay(super.getLastKnownLocation(true));
+		freshObstacleOverlay(super.getLastKnownLocation(true));
 		
 		/* forces the ScaleIndicator-View to be refreshed in the beginning. */
 		super.mOSMapView.forceFireOnChangeListeners();
@@ -1836,21 +1993,24 @@ implements PreferenceConstants, Constants
 	}
 
 	private void updateUIForAutoCenterChange(final int pNewMode) {
-		if(WhereAmIMap.this.mDoCenter == pNewMode) {
-			return;
-		}
+		if(WhereAmIMap.this.mDoCenter == pNewMode) return;
 
 		WhereAmIMap.this.mDoCenter = pNewMode;
 
 		if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_AUTO){
 			WhereAmIMap.this.mIbtnCenter.setImageResource(R.drawable.person_focused_small);
 			Toast.makeText(WhereAmIMap.this, R.string.toast_autofollow_enabled, Toast.LENGTH_SHORT).show();
-		}else if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_ONCE){
+			return;
+		}
+		if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_ONCE){
 			WhereAmIMap.this.mIbtnCenter.setImageResource(R.drawable.person_focused_once_small);
 			Toast.makeText(WhereAmIMap.this, R.string.toast_autofollow_once, Toast.LENGTH_SHORT).show();
-		}else if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_NONE){
+			return;
+		}
+		if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_NONE){
 			WhereAmIMap.this.mIbtnCenter.setImageResource(R.drawable.person_small);
 			Toast.makeText(WhereAmIMap.this, R.string.toast_autofollow_disabled, Toast.LENGTH_SHORT).show();
+			return;
 		}
 	}
 
@@ -1873,31 +2033,32 @@ implements PreferenceConstants, Constants
 
 		this.mIbtnSearch.startAnimation(this.mFadeOutQuickAnimation);
 
-		if(query.length() > 0){
+		if(query.length() < 1) return;
 
-			/* Check if coordinates were entered. */
-			final GeoPoint coordsIfEntered = CoordinatesExtractor.match(query);
-			if(coordsIfEntered != null){
-				refreshPinOverlay(coordsIfEntered);
-			}else if(RouteHandleIDExtractor.match(query) != -1){
-				startDDMapWithRouteHandleID(RouteHandleIDExtractor.match(query));
-			}else{
-				/* No coords --> textual/freeform search. */
-				//			final String[] choices = new String[]{getString(R.string.whereami_search_scope_global), getString(R.string.whereami_search_scope_local)};
-				//			new AlertDialog.Builder(this)
-				//			.setTitle(R.string.whereami_search_scope_title)
-				//			.setCancelable(true)
-				//			.setSingleChoiceItems(choices, 0, new DialogInterface.OnClickListener(){
-				//				@Override
-				//				public void onClick(final DialogInterface dialog, final int which) {
-				//					dialog.dismiss();
-				Toast.makeText(WhereAmIMap.this, R.string.please_wait_a_moment, Toast.LENGTH_SHORT).show();
-				searchORSLocations(query);
-				//					searchLocations(query, 0); // which
-				//				}
-				//			}).create().show();
-			}
+		/* Check if coordinates were entered. */
+		final GeoPoint coordsIfEntered = CoordinatesExtractor.match(query);
+		if(coordsIfEntered != null){
+			refreshPinOverlay(coordsIfEntered);
+			return;
 		}
+		if(RouteHandleIDExtractor.match(query) != -1){
+			startDDMapWithRouteHandleID(RouteHandleIDExtractor.match(query));
+			return;
+		}
+		/* No coords --> textual/freeform search. */
+		//			final String[] choices = new String[]{getString(R.string.whereami_search_scope_global), getString(R.string.whereami_search_scope_local)};
+		//			new AlertDialog.Builder(this)
+		//			.setTitle(R.string.whereami_search_scope_title)
+		//			.setCancelable(true)
+		//			.setSingleChoiceItems(choices, 0, new DialogInterface.OnClickListener(){
+		//				@Override
+		//				public void onClick(final DialogInterface dialog, final int which) {
+		//					dialog.dismiss();
+		Toast.makeText(WhereAmIMap.this, R.string.please_wait_a_moment, Toast.LENGTH_SHORT).show();
+		searchORSLocations(query);
+		//					searchLocations(query, 0); // which
+		//				}
+		//			}).create().show();
 	}
 
 	private void startDDMapWithRouteHandleID(final long pRouteHandleID) {
@@ -1920,35 +2081,36 @@ implements PreferenceConstants, Constants
 					runOnUiThread(new Runnable(){
 						public void run() {
 							if(ret == null || ret.size() == 0){
-								Toast.makeText(WhereAmIMap.this, R.string.whereami_search_no_places_found, Toast.LENGTH_SHORT).show();
-							}else{
-
-								final BoundingBoxE6 bBox = BoundingBoxE6.fromGeoPoints(ret);
-
-								/* Disable Auto-Follow. */
-								if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_AUTO) {
-									updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
-								}
-
-
-								final List<OSMMapViewOverlayItem> itemsFound = new ArrayList<OSMMapViewOverlayItem>();
-								for (final GeocodedAddress ga : ret) {
-									itemsFound.add(OSMMapViewOverlayItem.get_instance(ga.getMunicipality(), ga.toString(WhereAmIMap.this), ga));
-								}
-
-								final int foundItemsSize = ret.size();
-								if(foundItemsSize == 1){
-									WhereAmIMap.this.mOSMapView.setZoomLevel(15);
-									WhereAmIMap.this.mOSMapView.getController().animateTo(bBox.getCenter(), AnimationType.MIDDLEPEAKSPEED);
-								}else{
-									WhereAmIMap.this.mOSMapView.getController().zoomToSpan(bBox);
-									WhereAmIMap.this.mOSMapView.getController().animateTo(bBox.getCenter(), AnimationType.MIDDLEPEAKSPEED);
-								}
-
-								WhereAmIMap.this.refreshPinOverlay(itemsFound);
-								Log.d(Constants.DEBUGTAG, "Items remained: " + foundItemsSize);
-								Toast.makeText(WhereAmIMap.this, getString(R.string.whereami_search_places_found) + " " + foundItemsSize, Toast.LENGTH_SHORT).show();
+								Toast.makeText(WhereAmIMap.this, 
+										R.string.whereami_search_no_places_found, Toast.LENGTH_SHORT).show();
+								return;
 							}
+							final BoundingBoxE6 bBox = BoundingBoxE6.fromGeoPoints(ret);
+
+							/* Disable Auto-Follow. */
+							if(WhereAmIMap.this.mDoCenter == WhereAmIMap.CENTERMODE_AUTO) {
+								updateUIForAutoCenterChange(WhereAmIMap.CENTERMODE_NONE);
+							}
+
+
+							final List<OSMMapViewOverlayItem> itemsFound = new ArrayList<OSMMapViewOverlayItem>();
+							for (final GeocodedAddress ga : ret) {
+								itemsFound.add(OSMMapViewOverlayItem.get_instance(ga.getMunicipality(), ga.toString(WhereAmIMap.this), ga));
+							}
+
+							final int foundItemsSize = ret.size();
+							if(foundItemsSize == 1){
+								WhereAmIMap.this.mOSMapView.setZoomLevel(15);
+								WhereAmIMap.this.mOSMapView.getController().animateTo(bBox.getCenter(), AnimationType.MIDDLEPEAKSPEED);
+							}else{
+								WhereAmIMap.this.mOSMapView.getController().zoomToSpan(bBox);
+								WhereAmIMap.this.mOSMapView.getController().animateTo(bBox.getCenter(), AnimationType.MIDDLEPEAKSPEED);
+							}
+
+							WhereAmIMap.this.refreshPinOverlay(itemsFound);
+							Log.d(Constants.DEBUGTAG, "Items remained: " + foundItemsSize);
+							Toast.makeText(WhereAmIMap.this, 
+									getString(R.string.whereami_search_places_found) + " " + foundItemsSize, Toast.LENGTH_SHORT).show();
 						}
 					});
 

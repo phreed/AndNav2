@@ -153,7 +153,7 @@ extends OSMMapViewItemizedOverlay<T>
 		final int right = left + this.mMarkerFocusedWidth;
 		final int top = mp.asPoint().y - this.mMarker.getHotSpot().y;
 		final int bottom = top + this.mMarkerFocusedHeight;
-		this.mMarkerFocusedBase.setBounds(left, top, right, bottom);
+		// FIXME this.mMarkerFocusedBase.setBounds(left, top, right, bottom);
 
 		/* Strings of the OverlayItem, we need. */
 		final String itemTitle = (this.mFocusedItem.mTitle == null) ? this.UNKNOWN : this.mFocusedItem.mTitle;
@@ -246,7 +246,7 @@ extends OSMMapViewItemizedOverlay<T>
 		c.drawLine(descBoxLeft, descTextLineBottom, descBoxRight, descTextLineBottom, this.mDescriptionPaint);
 
 		/* Finally draw the marker base. This is done in the end to make it look better. */
-		this.mMarkerFocusedBase.draw(c, mp);
+		// FIXME this.mMarkerFocusedBase.draw(c, mp);
 	}
 
 	// ===========================================================

@@ -27,11 +27,8 @@ public  interface OSMMapViewMarker
 	 * 
 	 */
 	public boolean onDraw(final Canvas canvas, final MapPoint location) ;
-
 	public boolean onDrawFocused(Canvas canvas, final MapPoint location) ;
 
-	public void draw(Canvas canvas, MapPoint mp) ;
-	
 	/**
 	 * wrapper methods - they pass through to the wrapped object.
 	 */
@@ -44,7 +41,5 @@ public  interface OSMMapViewMarker
 	public void setColorFilter(ColorFilter cf) ;
 	
 	public Point getHotSpot() ;
-
-	public void setBounds(int left, int top, int right, int bottom);
 
 }
