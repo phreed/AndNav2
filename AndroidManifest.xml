@@ -4,7 +4,7 @@
     android:versionCode="20"
     android:versionName="0.8.8.2.1">
    
-    <uses-sdk android:minSdkVersion="3" />
+    <uses-sdk android:minSdkVersion="7" />
     
     <uses-permission android:name="android.permission.BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
